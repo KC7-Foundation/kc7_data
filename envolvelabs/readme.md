@@ -1,6 +1,7 @@
 # Script to Import EnvolveLabs Data to Cluster
 
-```.execute database script <|
+```kusto
+.execute database script <|
 // Create tables for the data
 .create table ['PassiveDns']
 (['ip']:string,
