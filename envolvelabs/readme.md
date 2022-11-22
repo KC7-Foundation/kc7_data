@@ -1,3 +1,7 @@
+# Training Guide PDF
+
+Download the training guide PDF [here](https://github.com/kkneomis/kc7_data/raw/main/envolvelabs/EnvolveLabs%20Training%20Guide%20(Intermediate).pdf)
+
 # Script to Import EnvolveLabs Data to Cluster
 
 ```kusto
