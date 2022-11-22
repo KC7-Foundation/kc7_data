@@ -1,3 +1,7 @@
+# Training Guide PDF
+
+Download the training guide PDF [here](https://github.com/kkneomis/kc7_data/raw/main/krustykrab/Krusty%20Krab%20Training%20Guide%20(Beginner).pdf)!
+
 # Script To Import Krusty Krab Data
 
 ```kusto
