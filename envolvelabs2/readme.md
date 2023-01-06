@@ -78,4 +78,4 @@ Download the training guide PDF [here](https://github.com/kkneomis/kc7_data/raw/
 .ingest into table InboundBrowsing ('https://github.com/kkneomis/kc7_data/raw/main/envolvelabs2/Data/InboundBrowsing.csv.gz') with 
 (ignoreFirstRecord=true)
 .ingest into table ProcessEvents ('https://github.com/kkneomis/kc7_data/raw/main/envolvelabs2/Data/ProcessEvents.csv.gz') with 
-(ignoreFirstRecord=true)```
+(ignoreFirstRecord=true)
