@@ -109,3 +109,95 @@ The `Employees` table contains information about all the employees in our organi
 > 1. 🤔 Try it for yourself! Do a `take 10` on all the other tables to see what kind of data they contain.
 
 You can easily write multiple queries in the same workspace tab. To do this, make sure to separate each query by an empty line. Notice below how we have separated the queries for the Employees, Email, and OutboundBrowsing tables by empty lines on lines 3 and 6.
+
+![multiple queries in ADX](multiple_queries.jpg)
+
+When you have multiple queries, it’s important to tell ADX which query you want to run. To choose a query, just click on any line that is part of that query. Once you’ve selected a query, it will be highlighted in blue, as seen on lines 4 and 5 above.
+
+#
+
+## Finding Out How Many: The `count` Operator
+
+We can use `count` to see how many rows are in a table. This tells us how much data is stored there.  
+
+```kusto
+Employees
+| count
+```
+
+> 2. 🤔How many employees are in the company?
+
+## Filtering Data with the `where` Operator
+
+So far, we’ve run queries that look at the entire contents of the table. Often in cybersecurity analysis, we only want to look at data that meets a set of conditions or criteria. To accomplish this, we apply filters to specific columns.
+
+We can use the where operator in KQL to apply filters to a particular field. For example, we can find all the employees with the name “Linda” by filtering on the name column in the Employees table. 
+
+`where` statements are written using a particular structure. Use this helpful chart below to understand how to structure a `where` statement.
+
+![structure of a where statement](where_statement_structure.png)
+
+```kusto
+Employees
+| where name has "Linda"
+```
+
+The `has` operator is useful here because we’re looking for only a partial match. If we wanted to look for an employee with a specific first and last name (an exact match), we’d use the `==` operator: 
+
+```kusto
+Employees
+| where name == "Linda Holbert"
+```
+
+> 3. 🤔Each employee at Envolve Labs is assigned an IP address. Which employee has the IP address: “192.168.0.191”?
+
+While performing their day-to-day tasks, Envolve Labs employees send and receive emails. A record of each of these emails is stored in the Email table. 
+
+> 🎯Key Point – User Privacy and Metadata: As you can imagine, some emails are highly sensitive. Instead of storing the entire contents of every email sent and received within the company in a database that can be easily accessed by security analysts, we only capture email metadata. 
+>
+> Email metadata includes information like: the time the email was sent, the sender, the recipient, the subject line, and any links the email may contain. Storing only email metadata, rather than entire contents, helps protect the privacy of our employees, while also ensuring that our security analysts can keep us safe. Sometimes even metadata can reveal sensitive information, so it’s important that you don’t talk about log data with other employees outside the SOC.
+
+We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the Email table. For example, we can use the following query to see all the emails sent by “Michael Montello”:
+
+```kusto
+Email
+| where sender == "michael_montello@envolvelabs.com"
+```
+
+> 4. 🤔How many emails did Betty Parrish receive?
+
+## Easy as 1, 2, 3… Compound Queries and the `distinct` Operator
+
+We can use the distinct operator to find unique values in a particular column. We can use the following query to determine how many of the organization’s users sent emails.
+
+![distinct query breakdown](distinct.png)
+
+This is our first time using a multi-line query with multiple operators, so let’s break it down:
+
+- In line 2, we take the Email table and filter the data down to find only those rows with “envolvelabs” in the sender column.
+
+- In line 3, we add another pipe character ( | ) and use the distinct operator to find all the unique senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “envolvelabs” in the sender column.
+
+- Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
+
+> 5. 🤔How many users received emails with the term “vaccine” in the subject?
+
+## Tracking Down a Click: OutboundBrowsing Data
+
+When employees at Envolve Labs browse to a website from within the corporate network, that browsing activity is logged. This is stored in the OutboundBrowsing table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the Employees table to figure out who browsed a particular website.  
+
+If we want to figure out what websites Annie Jackson visited, we can find her IP address from the Employees table.
+
+```kusto 
+Employees
+| where name == "Annie Jackson"
+```
+
+The query above tells us her IP address is “192.168.3.168”. We can take her IP address and look in the OutboundBrowsing table to determine what websites she visited. 
+
+```kusto
+OutboundBrowsing
+| where src_ip == "192.168.3.168"
+```
+
+> 6. 🤔How many unique websites did “Keith Mitchell” visit?
