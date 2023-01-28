@@ -15,6 +15,7 @@ After completing this module, you should be able to:
 - Apply KQL fundamentals to answer targeted questions using data
 - Pivot across multiple datasets
 
+
 ## Legend
 
 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understand of key cybersecurity ideas that are demonstrated in the game. 
@@ -201,3 +202,59 @@ OutboundBrowsing
 ```
 
 > 6. 🤔How many unique websites did “Keith Mitchell” visit?
+
+## What’s in a Name? All about Passive DNS Data
+
+Although domain names like “google.com” are easy for humans to remember, computers don’t know how to handle them. So, they convert them to machine readable IP addresses. Just like your home address tells your friends how to find your house or apartment, an IP address tells your computer where to find a page or service hosted on the internet.
+ 
+> 🎯Key Point – Practice Good OPSEC: If we want to find out which IP address a particular domain resolves to, we could just browse to it. But, if the domain is a malicious one, you could download malicious files to your corporate analysis system or tip off the attackers that you know about their infrastructure. As cybersecurity analysts, we must follow procedures and safeguards that protect our ability to track threats. These practices are generally called operational security, or OPSEC.
+
+To eliminate the need to actively resolve (that is- directly browse to or interact with a domain to find it’s related IP address) every domain we’re interested in, we can rely on passive DNS data. Passive DNS data allows us to safely explore domain-to-IP relationships, so we can answer questions like:
+
+- Which IP address does this domain resolve to?
+- Which domains are hosted on this IP address?
+- How many other IPs have this domain resolved to?
+
+These domain-to-IP relationships are stored in our PassiveDns table. 
+
+> 7. 🤔 How many domains in the PassiveDns records contain the word “vaccine”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+
+> 8. 🤔 What IPs did the domain “biotechenvolv.science” resolve to?
+
+## 🤯Let statements – making your life a bit easier:
+
+Sometimes we need to use the output of one query as the input for a second query.  The first way we can do this is by manually typing the results into next query.
+
+For example, what if we want to look at all the web browsing activity from employees named “Linda”?
+
+First, you would need to go into the Employees table and find the IP addresses used by these employees.
+
+![let statement-part 1](let_pic1.png)
+
+Then, you could manually copy and paste these IPs into a query against the OutboundBrowsing table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list.
+
+![let statement-part 2](let_pic2.png)
+
+Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “Linda.”
+
+We can accomplish this in a more elegant way by using a let statement, which allows us to assign a name to an expression or a function. We can use a let statement here to save and give a name to the results of the first query so that the values can be re-used later. That means we don’t have to manually type or copy and paste the results repeatedly.
+
+![let statement-part 3](let_pic3.png)
+
+On the left of the let statement is the variable name (“linda_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing. 
+
+![let statement-part 4](let_pic4.png)
+
+On the right side of the let statement in the expression you are storing. In this case, we use the distinct operator to select values from only one column – so they are stored in an array – or list of values. 
+
+![let statement-part 5](let_pic5.png)
+
+The let statement is concluded by a semi-colon.
+
+![let statement-part 6](let_pic6.png)
+
+After we store the value of a query into a variable using the let statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your let statement. 
+
+> 9. 🤔 How many unique URLs were browsed by employees named “Karen”?
+
+> 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundBrowsing. 
