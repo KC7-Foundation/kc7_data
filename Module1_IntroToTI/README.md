@@ -74,5 +74,38 @@ We currently have eight types of log data. As you’ll see in ADX, each log type
 | **ProcessEvents**         | Records processes created on employee’s devices                                                                            |
 | **PassiveDns (External)** | Records IP-domain resolutions           
 
-
 > 🎯**Key Point – Over the Horizon (OTH) data:** One of the tables listed above is not like the others – PassiveDns. Rather than being an internal security log, PassiveDns is a data source that we’ve purchased from a 3rd party vendor. Not all malicious cyber activity happens within our company network, so sometimes we depend on data from other sources to complete our investigations.
+
+You’ll learn more about how to use each of these datasets in just a minute. First, let’s just run some queries so you can practice using KQL and ADX.
+
+# KQL 101
+
+Type the following query in the workspace to view the first rows in the Employees table. Press “run” or “shift + enter” to execute the query.
+
+```kusto
+Employees
+| take 10
+```
+[Run this query in ADX](https://dataexplorer.azure.com/clusters/mstictraining.eastus/databases/SecurityLogs?query=H4sIAAAAAAAAA3PNLcjJr0xNLeblqlEoScxOVTA0AADuIW0/FAAAAA==)
+
+This query has a few parts. Let’s take a moment to break each of them down:
+
+![breakdown of parts of a query](take10_query_parts.png)
+
+| **Query Component**    | **Description**                                                                                                                                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Table name**         | The table name specifies which table/data source the query will pull data from. All queries must start with a table.                                                                                                                                                                             |
+| **Pipe character (\|)** | The pipe character indicates the start of a new part of the query. A pipe will be added automatically after typing a table name and pressing enter. You can also add a pipe character manually by holding shift and pressing the backslash key. That’s the one just below the backspace key. |
+| **Operator**           | The operator tells the query what exactly you want to do. The first operator you’ve learned is take, which simply _takes_ a given number of rows and shows you the data there.
+
+You’ll learn and practice using more operators soon!
+
+The `take` operator is a powerful tool you can use to explore rows in a table, and therefore better understand what kinds of data are stored there.
+
+>**🎯Key Point – What to do when you don’t know what to do:** Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the `take` operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
+
+The `Employees` table contains information about all the employees in our organization. In this case, we can see that the organization is named _“Envolve Labs”_ and the domain is _“envolvelabs.com”_.
+
+> 1. 🤔 Try it for yourself! Do a `take 10` on all the other tables to see what kind of data they contain.
+
+You can easily write multiple queries in the same workspace tab. To do this, make sure to separate each query by an empty line. Notice below how we have separated the queries for the Employees, Email, and OutboundBrowsing tables by empty lines on lines 3 and 6.
