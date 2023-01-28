@@ -46,7 +46,7 @@ Data in ADX is organized in a hierarchical structure which consists of clusters,
 
 ![cluster hierarchy](cluster_hierarchy.png)
 
-🚨**IMPORTANT NOTE**: For this module, make sure you've selected the _SecurityLogs_ database. You should see the database highlighted in blue when you've selected it.
+>🚨**IMPORTANT NOTE**: For this module, make sure you've selected the _SecurityLogs_ database. You should see the database highlighted in blue when you've selected it.
 
 ![select SecurityLogs database](SecurityLogs_db.png)
 
