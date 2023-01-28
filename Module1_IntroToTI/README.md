@@ -28,7 +28,7 @@ After completing this module, you should be able to:
 
 Welcome to Envolve Labs Corporation! 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Envolve Labs and its employees from malicious cyber actors. 
 
-![Envolve Labs Logo](envolve_logo.png)
+![Envolve Labs Logo](images/envolve_logo.png)
 
 Envolve Labs is a med-tech startup based in the United States that was founded in 2012. Our mission is to develop a new type of flexible vaccine technology that covers many different viral strains and offers long-lasting immunity (which means no more boosters!) Our initial research has proven this technology is highly effective – we’re planning to start production in Q1 2023. 
 
@@ -44,15 +44,15 @@ ADX is the primary tool used in the Envolve Labs SOC for data exploration and an
 
 Data in ADX is organized in a hierarchical structure which consists of clusters, databases, and tables. All of Envolve Labs’s security logs are stored in a single cluster.
 
-![cluster hierarchy](cluster_hierarchy.png)
+![cluster hierarchy](images/cluster_hierarchy.png)
 
 >🚨**IMPORTANT NOTE**: For this module, make sure you've selected the _SecurityLogs_ database. You should see the database highlighted in blue when you've selected it.
 
-![select SecurityLogs database](SecurityLogs_db.png)
+![select SecurityLogs database](images/SecurityLogs_db.png)
 
 The big blank space to the right of your cluster list is the query workspace. That’s where you’ll actually write the queries used to interact with our log data. 
 
-![ADX query workspace](query_workspace.png)
+![ADX query workspace](images/query_workspace.png)
 
 Okay, enough introductions… let’s get your hands on the data.
 
@@ -91,7 +91,7 @@ Employees
 
 This query has a few parts. Let’s take a moment to break each of them down:
 
-![breakdown of parts of a query](take10_query_parts.png)
+![breakdown of parts of a query](images/take10_query_parts.png)
 
 | **Query Component**    | **Description**                                                                                                                                                                                                                                                                                  |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -111,7 +111,7 @@ The `Employees` table contains information about all the employees in our organi
 
 You can easily write multiple queries in the same workspace tab. To do this, make sure to separate each query by an empty line. Notice below how we have separated the queries for the Employees, Email, and OutboundBrowsing tables by empty lines on lines 3 and 6.
 
-![multiple queries in ADX](multiple_queries.jpg)
+![multiple queries in ADX](images/multiple_queries.jpg)
 
 When you have multiple queries, it’s important to tell ADX which query you want to run. To choose a query, just click on any line that is part of that query. Once you’ve selected a query, it will be highlighted in blue, as seen on lines 4 and 5 above.
 
@@ -136,7 +136,7 @@ We can use the where operator in KQL to apply filters to a particular field. For
 
 `where` statements are written using a particular structure. Use this helpful chart below to understand how to structure a `where` statement.
 
-![structure of a where statement](where_statement_structure.png)
+![structure of a where statement](images/where_statement_structure.png)
 
 ```kusto
 Employees
@@ -171,7 +171,7 @@ Email
 
 We can use the distinct operator to find unique values in a particular column. We can use the following query to determine how many of the organization’s users sent emails.
 
-![distinct query breakdown](distinct.png)
+![distinct query breakdown](images/distinct.png)
 
 This is our first time using a multi-line query with multiple operators, so let’s break it down:
 
@@ -229,29 +229,29 @@ For example, what if we want to look at all the web browsing activity from emplo
 
 First, you would need to go into the Employees table and find the IP addresses used by these employees.
 
-![let statement-part 1](let_pic1.png)
+![let statement-part 1](images/let_pic1.png)
 
 Then, you could manually copy and paste these IPs into a query against the OutboundBrowsing table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list.
 
-![let statement-part 2](let_pic2.png)
+![let statement-part 2](images/let_pic2.png)
 
 Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “Linda.”
 
 We can accomplish this in a more elegant way by using a let statement, which allows us to assign a name to an expression or a function. We can use a let statement here to save and give a name to the results of the first query so that the values can be re-used later. That means we don’t have to manually type or copy and paste the results repeatedly.
 
-![let statement-part 3](let_pic3.png)
+![let statement-part 3](images/let_pic3.png)
 
 On the left of the let statement is the variable name (“linda_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing. 
 
-![let statement-part 4](let_pic4.png)
+![let statement-part 4](images/let_pic4.png)
 
 On the right side of the let statement in the expression you are storing. In this case, we use the distinct operator to select values from only one column – so they are stored in an array – or list of values. 
 
-![let statement-part 5](let_pic5.png)
+![let statement-part 5](images/let_pic5.png)
 
 The let statement is concluded by a semi-colon.
 
-![let statement-part 6](let_pic6.png)
+![let statement-part 6](images/let_pic6.png)
 
 After we store the value of a query into a variable using the let statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your let statement. 
 
