@@ -1,412 +1,412 @@
 [
   {
-    "Name": 1,
+    "Name": "Question 1",
     "Value": 10,
     "Description": "Try it for yourself! Do a take 10 on all the other tables to see what kind of data they contain. (Type ‘done’ when you are finished!)",
     "Answer": "done",
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 2,
+    "Name": "Question 2",
     "Value": 10,
     "Description": "How many employees are in the company?",
     "Answer": "1000;1000",
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 3,
+    "Name": "Question 3",
     "Value": 10,
     "Description": "Each employee at The Krusty Krab is assigned an IP address. Which employee has the IP address: “192.168.2.184”? (What is their name?)",
     "Answer": "Julia Snyder",
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 4,
+    "Name": "Question 4",
     "Value": 10,
     "Description": "How many emails did Roy Warren receive?",
     "Answer": 17,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 5,
+    "Name": "Question 5",
     "Value": 10,
     "Description": "How many users received emails with the term “custard” in the subject?",
     "Answer": 105,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 6,
+    "Name": "Question 6",
     "Value": 10,
     "Description": "How many unique websites did “Marcos Cohen” visit?",
     "Answer": 27,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 7,
+    "Name": "Question 7",
     "Value": 10,
     "Description": "How many domains in the PassiveDNS records contain the word “jellyfish”? (Hint: use the contains operator instead of has. If you get stuck do a take 10 on the table to see what fields are available.)",
     "Answer": 10,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 8,
+    "Name": "Question 8",
     "Value": 10,
     "Description": "How many IPs has the domain “genius.pizza” resolved to?",
     "Answer": 3,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 9,
+    "Name": "Question 9",
     "Value": 10,
     "Description": "How many unique URLs were browsed by employees named “Michelle?”",
     "Answer": 68,
     "Category": "1. 🎓  KQL 101"
   },
   {
-    "Name": 1,
+    "Name": "Question 1",
     "Value": 20,
     "Description": "How many users in our organization were sent emails containing the domain chum.net?",
     "Answer": 2,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 2,
+    "Name": "Question 2",
     "Value": 20,
     "Description": "One of the employees who was targeted has a 'y' in their name. Who is this employee?",
     "Answer": "Jorge Payne",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 3,
+    "Name": "Question 3",
     "Value": 20,
     "Description": "How many of the emails containing chum.net were blocked? (hint: the “accepted” field in the Email table tells you whether or not the email was blocked. Blocked emails will show as false).",
     "Answer": 0,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 4,
+    "Name": "Question 4",
     "Value": 20,
     "Description": "How many unique IP addresses does chum.org resolve to?",
     "Answer": 2,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 5,
+    "Name": "Question 5",
     "Value": 20,
     "Description": "How many unique IP addresses does fun.com resolve to?",
     "Answer": 3,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 6,
+    "Name": "Question 6",
     "Value": 20,
     "Description": "How many unique IP addresses does genius.org resolve to?",
     "Answer": 1,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 7,
+    "Name": "Question 7",
     "Value": 20,
     "Description": "How many unique domains does IP 43.243.201.76 host?",
     "Answer": 5,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 8,
+    "Name": "Question 8",
     "Value": 20,
     "Description": "How many unique domains does IP 101.143.139.17 host?",
     "Answer": 2,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 9,
+    "Name": "Question 9",
     "Value": 30,
     "Description": "How many “.net” domains resolve to IP 192.224.255.208? (hint: you can use the in operator to check for multiple values in a field. E.g. | where field in (“x” “y” “z”)",
     "Answer": 1,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 10,
+    "Name": "Question 10",
     "Value": 30,
     "Description": "How many \".com\" domains resolve to IP 43.243.201.76?",
     "Answer": 1,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 11,
+    "Name": "Question 11",
     "Value": 30,
     "Description": "Which \".pizza\" domain resolved to the same IP as fun.com",
     "Answer": "genius.pizza;jellyfish-genius.pizza",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 12,
+    "Name": "Question 12",
     "Value": 30,
     "Description": "Which \".net\" domain resolved to the same IP as chum-fun.food",
     "Answer": "domination-waits.net",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 13,
+    "Name": "Question 13",
     "Value": 30,
     "Description": "How many email addresses did the hackers use to send these domains (the .net domains you found in question #23)?",
     "Answer": "sheldon.computerwife@aol.com",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 14,
+    "Name": "Question 14",
     "Value": 35,
     "Description": "How many of these emails had mismatched sender and reply-to addresses? (You can use the != operators to check if two things are not the same)",
     "Answer": 1,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 15,
+    "Name": "Question 15",
     "Value": 20,
     "Description": "How many users clicked on a link containing the domain \"fun.com\"?",
     "Answer": 2,
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 16,
+    "Name": "Question 16",
     "Value": 20,
     "Description": "What was the timestamp of the first employee that clicked on a phishing link containing the domain \"fun.com\"?",
     "Answer": "2022-01-28 10:42:32",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 17,
+    "Name": "Question 17",
     "Value": 30,
     "Description": "What was the first domain sent by \"krabbs@yandex.com\"? (Hint: You can click on the event_time column header to sort the rows by time. Then find the link for the email that was sent first.)",
     "Answer": "karen-domination.org",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 18,
+    "Name": "Question 18",
     "Value": 30,
     "Description": "What was the first email address used to send an email containing a link to \"picket.pizza\"?",
     "Answer": "krabbs.eugene@yandex.com",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 19,
+    "Name": "Question 19",
     "Value": 20,
     "Description": "Which email address was used to send a link to \"bucketdomination.com\"?",
     "Answer": "sheldon.computerwife@aol.com",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 20,
+    "Name": "Question 20",
     "Value": 40,
     "Description": "Based on the data you've seen (email addresses domains and subject lines) which SpongeBob character do you believe is responsible for the malicious activity targeting the Krusty Krab?",
     "Answer": "plankton;sheldon plankton;chum bucket;the chum bucket",
     "Category": "2. 🥷  Let's Find the Hackers"
   },
   {
-    "Name": 1,
+    "Name": "Question 1",
     "Value": 10,
     "Description": "How many lab technicians work at EnvolveLabs?",
     "Answer": 132,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 2,
+    "Name": "Question 2",
     "Value": 10,
     "Description": "What is Ken Hawkins' hostname?",
     "Answer": "4GAU-LAPTOP",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 3,
+    "Name": "Question 3",
     "Value": 20,
     "Description": "A user received an email with the subject \"ALERT: Your password has expired and needs to be reset\". Who was the email sent by?",
     "Answer": "alert_helpdesk@protonmail.com",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 4,
+    "Name": "Question 4",
     "Value": 20,
     "Description": "How many unique domains were sent by the sender alert_helpdesk@protonmail.com?",
     "Answer": 12,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 5,
+    "Name": "Question 5",
     "Value": 20,
     "Description": "How many users clicked on links sent by alert_helpdesk@protonmail.com?",
     "Answer": 10,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 6,
+    "Name": "Question 6",
     "Value": 20,
     "Description": "When did \"Deirdre Greenwood\" click on the link sent by \"alert_helpdesk@protonmail.com\"? (Hint: Copy and paste the exact timestamp you see in ADX)",
     "Answer": "2022-02-01 8:09:25",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 7,
+    "Name": "Question 7",
     "Value": 10,
     "Description": "What is Deirdre Greenwood's username?",
     "Answer": "degreenwood",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 8,
+    "Name": "Question 8",
     "Value": 40,
     "Description": "What adversary (bad actor) IP was used to login to Deirdre Greenwood's account?",
     "Answer": "165.97.147.243",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 9,
+    "Name": "Question 9",
     "Value": 20,
     "Description": "Did the actor manage to steal (exfiltrate) the contents of Deirdre’s account (via the same IP)?",
     "Answer": "no",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 10,
+    "Name": "Question 10",
     "Value": 30,
     "Description": "How many unique email accounts did the IP above log into? (the IP identified in question 8)",
     "Answer": 35,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 11,
+    "Name": "Question 11",
     "Value": 30,
     "Description": "The actors (via the same IP identified in question 8) tried to steal the email contents of this many users.",
     "Answer": 22,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 12,
+    "Name": "Question 12",
     "Value": 30,
     "Description": "How many email addresses sent emails with the same subject as \"alert_helpdesk@protonmail.com\"?",
     "Answer": 5,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 13,
+    "Name": "Question 13",
     "Value": 30,
     "Description": "How many unique links were sent by the senders above?",
     "Answer": 45,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 14,
+    "Name": "Question 14",
     "Value": 70,
     "Description": "On March 2nd 2022 Troy Gibbons observed a suspicious login to his account. What was the subject of the email that led to this compromise?",
     "Answer": "Envolvelabs research opportunity",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 15,
+    "Name": "Question 15",
     "Value": 30,
     "Description": "The subject above (from question 14) was sent by this many unique email senders.",
     "Answer": 4,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 16,
+    "Name": "Question 16",
     "Value": 40,
     "Description": "Of the emails with this subject how many of them had spoofed senders?",
     "Answer": 18,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 17,
+    "Name": "Question 17",
     "Value": 30,
     "Description": "How many emails sent by \"pandemic@qq.com\" have links to file downloads?",
     "Answer": 3,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 18,
+    "Name": "Question 18",
     "Value": 50,
     "Description": "The domains “flashback.info” and “securityaccredits.site” are linked together by one common indicator of compromise (IOC). What is that common IOC? (Hint: IOCs can be email addresses IP addresses domain or subject)",
     "Answer": "reset_info@gmail.com",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 19,
+    "Name": "Question 19",
     "Value": 100,
     "Description": "Juan Carrington was targeted with an email from cdc@hotmail.com. How many minutes elapsed between when he was sent the phishing email and when he clicked the link? (Hint: Round down to the nearest whole number of minutes)",
     "Answer": 2,
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 20,
+    "Name": "Question 20",
     "Value": 40,
     "Description": "One employee had their account compromised by the attackers at 2022-01-04 09:47:57.770149. Who was this employee (their name)?",
     "Answer": "Beth Vinci",
     "Category": "3. 🚀  Final Challenge"
   },
   {
-    "Name": 1,
+    "Name": "Question 1",
     "Value": 10,
     "Description": "What day of the week is it?",
     "Answer": "Monday",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 2,
+    "Name": "Question 2",
     "Value": 10,
     "Description": "What is 1+1?",
     "Answer": 2,
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 3,
+    "Name": "Question 3",
     "Value": 20,
     "Description": "What is the name of this game?",
     "Answer": "KC7",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 4,
+    "Name": "Question 4",
     "Value": 40,
     "Description": "What is the name of Iranian threat actor associated with the file hash 03d0e7ad4c12273a42e4c95d854408b98b0cf5ecf5f8c5ce05b24729b6f4e369? (Hint Its a cat)",
     "Answer": "Charming Kitten",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 5,
+    "Name": "Question 5",
     "Value": 40,
     "Description": "This individual nicknamed “Hutch” was one of the co-authors of the Lockheed Martin Cyber Kill Chain white paper",
     "Answer": "Eric Hutchins",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 6,
+    "Name": "Question 6",
     "Value": 50,
     "Description": "Microsoft assesses that this technology company is front company for Iranian advanced persistent threat group DEV-0270/PHOSPHORUS",
     "Answer": "Najee Technology Hooshmand",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 7,
+    "Name": "Question 7",
     "Value": 50,
     "Description": "A North Korea-based threat actor group nearly made off with $1B in a cryptocurrency heist in mid-2021. What is the name of this actor group?",
     "Answer": "Lazarus",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 8,
+    "Name": "Question 8",
     "Value": 50,
     "Description": "The 2014 hack of Sony Pictures Entertainment was conducted to discourage the release this movie that satirizes North Korean leader Kim Jong Un",
     "Answer": "The Interview",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 9,
+    "Name": "Question 9",
     "Value": "",
     "Description": "What is the second phase of the Cyber Kill Chain",
     "Answer": "Weaponization",
     "Category": "4. 💡Misc Challenge"
   },
   {
-    "Name": 10,
+    "Name": "Question 10",
     "Value": 30,
     "Description": "What university did Greg Attend?",
     "Answer": "uk;university of kentucky;the university of kentucky",
