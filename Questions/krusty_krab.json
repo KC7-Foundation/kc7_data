@@ -11,56 +11,56 @@
     "Value": 10,
     "Description": "How many employees are in the company?",
     "Answer": "1000;1000",
-    "Category": "🎓 KQL 102"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 3",
     "Value": 10,
     "Description": "Each employee at The Krusty Krab is assigned an IP address. Which employee has the IP address: “192.168.2.184”? (What is their name?)",
     "Answer": "Julia Snyder",
-    "Category": "🎓 KQL 103"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 4",
     "Value": 10,
     "Description": "How many emails did Roy Warren receive?",
     "Answer": 17,
-    "Category": "🎓 KQL 104"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 5",
     "Value": 10,
     "Description": "How many users received emails with the term “custard” in the subject?",
     "Answer": 105,
-    "Category": "🎓 KQL 105"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 6",
     "Value": 10,
     "Description": "How many unique websites did “Marcos Cohen” visit?",
     "Answer": 27,
-    "Category": "🎓 KQL 106"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 7",
     "Value": 10,
     "Description": "How many domains in the PassiveDNS records contain the word “jellyfish”? (Hint: use the contains operator instead of has. If you get stuck do a take 10 on the table to see what fields are available.)",
     "Answer": 10,
-    "Category": "🎓 KQL 107"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 8",
     "Value": 10,
     "Description": "How many IPs has the domain “genius.pizza” resolved to?",
     "Answer": 3,
-    "Category": "🎓 KQL 108"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 9",
     "Value": 10,
     "Description": "How many unique URLs were browsed by employees named “Michelle?”",
     "Answer": 68,
-    "Category": "🎓 KQL 109"
+    "Category": "🎓 KQL 101"
   },
   {
     "Name": "Question 1",
