@@ -1,0 +1,254 @@
+[
+  {
+    "Name": "Question 1",
+    "Value": 10,
+    "Description": "Try a \"take 10\" on all of the tables. Enter \"done\" when finished to earn 10 points!",
+    "Answer": "done",
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 2",
+    "Value": 20,
+    "Description": "How many employees are in the company?",
+    "Answer": 1000,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 3",
+    "Value": 20,
+    "Description": "Each employee at Envolve Labs is assigned an IP address. Which employee has the IP address: “192.168.0.191”?",
+    "Answer": "James Sedgwick",
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 4",
+    "Value": 20,
+    "Description": "How many emails did Betty Parrish receive?",
+    "Answer": 12,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 5",
+    "Value": 20,
+    "Description": "How many users received emails with the term “vaccine” in the subject?",
+    "Answer": 760,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 6",
+    "Value": 20,
+    "Description": "How many unique websites did “Keith Mitchell” visit?",
+    "Answer": 3,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 7",
+    "Value": 25,
+    "Description": "How many domains in the PassiveDns records contain the word “vaccine”?",
+    "Answer": 5,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 8",
+    "Value": 25,
+    "Description": "What IPs did the domain “biotechenvolv.science” resolve to?",
+    "Answer": "186.39.204.74;211.174.194.111",
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 9",
+    "Value": 30,
+    "Description": "How many unique URLs were browsed by employees named “Karen”?",
+    "Answer": 50,
+    "Category": "Section 1 - KQL 101"
+  },
+  {
+    "Name": "Question 1",
+    "Value": 20,
+    "Description": "Which user has the file named “ResearchBibliographyGenerator.zip” on their machine?",
+    "Answer": "Terry Simpson",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 2",
+    "Value": 25,
+    "Description": "When did the user from question 1 download “ResearchBibliographyGenerator.zip”? (paste the exact timestamp)",
+    "Answer": "24:12.3",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3",
+    "Value": 25,
+    "Description": "What domain did the user download the file from?",
+    "Answer": "disarm-remarkable.science",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3a",
+    "Value": 30,
+    "Description": "What was the subject of the email in (3)?",
+    "Answer": "Research opportunties! Apply today",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3b",
+    "Value": 30,
+    "Description": "Who was the email in (3) sent by?",
+    "Answer": "john-n-johnmoderno@yahoo.com",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3c",
+    "Value": 30,
+    "Description": "What other domains were delivered via links in emails with the same subjects as the email in (3)?",
+    "Answer": "deprived.tech",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3d",
+    "Value": 30,
+    "Description": "What “interview” themed subject was sent by an actor-controlled email address associated with the email in (3)?",
+    "Answer": "Interview Request - Recent research article",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 3e",
+    "Value": 35,
+    "Description": "Which “fda” themed email address sent an email with the subject from (3d)?",
+    "Answer": "pfizar.fda@hotmail.com",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 4",
+    "Value": 35,
+    "Description": "What other “.science” domain is closely associated via Passive DNS to this cluster of activity and the domain used to deliver “ResearchBibliographyGenerator.zip”?",
+    "Answer": "vaccine.science",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 5",
+    "Value": 30,
+    "Description": "Which .dll file was dropped on the victim machine shortly after the user downloaded the zip: ResearchBibliographyGenerator.zip",
+    "Answer": "updater.dll",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 5a",
+    "Value": 50,
+    "Description": "The dll file from (5) is observed on Virustotal under what file name?",
+    "Answer": "S4ZD8JVW.dat",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 5b",
+    "Value": 30,
+    "Description": "Which six letter reconnaissance command was executed on the Machine of the user that loaded the implant from (5)?",
+    "Answer": "whoami",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 5c",
+    "Value": 30,
+    "Description": "What IP address does the dll from (5) beacon to?",
+    "Answer": "199.57.49.250",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 6",
+    "Value": 30,
+    "Description": "What is the domain name of the legitimate service the adversary used to exfiltrate data from the victim machine?",
+    "Answer": "pastebin.com",
+    "Category": "Section 2 - Clustering and attribution"
+  },
+  {
+    "Name": "Question 1a",
+    "Value": 10,
+    "Description": "How many emails contained the domain clan[.]io?",
+    "Answer": 2,
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 1b",
+    "Value": 10,
+    "Description": "What email address sent the domain clan[.]io?",
+    "Answer": "gaara@qq.com",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 1c",
+    "Value": 10,
+    "Description": "What was the subject line of the emails containing the domain clan[.]io?",
+    "Answer": "50% discount on Naruto anime this weekend",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 1d",
+    "Value": 20,
+    "Description": "What is the name of the user who clicked on the clan[.]io link?",
+    "Answer": "Erica Wilson",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 2a",
+    "Value": 20,
+    "Description": "What actor IP was used to compromise the account of the user identified in (1d)?",
+    "Answer": "223.80.243.56",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 2b",
+    "Value": 20,
+    "Description": "How many accounts did the actor compromise using the IP identified in (2)?",
+    "Answer": 17,
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 3",
+    "Value": 30,
+    "Description": "What .info domain shared IPs with domain clan[.]io?",
+    "Answer": "arbiters-tail.info",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 4a",
+    "Value": 30,
+    "Description": "Which password (hash) was used in failed login attempts against 40 unique accounts?",
+    "Answer": "1a594fcbac606f03bea639dd3fdba026",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 4b",
+    "Value": 30,
+    "Description": "What user-agent was used in the authentications attempts involving the password hash above?",
+    "Answer": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 Firefox/69.0",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 4c",
+    "Value": 40,
+    "Description": "The login activity exhibited by the user agent above is an example of this attack (2 words)?",
+    "Answer": "password spray",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 5",
+    "Value": 40,
+    "Description": "The IPs associated via PassiveDNS with domain swindled.bio was searching for this term on the company website (2 words)",
+    "Answer": "research priorities",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 6",
+    "Value": 50,
+    "Description": "One user was targeted at 21:52 on 2022-01-07 from the IP identified in (5)? Which actor domain was used to initially target this user via phishing?",
+    "Answer": "activists.tk",
+    "Category": "Section 3 - Phishing and more"
+  },
+  {
+    "Name": "Question 7",
+    "Value": 50,
+    "Description": "Who was the IT associate targeted using the domain identified in (12)? (enter the user's name, not their email)",
+    "Answer": "Blake Welsh",
+    "Category": "Section 3 - Phishing and more"
+  }
+]
