@@ -1,7 +1,7 @@
 [
     {
-        "name": "1. Envolvelabs - Clustering and Attribution",
-        "path": "questions.json"
+        "name": "1. Krusty Krab - Intro to security",
+        "path": "krusty_krab.json"
     },{
         "name": "2. Envolvelabs - Clustering and Attribution",
         "path": "evolvelabs_1.json"
