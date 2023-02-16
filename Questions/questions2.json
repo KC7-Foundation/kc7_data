@@ -5,5 +5,8 @@
     },{
         "name": "2. Envolvelabs - Clustering and Attribution",
         "path": "evolvelabs_1.json"
+    },{
+        "name": "3. Envolvelabs - Analysis",
+        "path": "evolveLabs_analysis.json"
     }
 ]
