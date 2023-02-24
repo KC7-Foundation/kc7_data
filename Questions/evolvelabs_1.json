@@ -2,253 +2,365 @@
   {
     "Name": "Question 1",
     "Value": 10,
-    "Description": "Try a \"take 10\" on all of the tables. Enter \"done\" when finished to earn 10 points!",
+    "Description": "Do a take 10 on all the other tables to see what kind of data they contain. Answer: \"done",
     "Answer": "done",
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 2",
-    "Value": 20,
+    "Value": 10,
     "Description": "How many employees are in the company?",
     "Answer": 1000,
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 3",
-    "Value": 20,
-    "Description": "Each employee at Envolve Labs is assigned an IP address. Which employee has the IP address: “192.168.0.191”?",
+    "Value": 10,
+    "Description": "Each employee at Envolve Labs is assigned an IP address. Which employee (name) has the IP address: “192.168.0.191”?",
     "Answer": "James Sedgwick",
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 4",
-    "Value": 20,
+    "Value": 10,
     "Description": "How many emails did Betty Parrish receive?",
     "Answer": 12,
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 5",
-    "Value": 20,
-    "Description": "How many users received emails with the term “vaccine” in the subject?",
-    "Answer": 760,
-    "Category": "Section 1 - KQL 101"
+    "Value": 10,
+    "Description": "How many EnvolveLabs Employees received emails with the exact term “vaccine” in the subject?",
+    "Answer": 325,
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 6",
-    "Value": 20,
+    "Value": 10,
     "Description": "How many unique websites did “Keith Mitchell” visit?",
     "Answer": 3,
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 7",
-    "Value": 25,
-    "Description": "How many domains in the PassiveDns records contain the word “vaccine”?",
+    "Value": 10,
+    "Description": "How many domains in the PassiveDns records contain the word “vaccine”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)",
     "Answer": 5,
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 8",
-    "Value": 25,
-    "Description": "What IPs did the domain “biotechenvolv.science” resolve to?",
-    "Answer": "186.39.204.74;211.174.194.111",
-    "Category": "Section 1 - KQL 101"
+    "Value": 10,
+    "Description": "What IPs did the domain “biotechenvolv.science” resolve to? (enter any of them)",
+    "Answer": "211.174.194.111;186.39.204.74",
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 9",
-    "Value": 30,
+    "Value": 10,
     "Description": "How many unique URLs were browsed by employees named “Karen”?",
     "Answer": 50,
-    "Category": "Section 1 - KQL 101"
+    "Category": "1. Intro to KQL"
   },
   {
     "Name": "Question 1",
     "Value": 20,
-    "Description": "Which user has the file named “ResearchBibliographyGenerator.zip” on their machine?",
-    "Answer": "Terry Simpson",
-    "Category": "Section 2 - Clustering and attribution"
+    "Description": "How many users in our organization were sent emails containing the domain immune.tech?",
+    "Answer": 3,
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 2",
-    "Value": 25,
-    "Description": "When did the user from question 1 download “ResearchBibliographyGenerator.zip”? (paste the exact timestamp)",
-    "Answer": "2022-01-07 13:24:12.328613",
-    "Category": "Section 2 - Clustering and attribution"
+    "Value": 30,
+    "Description": "Did we block any of the emails containing that domain? (yes or no)",
+    "Answer": "no",
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 3",
-    "Value": 25,
-    "Description": "What domain did the user download the file from?",
-    "Answer": "disarm-remarkable.science",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 3a",
-    "Value": 30,
-    "Description": "What was the subject of the email in (3)?",
-    "Answer": "Research opportunties! Apply today",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 3b",
-    "Value": 30,
-    "Description": "Who was the email in (3) sent by?",
-    "Answer": "john-n-johnmoderno@yahoo.com",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 3c",
-    "Value": 30,
-    "Description": "What other domains were delivered via links in emails with the same subjects as the email in (3)?",
-    "Answer": "deprived.tech",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 3d",
-    "Value": 30,
-    "Description": "What “interview” themed subject was sent by an actor-controlled email address associated with the email in (3)?",
-    "Answer": "Interview Request - Recent research article",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 3e",
-    "Value": 35,
-    "Description": "Which “fda” themed email address sent an email with the subject from (3d)?",
-    "Answer": "pfizar.fda@hotmail.com",
-    "Category": "Section 2 - Clustering and attribution"
+    "Value": 40,
+    "Description": "What email address was used to the send emails with the domain immune.tech?",
+    "Answer": "vaccinepfizar@gmail.com",
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 4",
-    "Value": 35,
-    "Description": "What other “.science” domain is closely associated via Passive DNS to this cluster of activity and the domain used to deliver “ResearchBibliographyGenerator.zip”?",
-    "Answer": "vaccine.science",
-    "Category": "Section 2 - Clustering and attribution"
+    "Value": 20,
+    "Description": "What was the reply-to address on the emails containing the domain immune.tech?",
+    "Answer": "pandemicmedical@yandex.com",
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 5",
     "Value": 30,
-    "Description": "Which .dll file was dropped on the victim machine shortly after the user downloaded the zip: ResearchBibliographyGenerator.zip",
-    "Answer": "updater.dll",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 5a",
-    "Value": 50,
-    "Description": "The dll file from (5) is observed on Virustotal under what file name?",
-    "Answer": "S4ZD8JVW.dat",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 5b",
-    "Value": 30,
-    "Description": "Which six letter reconnaissance command was executed on the Machine of the user that loaded the implant from (5)?",
-    "Answer": "whoami",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 5c",
-    "Value": 30,
-    "Description": "What IP address does the dll from (5) beacon to?",
-    "Answer": "199.57.49.250",
-    "Category": "Section 2 - Clustering and attribution"
+    "Description": "What is the name of the user who clicked on the link email in (4) ?",
+    "Answer": "Marissa Stephens",
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 6",
     "Value": 30,
-    "Description": "What is the domain name of the legitimate service the adversary used to exfiltrate data from the victim machine?",
-    "Answer": "pastebin.com",
-    "Category": "Section 2 - Clustering and attribution"
-  },
-  {
-    "Name": "Question 1a",
-    "Value": 10,
-    "Description": "How many emails contained the domain clan[.]io?",
-    "Answer": 2,
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 1b",
-    "Value": 10,
-    "Description": "What email address sent the domain clan[.]io?",
-    "Answer": "gaara@qq.com",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 1c",
-    "Value": 10,
-    "Description": "What was the subject line of the emails containing the domain clan[.]io?",
-    "Answer": "50% discount on Naruto anime this weekend",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 1d",
-    "Value": 20,
-    "Description": "What is the name of the user who clicked on the clan[.]io link?",
-    "Answer": "Erica Wilson",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 2a",
-    "Value": 20,
-    "Description": "What actor IP was used to compromise the account of the user identified in (1d)?",
-    "Answer": "223.80.243.56",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 2b",
-    "Value": 20,
-    "Description": "How many accounts did the actor compromise using the IP identified in (2)?",
-    "Answer": 17,
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 3",
-    "Value": 30,
-    "Description": "What .info domain shared IPs with domain clan[.]io?",
-    "Answer": "arbiters-tail.info",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 4a",
-    "Value": 30,
-    "Description": "Which password (hash) was used in failed login attempts against 40 unique accounts?",
-    "Answer": "1a594fcbac606f03bea639dd3fdba026",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 4b",
-    "Value": 30,
-    "Description": "What user-agent was used in the authentications attempts involving the password hash above?",
-    "Answer": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 Firefox/69.0",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 4c",
-    "Value": 40,
-    "Description": "The login activity exhibited by the user agent above is an example of this attack (2 words)?",
-    "Answer": "password spray",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 5",
-    "Value": 40,
-    "Description": "The IPs associated via PassiveDNS with domain swindled.bio was searching for this term on the company website (2 words)",
-    "Answer": "research priorities",
-    "Category": "Section 3 - Phishing and more"
-  },
-  {
-    "Name": "Question 6",
-    "Value": 50,
-    "Description": "One user was targeted at 21:52 on 2022-01-07 from the IP identified in (5)? Which actor domain was used to initially target this user via phishing?",
-    "Answer": "activists.tk",
-    "Category": "Section 3 - Phishing and more"
+    "Description": "When did the user in (4) click on the link? (exact timestamp)",
+    "Answer": "2022-01-10 05:46:44.341648",
+    "Category": "2. Introducing the Hackers"
   },
   {
     "Name": "Question 7",
     "Value": 50,
-    "Description": "Who was the IT associate targeted using the domain identified in (12)? (enter the user's name, not their email)",
-    "Answer": "Blake Welsh",
-    "Category": "Section 3 - Phishing and more"
+    "Description": "What IP did the adversaries use to login to the user's account shortly after they clicked on the malicious link?",
+    "Answer": "88.150.11.111",
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 8",
+    "Value": 40,
+    "Description": "How many accounts was did the IP in question (7) used to login into?",
+    "Answer": 21,
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 9",
+    "Value": 50,
+    "Description": "The IP in question (7) exfiltrated data from the account of Brandon Harris using this gzip file",
+    "Answer": "important.gzip",
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 10",
+    "Value": 50,
+    "Description": "The IP in question (7) was used to perform reconnaissance on this three letter executive position on the EnvolveLabs website",
+    "Answer": "CEO",
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 11",
+    "Value": 100,
+    "Description": "The same adversary compromised the account of Geneva Manzanares. Which adversary email address did they receive the initial phishing email from?",
+    "Answer": "cdc@yandex.com",
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 12",
+    "Value": 30,
+    "Description": "How many emails were sent by the email sender in question (11)?",
+    "Answer": 12,
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 13",
+    "Value": 30,
+    "Description": "How many unique domains were sent by the email address in (13)?",
+    "Answer": 4,
+    "Category": "2. Introducing the Hackers"
+  },
+  {
+    "Name": "Question 1",
+    "Value": 10,
+    "Description": "How many emails contained the domain notice[.]io?",
+    "Answer": 3,
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 2",
+    "Value": 10,
+    "Description": "What email address sent the domain notice[.]io",
+    "Answer": "amelia_lozano@wesellbeakers.com",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 3",
+    "Value": 10,
+    "Description": "What was the subject line of the emails containing the domain notice[.]io?",
+    "Answer": "IMPORTANT: YOUR PASSWORD IS EXPIRING",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 4",
+    "Value": 20,
+    "Description": "What is the name of the user who clicked on the notice[.]io link?",
+    "Answer": "Jose Delagarza",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 5",
+    "Value": 20,
+    "Description": "At what timestamp did the user above download the file: \"Critical_Security_Path.docx\"?",
+    "Answer": "59:33.7",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 6",
+    "Value": 30,
+    "Description": "How many emails were sent to your organization on January 9th by users at wesellbeakers.com?",
+    "Answer": 31,
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 7",
+    "Value": 20,
+    "Description": "What other domains are hosted on the same IPs as notice[.]io? (submit any one of them)",
+    "Answer": "alert.com;verify.info",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 8",
+    "Value": 20,
+    "Description": "What email address is seen sending emails containing one of the domains identified in question 7?",
+    "Answer": "it@yandex.com",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 9",
+    "Value": 30,
+    "Description": "How many users downloaded the files observed in the emails from question 8?",
+    "Answer": 9,
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 10",
+    "Value": 40,
+    "Description": "One of the files observed in question 9 - IMPORTANT_INSTRUCTIONS.pptx - was seen in two separate emails. What are the subject lines of these emails?",
+    "Answer": "New heldesk procedures - READ NOW;RE: Purchase Order 12393",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 11",
+    "Value": 30,
+    "Description": "Which compromised pharmasupplies.org email address was used to send a link to scanverify.com?",
+    "Answer": "james_wilder@pharmasupplies.org;james_wilder",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 12",
+    "Value": 30,
+    "Description": "How many IPs has scanverify.com resolved to?",
+    "Answer": 1,
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 13",
+    "Value": 40,
+    "Description": "Consider the email address you found in question 11. What other domain did this email address send?",
+    "Answer": "mobile.io",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 14",
+    "Value": 30,
+    "Description": "What is the name of the file hosted on scanverify.com?",
+    "Answer": "EnvolveLabs_Research_Tool.7z",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 15",
+    "Value": 40,
+    "Description": "Which .pptx file was used to target Gerald Kempinski and Kenny Salcido?",
+    "Answer": "Software_Update.pptx",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 16",
+    "Value": 60,
+    "Description": "Which actor IP was used to search EnvolveLabs' website for the term \"helpdesk ticket system\"?",
+    "Answer": "66.45.120.188",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 17",
+    "Value": 100,
+    "Description": "How many total emails were sent to your organization by this actor?",
+    "Answer": 33,
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 18",
+    "Value": 80,
+    "Description": "Which .dll file was dropped on a victim machine shortly after the user downloaded the malicious zip : EnvolveLabs_Research_Tool.7z",
+    "Answer": "updater.dll",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 19",
+    "Value": 60,
+    "Description": "Which six letter reconnaissance command was executed on the Machine of the user that loaded the implant above?",
+    "Answer": "whoami",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 20",
+    "Value": 100,
+    "Description": "A malicious file 'infector.exe' is observed performing suspicious actions on multiple devices. What process_commandline associated with this file is being used for persistence on the devices?",
+    "Answer": "schtasks /create /sc minute /mo 1 /tn \"ttttask\" /tr C:\\Windows\\system32\\infector.exe /ru \"SYSTEM",
+    "Category": "3: Hackers sending malware docs"
+  },
+  {
+    "Name": "Question 1",
+    "Value": 10,
+    "Description": "This author wrote a classic book about computer network espionage called \"the cuckoo's egg",
+    "Answer": "Clifford Stoll",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 2",
+    "Value": 20,
+    "Description": "This is the first phase of the cyber kill chain",
+    "Answer": "reconnaissance",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 3",
+    "Value": 30,
+    "Description": "This is the \"P\" in TTPs",
+    "Answer": "procedure",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 4",
+    "Value": 40,
+    "Description": "This kusto operator is used to merge the rows of two tables to form a new table by matching values of the specified columns from each table.",
+    "Answer": "join",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 5",
+    "Value": 50,
+    "Description": "This type of malware that downloads onto a computer disguised as a legitimate program",
+    "Answer": "trojan horse",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 6",
+    "Value": 60,
+    "Description": "In 2016 North Korean hackers planned a $1bn raid on this country's national bank and came within an inch of success",
+    "Answer": "Bangladesh",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 7",
+    "Value": 70,
+    "Description": "This three letter intelligence agency is the foreign military intelligence agency of the General Staff of the Armed Forces of the Russian Federation",
+    "Answer": "GRU",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 8",
+    "Value": 80,
+    "Description": "This ex-Google lawyer serves as the US Deputy National Cyber Director for Technology & Ecosystem",
+    "Answer": "Camille Stewart;Camille Stewart Gloster",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 9",
+    "Value": 90,
+    "Description": "Probably the best known project for penetration testing—this exploit framework is designed to make it easy for someone to launch an exploit against a particular vulnerable target.",
+    "Answer": "Metasploit",
+    "Category": "3. Misc Questions"
+  },
+  {
+    "Name": "Question 10",
+    "Value": 100,
+    "Description": "Microsoft assesses that this \"Technology\" company is a front company for the threat actor called \"DEV-0270",
+    "Answer": "Najee Technology Hooshmand",
+    "Category": "3. Misc Questions"
   }
 ]
