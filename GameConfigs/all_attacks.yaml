@@ -12,6 +12,7 @@ attacks:
   # victims have their credentials stolen by the attacker
   # requirements:
   # - domain_themes
+  # - watering_hole_target_roles (optional)
   # - partners must be defined on the actor company.yaml file
   - watering_hole:malware_delivery
   # actor conducts a wateringhole attack by staging a malicious payload on partner domain
@@ -22,6 +23,7 @@ attacks:
   # - domain_themes
   # - file_names
   # - post_exploit_commands (optional)
+  # - watering_hole_target_roles optional 
   # - partners must be defined on the actor company.yaml file
   - email:phishing
   # actor sends credential phishing emails to targets

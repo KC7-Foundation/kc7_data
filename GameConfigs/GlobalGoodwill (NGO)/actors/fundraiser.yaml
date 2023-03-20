@@ -5,11 +5,8 @@ max_wave_size: 4
 attacks:
   - recon:browsing
   - watering_hole:malware_delivery
-compromised_email_targets:
-  - info@charityhope.org
-  - donations@charityhope.org
-  - fundraising@charityhope.org
-  - ceo@charityhope.org
+  - email:phishing
+  - delivery:supply_chain
 domain_themes:
   - charity
   - fundraising
@@ -21,10 +18,6 @@ domain_themes:
   - outreach
   - volunteer
   - contribution
-  - enerosity
-  - kindness
-  - compassion
-  - goodwill
 sender_themes:
   - volunteer
   - donor
@@ -77,9 +70,9 @@ post_exploit_commands:
   - name: cmd.exe
     process: cmd.exe dir
   - name: cmd.exe
-    process: "cmd.exe dir C:\"
+    process: "cmd.exe dir C:\\"
   - name: cmd.exe
-    process: "cmd.exe dir D:\"
+    process: "cmd.exe dir D:\\"
   - name: cmd.exe
     process: "cmd.exe cd Users\Public\Documents"
   - name: cmd.exe

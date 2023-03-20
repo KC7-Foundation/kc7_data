@@ -1,0 +1,81 @@
+name: CourierX
+effectiveness: 80
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:malware_delivery
+  - identity:password_spray
+watering_hole_domains:
+  - top-research-lab.net
+watering_hole_target_roles:
+  - Communications Manager
+  - Research Associate
+domain_themes:
+  - courier
+  - delivery
+  - logistics
+  - inventory
+  - warehousing
+  - shipping
+  - freight
+  - customs
+  - international 
+sender_themes: 
+  - courier
+  - logistics
+  - transportation
+  - delivery
+  - shipping
+  - freight
+  - customs
+subjects:
+  - "Request for quote on freight shipment"
+  - "Notification of shipment delay"
+  - "Confirmation of shipment delivery"
+  - "Request for customs clearance information"
+  - "Delivery service satisfaction survey"
+  - "Notice of warehousing fee increase"
+  - "Request for logistics consultation"
+  - "Request for logistics and supply chain management proposal"
+  - "Request for logistics optimization report"
+  - "Request for import/export services information"
+  - "Request for international trade compliance consultation"
+recon_search_terms:
+  - courier service vulnerabilities
+  - delivery vehicle security features
+  - logistics management best practices
+  - freight industry trends
+  - shipping regulations and compliance
+  - warehousing facility security measures
+  - customs clearance process
+  - international trade sanctions
+  - supply chain risk assessment
+file_names:
+  - Freight-Shipment-Quote.docx
+  - Shipment-Delay-Notification.docx
+  - Shipment-Delivery-Confirmation.docx
+  - Customs-Clearance-Information.docx
+  - Delivery-Service-Satisfaction-Survey.docx
+  - Warehousing-Fee-Increase-Notice.docx
+  - Logistics-Consultation-Request.docx
+  - Logistics-Proposal-Request.docx
+  - Logistics-Optimization-Report-Request.docx
+  - Import-Export-Services-Information.docx
+  - International-Trade-Compliance-Consultation.docx
+tlds:
+  - com
+spoofs_email: False
+malware:
+  - logisticshijack
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "process: "cmd.exe echo 'Data has been encrypted. Pay the ransom to unlock your files.' > READ_ME.txt""

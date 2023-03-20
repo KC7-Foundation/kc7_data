@@ -7,10 +7,10 @@ attacks:
   - watering_hole:phishing
   - watering_hole:malware_delivery
 watering_hole_domains:
-  - earthquakeresearch.org
+  - charitywatch.org
 watering_hole_target_roles:
-  - Seismologist
-  - Emergency Response Coordinator
+  - Volunteer Coordinator
+  - Project Coordinator
 domain_themes:
   - disaster
   - emergency
@@ -22,11 +22,11 @@ domain_themes:
   - preparedness
   - resilience
 sender_themes: 
-  - aid worker
-  - relief coordinator
-  - emergency responder
-  - disaster expert
-  - crisis manager
+  - aid
+  - relief
+  - emergency
+  - disaster
+  - crisis
 subjects:
   - "Update on earthquake damage assessment"
   - "Request for emergency assistance"
@@ -57,7 +57,6 @@ file_names:
   - Aid-Donation-Request-Letter.docx
 tlds:
   - org
-  - gov
 spoofs_email: True
 malware:
   - aftershock

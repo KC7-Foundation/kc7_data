@@ -1,0 +1,76 @@
+name: InterviewerX
+effectiveness: 75
+count_init_passive_dns: 5
+max_wave_size: 4
+attacks:
+  - recon:browsing
+  - email:phishing
+  - email:malware_delivery
+email_subjects:
+  - "Invitation to an exclusive interview with our CEO"
+  - "Invitation to participate in our latest research study"
+  - "Request for information on your latest research project"
+  - "Request for an interview with one of your researchers"
+  - "Request for comments on our latest article"
+  - "Request for participation in our upcoming event"
+  - "Job opening at Innovation Nexus"
+sender_themes:
+  - interviewer
+  - journalist
+  - reporter
+  - HR
+  - recruitment
+  - talent-scout
+  - headhunter
+  - consultant
+  - researcher
+  - academic
+domain_themes:
+  - innovation
+  - research
+  - development
+  - technology
+  - science
+  - engineering
+  - intelligence
+  - analysis
+  - consulting
+  - management
+  - talent
+  - recruitment
+  - education
+tlds:
+  - com
+  - net
+  - org
+  - edu
+spoofs_email: True
+malware:
+  - nexusTrojan
+file_names:
+  - Innovation_Nexus_Strategy.pdf
+  - Innovation_Nexus_Talent_Acquisition.docx
+  - Innovation_Nexus_Marketing_Report.pptx
+  - Innovation_Nexus_Budget_Summary.xls
+recon_search_terms:
+  - innovation nexus strategy
+  - innovation nexus research projects
+  - innovation nexus talent acquisition
+  - innovation nexus management team
+  - innovation nexus intellectual property
+  - innovation nexus technology partnerships
+post_exploit_commands:
+  - name: cmd.exe
+    process: "cmd.exe dir /s"
+  - name: cmd.exe
+    process: "cmd.exe systeminfo"
+  - name: cmd.exe
+    process: "cmd.exe net user"
+  - name: cmd.exe
+    process: "cmd.exe net localgroup administrators"
+  - name: cmd.exe
+    process: "cmd.exe net view"
+  - name: cmd.exe
+    process: "cmd.exe ipconfig /all"
+  - name: powershell.exe
+    process: "powershell.exe Get-ChildItem -Recurse C:\Users\* | foreach {$_.FullName}"

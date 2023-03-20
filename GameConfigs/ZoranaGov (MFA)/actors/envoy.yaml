@@ -5,7 +5,6 @@ max_wave_size: 4
 attacks:
   - recon:browsing
   - watering_hole:phishing
-  - email:phishing
   - email:malware_delivery
 watering_hole_domains:
   - mfazorana.gov.zo

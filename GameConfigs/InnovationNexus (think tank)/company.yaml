@@ -1,0 +1,31 @@
+name: InnovationNexus
+domain: innovationnexus.net
+count_employees: 1000
+roles:
+  - title: Executive Director
+    limit: 1
+  - title: Chief Operating Officer
+    limit: 1
+  - title: Chief Financial Officer
+    limit: 1
+  - title: Chief Technology Officer
+    limit: 1
+  - title: Senior Researcher
+    limit: 5
+  - title: Junior Researcher
+    limit: 50
+  - title: Data Analyst
+    limit: 10
+  - title: Software Engineer
+    limit: 100
+  - title: Marketing Manager
+    limit: 2
+  - title: Communications Manager
+    limit: 2
+  - title: Administrative Assistant
+    limit: 100
+partners:
+  - tech-giant.com
+  - venturecapitalists.co
+  - top-research-lab.net
+  - government-research-agency.org

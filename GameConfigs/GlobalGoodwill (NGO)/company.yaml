@@ -1,34 +1,35 @@
-name: Balloons Over Iowa
-domain: iowaballoons.com
-count_employees: 729
+name: GlobalGoodwill
+domain: globalgoodwill.org
+count_employees: 572
 roles:
   - title: Chief Executive Officer
     limit: 1
   - title: Chief Financial Officer
     limit: 1
-  - title: Chief Marketing Officer
+  - title: Chief Operations Officer
     limit: 1
-  - title: Chief Balloon Procurement Officer
+  - title: Chief Fundraising Officer
     limit: 1
   - title: Vice President
     limit: 10
   - title: IT associate
-    limit: 999
+    limit: 250
   - title: Finance associate
-    limit: 999
-  - title: Marketing associate
-    limit: 999
-  - title: Balloon Operations Analyst
-    limit: 999
-  - title: Field Associate
-    limit: 499
-  - title: Balloon Pilot
-    limit: 499
-  - title: Customer Representative
+    limit: 250
+  - title: Fundraising associate
+    limit: 250
+  - title: Program Manager
     limit: 100
+  - title: Project Coordinator
+    limit: 100
+  - title: Grant Writer
+    limit: 50
+  - title: Volunteer Coordinator
+    limit: 50
+  - title: Communications Specialist
+    limit: 50
 partners:
-  - wesellballoons.com
-  - partysupplies.org
-  - nothing-but-hot-air.com
-  - blimpgoespop.com
-
+  - charitywatch.org
+  - globalimpact.org
+  - worldvision.org
+  - mercyships.org
