@@ -43,7 +43,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Dai_Wok_Foods](http://kc7cyber.com/Dai_Wok_Foods)
+You can find all the links you need here: [kc7cyber.com/dai-wok-foods](http://kc7cyber.com/dai-wok-foods)
 
 ### Legend
 
@@ -61,7 +61,7 @@ ADX is the primary tool used in the Dai Wok Foods SOC for data exploration and a
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Dai Wok Foods training module at [kc7cyber.com/Dai_Wok_Foods](http://kc7cyber.com/Dai_Wok_Foods)
+1. Go to the Dai Wok Foods training module at [kc7cyber.com/dai-wok-foods](http://kc7cyber.com/dai-wok-foods)
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
