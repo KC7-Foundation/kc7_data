@@ -302,8 +302,7 @@ Employees
 | where name has "James"
 ```
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/542663e7-cbf5-41f6-8861-43e4b3bd4382)
-
+![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/c8368d7a-2029-463a-a40e-8dadbb6fe67f)
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
