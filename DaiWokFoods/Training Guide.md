@@ -73,8 +73,7 @@ Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has 
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/4da824ab-f61d-498b-99c2-822d73077cd2)
-
+![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/76f4c037-5b9c-49ed-ac86-320d4c179e2e)
 
 All of Dai Wok Foods’s security logs are stored in a single database – the Dai Wok Foods database. 
 
@@ -86,7 +85,7 @@ Note: It’s very important that you use the Dai Wok Foods database for all ques
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/81627312-030e-4d73-a29c-61bbe6cad974)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/121b9473-1814-4373-9057-5436c5e3ca1d)
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
