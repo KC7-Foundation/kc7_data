@@ -47,3 +47,10 @@ attacks:
   - identity:password_spray
   # actor conducts a password spray as observed in the authenticaiton logs
   # requirements: None
+# Other configs
+# create mismatching sender and reply to addresses
+spoofs_email: True 
+#domain_depth determines how many domain theme words are used in domain name
+# e.g. 2 --> evil-stuff.com 2 -> super-evil-stuff.com
+# user domain_dept: 1 to set custom domains. be sure to pull full domains rather than themes 
+domain_depth: 1 
