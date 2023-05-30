@@ -36,8 +36,6 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/radstone_medical](http://kc7cyber.com/radstone_medical)
-
 ### Legend
 
 > 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
@@ -54,11 +52,7 @@ ADX is the primary tool used in the Radstone Medical Center SOC for data explora
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Radstone Medical Center training module at [kc7cyber.com/radstone_medical](http://kc7cyber.com/radstone_medical)
-
-On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
-
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
+1. You can access the data here: [Azure Data Explorer](https://dataexplorer.azure.com/clusters/kc7cyber.eastus2/databases/RadstoneMedical). Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
@@ -70,7 +64,7 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 
 All of Radstone Medical Center’s security logs are stored in a single database – the Radstone Medical Center database. 
 
-  2. Select your database.  
+2. Select your database.  
 	- Expand the dropdown arrow next to the Radstone Medical Center database.
 	- Click on the **Radstone Medical Center** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
@@ -104,9 +98,7 @@ We currently have nine types of log data. As you’ll see in ADX, each log type 
 
 > 🎯**Key Point – Over the Horizon (OTH) data**: One of the tables listed above is not like the others – **PassiveDns**. Rather than being an internal security log, PassiveDns is a data source that we’ve purchased from a 3rd party vendor. Not all malicious cyber activity happens within our company network, so sometimes we depend on data from other sources to complete our investigations.
 
-
 You’ll learn more about how to use each of these datasets in just a minute. First, let’s just run some queries so you can practice using KQL and ADX.
-
 
 #### KQL 101 
 
@@ -134,7 +126,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 
 The Employees table contains information about all the employees in the organization. In this case, we can see that the organization is named “Radstone Medical Center” and the domain is “radstonemedical.com”.
 
->1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
+>Q1 - 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
 Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
 
@@ -162,7 +154,7 @@ Employees
 | count
 ```
 
-2.  🤔How many employees are in the company?
+>Q2 -  🤔How many employees are in the company?
 
 **Filtering Data With the _where_ Operator**
 
@@ -188,7 +180,7 @@ Employees
 | where name == "Oscar Becker"
 ```
 
->3. 🤔Each employee at Radstone Medical Center is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+>Q3 - 🤔Each employee at Radstone Medical Center is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
 
 Here are some additional operators we like to use:
 
@@ -220,7 +212,7 @@ Email
 
 ```
 
-> 4. 🤔How many emails did Wallace Ganong receive?
+>Q4 - 🤔How many emails did Wallace Ganong receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -241,7 +233,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-5.  🤔How many distinct senders were seen in the email logs from medequipsolutions.com?
+>Q5 - 🤔How many distinct senders were seen in the email logs from medequipsolutions.com?
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -261,7 +253,7 @@ OutboundNetworkEvents
 | where src_ip == "192.168.4.245"
 ```
 
-> 6.  🤔How many unique websites did “Peggy Elliot” visit?
+>Q6 -  🤔How many unique websites did “Peggy Elliot” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -278,8 +270,8 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
+>Q7 - 🤔 How many domains in the PassiveDns records contain the word “equipment”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+>Q8 - 🤔 What IPs did the domain “research-government” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
@@ -354,7 +346,7 @@ OutboundNetworkEvents
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
-> 9.  🤔 How many unique URLs were browsed by employees named “Karen”?
+>Q9 -  🤔 How many unique URLs were browsed by employees named “Karen”?
 
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
 
