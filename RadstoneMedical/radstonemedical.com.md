@@ -40,7 +40,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 
 > 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
 
-> 🤔Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
+> 🤔 Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
 
 > 🤫 Hint – “Whisper” emojis represent in-game hints. These hints will guide you in the right direction in answering some of the questions.
 
@@ -154,7 +154,7 @@ Employees
 | count
 ```
 
->Q2 -  🤔How many employees are in the company?
+>Q2 -  🤔 How many employees are in the company?
 
 **Filtering Data With the _where_ Operator**
 
@@ -180,7 +180,7 @@ Employees
 | where name == "Oscar Becker"
 ```
 
->Q3 - 🤔Each employee at Radstone Medical Center is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+>Q3 - 🤔 Each employee at Radstone Medical Center is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
 
 Here are some additional operators we like to use:
 
@@ -212,7 +212,7 @@ Email
 
 ```
 
->Q4 - 🤔How many emails did Wallace Ganong receive?
+>Q4 - 🤔 How many emails did Wallace Ganong receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -233,7 +233,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
->Q5 - 🤔How many distinct senders were seen in the email logs from medequipsolutions.com?
+>Q5 - 🤔 How many distinct senders were seen in the email logs from medequipsolutions.com?
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -253,7 +253,7 @@ OutboundNetworkEvents
 | where src_ip == "192.168.4.245"
 ```
 
->Q6 -  🤔How many unique websites did “Peggy Elliot” visit?
+>Q6 -  🤔 How many unique websites did “Peggy Elliot” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -346,7 +346,7 @@ OutboundNetworkEvents
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
->Q9 -  🤔 How many unique URLs were browsed by employees named “Karen”?
+>Q9 - 🤔 How many unique URLs were browsed by employees named “Karen”?
 
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
 
