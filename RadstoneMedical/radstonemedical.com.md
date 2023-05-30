@@ -2,7 +2,7 @@
 
 As the law enforcement investigator, you were just informed that a hospital in your AOR has been hit with ransomware. You are traveling directly on site to work with their IT team to investigate what happened. They have hired a 3rd party IR firm, but they may take a while to get there.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/aee4a709-0444-4a08-a473-abb49bf8f097)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/e50895c7-a591-47cd-82f3-2567d30af675)
 
 Radstone Medical Center is a premier hospital and research facility located in the heart of the city. With a team of expert medical professionals and cutting-edge technology, Radstone Medical Center provides top-notch medical services in various fields such as cardiology, neurology, oncology, and more. Along with providing top-quality medical care to patients, Radstone Medical Center also invests heavily in medical research, partnering with some of the leading medical research companies in the world. The hospital also offers state-of-the-art medical equipment and supplies to ensure that patients receive the best care possible.
 
@@ -62,13 +62,11 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/46a6d16b-6fa0-448a-a415-92c7b5941d3c)
-
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/f3883194-ae50-4589-bd0e-090b531ddb1b)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/1601ebcb-bff2-4559-a31a-17f9bc1f370e)
-
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/a577ddcb-f5f5-45b8-83dc-15da9bb7c47d)
 
 All of Radstone Medical Center’s security logs are stored in a single database – the Radstone Medical Center database. 
 
@@ -80,7 +78,7 @@ Note: It’s very important that you use the Radstone Medical Center database fo
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/3e2deb13-4890-4086-85f6-91afeacdbe9f)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/7f1c2dec-6236-4cfe-821a-409c966e191a)
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
@@ -296,7 +294,7 @@ First, you would need to go into the **Employees** table and find the IP address
 Employees
 | where name has "James"
 ```
-![image](https://github.com/KC7-Foundation/internal-actor-configs/assets/129029167/216c0c86-a597-400e-8c51-0ab726cc7ae4)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/866afbae-807a-426c-b440-cf02a19ff62b)
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
