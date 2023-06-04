@@ -2,18 +2,18 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Castle&Sand and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/cdd08773-1d97-4a99-a259-f9acefaea020)
 
-{{COMPANY_DESCRIPTION}}
+Castle&Sand is a renowned company in the beach accessories and gear industry, operating a vast network of stores across multiple locations. With a comprehensive range of products and a dedicated team of knowledgeable staff, Castle&Sand offers customers an exceptional shopping experience. The company's commitment to research and development ensures that they stay ahead of industry trends, providing high-quality and innovative beach accessories and gear. Castle&Sand's focus on customer satisfaction, welcoming store environments, and continuous improvement has solidified its position as a leader in the industry, making it the go-to destination for all beachgoers' needs.
 
 Castle&Sand has a series of key partners who contribute to the success of our business:
 
 | Partner Name | Relationship |
 | ----------- | ----------- |
-| sunandsandtrading.com | {{PARTNER_DOMAIN_1_DESCRIPTION}}|
-| beachsupplyco.com | {{PARTNER_DOMAIN_2_DESCRIPTION}}|
-| surfparadise.com | {{PARTNER_DOMAIN_3_DESCRIPTION}}|
-| beachlifestyle.com | {{PARTNER_DOMAIN_4_DESCRIPTION}}|
+| sunandsandtrading.com | SunAndSandTrading.com is a leading distributor of high-quality beach products and accessories. They collaborate closely with Castle&Sand to provide a diverse range of merchandise that aligns with the company's commitment to offering innovative and top-notch beach gear. SunAndSandTrading.com's extensive network and expertise in sourcing the finest beach products make them an invaluable partner in ensuring Castle&Sand's inventory meets the demands and preferences of beachgoers.|
+| beachsupplyco.com | BeachSupplyCo.com is a specialized online retailer that focuses on providing beach essentials and supplies. Castle&Sand has formed a strategic partnership with BeachSupplyCo.com to enhance its online presence and reach a wider customer base. BeachSupplyCo.com's expertise in e-commerce and their commitment to curating a comprehensive selection of beach-related products complement Castle&Sand's brick-and-mortar stores, creating a seamless omnichannel shopping experience for customers. Their shared values of quality, convenience, and customer satisfaction make them ideal collaborators in fulfilling the diverse needs of beach enthusiasts.|
+| surfparadise.com | SurfParadise.com is a popular online platform dedicated to surfing and beach culture. Castle&Sand has established a partnership with SurfParadise.com to leverage their extensive audience of surf enthusiasts and beach lovers. Through this collaboration, Castle&Sand gains visibility among a highly targeted demographic, enhancing brand awareness and driving more traffic to their stores and online channels. SurfParadise.com also provides valuable insights and trends in the surf and beach industry, allowing Castle&Sand to stay at the forefront of the market and offer products that cater to the evolving needs and preferences of surfers and beachgoers.|
+| beachlifestyle.com | BeachLifestyle.com is a lifestyle media and content platform focused on beach living, travel, and fashion. Castle&Sand has formed a partnership with BeachLifestyle.com to tap into their engaged community of beach enthusiasts and leverage their influence in promoting Castle&Sand's brand and products. Through this collaboration, Castle&Sand gains exposure to a wider audience, increases brand loyalty, and fosters a sense of community among beach lovers. BeachLifestyle.com's content and marketing expertise align with Castle&Sand's values, creating a synergistic partnership that enhances the overall beachgoer experience.|
 
 Castle&Sand has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
 
@@ -138,7 +138,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 
 The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Castle&Sand” and the domain is “castleandsand.com”.
 
->1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
+> 1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
 Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
 
@@ -166,7 +166,7 @@ Employees
 | count
 ```
 
-2.  🤔How many employees are in the company?
+> 2.  🤔How many employees are in the company?
 
 **Filtering Data With the _where_ Operator**
 
@@ -192,7 +192,7 @@ Employees
 | where name == "Jason Goldsmith"
 ```
 
->3. 🤔Each employee at Castle&Sand is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+> 3. 🤔Each employee at Castle&Sand is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
 
 Here are some additional operators we like to use:
 
@@ -245,7 +245,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-5.  🤔How many distinct senders were seen in the email logs from sunandsandtrading.com?
+> 5. 🤔 How many distinct senders were seen in the email logs from sunandsandtrading.com?
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -265,7 +265,7 @@ OutboundNetworkEvents
 | where src_ip == "10.10.0.84"
 ```
 
-> 6.  🤔How many unique websites did “Cristin Genao” visit?
+> 6. 🤔 How many unique websites did “Cristin Genao” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -282,7 +282,7 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 7. 🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
 > 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
@@ -362,7 +362,7 @@ OutboundNetworkEvents
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
-> 9.  🤔 How many unique URLs were browsed by employees named “Karen”?
+> 9. 🤔 How many unique URLs were browsed by employees named “Karen”?
 
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
 
