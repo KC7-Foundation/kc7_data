@@ -36,7 +36,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Castle&Sand](http://kc7cyber.com/Castle&Sand)
+You can find all the links you need here: [kc7cyber.com/Castle_and_Sand](http://kc7cyber.com/Castle_and_Sand)
 
 ### Legend
 
@@ -54,9 +54,7 @@ ADX is the primary tool used in the Castle&Sand SOC for data exploration and ana
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Castle&Sand training module at [kc7cyber.com/Castle&Sand
-
-](http://kc7cyber.com/Castle&Sand)
+1. Go to the Castle&Sand training module at [kc7cyber.com/Castle_and_Sand](http://kc7cyber.com/Castle_and_Sand)
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
@@ -64,13 +62,11 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/33983641-1dab-4c4d-8dac-0b65532d3b4f)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/08cfad5e-f136-4e72-a87b-514d6886b484)
 
 All of Castle&Sand’s security logs are stored in a single database – the Castle&Sand database. 
 
@@ -299,20 +295,22 @@ Employees
 | where name has "James"
 ```
 
-![](https://lh5.googleusercontent.com/Ul2NZuxCWG8Wg3zIGBjTSrUQHeNJ7b_cPKWSqvqGrkptYJ8F0Y4-qtoTcR8OtjJGzQaCqdyDe9_fJDSXOm58hWdgvNYqvteckmtEvq51WIjYrxXIIi-rdGUSIZ0eSYon7mOoL2jFrmu-)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/9565f7fc-9008-45fa-9439-9a35a910f5e1)
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
 ```sql 
 OutboundNetworkEvents
-| where src-ip in ("192.168.1.132",
-	"192.168.3.128",
-	"192.168.1.70",
-	"192.168.1.92",
-	"192.168.0.147",
-	"192.168.1.50",
-	"192.168.0.163",
-	"192.168.2.200")
+| where src-ip in ("10.10.3.102",
+	"10.10.3.48",
+	"10.10.4.37",
+	"10.10.2.143",
+	"10.10.2.143",
+	"10.10.3.155",
+	"10.10.5.180",
+	"10.10.1.178",
+	"10.10.5.67",
+	"10.10.1.221")
 ```
 
 Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “James.”
