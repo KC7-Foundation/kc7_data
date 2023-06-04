@@ -192,7 +192,7 @@ Employees
 | where name == "Jason Goldsmith"
 ```
 
-> 3. 🤔Each employee at Castle&Sand is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+> 3. 🤔Each employee at Castle&Sand is assigned an IP address. Which employee has the IP address: “10.10.2.1”?
 
 Here are some additional operators we like to use:
 
