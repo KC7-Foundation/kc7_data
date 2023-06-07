@@ -2,7 +2,7 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Castle&Sand and our employees from malicious cyber actors.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/cdd08773-1d97-4a99-a259-f9acefaea020)
+<img src="https://github.com/KC7-Foundation/kc7_data/assets/129029167/cdd08773-1d97-4a99-a259-f9acefaea020)" alt="Image" width="300" >
 
 Castle&Sand is a renowned company in the beach accessories and gear industry, operating a vast network of stores across multiple locations. With a comprehensive range of products and a dedicated team of knowledgeable staff, Castle&Sand offers customers an exceptional shopping experience. The company's commitment to research and development ensures that they stay ahead of industry trends, providing high-quality and innovative beach accessories and gear. Castle&Sand's focus on customer satisfaction, welcoming store environments, and continuous improvement has solidified its position as a leader in the industry, making it the go-to destination for all beachgoers' needs.
 
@@ -72,7 +72,7 @@ All of Castle&Sand’s security logs are stored in a single database – the Cas
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the Castle&Sand database.
-	- Click on the **Castle&Sand** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
+	- Click on the **CastleSand** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
 Note: It’s very important that you use the Castle&Sand database for all questions while you’re investigating activity at Castle&Sand! If you choose the wrong database, you won’t be able to answer questions correctly.
 
@@ -86,9 +86,9 @@ Okay, enough introductions… let’s get your hands on the data.
 
 #### First Look at the data... 
 
-The **Castle&Sand** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
+The **CastleSand** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
 
-We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Castle&Sand** database:
+We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **CastleSand** database:
 
 | **Table Name** | **Description** | 
 | ----------- | ----------- |
@@ -376,6 +376,30 @@ As you answer the questions, we will take you on a journey exploring the data an
 Use the provided [Actor Preview](https://docs.google.com/document/d/1rZR4eVG886oPziG-5nGeQ5kN_q5Bpq0m/edit?usp=sharing&ouid=105873493764084037775&rtpof=true&sd=true) document to keep track of what you know about the attacker. Building a good profile, timelining the attacker’s activity, and forming a list of indicators of compromise (IOCs) will help you keep track of the attacker. KC7 models some of the techniques used by these attackers from real world threat actors, so it may be a helpful resource for you in the future when you are investigating a real security incident. 
 
 Now, get out there and keep us safe! The whole company is counting on you. No pressure😊.
+
+## Nice to Know
+
+Here are some things that might be helpful to know as we explore the CastleSand Database:
+
+### Business hours
+
+We operate our business from 9am to 5pm, 7 days a week. We should roughly expect to see all legitimate business activity within that timeframe (with some exceptions, of course). Let's be vigilant about any activity that occurs on the network while everyone sleeps ;)
+
+### Pay attention to the IT Workers
+
+Our IT staff at Castle&Sand are granted elevated privileges on machines across the company in order to fulfill their duties. As a result, it can be concerning when their machines get compromised. We, at Castle&Sand, are a security-aware organization, so we do not grant local administrative privileges to users on their computers. However, each laptop and desktop at Castle&Sand is provisioned with a separate local administrative account - which looks something like "marketing_local_admin." These administrator accounts are provisioned with the same username and password per department. For example, all employees in the Marketing department have a local administrator account with the username "marketing_local_admin" and the same password.
+
+### Castle&Sand uses Active Directory
+
+We utilize Active Directory, a directory service developed by Microsoft for Windows networks. It provides us with a centralized and standardized system for managing and organizing network resources, such as user accounts, computers, groups, and other network objects.
+
+Unfortunately, compromising the Active Directory Domain Controller would give an adversary credentials for all accounts on our network and enable them to cause severe harm.
+
+### Alerts and Alert Fatigue
+
+In the CastleSand database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the Castle&Sand network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
+
+
 
 ## Glossary
 
