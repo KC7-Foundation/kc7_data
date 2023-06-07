@@ -278,8 +278,8 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7. 🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
+> 7. 🤔 How many domains in the PassiveDns records contain the word “shark”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 8. 🤔 What IPs did the domain “sharkfin.com” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
