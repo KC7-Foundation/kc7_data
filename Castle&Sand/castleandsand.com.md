@@ -17,7 +17,7 @@ Castle&Sand has a series of key partners who contribute to the success of our bu
 
 Castle&Sand has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
 
-Like all good companies, Castle&Sand collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
+Like all good companies, Castle&Sand collects log data about the activity performed on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
 You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
 
@@ -25,7 +25,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 
 🧠 By the end of your first day on the job, you should be able to:
 
--   Use the Azure Data Explorer
+-   Use Azure Data Explorer and Kusto Query Language
 -   Use multiple data sets to answer targeted questions 
 -   Investigate cyber activity in logs including: email, web traffic, and server logs 
 -   Use multiple techniques to track the activity of APTs (Advanced Persistent Threats) 
@@ -42,7 +42,7 @@ You can find all the links you need here: [kc7cyber.com/Castle_and_Sand](http://
 
 > 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
 
-> 🤔Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
+> 🤔Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions in the scoring portal available at kc7cyber.com/scoreboard.
 
 > 🤫 Hint – “Whisper” emojis represent in-game hints. These hints will guide you in the right direction in answering some of the questions.
 
@@ -68,7 +68,7 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/08cfad5e-f136-4e72-a87b-514d6886b484)
 
-All of Castle&Sand’s security logs are stored in a single database – the Castle&Sand database. 
+All of Castle&Sand’s security logs are stored in a single database – the CastleSand database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the Castle&Sand database.
