@@ -2,7 +2,8 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Castle&Sand and our employees from malicious cyber actors.
 
-<img src="https://github.com/KC7-Foundation/kc7_data/assets/129029167/cdd08773-1d97-4a99-a259-f9acefaea020)" alt="Image" width="300" >
+![243223309-cdd08773-1d97-4a99-a259-f9acefaea020](https://github.com/KC7-Foundation/kc7_data/assets/9474932/d5bbf3c1-bae6-407a-9ef6-4acf037b3940)
+
 
 Castle&Sand is a renowned company in the beach accessories and gear industry, operating a vast network of stores across multiple locations. With a comprehensive range of products and a dedicated team of knowledgeable staff, Castle&Sand offers customers an exceptional shopping experience. The company's commitment to research and development ensures that they stay ahead of industry trends, providing high-quality and innovative beach accessories and gear. Castle&Sand's focus on customer satisfaction, welcoming store environments, and continuous improvement has solidified its position as a leader in the industry, making it the go-to destination for all beachgoers' needs.
 
