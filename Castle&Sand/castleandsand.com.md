@@ -38,7 +38,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/castle_and_sand](http://kc7cyber.com/castle-and-sand)
+You can find all the links you need here: [kc7cyber.com/castle-and-sand](http://kc7cyber.com/castle-and-sand)
 
 ### Legend
 
