@@ -407,14 +407,17 @@ In the CastleSand database, we have access to a **SecurityAlerts** table that sh
 The following Mitre ATT&CK techniques were used by the actors in the observed intrusions
 
 **Reconnaissance**  
+
 - ***T1594*** - Search Victim-Owned Websites:
 Adversaries may search websites owned by the victim for information that can be used during targeting. Victim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info (ex: Email Addresses). These sites may also have details highlighting business operations and relationships.
 
 **Resource Development**
+
 - ***T1584*** - Compromise Infrastructure:
 Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastructure solutions include physical or cloud servers, domains, and third-party web and DNS services. Instead of buying, leasing, or renting infrastructure an adversary may compromise infrastructure and use it during other phases of the adversary lifecycle.
 
 **Initial Access**
+
 - ***T1189*** - Drive-by Compromise:
 Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is typically targeted for exploitation, but adversaries may also use compromised websites for non-exploitation behavior such as acquiring Application Access Token.
 
@@ -425,6 +428,7 @@ Adversaries may send phishing messages to gain access to victim systems. All for
 Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
 
 **Execution**
+
 - ***T1047*** - Windows Management Instrumentation:
 Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
 
@@ -432,6 +436,7 @@ Adversaries may abuse Windows Management Instrumentation (WMI) to execute malici
 Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.
 
 **Persistence**
+
 - ***T1574*** - Hijack Execution Flow:
 Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs.
 
@@ -439,6 +444,7 @@ Adversaries may execute their own malicious payloads by hijacking the way operat
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
 
 **Privilege Escalation**
+
 - ***T1078*** - Valid Accounts:
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
 
@@ -446,6 +452,7 @@ Adversaries may obtain and abuse credentials of existing accounts as a means of 
 Adversaries may modify the configuration settings of a domain to evade defenses and/or escalate privileges in domain environments.
 
 **Defense Evasion**
+
 - ***T1070*** - Indicator Removal:
 Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses.
 
@@ -456,12 +463,12 @@ Adversaries may execute their own malicious payloads by hijacking the way operat
 Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms.
 
 **Credential Access**
+
 - ***T1110*** - Brute Force:
 Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained.
 
 - ***T1003*** - OS Credential Dumping:
 Adversaries
-
 
 
 
