@@ -383,15 +383,15 @@ Now, get out there and keep us safe! The whole company is counting on you. No pr
 
 Here are some things that might be helpful to know as we explore the CastleSand Database:
 
-#### Business hours
+**Business hours**
 
 We operate our business from 9am to 5pm, 7 days a week. We should roughly expect to see all legitimate business activity within that timeframe (with some exceptions, of course). Let's be vigilant about any activity that occurs on the network while everyone sleeps ;)
 
-#### Pay attention to the IT Workers
+**Pay attention to the IT Workers**
 
 Our IT staff at Castle&Sand are granted elevated privileges on machines across the company in order to fulfill their duties. As a result, it can be concerning when their machines get compromised. We, at Castle&Sand, are a security-aware organization, so we do not grant local administrative privileges to users on their computers. However, each laptop and desktop at Castle&Sand is provisioned with a separate local administrative account - which looks something like "marketing_local_admin." These administrator accounts are provisioned with the same username and password per department. For example, all employees in the Marketing department have a local administrator account with the username "marketing_local_admin" and the same password.
 
-#### Castle&Sand uses Active Directory
+**Castle&Sand uses Active Directory**
 
 We utilize Active Directory, a directory service developed by Microsoft for Windows networks. It provides us with a centralized and standardized system for managing and organizing network resources, such as user accounts, computers, groups, and other network objects.
 
@@ -406,61 +406,62 @@ In the CastleSand database, we have access to a **SecurityAlerts** table that sh
 
 The following Mitre ATT&CK techniques were used my by the actors in the observed intrusions
 
-### Reconnaissance
-- **T1594** - Search Victim-Owned Websites:
+**Reconnaissance**
+- ***T1594*** - Search Victim-Owned Websites:
 Adversaries may search websites owned by the victim for information that can be used during targeting. Victim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info (ex: Email Addresses). These sites may also have details highlighting business operations and relationships.
 
-### Resource Development
-- **T1584** - Compromise Infrastructure:
+**Resource Development**
+- ***T1584*** - Compromise Infrastructure:
 Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastructure solutions include physical or cloud servers, domains, and third-party web and DNS services. Instead of buying, leasing, or renting infrastructure an adversary may compromise infrastructure and use it during other phases of the adversary lifecycle.
 
-### Initial Access
-- **T1189** - Drive-by Compromise:
+**Initial Access**
+- ***T1189*** - Drive-by Compromise:
 Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is typically targeted for exploitation, but adversaries may also use compromised websites for non-exploitation behavior such as acquiring Application Access Token.
 
-- **T1566** - Phishing:
+- ***T1566*** - Phishing:
 Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.
 
-- **T1195** - Supply Chain Compromise:
+- ***T1195*** - Supply Chain Compromise:
 Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
 
-### Execution
-- **T1047** - Windows Management Instrumentation:
+**Execution**
+- ***T1047*** - Windows Management Instrumentation:
 Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
 
-- **T1053** - Scheduled Task/Job:
+- ***T1053*** - Scheduled Task/Job:
 Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.
 
-### Persistence
-- **T1574** - Hijack Execution Flow:
+**Persistence**
+- ***T1574*** - Hijack Execution Flow:
 Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs.
 
-- **T1078** - Valid Accounts:
+- ***T1078*** - Valid Accounts:
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
 
-### Privilege Escalation
-- **T1078** - Valid Accounts:
+**Privilege Escalation**
+- ***T1078*** - Valid Accounts:
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
 
-- **T1484** - Domain Policy Modification:
+- ***T1484*** - Domain Policy Modification:
 Adversaries may modify the configuration settings of a domain to evade defenses and/or escalate privileges in domain environments.
 
-### Defense Evasion
-- **T1070** - Indicator Removal:
+**Defense Evasion**
+- ***T1070*** - Indicator Removal:
 Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses.
 
-- **T1574** - Hijack Execution Flow:
+- ***T1574*** - Hijack Execution Flow:
 Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs.
 
-- **T1562** - Impair Defenses:
+- ***T1562*** - Impair Defenses:
 Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms.
 
-### Credential Access
-- **T1110** - Brute Force:
+**Credential Access**
+- ***T1110*** - Brute Force:
 Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained.
 
-- **T1003** - OS Credential Dumping:
-Adversaries may attempt to dump credentials
+- ***T1003*** - OS Credential Dumping:
+Adversaries may attempt to dump credentials to obtain account login and credential material, normally
+
 
 
 ## Glossary
