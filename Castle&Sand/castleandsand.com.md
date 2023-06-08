@@ -404,7 +404,9 @@ In the CastleSand database, we have access to a **SecurityAlerts** table that sh
 
 ## Mitre ATT&CK Techniques
 
-The following Mitre ATT&CK techniques were used by the actors in the observed intrusions
+The MITRE ATT&CK(TM) framework is a knowledgebase of adversary techniques observed in real-world intrusions. The framework consists of tactics, techniques, and subtechniques. Each of these elements of the framework is assigned a number. You can access the MITRE ATT&CK framework [here](https://attack.mitre.org).
+
+The following Mitre ATT&CK techniques were used by the actors in the observed intrusions:
 
 **Reconnaissance**  
 
