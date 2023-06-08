@@ -406,19 +406,18 @@ In the CastleSand database, we have access to a **SecurityAlerts** table that sh
 
 The following Mitre ATT&CK techniques were used by the actors in the observed intrusions
 
-**Reconnaissance**
-
+**Reconnaissance**. 
 
 - ***T1594*** - Search Victim-Owned Websites:
 Adversaries may search websites owned by the victim for information that can be used during targeting. Victim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info (ex: Email Addresses). These sites may also have details highlighting business operations and relationships.
 
-**Resource Development**
+**Resource Development**. 
 
 
 - ***T1584*** - Compromise Infrastructure:
 Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastructure solutions include physical or cloud servers, domains, and third-party web and DNS services. Instead of buying, leasing, or renting infrastructure an adversary may compromise infrastructure and use it during other phases of the adversary lifecycle.
 
-**Initial Access**
+**Initial Access**. 
 
 
 - ***T1189*** - Drive-by Compromise:
@@ -430,8 +429,7 @@ Adversaries may send phishing messages to gain access to victim systems. All for
 - ***T1195*** - Supply Chain Compromise:
 Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
 
-**Execution**
-
+**Execution**. 
 
 - ***T1047*** - Windows Management Instrumentation:
 Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
@@ -439,7 +437,7 @@ Adversaries may abuse Windows Management Instrumentation (WMI) to execute malici
 - ***T1053*** - Scheduled Task/Job:
 Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.
 
-**Persistence**
+**Persistence**. 
 
 
 - ***T1574*** - Hijack Execution Flow:
@@ -448,7 +446,7 @@ Adversaries may execute their own malicious payloads by hijacking the way operat
 - ***T1078*** - Valid Accounts:
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
 
-**Privilege Escalation**
+**Privilege Escalation**. 
 
 
 - ***T1078*** - Valid Accounts:
@@ -457,7 +455,7 @@ Adversaries may obtain and abuse credentials of existing accounts as a means of 
 - ***T1484*** - Domain Policy Modification:
 Adversaries may modify the configuration settings of a domain to evade defenses and/or escalate privileges in domain environments.
 
-**Defense Evasion**
+**Defense Evasion**. 
 
 
 - ***T1070*** - Indicator Removal:
@@ -469,7 +467,7 @@ Adversaries may execute their own malicious payloads by hijacking the way operat
 - ***T1562*** - Impair Defenses:
 Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms.
 
-**Credential Access**
+**Credential Access**. 
 
 
 - ***T1110*** - Brute Force:
