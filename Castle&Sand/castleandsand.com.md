@@ -56,7 +56,7 @@ ADX is the primary tool used in the Castle&Sand SOC for data exploration and ana
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Castle&Sand training module at [kc7cyber.com/Castle_and_Sand](http://kc7cyber.com/Castle_and_Sand)
+1. Go to the Castle&Sand training module at [kc7cyber.com/castle-and-sand](http://kc7cyber.com/castle-and-sand)
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
