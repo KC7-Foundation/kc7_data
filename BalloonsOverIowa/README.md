@@ -2,7 +2,7 @@
 
 Welcome to Balloons Over Iowa! 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Balloons Over Iowa and our employees from malicious cyber actors. 
 
-<img width="324" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/4d009a06-df7a-4adc-a739-98eae1c66d98">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/8091c279-ed25-4a2f-81e0-4d9d56322ead)
 
 Balloons Over Iowa (BOI) is a company that specializes in providing extravagant gender reveal experiences through the rental of high-quality floating balloons. The balloons are purchased from China and are available in various sizes, colors, and designs to match the clients' preferences.
 
@@ -62,15 +62,15 @@ Let’s get you logged in and started with ADX:
 1. Once you have joined the game, you’ll see a button that says **Query Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
 
-<img width="243" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/5bc4dc36-a838-4134-b37a-84d0881cfd7a">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c572d21-109c-42c7-ab09-d9e352657ec4)
 
 Once you login to Azure Data Explorer, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-<img width="1057" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/2a09ab70-5097-4b15-ba10-3e37a39113c2">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f64814b7-b702-49fa-8fa8-acb6af946daa)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-<img width="196" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/02b5f57d-4cf0-4730-8903-5b53aadaafec">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/52092393-5c65-4fd1-8227-36309a269681)
 
 
 All of Balloons Over Iowa’s security logs are stored in a single database – the BalloonsOverIowa database. 
@@ -83,7 +83,7 @@ Note: It’s very important that you use the BalloonsOverIowa database for all q
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-<img width="602" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/94fb01ab-ac79-455e-b84a-c53bc1f29082">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/91898d32-0831-4b34-92be-7bee25ed45d3)
 
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
@@ -125,8 +125,8 @@ Employees
 
 This query has a few parts. Let’s take a moment to break each of them down:
 
-![Diagram
-Description automatically generated with low confidence](https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/bf39d458-fde5-4a49-b16b-a9493b6c32f9)
+
 
 | **Query Component** | **Description** | 
 | ----------- | ----------- |
@@ -301,12 +301,12 @@ Employees
 | where name has "James"
 ```
 
-<img width="602" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/9e32a332-62f6-4d52-8fb1-cd0386c9f192">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/61265439-37c3-47f8-922c-a2782be1f9d9)
 
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
-<img width="392" alt="image" src="https://github.com/KC7-Foundation/internal-actor-configs/assets/9474932/d6d5c9ab-bd9b-41c8-bf74-1b412394f105">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/4f67ce18-906c-48a8-a831-7776357f3426)
 
 
 Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “James.”
