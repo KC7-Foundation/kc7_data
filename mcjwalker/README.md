@@ -402,7 +402,7 @@ Unfortunately, compromising the Active Directory Domain Controller would give an
 
 **Alerts and Alert Fatigue**
 
-In the CJWalker database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the Castle&Sand network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
+In the CJWalker database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
 
 
 ## Resources
