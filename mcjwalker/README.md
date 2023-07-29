@@ -384,7 +384,7 @@ Now, get out there and keep us safe! The whole company is counting on you. No pr
 
 ## Nice to Know
 
-Here are some things that might be helpful to know as we explore the CastleSand Database:
+Here are some things that might be helpful to know as we explore the CJWalker Database:
 
 **Business hours**
 
@@ -392,9 +392,9 @@ We operate our business from 9am to 5pm, 7 days a week. We should roughly expect
 
 **Pay attention to the IT Workers**
 
-Our IT staff at Castle&Sand are granted elevated privileges on machines across the company in order to fulfill their duties. As a result, it can be concerning when their machines get compromised. We, at Castle&Sand, are a security-aware organization, so we do not grant local administrative privileges to users on their computers. However, each laptop and desktop at Castle&Sand is provisioned with a separate local administrative account - which looks something like "marketing_local_admin." These administrator accounts are provisioned with the same username and password per department. For example, all employees in the Marketing department have a local administrator account with the username "marketing_local_admin" and the same password.
+Our IT staff at Walker Manufacturing Computer are granted elevated privileges on machines across the company in order to fulfill their duties. As a result, it can be concerning when their machines get compromised. We are a security-aware organization, so we do not grant local administrative privileges to users on their computers. However, each laptop and desktop at company is provisioned with a separate local administrative account - which looks something like "marketing_local_admin." These administrator accounts are provisioned with the same username and password per department. For example, all employees in the Marketing department have a local administrator account with the username "marketing_local_admin" and the same password.
 
-**Castle&Sand uses Active Directory**
+**We use Active Directory**
 
 We utilize Active Directory, a directory service developed by Microsoft for Windows networks. It provides us with a centralized and standardized system for managing and organizing network resources, such as user accounts, computers, groups, and other network objects.
 
@@ -402,7 +402,7 @@ Unfortunately, compromising the Active Directory Domain Controller would give an
 
 **Alerts and Alert Fatigue**
 
-In the CastleSand database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the Castle&Sand network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
+In the CJWalker database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the Castle&Sand network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
 
 
 ## Resources
