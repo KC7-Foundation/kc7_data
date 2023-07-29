@@ -1,12 +1,16 @@
-# Welcome to Madam C.J. Walker Manufacturing Company
+# The Madam C.J. Walker Manufacturing Company
+
+The year is 2323. Washington D.C.has been split into several districts, some districts inhabited, some are simply abandoned relics of the past. Where there is life, there is a sprawling metropolis!
+
+Within the industrial district, the Madam C.J. Walker Manufacturing Company stands as a defiant beacon of hope within the industrial distict. Once celebrated for its exceptional hair care and beauty products, tailored for those forgotten by society, it now serves as a last bastion of resilience.
+
+The Walker Manufacturing Company is leading the economic resurgence of the city. Several years ago, it embarked on a mission to manufacture generators that bring energy to the most desolate parts of the city at a fraction of the typical cost. This new energy source has sparked economic growth in the most underserved areas. However, the reduced cost of energy is perceived as a threat to the profits of the local mafia, which has amassed its wealth by controlling the expensive fuel supply chain. There are also rumors circulating about Walker Manufacturing Company's ambitious plan to engineer a floating electric scooter, a disruptive innovation that could revolutionize the transportation sector.
+
+## You're hired!
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Madam C.J. Walker Manufacturing Company and our employees from malicious cyber actors.
 
 ![MCJWalkerLogo](https://res.cloudinary.com/dt8l5w5wi/image/upload/v1690417731/256391202-c616d07c-70a5-4afb-86f4-24a9af37302d.png_bdiwzv.png)
-
-In the desolate ruins of the abandoned city, the Madam C.J. Walker Manufacturing Company stands as a defiant beacon of hope within the industrial distict. Once celebrated for its exceptional hair care and beauty products, tailored for those forgotten by society, it now serves as a last bastion of resilience.
-
-The Walker Manufacturing Company is leading the economic resurgence of the city. Several years ago, it embarked on a mission to manufacture generators that bring energy to the most desolate parts of the city at a fraction of the typical cost. This new energy source has sparked economic growth in the most underserved areas. However, the reduced cost of energy is perceived as a threat to the profits of the local mafia, which has amassed its wealth by controlling the expensive fuel supply chain. There are also rumors circulating about Walker Manufacturing Company's ambitious plan to engineer a floating electric scooter, a disruptive innovation that could revolutionize the transportation sector.
 
 
 The Walker Manufacturing Company has a series of key partners who contribute to the success of our business:
