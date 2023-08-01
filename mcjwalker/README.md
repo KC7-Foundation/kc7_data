@@ -124,7 +124,7 @@ Employees
 | take 10
 ```
 
-https://res.cloudinary.com/dt8l5w5wi/image/upload/v1690854399/kc7_take_10_lyec47.gif
+![take 10 command](https://res.cloudinary.com/dt8l5w5wi/image/upload/v1690854399/kc7_take_10_lyec47.gif)
 
 This query has a few parts. Let’s take a moment to break each of them down:
 
