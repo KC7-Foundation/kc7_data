@@ -1,3 +1,6 @@
+_:warning: Legal Disclaimer:
+The companies, organizations, domain names, email addresses, people, places, and events depicted in the KC7 Cyber Game data sets and other materials created by the KC7 Foundation are fictitious.  No association with any real company, organization, domain name, email address, person, place, or event is intended or should be inferred._
+
 # The Madam C.J. Walker Manufacturing Company
 
 The year is 2323. Washington D.C.has been split into several districts, some districts inhabited, some are simply abandoned relics of the past. Where there is life, there is a sprawling metropolis!
@@ -65,7 +68,6 @@ Let’s get you logged in and started with ADX:
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
