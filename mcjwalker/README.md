@@ -199,7 +199,7 @@ Employees
 | where name == "Sherrell Dorsey"
 ```
 
->3. 🤔Each employee at Madam C.J. Walker Manufacturing Company is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+>3. 🤔 Each employee at Madam C.J. Walker Manufacturing Company is assigned an IP address. Which employee has the IP address: “10.10.0.1”?
 
 Here are some additional operators we like to use (**this might be useful later ;) ):
 
@@ -231,7 +231,7 @@ Email
 
 ```
 
-> 4. 🤔How many emails did Wayne Sutton receive?
+> 4. 🤔 How many emails did Wayne Sutton, the Marketing Coordinator, receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -252,7 +252,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-5.  🤔How many distinct senders were seen in the email logs from scavengers-r-us.org?
+5.  🤔 How many distinct senders were seen in the email logs from scavengers-r-us.org?
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -272,7 +272,7 @@ OutboundNetworkEvents
 | where src_ip == "10.10.0.79"
 ```
 
-> 6.  🤔How many unique websites did “Derrick Robinson” visit?
+> 6.  🤔 How many unique websites did “Patricia Robinson” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -289,8 +289,8 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “powergrid”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “powergrid.net” resolve to (enter any one of them)?
+> 7.  🤔 How many domains in the PassiveDns records contain the word “power”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 8. 🤔 What IP starting with a 196. did the domain “critical-power.net” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
