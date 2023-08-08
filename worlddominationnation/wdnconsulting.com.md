@@ -55,9 +55,7 @@ ADX is the primary tool used in the WDN Consulting SOC for data exploration and 
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the WDN Consulting training module at [kc7cyber.com/WDN Consulting
-
-](http://kc7cyber.com/WDN Consulting)
+1. Go to the WDN Consulting training module at [scoreboard.kc7cyber.com/squadcon](scoreboard.kc7cyber.com/squadcon)
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
@@ -65,13 +63,13 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
+<img width="320" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/b86cad4f-66fc-4cc8-bab6-2ef3917b8e01">
+
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+<img width="502" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/706f2c64-7728-4902-ad5f-0d4726f539f9">
+
 
 All of WDN Consulting’s security logs are stored in a single database – the WDN Consulting database. 
 
