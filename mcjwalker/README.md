@@ -1,4 +1,4 @@
-_:warning: Legal Disclaimer:
+⚠️  Legal Disclaimer:
 The companies, organizations, domain names, email addresses, people, places, and events depicted in the KC7 Cyber Game data sets and other materials created by the KC7 Foundation are fictitious.  No association with any real company, organization, domain name, email address, person, place, or event is intended or should be inferred._
 
 # The Madam C.J. Walker Manufacturing Company
