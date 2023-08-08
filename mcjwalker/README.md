@@ -46,7 +46,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Madam C.J. Walker Manufacturing Company](http://kc7cyber.com/modules/defcon)
+You can find all the links you need here: scoreboard.kc7cyber.com/modules/defcon. **However, you will answer all the question on the CTFRoom scoreboard.**
 
 ### Legend
 
