@@ -59,8 +59,6 @@ Let’s get you logged in and started with ADX:
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
-
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 <img width="320" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/b86cad4f-66fc-4cc8-bab6-2ef3917b8e01">
@@ -77,11 +75,12 @@ All of WDN Consulting’s security logs are stored in a single database – the 
 	- Expand the dropdown arrow next to the WDN Consulting database.
 	- Click on the **DominationNation** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the WDN Consulting database for all questions while you’re investigating activity at WDN Consulting! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the DominationNation database for all questions while you’re investigating activity at WDN Consulting! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
+<img width="839" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/e654b2e7-2436-4012-823c-0803f617a79a">
+
 
 Currently, you’ll see there’s a message there welcoming you to WDN Consulting! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
