@@ -2,7 +2,8 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend WDN Consulting and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+![domination_nation](https://github.com/KC7-Foundation/kc7_data/assets/9474932/ae93a444-18d4-4550-9bd7-c98568fe626b)
+
 
 World Domination Nation, a woman-led consulting powerhouse, propels individuals and organizations to unleash their potential through visionary "world domination plans." With strategic prowess, innovative spirit, and meticulous execution, we've revolutionized urban sustainability, pioneered health-tech breakthroughs, reignited space exploration, transformed education, harnessed AI for social good, and ignited culinary fusion. Through our diverse projects, World Domination Nation showcases the remarkable impact of our empowering approach, reshaping industries and inspiring positive global change.
 
@@ -69,7 +70,7 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 <img width="502" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/706f2c64-7728-4902-ad5f-0d4726f539f9">
 
 
-All of WDN Consulting’s security logs are stored in a single database – the WDN Consulting database. 
+All of WDN Consulting’s security logs are stored in a single database – the DominationNation database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the WDN Consulting database.
@@ -280,8 +281,8 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
+> 7. 🤔 How many domains in the PassiveDns records contain the word “crypto”?
+> 8. 🤔 What IPs did the domain “cryptocoin.net” resolve to (enter any one of them)??
 
 **🤯Let statements – making your life a bit easier:**
 
