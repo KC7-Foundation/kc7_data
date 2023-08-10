@@ -2,8 +2,8 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend WDN Consulting and our employees from malicious cyber actors.
 
-![domination_nation](https://github.com/KC7-Foundation/kc7_data/assets/9474932/ae93a444-18d4-4550-9bd7-c98568fe626b)
-
+[![domination_nation](https://github.com/KC7-Foundation/kc7_data/assets/9474932/ae93a444-18d4-4550-9bd7-c98568fe626b)
+](https://res.cloudinary.com/dt8l5w5wi/image/upload/v1691654392/domination_nation-min_rbc57q.png)
 
 World Domination Nation, a woman-led consulting powerhouse, propels individuals and organizations to unleash their potential through visionary "world domination plans." With strategic prowess, innovative spirit, and meticulous execution, we've revolutionized urban sustainability, pioneered health-tech breakthroughs, reignited space exploration, transformed education, harnessed AI for social good, and ignited culinary fusion. Through our diverse projects, World Domination Nation showcases the remarkable impact of our empowering approach, reshaping industries and inspiring positive global change.
 
