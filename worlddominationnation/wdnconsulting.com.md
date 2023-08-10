@@ -1,3 +1,6 @@
+⚠️  Legal Disclaimer:
+The companies, organizations, domain names, email addresses, people, places, and events depicted in the KC7 Cyber Game data sets and other materials created by the KC7 Foundation are fictitious.  No association with any real company, organization, domain name, email address, person, place, or event is intended or should be inferred._
+
 # Welcome to World Domination Nation Consulting
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend WDN Consulting and our employees from malicious cyber actors.
