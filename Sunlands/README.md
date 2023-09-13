@@ -2,7 +2,8 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with the most advanced space program in the world. Your primary job responsibility is to defend Sunlands Aeronautics and Space Administration (SASA) and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+![sasa](https://github.com/KC7-Foundation/kc7_data/assets/9474932/26fda1ff-c5c2-4c5d-9e90-f553375544fc)
+
 
 ### Introduction
 
