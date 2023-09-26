@@ -52,13 +52,13 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/cc798f5c-a6b9-4928-af4c-25b13d02a83c)
+
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/c4114658-b8e3-4822-a0ea-951d577082d8)
+
 
 All of Sunlands Aeronautics and Space Administration (SASA)’s security logs are stored in a single database – the Sunlands Aeronautics and Space Administration (SASA) database. 
 
@@ -70,7 +70,7 @@ Note: It’s very important that you use the **Sunlands** database for all quest
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/2c15aae9-2334-46a5-b3f1-fb47fbe6c47f)
 
 Currently, you’ll see there’s a message there welcoming you to Sunlands Aeronautics and Space Administration (SASA)! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
