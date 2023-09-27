@@ -34,7 +34,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Sunlands Aeronautics and Space Administration (SASA)](http://kc7cyber.com/modules/SASA)
+You can find all the links you need here: [http://scoreboard.kc7cyber.com/modules/SASA](http://scoreboard.kc7cyber.com/modules/SASA)
 
 #### Getting Set Up in Azure Data Explorer (ADX)
 
@@ -42,13 +42,10 @@ ADX is the primary tool used in the Sunlands Aeronautics and Space Administratio
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Sunlands Aeronautics and Space Administration (SASA) training module at [kc7cyber.com/Sunlands Aeronautics and Space Administration (SASA)
+On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-](http://kc7cyber.com/Sunlands Aeronautics and Space Administration (SASA))
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/aaab3ee6-95c6-4806-99f2-a2e9e6ada2bf)
 
-On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
-
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
@@ -60,13 +57,13 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/c4114658-b8e3-4822-a0ea-951d577082d8)
 
 
-All of Sunlands Aeronautics and Space Administration (SASA)’s security logs are stored in a single database – the Sunlands Aeronautics and Space Administration (SASA) database. 
+All of Sunlands Aeronautics and Space Administration (SASA)’s security logs are stored in a single database – the **Sunlands** database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the **Sunlands** database.
 	- Click on the **Sunlands** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the **Sunlands** database for all questions while you’re investigating activity at Sunlands Aeronautics and Space Administration (SASA)! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **Sunlands** database for all questions while you’re investigating activity at SASA! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
