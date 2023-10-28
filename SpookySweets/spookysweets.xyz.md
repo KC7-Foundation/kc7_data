@@ -64,7 +64,8 @@ Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1fb748c7-a7bf-451e-a5cb-e634ab084e8c)
+<img width="660" alt="Screenshot 2023-10-28 at 11 39 06 AM" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/27cd7a48-1205-4d21-90d7-c054f2873388">
+
 
 All of Spooky Sweets Candy Company’s security logs are stored in a single database – the Spooky Sweets Candy Company database. 
 
