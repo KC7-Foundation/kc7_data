@@ -36,7 +36,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Spooky Sweets Candy Company](http://kc7cyber.com/Spooky Sweets Candy Company)
+You can find all the links you on the left sidebar of the the KC7 scoreboard. 
 
 ### Legend
 
@@ -54,13 +54,10 @@ ADX is the primary tool used in the Spooky Sweets Candy Company SOC for data exp
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Spooky Sweets Candy Company training module at [kc7cyber.com/Spooky Sweets Candy Company
+1. Look on the left sidebar of the scoreboard
 
-](http://kc7cyber.com/Spooky Sweets Candy Company)
+On the training module page, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
-
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
@@ -78,7 +75,7 @@ All of Spooky Sweets Candy Company’s security logs are stored in a single data
 	- Expand the dropdown arrow next to the Spooky Sweets Candy Company database.
 	- Click on the **Spooky Sweets Candy Company** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the Spooky Sweets Candy Company database for all questions while you’re investigating activity at Spooky Sweets Candy Company! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the Spooky Sweets Candy Company database for all questions while you’re investigating activity at Spooky Sweets Candy Company! If you choose the wrong database, you won’t be able to answer questions correctly. You can click the "favorite" button next to the query bar to highlight only the SpookySweets database.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
@@ -90,9 +87,9 @@ Okay, enough introductions… let’s get your hands on the data.
 
 #### First Look at the data... 
 
-The **Spooky Sweets Candy Company** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
+The **SpookySweets** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
 
-We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Spooky Sweets Candy Company** database:
+We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **SpookySweets** database:
 
 | **Table Name** | **Description** | 
 | ----------- | ----------- |
