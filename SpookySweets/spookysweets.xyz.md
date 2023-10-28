@@ -61,8 +61,7 @@ On the training module page, you’ll see a button that says **Query Data (ADX)*
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/71fe6659-a0d7-4bf8-bc00-e34f3de150c2)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
