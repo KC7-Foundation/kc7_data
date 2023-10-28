@@ -2,9 +2,9 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Spooky Sweets Candy Company and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/ff0b5325-6419-48ad-80f8-27aae7daf06e)
 
-{{COMPANY_DESCRIPTION}}
+The Spooky Sweets Candy Company is a renowned confectionery enterprise with a captivating history and a substantial global following. Founded in the early 20th century by the imaginative Wilhelmina "Willy" Whipple, the company has since evolved into a Halloween sensation. Spooky Sweets is celebrated for its inventive and spooky-themed candy creations, contributing significantly to the Halloween spirit.
 
 Spooky Sweets Candy Company has a series of key partners who contribute to the success of our business:
 
@@ -189,7 +189,7 @@ Employees
 | where name == "Jerry Blake"
 ```
 
->3. 🤔Each employee at Spooky Sweets Candy Company is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+>3. 🤔Each employee at Spooky Sweets Candy Company is assigned an IP address. Which employee has the IP address: “10.10.0.251”?
 
 Here are some additional operators we like to use:
 
@@ -279,8 +279,8 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
+> 7.  🤔 How many domains in the PassiveDns records contain the word “Halloween”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 8. 🤔 What IPs did the domain “halloween-infrastructure.com” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
