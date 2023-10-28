@@ -75,9 +75,11 @@ All of Spooky Sweets Candy Company’s security logs are stored in a single data
 
 Note: It’s very important that you use the Spooky Sweets Candy Company database for all questions while you’re investigating activity at Spooky Sweets Candy Company! If you choose the wrong database, you won’t be able to answer questions correctly. You can click the "favorite" button next to the query bar to highlight only the SpookySweets database.
 
+<img width="556" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/3d38b044-60fd-495e-851b-81f6e06100a7">
+
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
+<img width="565" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/ca8a5aef-6527-4589-b4ee-a8eae2aaf69d">
 
 Currently, you’ll see there’s a message there welcoming you to Spooky Sweets Candy Company! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
