@@ -10,10 +10,10 @@ Spooky Sweets Candy Company has a series of key partners who contribute to the s
 
 | Partner Name | Relationship |
 | ----------- | ----------- |
-| spoopycandysupplies.com | {{PARTNER_DOMAIN_1_DESCRIPTION}}|
-| spookycandycompliance.biz | {{PARTNER_DOMAIN_2_DESCRIPTION}}|
-| spookysweetsuppliers.shop | {{PARTNER_DOMAIN_3_DESCRIPTION}}|
-| spoopycandydistribution.site | {{PARTNER_DOMAIN_4_DESCRIPTION}}|
+| spoopycandysupplies.com | spoopycandysupplies.com seems like a website dedicated to offering various supplies and accessories related to Halloween or spooky-themed candy. This might include packaging, decorations, and special ingredients for making Halloween candies.|
+| spookycandycompliance.biz | spookycandycompliance.biz appears to be a domain focused on ensuring compliance with regulatory and safety standards in the candy industry, particularly for spooky or Halloween-themed confectionery products. It might provide information, resources, or services for candy manufacturers to meet these standards.|
+| spookysweetsuppliers.shop | spookysweetsuppliers.shop suggests a platform that connects buyers with suppliers of a wide range of spooky or Halloween-themed sweets. This domain likely hosts an online store or marketplace for purchasing candies and related products with a spooky twist.|
+| spoopycandydistribution.site | spoopycandydistribution.site seems like a website involved in the distribution of Halloween or spooky-themed candies. It may function as a distributor, connecting candy producers with retailers, or as an online store where customers can purchase these candies for various occasions.|
 
 Spooky Sweets Candy Company has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
 
