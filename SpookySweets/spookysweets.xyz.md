@@ -61,12 +61,10 @@ On the training module page, you’ll see a button that says **Query Data (ADX)*
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/71fe6659-a0d7-4bf8-bc00-e34f3de150c2)
-
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+
+![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1fb748c7-a7bf-451e-a5cb-e634ab084e8c)
 
 All of Spooky Sweets Candy Company’s security logs are stored in a single database – the Spooky Sweets Candy Company database. 
 
