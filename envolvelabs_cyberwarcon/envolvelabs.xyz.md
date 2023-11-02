@@ -68,7 +68,6 @@ A few things you’ll need to do first:
 
 9. Once you’ve installed the Power-Ups, use the Toolbar on the left of the UI to navigate to the Console Tool by clicking on the Console Tool icon, shown below: 
 
-
 10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key: 
 
 11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
@@ -105,7 +104,7 @@ There are three basic operations we’ll use to query the company’s logs using
 
 Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
-__Lifts - Example 1: Let’s find all the employees at EnvolveLabs__
+<u>Lifts - Example 1: Let’s find all the employees at EnvolveLabs<\u>
 
 To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, the form for employees is `ps:contact`.
 Enter the following in the Query Bar:
