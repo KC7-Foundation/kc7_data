@@ -205,7 +205,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
 
 This leaves us 17 results.
 
-### Pivots
+### Pivot
 
 Pivot operations are performed on the output of a previous Storm operation such as a lift or filter. Pivot operators are used to navigate from one set of nodes to another based on a specified relationship.
 
