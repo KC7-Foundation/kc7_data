@@ -117,7 +117,7 @@ We’ll find there are 1,513 results. Each result is a node that represents a un
 
 Question: How many employees are in the company?
 
-<u>Lifts Example 2: Finding a limited number of nodes</u>
+<u>**Lifts Example 2: Finding a limited number of nodes**</u>
 
 In Lifts - Example 1, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
 
