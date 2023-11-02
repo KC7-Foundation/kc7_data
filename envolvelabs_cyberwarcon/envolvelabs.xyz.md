@@ -104,7 +104,7 @@ There are three basic operations we’ll use to query the company’s logs using
 
 Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
-**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**
+<u>Lifts - Example 1: Let’s find all the employees at EnvolveLabs</u>
 
 To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, the form for employees is `ps:contact`.
 Enter the following in the Query Bar:
@@ -117,7 +117,7 @@ We’ll find there are 1,513 results. Each result is a node that represents a un
 
 Question: How many employees are in the company?
 
-_Lifts Example 2: Finding a limited number of nodes_
+<u>Lifts Example 2: Finding a limited number of nodes</u>
 
 In Lifts - Example 1, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
 
@@ -135,7 +135,7 @@ inet:fqdn | limit 10
 
 >Lift 10 employees. Enter “done” when you have finished. 
 
-_Lifts Example 3: Standard and Extended Comparisons_
+<u>Lifts Example 3: Standard and Extended Comparisons</u>
 
 Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about Envolve Labs employee Stephanie Clark.
 
@@ -162,7 +162,7 @@ Filter operations are performed on the output of a previous Storm operation, suc
 * `-` specifies an exclusion filter (include all nodes except those that match the criteria)
 
 
-_Filters Example 1: Inclusion Filtering_
+<u>Filters Example 1: Inclusion Filtering</u>
 
 Suppose we wanted to look at all the emails sent by Stephanie Clark, but only those emails about economics.
 
@@ -192,7 +192,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 
 This leaves us with only one result.
 
-_Filters Example 2: Exclusion Filtering_
+<u>Filters Example 2: Exclusion Filtering</u>
 
 Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
 
@@ -210,7 +210,7 @@ Pivot operations can help us join information together from multiple sources thr
 
 We’ll primarily use the pivot out operator, which is denoted by the arrow symbol `->`
 
-_Pivot Out Example 1_
+<u>Pivot Out Example 1</u>
 
 Suppose you wanted to find all the links sent in the emails sent by Stephanie Clark. We can accomplish this using the pivot out operator
 
