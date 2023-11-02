@@ -195,7 +195,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 
 This leaves us with only one result.
 
-_Filters Example 1: Inclusion Filtering_
+_Filters Example 2: Exclusion Filtering_
 
 Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
 
