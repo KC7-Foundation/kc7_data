@@ -2,7 +2,8 @@
 
 🥳 **Today is your inaugural day as a Junior Security Operations Center (SOC) analyst.** Your job is to safeguard EnvolveLabs, a leading research hub in Ukraine, and its dedicated team from potential cyber threats, especially during these challenging times of the Russian invasion.
 
-![2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/18dd5130-0fbc-49db-a42f-fd1cbecab887)
+![2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/db6fffb7-6f81-4fc1-ada7-ab0af4700732)
+
 
 EnvolveLabs, situated in Ukraine's vibrant tech landscape, is a nexus of groundbreaking research in the intertwined fields of energy and artificial intelligence (AI). This research institute is harnessing renewable energy sources, all while employing advanced AI algorithms to optimize energy production, distribution, and consumption. Beyond just energy, they're leveraging AI to predict energy demands, streamline grid operations, and even forecast environmental impacts.
 
