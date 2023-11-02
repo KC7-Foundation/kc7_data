@@ -104,7 +104,7 @@ There are three basic operations we’ll use to query the company’s logs using
 
 Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
-<u>Lifts - Example 1: Let’s find all the employees at EnvolveLabs</u>
+**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**
 
 To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, the form for employees is `ps:contact`.
 Enter the following in the Query Bar:
