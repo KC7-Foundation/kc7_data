@@ -134,7 +134,7 @@ This query brings back over 2,000 results. To see a more manageable set of the d
 inet:fqdn | limit 10
 ```
 
-Lift 10 employees. Enter “done” when you have finished. 
+>Lift 10 employees. Enter “done” when you have finished. 
 
 _Lifts Example 3: Standard and Extended Comparisons_
 
@@ -152,11 +152,9 @@ If, instead, we wanted to find all EnvolveLabs employees with the first name Ste
 ps:contact:name^=Stephanie
 ```
 
-What is the CEO’s name? (hint: lift by the title)
+>What is the CEO’s name? (hint: lift by the title)
 
 
-
- 
 ### Filter
 
 Filter operations are performed on the output of a previous Storm operation, such as a lift or pivot. We use filter to downselect the set of nodes by either including or excluding nodes based on a set of criteria:
