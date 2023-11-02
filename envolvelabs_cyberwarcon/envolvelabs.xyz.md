@@ -1,406 +1,292 @@
-# Welcome to EnvolveLabs
+# Welcome to EnvolveLabs!
 
-🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend EnvolveLabs and our employees from malicious cyber actors.
+🥳 **Today is your inaugural day as a Junior Security Operations Center (SOC) analyst.** Your job is to safeguard EnvolveLabs, a leading research hub in Ukraine, and its dedicated team from potential cyber threats, especially during these challenging times of the Russian invasion.
 
-{{IMAGE_LOGO}}
+EnvolveLabs, situated in Ukraine's vibrant tech landscape, is a nexus of groundbreaking research in the intertwined fields of energy and artificial intelligence (AI). This research institute is harnessing renewable energy sources, all while employing advanced AI algorithms to optimize energy production, distribution, and consumption. Beyond just energy, they're leveraging AI to predict energy demands, streamline grid operations, and even forecast environmental impacts.
 
-{{COMPANY_DESCRIPTION}}
+However, in the wake of the Russian invasion, their cutting-edge research and strategic location have inadvertently made EnvolveLabs a prime target for cyber threats and espionage. Your mission, if you choose to accept it, is to investigate attacks against EvolveLabs so they can help keep the lights on for everyone in the country.
 
-EnvolveLabs has a series of key partners who contribute to the success of our business:
+EnvolveLabs has some key partners that contribute to the success of its research endeavors.
 
 | Partner Name | Relationship |
-| ----------- | ----------- |
-| pharmasupplies.shop | {{PARTNER_DOMAIN_1_DESCRIPTION}}|
-| wesellbeakers.online | {{PARTNER_DOMAIN_2_DESCRIPTION}}|
-| vaxdistro.site | {{PARTNER_DOMAIN_3_DESCRIPTION}}|
-| researchcompliance.biz | {{PARTNER_DOMAIN_4_DESCRIPTION}}|
+|--------------|--------------|
+| We Sell Beakers (wesellbeakers.online | We Sell Beakers is a crucial partner for EnvolveLabs, providing essential laboratory equipment and supplies to support their groundbreaking research. |
+| Ukrainian Pharma Supplies (pharmasupplies.shop) | Ukrainian Pharma Supplies plays a significant role in supporting EnvolveLabs' research activities, particularly in the context of healthcare and pharmaceutical-related projects. |
+| The Center For Compliance in Research Ethics (researchcompliance.biz) | The Center for Compliance in Research Ethics is a valued partner, providing guidance and expertise in ensuring that EnvolveLabs' research adheres to the highest ethical and compliance standards. |
+| Vaccine Distributors Inc (vaxdistro.site) | Vaccine Distributors Inc plays a crucial role in public health initiatives and is a key collaborator of EnvolveLabs. Protecting this partnership is vital for maintaining public health and safety. |
 
-EnvolveLabs has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
+## Objectives
 
-Like all good companies, EnvolveLabs collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
+🧠 **By the end of your first day on the job, you should be able to:**
+	
+- ✅ **Pivot on data using Storm and Synapse:** Learn how to lift, filter, and pivot.
+- ✅ **Labeling nodes:** Understand how to label nodes to form an analytical layer.
+- ✅ **Data analysis:** Use multiple data sets to answer targeted questions.
+- ✅ **Cyber activity investigation:** Examine logs, including email, web traffic, and server logs.
+- ✅ **Tracking APTs:** Employ multiple techniques to track the activity of Advanced Persistent Threats.
+- ✅ **Utilize third-party data sets:** Discover insights about your attackers.
+- ✅ **Recommendations:** Advise on actions a company can take to protect themselves.
 
-You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
+🚀 The attackers have gotten a head start, so let's not waste any more time... **let's get to work!**
 
-### Objectives
+## Section 1: The Walkthrough
 
-🧠 By the end of your first day on the job, you should be able to:
+EnvolveLabs collects log data about the activity our employees perform on the organization's network. These security audit logs are stored in Synapse - a versatile central intelligence and analysis system developed by the Vertex Project. You will use the Storm query language to pivot through EnvolveLabs’ telemetry, and label clusters of malicious activity you find along the way. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors and help us stop the adversaries!
 
--   Use the Azure Data Explorer
--   Use multiple data sets to answer targeted questions 
--   Investigate cyber activity in logs including: email, web traffic, and server logs 
--   Use multiple techniques to track the activity of APTs (Advanced Persistent Threats) 
--   Use third party data sets to discover things about your attackers
--   Make recommendations on what actions a company can take to protect themselves
+### Getting Set Up in Synapse
 
+A few things you’ll need to do first:
 
-**The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
+1. If you have not already received a Synapse demo instance, you can request one [here](https://vertex.link/request-a-demo).
 
+2. Once you’ve requested a Synapse demo instance, you will receive an email from “Optic <signup@vertex.link>” with a link to your Synapse demo instance. Click the link to create a password and log into your Synapse instance.
 
-You can find all the links you need here: [kc7cyber.com/EnvolveLabs](http://kc7cyber.com/EnvolveLabs)
+3. Once you have logged in, you should be in the Research Tool. Verify this by checking the green Top Bar at the top of the UI. It should show “Research” in the left-hand corner. Alternatively, navigate to the Research Tool by
 
-### Legend
+4. Use the Workspace Selector dropdown menu in the Top Bar to change from “default” to the “KC7 Workspace”. This will be the first dropdown menu to the right of where it says “Research”.
 
-> 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
+5. After selecting the KC7 Workspace, move to the dropdown menu to the right of the Workspace selector, and select the KC7 Cyberwarcon 2023 view. This is where the data for today’s exercise is located. The Top Bar of your UI should now have a specific appearance (a visual representation or description would typically follow here).
 
-> 🤔Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
+6. Next, we’re going to create a scratchspace to work out of. To do this, click the fork icon to the right of the View Selector:
 
-> 🤫 Hint – “Whisper” emojis represent in-game hints. These hints will guide you in the right direction in answering some of the questions.
+	This will give you a pop-up window where you can name your scratchspace, then click “Fork” to create it. You’ll see the name of your scratchspace replace the “KC7 Cyberwarcon 2023” view in the View Selector.
 
-## Section 1: The Walkthrough 
+7. Double check that the Query Bar, shown below, is set to Storm mode:
 
-#### Getting Set Up in Azure Data Explorer (ADX)
-
-ADX is the primary tool used in the EnvolveLabs SOC for data exploration and analysis. The great thing about ADX is that it is used by cyber analysts at many of the smallest and largest organizations in the world. 
-
-Let’s get you logged in and started with ADX:
-
-1. Go to the EnvolveLabs training module at [kc7cyber.com/EnvolveLabs
-
-](http://kc7cyber.com/EnvolveLabs)
-
-On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
-
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
-
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
-
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
-
-Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
-
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
-
-All of EnvolveLabs’s security logs are stored in a single database – the EnvolveLabs database. 
-
-  2. Select your database.  
-	- Expand the dropdown arrow next to the EnvolveLabs database.
-	- Click on the **EnvolveLabs** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
-
-Note: It’s very important that you use the EnvolveLabs database for all questions while you’re investigating activity at EnvolveLabs! If you choose the wrong database, you won’t be able to answer questions correctly.
-
-The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
-
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
-
-Currently, you’ll see there’s a message there welcoming you to EnvolveLabs! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
-
-Okay, enough introductions… let’s get your hands on the data.
-
-#### First Look at the data... 
-
-The **EnvolveLabs** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
-
-We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **EnvolveLabs** database:
-
-| **Table Name** | **Description** | 
-| ----------- | ----------- |
-| Employees | Contains information about the company’s employees| 
-| Email | Records emails sent and received by employees|
-| InboundNetworkEvents | Records inbound network events including browsing activity from the Internet to devices within the company network|
-| OutboundNetworkEvents | Records outbound network events including browsing activity from within the company network out to the Internet|
-| AuthenticationEvents | Records successful and failed logins to devices on the company network. This includes logins to the company’s mail server.|
-| FileCreationEvents | Records files stored on employee’s devices|
-| ProcessEvents | Records processes created on employee’s devices |
-| PassiveDns (External) | Records IP-domain resolutions |
-| SecurityAlerts | Records security alerts from an employee’s device or the company’s email security system |
-
-> 🎯**Key Point – Over the Horizon (OTH) data**: One of the tables listed above is not like the others – **PassiveDns**. Rather than being an internal security log, PassiveDns is a data source that we’ve purchased from a 3rd party vendor. Not all malicious cyber activity happens within our company network, so sometimes we depend on data from other sources to complete our investigations.
+	We’ll be using this Query Bar to run our queries for today’s exercises. 
 
 
-You’ll learn more about how to use each of these datasets in just a minute. First, let’s just run some queries so you can practice using KQL and ADX.
+8. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
+
+	[image here]
+
+	Do the same for the Synapse-Maxmind Power-Up.
 
 
-#### KQL 101 
+9. Once you’ve installed the Power-Ups, use the Toolbar on the left of the UI to navigate to the Console Tool by clicking on the Console Tool icon, shown below: 
 
-Type the following query in the workspace to view the first rows in the **Employees** table. Press “run” or “shift + enter” to execute the query.
 
-```sql
-Employees
-| take 10
+10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key: 
+
+11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
+
+### First Look at the Data…
+
+EnvolveLabs maintains a log of various events taking place within the company. This data is gathered from multiple sources such as network sensors, firewalls, and endpoint products. This information is pivotal for detecting and countering malicious activities. You can access this data in Synapse using the following forms:
+
+| Form Used           | Description                                                                                          |
+|---------------------|------------------------------------------------------------------------------------------------------|
+| `ps:contact`        | Information about employees hired at the company and their corresponding assets                      |
+| `inet:email:message`| Emails sent and received by employees at the company                                                 |
+| `it:host`           | Information about hosts assigned to the company’s employees                                          |                                                                                     |
+| `inet:http:request` | Web browsing activity to and from the Internet, indicating websites visited by our employees and external users browsing our websites |
+| `it:logon`          | Successful and failed logins to devices on the company network, including logins to the company’s mail server |
+| `it:exec:file:add`  | Data about one of the employee-assigned host machines adding a file to a filesystem                  |
+| `it:exec:proc`      | Data regarding processes created on employee’s devices                                               |
+| `inet:dns:a`        | IP-domain resolutions provided by a third-party vendor                                               |
+| `risk:alert`        | Security alerts from employees’ devices and the company’s email security system                      |
+
+These additional forms may be helpful during your investigations
+
+| Form           | Description                                                                                          |
+|---------------------|------------------------------------------------------------------------------------------------------|
+| `inet:fqdn`         | A fully qualified domain name                                                                        |
+| `inet:ipv4`         | An IPv4 address 
+
+
+## STORM 101
+
+There are three basic operations we’ll use to query the company’s logs using Storm: Lift, Filter, and Pivot. We can build everything on top of these basics. 
+
+### Lift
+
+Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
+
+#### Lifts - Example 1: Let’s find all the employees at EnvolveLabs
+
+To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, the form for employees is `ps:contact`.
+Enter the following in the Query Bar:
+
+```css
+ps:contact
 ```
 
-This query has a few parts. Let’s take a moment to break each of them down:
+We’ll find there are 1,513 results. Each result is a node that represents a unique employee at the company, with more detail about each employee - such as name, email address, and title - captured as a node property.
 
-![Diagram
-Description automatically generated with low confidence](https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg)
+Question: How many employees are in the company?
 
-| **Query Component** | **Description** | 
-| ----------- | ----------- |
-| Table Name | The table name specifies which table/data source the query will pull data from. All queries must start with a table.|
-| Pipe character (&#124;) | The pipe character indicates the start of a new part of the query. A pipe will be added automatically after typing a table name and pressing enter. You can also add a pipe character manually by holding shift and pressing the backslash (&#92;) key. That’s the one just below the backspace key.
+### Lifts Example 2: Finding a limited number of nodes
 
-The **take** operator is a powerful tool you can use to explore rows in a table, and therefore better understand what kinds of data are stored there.
+In Lifts - Example 1, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
 
-> 🎯**Key Point – What to do when you don’t know what to do**: Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the **take** operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
+As with Example 1, let’s start by typing the Form name associated with domains:
 
-
-The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “EnvolveLabs” and the domain is “envolvelabs.xyz”.
-
->1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
-
-Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
-
-You can easily write multiple queries in the same workspace tab. To do this, make sure to separate each query by an empty line. Notice below how we have separated the queries for the **Employees**, **Email**, and **OutboundNetworkEvents** tables by adding empty lines between them.
-
-```sql
-Email
-| take 10
-
-Employees
-| take 10
-
-OutboundNetworkEvents
-| take 10
+```css
+inet:fqdn
 ```
 
-When you have multiple queries, it’s important to tell ADX which query you want to run. To choose a query, just click on any line that is part of that query. 
+This query brings back over 2,000 results. To see a more manageable set of the data, we can pipe the output of the query to the limit command, which will only return the specified numbers of results. Let’s run this query to see only 10 domains:
 
-**Finding Out “How Many”: The count Operator**
-
-We can use **count** to see how many rows are in a table. This tells us how much data is stored there.
-
-```sql
-Employees
-| count
+```css
+inet:fqdn | limit 10
 ```
 
-2.  🤔How many employees are in the company?
+Lift 10 employees. Enter “done” when you have finished. 
 
-**Filtering Data With the _where_ Operator**
+### Lifts Example 3: Standard and Extended Comparisons
 
-So far, we’ve run queries that look at the entire contents of the table. Often in cybersecurity analysis, we only want to look at data that meets a set of conditions or criteria. To accomplish this, we apply filters to specific columns.
-  
-We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find all the employees with the name “Jeanette” by filtering on the name column in the Employees table.
+Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about Envolve Labs employee Stephanie Clark.
 
-**where** statements are written using a particular structure. Use this helpful chart below to understand how to structure a **where** statement.
+We’ll be looking at ps:contact nodes for this query, but this time, we’ll focus specifically on the node’s :name property. Using the = comparator, we can find the exact node that belongs to Stephanie Clark:
 
-| **where** | **field** | **operator** | **"value"** |
-| ----------- | ----------- | ----------- | ----------- |
-| where | name | has | "Jeanette" |
-
-```sql
-Employees
-| where name has "Jeanette"
+```css
+ps:contact:name="Stephanie Clark"
 ```
 
-The **has** operator is useful here because we’re looking for only a partial match. If we wanted to look for an employee with a specific first and last name (an exact match), we’d use the == operator:
+If, instead, we wanted to find all EnvolveLabs employees with the first name Stephanie, we could use the prefix comparator `^=` to match these nodes:
 
-```sql
-Employees
-| where name == "Jeanette Sanchez"
+```css
+ps:contact:name^=Stephanie
 ```
 
->3. 🤔Each employee at EnvolveLabs is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+What is the CEO’s name? (hint: lift by the title)
 
-Here are some additional operators we like to use:
+### Lifts Example 2: Finding a limited number of nodes
 
-| Operator | Description | Case-Sensitive | Example (yields true) |
-|---|---|---|---|
-| == | Equals | Yes | "aBc" == "aBc" |
-| != | Not equals | Yes | "abc" != "ABC" |
-| =~ | Equals | No | "abc" =~ "ABC" |
-| contains | Right-hand-side (RHS) occurs as a subsequence of left-hand-side (LHS) | No | "FabriKam" contains "BRik" |
-| has | RHS is a whole term in LHS | No | "North America" has "america" |
-| has_all | Same as has but works on all of the elements | No | "North and South America" has_all("south", "north") |
-| has_any | Same as has but works on any of the elements | No | "North America" has_any("south", "north") |
-| in | Equals to any of the elements | Yes | "abc" in ("123", "345", "abc") |
+In Lifts - Example 1, we found all the employees at EnvolveLabs by typing the name of the Form (`ps:contact`) that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
 
+As with Example 1, let’s start by typing the Form name associated with domains:
 
-While performing their day-to-day tasks, EnvolveLabs employees send and receive emails. A record of each of these emails is stored in the **Email** table.
-
-> 🎯**Key Point – User Privacy and Metadata**: As you can imagine, some emails are highly sensitive. Instead of storing the entire contents of every email sent and received within the company in a database that can be easily accessed by security analysts, we only capture email metadata. 
-
-Email metadata includes information like: the time the email was sent, the sender, the recipient, the subject line, and any links the email may contain. Storing only email metadata, rather than entire contents, helps protect the privacy of our employees, while also ensuring that our security analysts can keep us safe. Sometimes even metadata can reveal sensitive information, so it’s important that you don’t talk about log data with other employees outside the SOC.
-
-
-We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails sent by “Jeanette Sanchez”:
-
-```sql
-
-Email
-| where sender == "jeanette_sanchez@envolvelabs.xyz"
-
+```css
+inet:fqdn
 ```
 
-> 4. 🤔How many emails did Betty Chavarria receive?
+This query brings back over 2,000 results. To see a more manageable set of the data, we can pipe the output of the query to the `limit` command, which will only return the specified numbers of results. Let’s run this query to see only 10 domains:
 
-**Easy as 1, 2, 3… Compound Queries and the distinct Operator**
-
-We can use the **distinct** operator to find unique values in a particular column. We can use the following query to determine how many of the organization’s users sent emails.
-
-```sql
-Email
-| where sender has "envolvelabs.xyz"
-| distinct sender
-| count
+```css
+inet:fqdn | limit 10
 ```
 
-This is our first time using a multi-line query with multiple operators, so let’s break it down:
+Lift 10 employees. Enter “done” when you have finished.
 
-In line 2, we take the Email table and filter the data down to find only those rows with “envolvelabs.xyz” in the sender column.
+### Lifts Example 3: Standard and Extended Comparisons
 
-In line 3, we add another pipe character ( | ) and use the distinct operator to find all the unique senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “envolvelabs.xyz” in the sender column.
+Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about Envolve Labs employee Stephanie Clark.
 
-Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
+We’ll be looking at ps:contact nodes for this query, but this time, we’ll focus specifically on the node’s :name property. Using the = comparator, we can find the exact node that belongs to Stephanie Clark:
 
-5.  🤔How many distinct senders were seen in the email logs from pharmasupplies.shop?
-
-**Tracking Down a Click: OutboundNetworkEvents Data**
-
-When employees at EnvolveLabs browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
-
-If we want to figure out what websites Emma Trantham visited, we can find their IP address from the Employees table.
-
-```sql
-Employees
-| where name == "Emma Trantham"
+```css
+ps:contact:name="Stephanie Clark"
 ```
 
-The query above tells us their IP address is “10.10.0.98”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
+If, instead, we wanted to find all EnvolveLabs employees with the first name Stephanie, we could use the prefix comparator `^=` to match these nodes:
 
-```sql
-OutboundNetworkEvents
-| where src_ip == "10.10.0.98"
+```css
+ps:contact:name^=Stephanie
 ```
 
-> 6.  🤔How many unique websites did “Emma Trantham” visit?
+ What is the CEO’s name? (hint: lift by the title)
+
+ 
+### Filter
+
+Filter operations are performed on the output of a previous Storm operation, such as a lift or pivot. We use filter to downselect the set of nodes by either including or excluding nodes based on a set of criteria:
+
+* `+` specifies an inclusion filter (include only the nodes that match the criteria)
+* `-` specifies an exclusion filter (include all nodes except those that match the criteria)
 
 
-**What’s in a Name? All about Passive DNS Data**
+#### Filters Example 1: Inclusion Filtering
 
-Although domain names like “google.com” are easy for humans to remember, computers don’t know how to handle them. So, they convert them to machine readable IP addresses. Just like your home address tells your friends how to find your house or apartment, an IP address tells your computer where to find a page or service hosted on the internet.
+Suppose we wanted to look at all the emails sent by Stephanie Clark, but only those emails about economics.
 
-> 🎯**Key Point – Practice Good OPSEC**: If we want to find out which IP address a particular domain resolves to, we could just browse to it. But, if the domain is a malicious one, you could download malicious files to your corporate analysis system or tip off the attackers that you know about their infrastructure. As cybersecurity analysts, we must follow procedures and safeguards that protect our ability to track threats. These practices are generally called operational security, or OPSEC.
+First, let’s find Stephanie’s email, which we can do using a simple lift:
 
-To eliminate the need to actively resolve (that is- directly browse to or interact with a domain to find it’s related IP address) every domain we’re interested in, we can rely on passive DNS data. Passive DNS data allows us to safely explore domain-to-IP relationships, so we can answer questions like:
-
--   *Which IP address does this domain resolve to?*
--   *Which domains are hosted on this IP address?*
--   *How many other IPs have this domain resolved to?*
-
-These domain-to-IP relationships are stored in our **PassiveDns** table.
-
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
-
-**🤯Let statements – making your life a bit easier:**
-
-Sometimes we need to use the output of one query as the input for a second query.  The first way we can do this is by manually typing the results into the next query.
-
-For example, what if we want to look at all the web browsing activity from employees named “James”?
-
-First, you would need to go into the **Employees** table and find the IP addresses used by these employees.
-
-
-```sql
-Employees
-| where name has "James"
+```css
+ps:contact:name="Stephanie Clark"
 ```
 
-![](https://lh5.googleusercontent.com/Ul2NZuxCWG8Wg3zIGBjTSrUQHeNJ7b_cPKWSqvqGrkptYJ8F0Y4-qtoTcR8OtjJGzQaCqdyDe9_fJDSXOm58hWdgvNYqvteckmtEvq51WIjYrxXIIi-rdGUSIZ0eSYon7mOoL2jFrmu-)
+Right-click on Stephanie’s email address from the results table to copy it. Next, we need to identify the form which corresponds to email messages sent to/from the company.
 
-Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
-
-```sql 
-OutboundNetworkEvents
-| where src-ip in ("192.168.1.132",
-	"192.168.3.128",
-	"192.168.1.70",
-	"192.168.1.92",
-	"192.168.0.147",
-	"192.168.1.50",
-	"192.168.0.163",
-	"192.168.2.200")
+```css
+inet:email:message
 ```
 
-Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “James.”
+Then, we can use a simple lift to find emails sent by Stephanie:
 
-We can accomplish this in a more elegant way by using a [let statement,](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement) which allows us to assign a name to an expression or a function. We can use a let statement here to save and give a name to the results of the first query so that the values can be re-used later. That means we don’t have to manually type or copy and paste the results repeatedly.
-
-```sql 
-let james_ips = 
-Employees
-| where name has "James"
-| distinct ip_addr;
-OutboundNetworkEvents
-| where src_ip in (james_ips)
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz"
 ```
 
-On the left of the let statement is the variable name (“james_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing.
+Now, we’ve found all emails sent by Stephanie. But, remember, we need to find only those messages about economics. We can add a filter based on the subject line of the email messages to find such emails. In this case, we’ll use an inclusion filter with a regular expression (regex) comparator to look for the term “economics” anywhere within the email’s Subject line:
 
-```sql  hl_lines="1"
-let james_ips = 
-Employees
-| where name has "James"
-| distinct ip_addr;
-OutboundNetworkEvents
-| where src_ip in (james_ips)
-```
-On the right side of the let statement in the expression you are storing. In this case, we use the **distinct** operator to select values from only one column – so they are stored in an array – or list of values.
-
-```sql  hl_lines="2 3 4"
-let james_ips = 
-Employees
-| where name has "James"
-| distinct ip_addr;
-OutboundNetworkEvents
-| where src_ip in (james_ips)
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 ```
 
-The **let** statement is concluded by a semi-colon.
+This leaves us with only one result.
 
-```sql  hl_lines="4"
-let james_ips = 
-Employees
-| where name has "James"
-| distinct ip_addr;
-OutboundNetworkEvents
-| where src_ip in (james_ips)
+#### Filters Example 1: Inclusion Filtering
+
+Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
+
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
 ```
 
-After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
+This leaves us 17 results.
 
-> 9.  🤔 How many unique URLs were browsed by employees named “Karen”?
+### Pivots
 
-> 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
+Pivot operations are performed on the output of a previous Storm operation such as a lift or filter. Pivot operators are used to navigate from one set of nodes to another based on a specified relationship.
 
+Pivot operations can help us join information together from multiple sources throughout the course of our investigation.
 
-## Section 2: Start Hunting! 
+We’ll primarily use the pivot out operator, which is denoted by the arrow symbol `->`
 
-You’ve finished your training and you’re ready to get to work protecting EnvolveLabs. 
+_Pivot Out Example 1_
+
+Suppose you wanted to find all the links sent in the emails sent by Stephanie Clark. We can accomplish this using the pivot out operator
+
+First, we lift to find emails sent by Stephanie:
+
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" 
+```
+
+Then we pivot on those messages to find those that also include embedded links:
+
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link 
+```
+
+Then, we pivot from the inet:email:message:link nodes representing those messages to the inet:url nodes representing just the URLs themselves.
+
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url
+```
+
+Of course, there could have been multiple links that were sent by Stephanie. We can view the unique links by piping the existing query to the `uniq` command. 
+
+```css
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url | uniq
+```
+
+## Section 2 Start Hunting!
+
+You’ve finished your training and you’re ready to get to work protecting EnvolveLabs.
 
 Work with your team to complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
 
-As you answer the questions, we will take you on a journey exploring the data and discovering what actions the adversaries have taken. However, you should remember that this is only one of many paths you can take through the data.  As you go, don’t forget to pay attention to the details along the way. What patterns do the attackers exhibit that could help you track them better? Do they like to use certain words, themes? Or do they make mistakes? Keeping track of these patterns will help you build the full picture of what happened. 
+As you answer the questions, we will take you on a journey exploring the data and discovering what actions the adversaries have taken. However, you should remember that this is only one of many paths you can take through the data. As you go, don’t forget to pay attention to the details along the way. What patterns do the attackers exhibit that could help you track them better? Do they like to use certain words, themes? Or do they make mistakes? Keeping track of these patterns will help you build the full picture of what happened.
 
-Use the provided [Actor Preview](https://docs.google.com/document/d/1rZR4eVG886oPziG-5nGeQ5kN_q5Bpq0m/edit?usp=sharing&ouid=105873493764084037775&rtpof=true&sd=true) document to keep track of what you know about the attacker. Building a good profile, timelining the attacker’s activity, and forming a list of indicators of compromise (IOCs) will help you keep track of the attacker. KC7 models some of the techniques used by these attackers from real world threat actors, so it may be a helpful resource for you in the future when you are investigating a real security incident. 
+Use the provided Actor Preview document to keep track of what you know about the attacker. Building a good profile, timelining the attacker’s activity, and forming a list of indicators of compromise (IOCs) will help you keep track of the attacker. KC7 models some of the techniques used by these attackers from real world threat actors, so it may be a helpful resource for you in the future when you are investigating a real security incident.
 
 Now, get out there and keep us safe! The whole company is counting on you. No pressure😊.
 
-## Glossary
+## Section 3: Clustering!
 
-**Watering hole:** A type of attack where a hacker compromises a website that is frequently visited by a specific group of users, such as employees of a certain organization, and then infects their devices with malware when they visit the site.
 
-**Phishing:** A type of attack where a hacker sends an email or other message that appears to be from a legitimate source, such as a bank or a colleague, and tries to trick the recipient into clicking on a malicious link, opening an attachment, or providing sensitive information.
 
-**Credential theft:** A type of attack where a hacker steals or obtains the username and password of a user or an administrator, and then uses them to access their accounts or systems.
 
-**Password spray:** A type of attack where a hacker tries to guess the passwords of multiple accounts by using common or weak passwords, such as “password” or “123456”, instead of targeting one account with many password attempts.
 
-**Reconnaissance:** The process of gathering information about a target system, network, organization, or user before launching an attack. This can include scanning for open ports, identifying vulnerabilities, mapping network topology, collecting email addresses, etc.
-
-**Supply chain compromise:** A type of attack where a hacker infiltrates the software development process or distribution channel of a trusted vendor or partner and inserts malicious code into their products or services. This way, the hacker can compromise the customers or users who install or use those products or services.
-
-**Malware:** A general term for any software that is designed to harm or disrupt a system, network, device, or data. Malware can include viruses, worms, trojans
-
-**Command and control:** A type of server or network that is used by hackers to communicate with and control their malware or botnets on compromised systems, networks, or devices. Command and control servers can send commands, receive data, update malware, or launch attacks.
-
-**Adversary in the middle:** A type of attack where a hacker intercepts and modifies the communication between two parties, such as a user and a website, without their knowledge. Adversary in the middle attacks can be used to steal or alter data, redirect traffic, inject malware, or impersonate either party.
-
-**Top level domain:** The highest level of domain names in the Internet’s domain name system. Top level domains are the last part of a domain name after the dot, such as .com, .org, .edu, etc. Top level domains can indicate the type or purpose of a website or its geographic location.
-
-## Resources
-
-Understanding KQL operators: [https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/datatypes-string-operators](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/datatypes-string-operators)
