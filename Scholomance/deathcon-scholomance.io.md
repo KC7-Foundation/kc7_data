@@ -36,8 +36,6 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [kc7cyber.com/Scholomance Hidden Enclave - DC2](http://kc7cyber.com/Scholomance Hidden Enclave - DC2)
-
 ### Legend
 
 > 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
@@ -54,9 +52,7 @@ ADX is the primary tool used in the Scholomance Hidden Enclave - DC2 SOC for dat
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Scholomance Hidden Enclave - DC2 training module at [kc7cyber.com/Scholomance Hidden Enclave - DC2
-
-](http://kc7cyber.com/Scholomance Hidden Enclave - DC2)
+1. Login in the scoreboard and go the the Scholomance module
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
