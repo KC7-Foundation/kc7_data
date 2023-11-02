@@ -4,11 +4,11 @@ Welcome to Balloons Over Iowa! 🥳 Today is your first day as a Junior Security
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/8091c279-ed25-4a2f-81e0-4d9d56322ead)
 
-Balloons Over Iowa (BOI) is a company that specializes in providing extravagant gender reveal experiences through the rental of high-quality floating balloons. The balloons are purchased from China and are available in various sizes, colors, and designs to match the clients' preferences.
+Balloons Over Iowa (BOI) is a company that specializes in providing providing unforgettable memories on breathtaking serene hot air balloon rides. The balloons are purchased from China and are available in various sizes, colors, and designs to match the clients' preferences.
 
 Our company takes pride in exceptional customer service. We work closely with our clients all the way from the initial inquiry to the delivery and setup of the balloons. We aim to make every occasion special and memorable by offering competitive pricing, ensuring that our services are accessible to everyone.
 
-In addition to our gender reveal balloons, Balloons Over Iowa also provides balloon decor for special events, party balloons, and balloon bouquets. Our team is dedicated to providing unique and unforgettable experiences through our exceptional services and high-quality products.
+In addition to our hot air balloon rides, Balloons Over Iowa also provides balloon decor for special events, party balloons, and balloon bouquets. Our team is dedicated to providing unique and unforgettable experiences through our exceptional services and high-quality products.
 
 BOI has a series of key partners who contribute to the success of our business:
 
