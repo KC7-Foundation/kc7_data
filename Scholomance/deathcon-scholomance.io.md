@@ -8,12 +8,12 @@
 
 Scholomance Hidden Enclave - DC2 has a series of key partners who contribute to the success of our business:
 
-| Partner Name | Relationship |
-| ----------- | ----------- |
-| scholomance-suppliers.online | {{PARTNER_DOMAIN_1_DESCRIPTION}}|
-| wizardnecrosupplies.shop | {{PARTNER_DOMAIN_2_DESCRIPTION}}|
-| artifactdistributors.site | {{PARTNER_DOMAIN_3_DESCRIPTION}}|
-| researchcompliance.biz | {{PARTNER_DOMAIN_4_DESCRIPTION}}|
+| Partner Name                    | Relationship                                               |
+|--------------------------------|------------------------------------------------------------|
+| scholomance-suppliers.online   | Provides magical academic supplies for spell-casting study |
+| wizardnecrosupplies.shop       | Specializes in necromancy tools and materials for wizards  |
+| artifactdistributors.site      | Distributes rare and powerful magical artifacts globally   |
+| researchcompliance.biz         | Ensures magical research meets ethical and safety standards|
 
 Scholomance Hidden Enclave - DC2 has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
 
@@ -68,13 +68,13 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 ![Graphical user interface, application
 Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
 
-All of Scholomance Hidden Enclave - DC2’s security logs are stored in a single database – the Scholomance Hidden Enclave - DC2 database. 
+All of Scholomance Hidden Enclave - DC2’s security logs are stored in a single database – **Scholomance** database. 
 
   2. Select your database.  
-	- Expand the dropdown arrow next to the Scholomance Hidden Enclave - DC2 database.
-	- Click on the **Scholomance Hidden Enclave - DC2** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
+	- Expand the dropdown arrow next to the **Scholomance** database.
+	- Click on the **Scholomance** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the Scholomance Hidden Enclave - DC2 database for all questions while you’re investigating activity at Scholomance Hidden Enclave - DC2! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **Scholomance** database for all questions while you’re investigating activity at Scholomance Hidden Enclave - DC2! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
@@ -86,9 +86,9 @@ Okay, enough introductions… let’s get your hands on the data.
 
 #### First Look at the data... 
 
-The **Scholomance Hidden Enclave - DC2** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
+The **Scholomance** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
 
-We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Scholomance Hidden Enclave - DC2** database:
+We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Scholomance** database:
 
 | **Table Name** | **Description** | 
 | ----------- | ----------- |
