@@ -32,11 +32,8 @@ EnvolveLabs has some key partners that contribute to the success of its research
 
 🚀 The attackers have gotten a head start, so let's not waste any more time... **let's get to work!**
 
-## Section 1: The Walkthrough
 
-EnvolveLabs collects log data about the activity our employees perform on the organization's network. These security audit logs are stored in Synapse - a versatile central intelligence and analysis system developed by the Vertex Project. You will use the Storm query language to pivot through EnvolveLabs’ telemetry, and label clusters of malicious activity you find along the way. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors and help us stop the adversaries!
-
-### Getting Set Up in Synapse
+## Getting Set Up in Synapse
 
 A few things you’ll need to do first:
 
@@ -66,7 +63,7 @@ A few things you’ll need to do first:
 
 8. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
 
-	<img width="591" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/1731a6b7-1af3-4a92-b573-0822395b00e4">
+	![image2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/5421ede0-2308-4b9d-92cf-820e97a40a6c)
 
 
 	Do the same for the Synapse-Maxmind Power-Up.
@@ -77,6 +74,8 @@ A few things you’ll need to do first:
 10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key: 
 
 11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
+
+## Section 1: The Walkthrough
 
 ### First Look at the Data…
 
