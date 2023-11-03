@@ -293,6 +293,11 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:
 
 <u>**Pivot Out Example 2**</u>
 
+In a few specific instances, nodes are connected by lightweight (light edges) representing a specific, directional relationship between the nodes. For example, a blog modeled as a media:news node that references multiple indicators will have a “refs” lightweight edge pointing to the nodes representing those referenced indicators. In this data set, lightweight edges appear between risk:alert nodes and nodes that the alerts reference. The query below shows a pivot from a risk:alert node to the file:bytes node that the alert references:
+
+```css
+risk:alert:detected="2023/11/13 15:51:25" -(refs)> file:bytes
+```
 
 ## Section 2 Start Hunting!
 
