@@ -2,7 +2,7 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend DC2 and our employees from malicious cyber actors.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/a5e2dc4c-5ccd-4f8c-a1a5-bb4020e7c8de)
+<img src="https://github.com/KC7-Foundation/kc7_data/assets/129029167/a5e2dc4c-5ccd-4f8c-a1a5-bb4020e7c8de" width="400">
 
 Deep within the enigmatic realm of mystical academia, the Scholomance Hidden Enclave, often referred to as DC2, stands as an unparalleled bastion of magical knowledge and arcane mastery. Its origins are shrouded in the mists of time, lost to history, and the mere mention of its name sends shivers down the spines of even the most seasoned enchanters and witches. Scholars and historians speculate that the Scholomance Hidden Enclave has been concealed from the mortal world for centuries, if not millennia. Some whisper that it was founded by a secretive council of legendary spellcasters, who sought to protect the most potent and dangerous magical secrets from falling into the wrong hands. These enigmatic founders are said to have woven powerful protection spells around the enclave, ensuring its invisibility to the outside world.
 
