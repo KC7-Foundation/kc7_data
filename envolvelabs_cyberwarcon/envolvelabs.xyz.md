@@ -61,7 +61,7 @@ A few things you’ll need to do first:
 
 8. Double check that the Query Bar, shown below, is set to Storm mode:
    
-	![powerup_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1bf09f51-035f-4f99-bbda-3f87d636fbbc)
+	![active storm mode](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1d639bf0-d45c-4f8c-a06c-281456555457)
 
 
 	We’ll be using this Query Bar to run our queries for today’s exercises. 
@@ -69,8 +69,7 @@ A few things you’ll need to do first:
 
 9. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
 
-	![image2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/5421ede0-2308-4b9d-92cf-820e97a40a6c)
-
+	![powerup_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1bf09f51-035f-4f99-bbda-3f87d636fbbc)
 
 	Do the same for the Synapse-Maxmind Power-Up.
 
