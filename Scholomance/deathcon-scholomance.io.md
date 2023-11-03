@@ -1,6 +1,6 @@
 # Welcome to Scholomance Hidden Enclave - DC2
 
-🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Scholomance Hidden Enclave - DC2 and our employees from malicious cyber actors.
+🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend DC2 and our employees from malicious cyber actors.
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/a5e2dc4c-5ccd-4f8c-a1a5-bb4020e7c8de)
 
@@ -8,7 +8,7 @@ Deep within the enigmatic realm of mystical academia, the Scholomance Hidden Enc
 
 Over the eons, DC2 developed a curriculum that delved deep into the mysteries of magic, pushing the boundaries of what was believed possible. Students from all corners of the mystical realm were drawn to the school, eager to harness its hidden knowledge. It is said that the secrets taught within its ancient halls ranged from time manipulation to dimensional conjuring, and the school was renowned for its relentless pursuit of magical excellence. The Scholomance Hidden Enclave stands on the cusp of a new era, its secrets unveiled to a select few and the world forever changed by its mystic revelations. The enigmatic institution continues to be a symbol of the endless pursuit of magical mastery, guarding ancient spells that hold the key to shaping the destiny of all enchanters and the mystical world at large. What the future holds for the Scholomance Hidden Enclave and its secrets remains a mystery, waiting to be uncovered by the next generation of magical scholars and adventurers.
 
-Scholomance Hidden Enclave - DC2 has a series of key partners who contribute to the success of our business:
+DC2 has a series of key partners who contribute to the success of our business:
 
 | Partner Name                    | Relationship                                               |
 |--------------------------------|------------------------------------------------------------|
@@ -17,9 +17,9 @@ Scholomance Hidden Enclave - DC2 has a series of key partners who contribute to 
 | artifactdistributors.site      | Distributes rare and powerful magical artifacts globally   |
 | researchcompliance.biz         | Ensures magical research meets ethical and safety standards|
 
-Scholomance Hidden Enclave - DC2 has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
+DC2 has been laser-focused on improving its magical knowledge. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
 
-Like all good companies, Scholomance Hidden Enclave - DC2 collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
+Like all good companies, DC2 collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
 You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
 
@@ -50,7 +50,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 
 #### Getting Set Up in Azure Data Explorer (ADX)
 
-ADX is the primary tool used in the Scholomance Hidden Enclave - DC2 SOC for data exploration and analysis. The great thing about ADX is that it is used by cyber analysts at many of the smallest and largest organizations in the world. 
+ADX is the primary tool used in the DC2 SOC for data exploration and analysis. The great thing about ADX is that it is used by cyber analysts at many of the smallest and largest organizations in the world. 
 
 Let’s get you logged in and started with ADX:
 
@@ -58,31 +58,30 @@ Let’s get you logged in and started with ADX:
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
-
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
-
-![Graphical user interface, application, Word
-Description automatically generated](https://lh4.googleusercontent.com/THqnfpbFTsMkuF2woUrDUaeUPmwqbwtCzG5oKCHAt9BnmHZdvl2B50-2OPZlAvMFp_x7fGx1WOi-uHmIkU5V1149qvu3RkJqzEw7YAtvq3a9JeI8iF7hj-UxPbg3Q-NNDheMZDDmUfv8)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+<img width="860" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/6b7410dd-2bb2-4c52-b52f-df785d8f9a7a">
 
-All of Scholomance Hidden Enclave - DC2’s security logs are stored in a single database – **Scholomance** database. 
+
+All of DC2’s security logs are stored in a single database – **Scholomance** database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the **Scholomance** database.
 	- Click on the **Scholomance** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the **Scholomance** database for all questions while you’re investigating activity at Scholomance Hidden Enclave - DC2! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **Scholomance** database for all questions while you’re investigating activity at DC2! If you choose the wrong database, you won’t be able to answer questions correctly. You can click the "favorite" button next to the query bar to highlight only the SpookySweets database.
+
+<img width="842" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/28c333f2-8a0f-4ec1-b7b0-d1737888a2e1">
+
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
+<img width="842" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/adef391a-638e-4ece-a58d-884f4a18b18f">
 
-Currently, you’ll see there’s a message there welcoming you to Scholomance Hidden Enclave - DC2! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
+
+Currently, you’ll see there’s a message there welcoming you to DC2! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
 Okay, enough introductions… let’s get your hands on the data.
 
@@ -134,7 +133,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 > 🎯**Key Point – What to do when you don’t know what to do**: Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the **take** operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
 
 
-The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Scholomance Hidden Enclave - DC2” and the domain is “deathcon-scholomance.io”.
+The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “DC2” and the domain is “deathcon-scholomance.io”.
 
 >1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
@@ -190,7 +189,7 @@ Employees
 | where name == "Zara Choudhury"
 ```
 
->3. 🤔Each employee at Scholomance Hidden Enclave - DC2 is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+>3. 🤔Each employee at DC2 is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
 
 Here are some additional operators we like to use:
 
@@ -206,7 +205,7 @@ Here are some additional operators we like to use:
 | in | Equals to any of the elements | Yes | "abc" in ("123", "345", "abc") |
 
 
-While performing their day-to-day tasks, Scholomance Hidden Enclave - DC2 employees send and receive emails. A record of each of these emails is stored in the **Email** table.
+While performing their day-to-day tasks, DC2 employees send and receive emails. A record of each of these emails is stored in the **Email** table.
 
 > 🎯**Key Point – User Privacy and Metadata**: As you can imagine, some emails are highly sensitive. Instead of storing the entire contents of every email sent and received within the company in a database that can be easily accessed by security analysts, we only capture email metadata. 
 
@@ -247,7 +246,7 @@ Finally, in line 4, we add another pipe character ( | ) and then use the count o
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
-When employees at Scholomance Hidden Enclave - DC2 browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
+When employees at DC2 browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
 
 If we want to figure out what websites Becky Thrower visited, we can find their IP address from the Employees table.
 
@@ -367,7 +366,7 @@ After we store the value of a query into a variable using the **let** statement,
 
 ## Section 2: Start Hunting! 
 
-You’ve finished your training and you’re ready to get to work protecting Scholomance Hidden Enclave - DC2. 
+You’ve finished your training and you’re ready to get to work protecting DC2. 
 
 Work with your team to complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
 
