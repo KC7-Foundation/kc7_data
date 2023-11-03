@@ -38,31 +38,35 @@ EnvolveLabs has some key partners that contribute to the success of its research
 
 A few things you’ll need to do first:
 
-1. If you have not already received a Synapse demo instance, you can request one [here](https://vertex.link/request-a-demo).
+1. If you have not already received a Synapse demo instance, you can request one [here: https://vertex.link/request-a-demo](https://vertex.link/request-a-demo).
 
-2. Once you’ve requested a Synapse demo instance, you will receive an email from “Optic <signup@vertex.link>” with a link to your Synapse demo instance. Click the link to create a password and log into your Synapse instance.
+2. Once you’ve requested a Synapse demo instance, you will receive an email from `Optic <signup@vertex.link>` with a link to your Synapse demo instance. Click the link to create a password and log into your Synapse instance.
 
-3. Once you have logged in, you should be in the Research Tool. Verify this by checking the green Top Bar at the top of the UI. It should show “Research” in the left-hand corner. Alternatively, navigate to the Research Tool by
+3. Once you have logged in, you should be in the Research Tool, which you can verify by checking the green Top Bar at the top of the UI. It should show “Research” in the left hand corner. You can also navigate to the Research Tool by clicking on the magnifying glass icon at the top of the toolbar along the left side of the page.
+   
 	<img width="788" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/07fa0ec2-9cda-4e0e-8f88-e551bfddc9f5">
 
  
-4. Use the Workspace Selector dropdown menu in the Top Bar to change from “default” to the “KC7 Workspace”. This will be the first dropdown menu to the right of where it says “Research”.
+5. Use the Workspace Selector dropdown menu in the Top Bar to change from “default” to the “KC7 Workspace”. This will be the first dropdown menu to the right of where it says “Research”.
 
-5. After selecting the KC7 Workspace, move to the dropdown menu to the right of the Workspace selector, and select the KC7 Cyberwarcon 2023 view. This is where the data for today’s exercise is located. The Top Bar of your UI should now have a specific appearance (a visual representation or description would typically follow here).
+6. After selecting the KC7 Workspace, move to the dropdown menu to the right of the Workspace selector, and select the KC7 Cyberwarcon 2023 view. This is where the data for today’s exercise is located. The Top Bar of your UI should now have a specific appearance (a visual representation or description would typically follow here).
+   
 	<img width="857" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/cea6f55d-f8da-4fe1-8b36-6e9dd6321c8e">
 
-6. Next, we’re going to create a scratchspace to work out of. To do this, click the fork icon to the right of the View Selector:
+7. Next, we’re going to create a scratchspace to work out of. To do this, click the fork icon to the right of the View Selector:
+   
 	<img width="856" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/8077aaa3-1c3c-4112-b852-1df6b0447efe">
 
 	This will give you a pop-up window where you can name your scratchspace, then click “Fork” to create it. You’ll see the name of your scratchspace replace the “KC7 Cyberwarcon 2023” view in the View Selector.
 
-7. Double check that the Query Bar, shown below, is set to Storm mode:
+8. Double check that the Query Bar, shown below, is set to Storm mode:
+   
 	<img width="853" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/a95eb1ff-d23c-41f2-b6a1-360473be7461">
 
 	We’ll be using this Query Bar to run our queries for today’s exercises. 
 
 
-8. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
+9. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
 
 	![image2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/5421ede0-2308-4b9d-92cf-820e97a40a6c)
 
@@ -70,11 +74,15 @@ A few things you’ll need to do first:
 	Do the same for the Synapse-Maxmind Power-Up.
 
 
-9. Once you’ve installed the Power-Ups, use the Toolbar on the left of the UI to navigate to the Console Tool by clicking on the Console Tool icon, shown below: 
+10. Once you’ve installed the Power-Ups, use the Toolbar on the left of the UI to navigate to the Console Tool by clicking on the Console Tool icon, shown below: 
 
-10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key: 
+11. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
 
-11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
+```
+alienvault.setup.apikey <apikey>
+```
+
+12. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
 
 ## Section 1: The Walkthrough
 
