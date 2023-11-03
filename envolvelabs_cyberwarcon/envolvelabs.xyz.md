@@ -78,7 +78,7 @@ A few things you’ll need to do first:
 
 11. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
 
-```
+```js
 alienvault.setup.apikey <apikey>
 ```
 
