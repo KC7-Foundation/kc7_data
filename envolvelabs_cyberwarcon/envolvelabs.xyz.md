@@ -106,7 +106,7 @@ These additional forms may be helpful during your investigations
 | `ou:jobtitle`             | A job title                                      |
 
 
-** A Note on Forms, Properties, and Nodes:**
+**A Note on Forms, Properties, and Nodes:**
 
 It can be helpful to think of a Form as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have properties, which are specific fields that provide additional information. Properties found on the ps:contact form, for example, include :name, :email, :title, and :type, among others. 
 
@@ -133,7 +133,7 @@ In some cases, we can use the Synapse UI to answer the question rather than runn
 
 Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
-<u>Lifts - Example 1: Let’s find all the employees at EnvolveLabs</u>
+<u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
 
 To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, we are capturing information about employees using the form `ps:contact`.
 
@@ -161,11 +161,11 @@ inet:fqdn | limit 10
 
 >Lift 10 employees. Enter “done” when you have finished. 
 
-<u>Lifts Example 3: Standard and Extended Comparisons</u>
+<u>**Lifts Example 3: Standard and Extended Comparisons**</u>
 
 Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about EnvolveLabs employee Stephanie Clark.
 
-We’ll be looking at `ps:contact` nodes for this query, but this time, we’ll focus specifically on the node’s `:name` property. Using the = comparator, we can find the exact node that belongs to Stephanie Clark:
+We’ll be looking at `ps:contact` nodes for this query, but this time, we’ll focus specifically on the node’s `:name` property. Using the `=` comparator, we can find the exact node that belongs to Stephanie Clark:
 
 ```css
 ps:contact:name="Stephanie Clark"
@@ -218,7 +218,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 
 This leaves us with only one result.
 
-<u>Filters Example 2: Exclusion Filtering</u>
+<u>**Filters Example 2: Exclusion Filtering**</u>
 
 Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
 
@@ -252,7 +252,7 @@ However, it is also possible to lift inet:email=alexander_hall@envolvelabs.xyz a
 
 [gif #2 here]
 
-<u>Pivot Out Example 1</u>
+<u>**Pivot Out Example 1**</u>
 
 Suppose you wanted to find all the links sent in the emails sent by Stephanie Clark. We can accomplish this using the pivot out operator
 
@@ -280,7 +280,7 @@ Of course, there could have been multiple links that were sent by Stephanie. We 
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url | uniq
 ```
 
-<u>Pivot Out Example 2</u>
+<u>**Pivot Out Example 2**</u>
 
 
 ## Section 2 Start Hunting!
