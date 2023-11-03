@@ -61,7 +61,8 @@ A few things you’ll need to do first:
 
 8. Double check that the Query Bar, shown below, is set to Storm mode:
    
-	<img width="853" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/a95eb1ff-d23c-41f2-b6a1-360473be7461">
+	![powerup_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1bf09f51-035f-4f99-bbda-3f87d636fbbc)
+
 
 	We’ll be using this Query Bar to run our queries for today’s exercises. 
 
@@ -261,7 +262,8 @@ inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
 
 However, it is also possible to lift inet:email=alexander_hall@envolvelabs.xyz and pivot out to all associated inet:email:message nodes without using Storm at all. We can do this by switching the Query Bar from Storm to Lookup mode, querying alexander_hall@envolvelabs.xyz, and then using the Explore button to pivot to connected nodes, including inet:email:message nodes: 
 
-[gif #2 here]
+![explore_UI](https://github.com/KC7-Foundation/kc7_data/assets/9474932/75c4faec-ab56-4f13-a6f6-a616cc2005e7)
+
 
 <u>**Pivot Out Example 1**</u>
 
@@ -319,13 +321,16 @@ Synapse gives you a structured way to record observations or assessments through
 
 For simplicity, we’ll nickname the first threat actor we are tracking “lightning.” We’ll use the tag  `#cno.threat.lightning` to label all nodes that correspond to this threat actor. You can apply tags to a node by right-clicking on the node in the Results pane of the Research Tool, and then selecting “Add Tags” from the context menu, as shown below:
 
-[add gif here]
+![tag_add1](https://github.com/KC7-Foundation/kc7_data/assets/9474932/58002dc2-3556-497a-a621-d17c7c696d30)
 
 Or, alternatively, from selecting the node and clicking the “Add Tags” button on the Details pane on the right hand side:
 
-[add gif here]
+![tag_add2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/c338c69f-baf1-4c44-84f1-7863c572a594)
 
 Once you’ve applied the tag, you’ll see it appear in the Detail pane view for the tagged node. You can remove the tag by clicking on it in the Details pane and selecting “Remove full tag” from the menu:
+
+![tag_remove](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a7921c50-42b2-49c7-afea-ffa70aaad82b)
+
 
 ### References
 
