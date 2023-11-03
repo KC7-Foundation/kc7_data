@@ -259,7 +259,7 @@ Pivoting from `inet:email=alexander_hall@envolvelabs.xyz` to associated `inet:em
 inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
 ```
 
-However, it is also possible to lift inet:email=alexander_hall@envolvelabs.xyz and pivot out to all associated inet:email:message nodes without using Storm at all. We can do this by switching the Query Bar from Storm to Lookup mode, querying alexander_hall@envolvelabs.xyz, and then using the Explore button to pivot to connected nodes, including inet:email:message nodes: 
+However, it is also possible to lift `inet:email=alexander_hall@envolvelabs.xyz` and pivot out to all associated `inet:email:message` nodes without using Storm at all. We can do this by switching the Query Bar from Storm to Lookup mode, querying alexander_hall@envolvelabs.xyz, and then using the Explore button to pivot to connected nodes, including `inet:email:message nodes`: 
 
 ![explore_UI](https://github.com/KC7-Foundation/kc7_data/assets/9474932/75c4faec-ab56-4f13-a6f6-a616cc2005e7)
 
