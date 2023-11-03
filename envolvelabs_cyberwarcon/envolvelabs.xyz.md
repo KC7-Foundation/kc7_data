@@ -138,6 +138,7 @@ There are three basic operations we’ll use to query the company’s logs using
 
 In some cases, we can use the Synapse UI to answer the question rather than running a Storm query. We’ll point out how to do that when possible.
 
+
 ### Lift
 
 Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
@@ -236,6 +237,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
 ```
 
 This leaves us 17 results.
+
 
 ### Pivot
 
