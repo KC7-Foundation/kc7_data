@@ -2,9 +2,11 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Scholomance Hidden Enclave - DC2 and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/a5e2dc4c-5ccd-4f8c-a1a5-bb4020e7c8de)
 
-{{COMPANY_DESCRIPTION}}
+Deep within the enigmatic realm of mystical academia, the Scholomance Hidden Enclave, often referred to as DC2, stands as an unparalleled bastion of magical knowledge and arcane mastery. Its origins are shrouded in the mists of time, lost to history, and the mere mention of its name sends shivers down the spines of even the most seasoned enchanters and witches. Scholars and historians speculate that the Scholomance Hidden Enclave has been concealed from the mortal world for centuries, if not millennia. Some whisper that it was founded by a secretive council of legendary spellcasters, who sought to protect the most potent and dangerous magical secrets from falling into the wrong hands. These enigmatic founders are said to have woven powerful protection spells around the enclave, ensuring its invisibility to the outside world.
+
+Over the eons, DC2 developed a curriculum that delved deep into the mysteries of magic, pushing the boundaries of what was believed possible. Students from all corners of the mystical realm were drawn to the school, eager to harness its hidden knowledge. It is said that the secrets taught within its ancient halls ranged from time manipulation to dimensional conjuring, and the school was renowned for its relentless pursuit of magical excellence. The Scholomance Hidden Enclave stands on the cusp of a new era, its secrets unveiled to a select few and the world forever changed by its mystic revelations. The enigmatic institution continues to be a symbol of the endless pursuit of magical mastery, guarding ancient spells that hold the key to shaping the destiny of all enchanters and the mystical world at large. What the future holds for the Scholomance Hidden Enclave and its secrets remains a mystery, waiting to be uncovered by the next generation of magical scholars and adventurers.
 
 Scholomance Hidden Enclave - DC2 has a series of key partners who contribute to the success of our business:
 
