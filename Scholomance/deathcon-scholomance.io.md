@@ -361,6 +361,7 @@ After we store the value of a query into a variable using the **let** statement,
 
 >9.  🤔 How many unique URLs were browsed by employees named “Karen”?
 
+
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
 
 
