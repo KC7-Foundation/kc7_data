@@ -464,6 +464,6 @@ Once you’ve applied the tag, you’ll see it appear in the **Details** pane vi
 
 - Storm Reference: [https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html)
 - Maxmind Power-Up: [https://synapse.docs.vertex.link/projects/maxmind/en/latest/](https://synapse.docs.vertex.link/projects/maxmind/en/latest/)
-- Alientvault OTX Power-Up: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
+- AlienVault OTX Power-Up: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
 
 
