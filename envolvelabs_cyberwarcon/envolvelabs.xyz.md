@@ -138,6 +138,7 @@ There are three basic operations we’ll use to query the company’s logs using
 In some cases, we can use the Synapse UI to answer the question rather than running a Storm query. We’ll point out how to do that when possible.
 
 
+
 ### Lift
 
 (Lift operations)[https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html] retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
@@ -238,18 +239,19 @@ Here are some example Lift operations using [Standard Common Operators](https://
 | Lift process execution events that occurred on or before November 15, 2023 (“`20231115`”) | `it:exec:proc:time<=20231115`                    |
 
 
->What is the CEO’s name? (hint: lift by the title)
+>Question: 3 What is the CEO’s name? (hint: lift by the title)
+
 
 
 ### Filter
 
-Filter operations are performed on the output of a previous Storm operation, such as a lift or pivot. We use filter to downselect the set of nodes by either including or excluding nodes based on a set of criteria:
+[Filter operations](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_filter.html#simple-filters) are performed on the output of a previous Storm operation, such as a lift or pivot. We use filter to downselect the set of nodes by either including or excluding nodes based on a set of criteria:
 
-* `+` specifies an inclusion filter (include only the nodes that match the criteria)
-* `-` specifies an exclusion filter (include all nodes except those that match the criteria)
+* `+` specifies an _inclusion filter_ (include **only** the nodes that match the criteria)
+* `-` specifies an _exclusion filter_ (include all nodes **except** those that match the criteria)
 
 
-<u>Filters Example 1: Inclusion Filtering</u>
+<u>**Filters Example 1: Inclusion Filtering**</u>
 
 Suppose we wanted to look at all the emails sent by Stephanie Clark, but only those emails about economics.
 
@@ -271,13 +273,15 @@ Then, we can use a simple lift to find emails sent by Stephanie:
 inet:email:message:from="stephanie_clark@envolvelabs.xyz"
 ```
 
-Now, we’ve found all the emails sent by Stephanie. But, remember, we need to find only those messages about economics. We can add a filter based on the subject line of the email messages to find such emails. In this case, we’ll use an inclusion filter with a regular expression (regex) comparator to look for the term “economics” anywhere within the email’s Subject line:
+Now, we’ve found all the emails sent by Stephanie. But, remember, we need to find only those messages about economics. We can add a filter based on the subject line of the email messages to find such emails. In this case, we’ll use an inclusion filter with a [Regular Expression (regex) comparator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html#lift-by-regular-expression) to look for the term “economics” anywhere within the email’s Subject line:
 
 ```css
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 ```
 
 This leaves us with only one result.
+
+>Question 4: Who was the first person to send Delia Hill an email about “solidarity”? 
 
 <u>**Filters Example 2: Exclusion Filtering**</u>
 
@@ -289,10 +293,14 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
 
 This leaves us 17 results.
 
+>Question 5: How many emails did Yuko Sidney send that don’t mention the word “term”?
+
 
 ### Pivot
 
-Pivot operations are performed on the output of a previous Storm operation such as a lift or filter. Pivot operators are used to navigate from one set of nodes to another based on a specified relationship. These relationships often include shared property values.
+[Pivot](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#) and [Traverse](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#traverse-walk-light-edges) operations are performed on the output of a previous Storm operation such as a Lift or Filter. These operations are used to navigate from one set of nodes to another based on a specified relationship. 
+
+Pivoting involves lifting adjacent nodes that share property values. However, traversing involves walking a named lightweight (light) edge (e.g., _refs_) to lift connected nodes.
 
 We mentioned earlier that forms have properties, which are specific fields that hold information about the node modeled in Synapse. Each form has, at a minimum, a primary property, which is the name of the form and definition of the value for individual instances of that form, and which a user must populate in order to create the node within Synapse. For some forms, the primary property value may be a Globally Unique Identifier (GUID). For the `inet:email` node shown below, the primary property value for is "alexander_hall@envolvelabs.xyz":
 
@@ -304,7 +312,7 @@ Many forms also have secondary properties, which are optional fields capable of 
 
 ![image6](https://github.com/KC7-Foundation/kc7_data/assets/9474932/058bce1f-d96d-484a-b12c-e78bbc47fa43)
 
-Pivoting from `inet:email=alexander_hall@envolvelabs.xyz` to associated `inet:email:message` nodes using Storm would look like the following (note the use of “->”, which is the pivot out operator):
+Pivoting from `inet:email=alexander_hall@envolvelabs.xyz` to associated `inet:email:message` nodes using Storm would look like the following (note the use of “->”, which is the [Pivot Out Operator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#pivot-out-operator):
 
 ```css
 inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
@@ -312,20 +320,22 @@ inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
 
 However, it is also possible to lift `inet:email=alexander_hall@envolvelabs.xyz` and pivot out to all associated `inet:email:message` nodes without using Storm at all. We can do this by switching the Query Bar from Storm to Lookup mode, querying alexander_hall@envolvelabs.xyz, and then using the Explore button to pivot to connected nodes, including `inet:email:message nodes`: 
 
-![explore_UI](https://github.com/KC7-Foundation/kc7_data/assets/9474932/75c4faec-ab56-4f13-a6f6-a616cc2005e7)
+![explore_ui (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/c0775745-e5a0-41fc-98f6-c006ed09eb0d)
+
+While it’s possible to use the UI, or a combination of the Storm query language and the UI, to query the data in Synapse, doing so is generally less efficient than running a Storm query. However, when it comes to pivoting, using the **Explore** button to view adjacent nodes can be a way for analysts to get a sense of how nodes are connected within Synapse and what pivots they will need to make in their Storm query. 
 
 
-<u>**Pivot Out Example 1**</u>
+<u>**Pivot Example**</u>
 
-Suppose you wanted to find all the links sent in the emails sent by Stephanie Clark. We can accomplish this using the pivot out operator
+Suppose you want to find all of the links sent in the emails sent by Stephanie Clark. We can accomplish this by pivoting. 
 
-First, we lift to find emails sent by Stephanie:
+First, lift the emails sent by Stephanie. Run the following Storm query to lift them by the `:from` property and value:
 
 ```css
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" 
 ```
 
-Then we pivot on those messages to find those that also include embedded links:
+Then pivot from those messages to those that also include embedded links:
 
 ```css
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link 
@@ -343,13 +353,32 @@ Of course, there could have been multiple links that were sent by Stephanie. We 
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url | uniq
 ```
 
-<u>**Pivot Out Example 2**</u>
+>Question 6: How many emails did the CEO receive?
+>Question 7: How many unique links were sent to the CEO via email?
+>Question 8: How many unique websites did the CEO visit?
+>Question 9: How many domains in the PassiveDNS records contain the word “cloudapps”?
+>Question 10: What IPs did the domain security-cloudapps.envolvelabs.xyz resolve to?
+
+
+<u>**Traverse Example**</u>
 
 In a few specific instances, nodes are connected by lightweight (light edges) representing a specific, directional relationship between the nodes. For example, a blog modeled as a media:news node that references multiple indicators will have a “refs” lightweight edge pointing to the nodes representing those referenced indicators. In this data set, lightweight edges appear between risk:alert nodes and nodes that the alerts reference. The query below shows a pivot from a risk:alert node to the file:bytes node that the alert references:
 
 ```css
 risk:alert:detected="2023/11/13 15:51:25" -(refs)> file:bytes
 ```
+Note here that if you only relied on pivoting, you would have no way of getting to the file:bytes from risk alerts. Run the following queries and examine the difference.
+
+```
+risk:alert:detected="2023/11/13 15:51:25" ->*
+
+risk:alert:detected="2023/11/13 15:51:25" -(refs)>*
+```
+
+>Question 11: What is the job role of the employee assigned to the host machine from the risk alert that was detected on 2023/10/27 15:26:47? 
+
+> Question 12: Who sent the email that mentions “german” that was detected in the alerts?
+
 
 ## Section 2 Start Hunting!
 
@@ -365,23 +394,21 @@ Now, get out there and keep us safe! The whole company is counting on you. No pr
 
 ## Section 3: Clustering!
 
-Now that we learned more about the Techniques, Tactics and the Procedures, used by the adversaries, we want to start documenting what we know so we can answer meaningful questions and build detections to block them. Instead of storing what we know about the adversaries as notes on a piece of paper, or just written words that someone else will need to re-interpret, we will label the relevant nodes using tags to keep track of our findings. 
+Now that we learned more about the Techniques, Tactics and the Procedures, used by the adversaries, we want to start documenting what we know so we can answer meaningful questions and build detections to block them. Instead of storing what we know about the adversaries as notes on a piece of paper, or just written words that someone else will need to re-interpret, we will label the relevant nodes using [tags](https://synapse.docs.vertex.link/en/latest/synapse/userguides/analytical_model.html#) to keep track of our findings. 
 
 Synapse gives you a structured way to record observations or assessments through the use of labels (tags) applied to data (nodes). Assessments represent conclusions based on the data available to you at the time. Tags are flexible and can be easily added, updated, or removed when assessments change, meaning that you can revise your analysis as needed when  new data becomes available.
 
-For simplicity, we’ll nickname the first threat actor we are tracking “lightning.” We’ll use the tag  `#cno.threat.lightning` to label all nodes that correspond to this threat actor. You can apply tags to a node by right-clicking on the node in the Results pane of the Research Tool, and then selecting “Add Tags” from the context menu, as shown below:
+For simplicity, we’ll nickname the first threat actor we are tracking “lightning.” We’ll use the tag  `#cno.threat.lightning` to label all nodes that correspond to this threat actor. You can apply tags to a node by right-clicking on the node in the **Results** pane of the **Research Tool**, and then selecting _Add Tags_ from the context menu, as shown below:
 
-![tag_add1](https://github.com/KC7-Foundation/kc7_data/assets/9474932/58002dc2-3556-497a-a621-d17c7c696d30)
+![tag_add1 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/e2efea45-4a75-452b-82dd-8d1f6b5f116d)
 
 Or, alternatively, from selecting the node and clicking the “Add Tags” button on the Details pane on the right hand side:
 
-![tag_add2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/c338c69f-baf1-4c44-84f1-7863c572a594)
+![tag_add2 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f840e27a-094c-456a-8a47-7fefa80cb9b6)
 
 Once you’ve applied the tag, you’ll see it appear in the Detail pane view for the tagged node. You can remove the tag by clicking on it in the Details pane and selecting “Remove full tag” from the menu:
 
-![tag_remove](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a7921c50-42b2-49c7-afea-ffa70aaad82b)
+![tag_remove (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/b8c65166-3ab7-45cb-a4b2-764dbc2d2b17)
 
-
-### References
 
 
