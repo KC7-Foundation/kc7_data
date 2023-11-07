@@ -393,6 +393,8 @@ Use the provided Actor Preview document to keep track of what you know about the
 
 Now, get out there and keep us safe! The whole company is counting on you. No pressure😊.
 
+![cat typing gif](https://media.tenor.com/CrWHpzxIZYEAAAAC/cat-typing-gif.gif)
+
 ## Section 3: Clustering!
 
 Now that we learned more about the Techniques, Tactics and the Procedures, used by the adversaries, we want to start documenting what we know so we can answer meaningful questions and build detections to block them. Instead of storing what we know about the adversaries as notes on a piece of paper, or just written words that someone else will need to re-interpret, we will label the relevant nodes using [tags](https://synapse.docs.vertex.link/en/latest/synapse/userguides/analytical_model.html#) to keep track of our findings. 
