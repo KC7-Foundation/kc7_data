@@ -170,13 +170,10 @@ inet:fqdn | limit 10
 
 >Question 2: Lift 10 employees. Copy and paste the query you used. 
 
-
-<blockquote>
 A note on Storm commands:
 
 There are several [Storm commands](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) that you may find useful when querying the data. These include:
 
-```
 | Command | Description                                                         |
 |---------|---------------------------------------------------------------------|
 | count   | Iterate through query results, and print the resulting number of nodes to the Console Tool |
@@ -184,7 +181,7 @@ There are several [Storm commands](https://synapse.docs.vertex.link/en/latest/sy
 | min     | Lift the resulting node with the lowest value for the specified property |
 | max     | Lift the resulting node with the greatest value for the specified property |
 | uniq    | Remove duplicate nodes from the query results                       |
-```
+
 
 When incorporating a Storm command into a query, we’ll need to use the pipe (“|”) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will  look like this:
 
@@ -197,7 +194,6 @@ inet:email:message | max :date
 ```css
 inet:email:message | max :date | -> inet:email:message:link
 ```
-</blockquote>
 
 <u>**Lifts Example 3: Standard and Extended Comparisons**</u>
 
@@ -214,6 +210,33 @@ If, instead, we wanted to find all EnvolveLabs employees with the first name Ste
 ```css
 ps:contact:name^=Stephanie
 ```
+
+There are several other comparison operators that we may find useful going forward. These include:
+| Operator | Lift by                                   |
+|----------|-------------------------------------------|
+| =        | Exact value                               |
+| ^=       | Prefix                                    |
+| ~=       | Regular expression                        |
+| @=       | Time or Interval                          |
+| >        | Value is greater than                     |
+| <        | Value is less than                        |
+| >=       | Value greater than or equal to            |
+| <=       | Value less than or equal to               |
+
+Here are some example Lift operations using [Standard Common Operators](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html#lifts-using-standard-comparison-operators): 
+
+| Description                                                       | Command                                            |
+|-------------------------------------------------------------------|----------------------------------------------------|
+| Lift email messages sent from the email address, “`gregorysmith@aol.com`” | `inet:email:message:from=gregorysmith@aol.com`     |
+| Lift email messages whose subject starts with the word, “`Important`” | `inet:email:message:subject^=Important`            |
+| Lift alerts containing the process “`waitfor.exe`” in the description | `risk:alert:desc~=waitfor.exe`                     |
+| Lift HTTP requests that took place between January 1, 2023 (“`20230101`”) and January 31, 2023. | `inet:http:request:time@=(20230101,20230201)`      |
+|                                                                   | `inet:http:request:time@=(20230101, “+31 days”)`   |
+| Lift email messages sent after November 8, 2023 (“`20231108`”)      | `inet:email:message:date>20231108`                |
+| Lift email messages sent before November 8, 2023 (“`20231108`”)     | `inet:email:message:date<20231109`                |
+| Lift process execution events that occurred on or after November 15, 2023 (“`20231115`”) | `it:exec:proc:time>=20231115`                    |
+| Lift process execution events that occurred on or before November 15, 2023 (“`20231115`”) | `it:exec:proc:time<=20231115`                    |
+
 
 >What is the CEO’s name? (hint: lift by the title)
 
