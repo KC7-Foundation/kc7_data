@@ -121,7 +121,7 @@ These additional forms may be helpful during your investigations
 
 <br>
 
-<mark style="background-color: #FFFF00">
+<div style="background-color: #FFFF00">
 	
 **A Note on Forms, Properties, and Nodes:**
 
@@ -136,7 +136,8 @@ The properties displayed are `:name`, `:title`, `:user`, `:email`, and `:type`, 
 You can review all currently available Forms within Synapse in the **Data Model Explorer**. The **Data Model Explorer** is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the **Data Model Explorer** via the **Help Tool**, as shown below:
 
 ![data_model_explorer](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1)
-</mark>
+
+</div>
 
 ## STORM 101
 
