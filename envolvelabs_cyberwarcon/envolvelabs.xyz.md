@@ -154,7 +154,7 @@ Let’s type that into the Query Bar and press Enter. We’ll find there are 1,5
 
 Note that we can use this query to lift only `ps:contact` nodes for EnvolveLabs employees since those are currently the only `ps:contact` nodes in this data set. We would need to run a more specific query (such as `ps:contact:type=employee`)  if this data set also included contact information for other individuals. 
 
-
+  
 <u>**Lifts Example 2: Finding a limited number of nodes**</u>
 
 In <u>Lifts - Example 1</u>, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
@@ -197,7 +197,7 @@ inet:email:message | max :date
 ```css
 inet:email:message | max :date | -> inet:email:message:link
 ```
-
+  
 <u>**Lifts Example 3: Standard and Extended Comparisons**</u>
 
 Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about EnvolveLabs employee Stephanie Clark.
@@ -215,6 +215,7 @@ ps:contact:name^=Stephanie
 ```
 
 There are several other comparison operators that we may find useful going forward. These include:
+
 | Operator | Lift by                                   |
 |----------|-------------------------------------------|
 | =        | Exact value                               |
@@ -285,6 +286,7 @@ This leaves us with only one result.
 
 >Question 4: Who was the first person to send Delia Hill an email about “solidarity”? 
 
+  
 <u>**Filters Example 2: Exclusion Filtering**</u>
 
 Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
@@ -297,7 +299,7 @@ This leaves us 17 results.
 
 >Question 5: How many emails did Yuko Sidney send that don’t mention the word “term”?
 
-
+  
 ### Pivot
 
 [Pivot](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#) and [Traverse](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#traverse-walk-light-edges) operations are performed on the output of a previous Storm operation such as a Lift or Filter. These operations are used to navigate from one set of nodes to another based on a specified relationship. 
@@ -326,7 +328,7 @@ However, it is also possible to lift `inet:email=alexander_hall@envolvelabs.xyz`
 
 While it’s possible to use the UI, or a combination of the Storm query language and the UI, to query the data in Synapse, doing so is generally less efficient than running a Storm query. However, when it comes to pivoting, using the **Explore** button to view adjacent nodes can be a way for analysts to get a sense of how nodes are connected within Synapse and what pivots they will need to make in their Storm query. 
 
-
+  
 <u>**Pivot Example**</u>
 
 Suppose you want to find all of the links sent in the emails sent by Stephanie Clark. We can accomplish this by pivoting. 
@@ -365,7 +367,7 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:
 
 >Question 10: What IPs did the domain security-cloudapps.envolvelabs.xyz resolve to?
 
-
+  
 <u>**Traverse Example**</u>
 
 In a few specific instances, nodes are connected by lightweight (light edges) representing a specific, directional relationship between the nodes. For example, a blog modeled as a media:news node that references multiple indicators will have a “refs” lightweight edge pointing to the nodes representing those referenced indicators. In this data set, lightweight edges appear between risk:alert nodes and nodes that the alerts reference. The query below shows a pivot from a risk:alert node to the file:bytes node that the alert references:
@@ -421,7 +423,7 @@ Once you’ve applied the tag, you’ll see it appear in the **Details** pane vi
 ## References
 
 - Storm Reference: [https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html)
-- Maxmind powerup: [https://synapse.docs.vertex.link/projects/maxmind/en/latest/](https://synapse.docs.vertex.link/projects/maxmind/en/latest/)
-- Alientvault OTX: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
+- Maxmind Power-Up: [https://synapse.docs.vertex.link/projects/maxmind/en/latest/](https://synapse.docs.vertex.link/projects/maxmind/en/latest/)
+- Alientvault OTX Power-Up: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
 
 
