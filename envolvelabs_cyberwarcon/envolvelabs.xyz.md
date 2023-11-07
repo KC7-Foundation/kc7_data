@@ -144,6 +144,8 @@ In some cases, we can use the Synapse UI to answer the question rather than runn
 
 [Lift operations](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html) retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
+<br>
+
 <u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
 
 To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, we are capturing information about employees using the form `ps:contact`.
@@ -154,7 +156,8 @@ Let’s type that into the Query Bar and press Enter. We’ll find there are 1,5
 
 Note that we can use this query to lift only `ps:contact` nodes for EnvolveLabs employees since those are currently the only `ps:contact` nodes in this data set. We would need to run a more specific query (such as `ps:contact:type=employee`)  if this data set also included contact information for other individuals. 
 
-  
+<br>  
+
 <u>**Lifts Example 2: Finding a limited number of nodes**</u>
 
 In <u>Lifts - Example 1</u>, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
@@ -197,7 +200,9 @@ inet:email:message | max :date
 ```css
 inet:email:message | max :date | -> inet:email:message:link
 ```
-  
+
+<br>
+ 
 <u>**Lifts Example 3: Standard and Extended Comparisons**</u>
 
 Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about EnvolveLabs employee Stephanie Clark.
@@ -245,6 +250,7 @@ Here are some example Lift operations using [Standard Common Operators](https://
 >Question: 3 What is the CEO’s name? (hint: lift by the title)
 
 
+<br>
 
 ### Filter
 
@@ -253,6 +259,7 @@ Here are some example Lift operations using [Standard Common Operators](https://
 * `+` specifies an _inclusion filter_ (include **only** the nodes that match the criteria)
 * `-` specifies an _exclusion filter_ (include all nodes **except** those that match the criteria)
 
+<br>
 
 <u>**Filters Example 1: Inclusion Filtering**</u>
 
@@ -299,6 +306,7 @@ This leaves us 17 results.
 
 >Question 5: How many emails did Yuko Sidney send that don’t mention the word “term”?
 
+<br>
   
 ### Pivot
 
@@ -328,6 +336,7 @@ However, it is also possible to lift `inet:email=alexander_hall@envolvelabs.xyz`
 
 While it’s possible to use the UI, or a combination of the Storm query language and the UI, to query the data in Synapse, doing so is generally less efficient than running a Storm query. However, when it comes to pivoting, using the **Explore** button to view adjacent nodes can be a way for analysts to get a sense of how nodes are connected within Synapse and what pivots they will need to make in their Storm query. 
 
+<br>
   
 <u>**Pivot Example**</u>
 
