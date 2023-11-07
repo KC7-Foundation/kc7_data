@@ -84,7 +84,7 @@ A few things you’ll need to do first:
 alienvault.setup.apikey <apikey>
 ```
 
-11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
+Once you’ve done that, use the magnifying glass icon at the top of the left-hand toolbar to return to the Research Tool. 
 
 ## Section 1: The Walkthrough
 
@@ -104,6 +104,8 @@ EnvolveLabs maintains a log of various events taking place within the company. T
 | `inet:dns:a`        | IP-domain resolutions provided by a third-party vendor                                               |
 | `risk:alert`        | Security alerts from employees’ devices and the company’s email security system                      |
 
+<br>
+
 These additional forms may be helpful during your investigations
 
 | Form                      | Description                                      |
@@ -117,6 +119,10 @@ These additional forms may be helpful during your investigations
 | `ou:jobtitle`             | A job title                                      |
 
 
+<br>
+
+<mark style="background-color: #FFFF00">
+	
 **A Note on Forms, Properties, and Nodes:**
 
 It can be helpful to think of a [Form](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form) as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have [properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property), which are specific fields that provide additional information. Properties found on the `ps:contact` form, for example, include `:name`, `:email`, `:title`, and `:type`, among others. 
@@ -130,7 +136,7 @@ The properties displayed are `:name`, `:title`, `:user`, `:email`, and `:type`, 
 You can review all currently available Forms within Synapse in the **Data Model Explorer**. The **Data Model Explorer** is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the **Data Model Explorer** via the **Help Tool**, as shown below:
 
 ![data_model_explorer](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1)
-
+</mark>
 
 ## STORM 101
 
