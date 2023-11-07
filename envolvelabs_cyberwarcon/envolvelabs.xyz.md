@@ -154,6 +154,7 @@ Let’s type that into the Query Bar and press Enter. We’ll find there are 1,5
 
 Note that we can use this query to lift only `ps:contact` nodes for EnvolveLabs employees since those are currently the only `ps:contact` nodes in this data set. We would need to run a more specific query (such as `ps:contact:type=employee`)  if this data set also included contact information for other individuals. 
 
+
 <u>**Lifts Example 2: Finding a limited number of nodes**</u>
 
 In <u>Lifts - Example 1</u>, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
