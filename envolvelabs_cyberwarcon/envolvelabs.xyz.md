@@ -122,7 +122,7 @@ These additional forms may be helpful during your investigations
 <br>
 
 	
->**A Note on Forms, Properties, and Nodes:**
+>**ℹ️ A Note on Forms, Properties, and Nodes:**
 >
 >It can be helpful to think of a [Form](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form) as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have [properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property), which are specific fields that provide additional information. Properties found on the `ps:contact` form, for example, include `:name`, `:email`, `:title`, and `:type`, among others. 
 >We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the `ps:contact` node for EnvolveLabs employee Cecil Bryant:
@@ -183,7 +183,7 @@ inet:fqdn | limit 10
 
 <br> 
 
->**A note on Storm commands:**
+>**ℹ️ A Note on Storm Commands:**
 >
 >There are several [Storm commands](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) that you may find useful when querying the data. These include:
 >
@@ -198,13 +198,13 @@ inet:fqdn | limit 10
 >
 >When incorporating a Storm command into a query, we’ll need to use the pipe (“|”) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will  look like this:
 >
->```css
+>```
 >inet:email:message | max :date
 >```
 >
 >If we want to continue our query after the Storm command, we’ll need to use the pipe character once more between the Storm command and the rest of the query. As an example, if we take the query above to lift the most recently received email message, and pivot to any embedded URLs sent within the email, our query will look like this:
 >
->```css
+>```
 >inet:email:message | max :date | -> inet:email:message:link
 >```
 
