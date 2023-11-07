@@ -128,6 +128,7 @@ These additional forms may be helpful during your investigations
 >We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the `ps:contact` node for EnvolveLabs employee Cecil Bryant:
 >
 >![cecil bryant employee](https://github.com/KC7-Foundation/kc7_data/assets/9474932/93b611dc-73e7-4906-b848-d635d0083eb3)
+>
 >The properties displayed are `:name`, `:title`, `:user`, `:email`, and `:type`, the last of which categorizes this entry as an employee. 
 >
 >You can review all currently available Forms within Synapse in the **Data Model Explorer**. The **Data Model Explorer** is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the **Data Model Explorer** via the **Help Tool**, as shown below:
