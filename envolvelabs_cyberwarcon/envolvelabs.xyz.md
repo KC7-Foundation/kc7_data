@@ -22,13 +22,14 @@ EnvolveLabs has some key partners that contribute to the success of its research
 
 🧠 **By the end of your first day on the job, you should be able to:**
 	
-- Pivot on data using Storm and Synapse, learning how to lift, filter and pivot. 
+- Pivot on data using Storm and Synapse, learning how to perform Lift, Filter and Pivot operations. 
 - Learn how to label nodes to form an analytical layer. 
-- Use multiple data sets to answer targeted questions.
+- Use multiple datasets to answer targeted questions.
 - Investigate cyber activity in logs including: email, web traffic, and server logs.
 - Use multiple techniques to track the activity of APTs (Advanced Persistent Threats).
-- Use third party data sets to discover things about your attackers.
+- Use third-party datasets to discover things about your attackers.
 - Make recommendations on what actions a company can take to protect themselves.
+
 
 
 🚀 The attackers have gotten a head start, so let's not waste any more time... **let's get to work!**
