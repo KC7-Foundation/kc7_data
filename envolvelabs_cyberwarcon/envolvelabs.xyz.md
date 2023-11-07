@@ -142,7 +142,7 @@ In some cases, we can use the Synapse UI to answer the question rather than runn
 
 ### Lift
 
-(Lift operations)[https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html] retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
+[Lift operations](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html) retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
 <u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
 
