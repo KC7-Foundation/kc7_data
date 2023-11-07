@@ -355,9 +355,13 @@ inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:
 ```
 
 >Question 6: How many emails did the CEO receive?
+
 >Question 7: How many unique links were sent to the CEO via email?
+
 >Question 8: How many unique websites did the CEO visit?
+
 >Question 9: How many domains in the PassiveDNS records contain the word “cloudapps”?
+
 >Question 10: What IPs did the domain security-cloudapps.envolvelabs.xyz resolve to?
 
 
@@ -413,5 +417,10 @@ Once you’ve applied the tag, you’ll see it appear in the **Details** pane vi
 
 ![tag_remove (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/b8c65166-3ab7-45cb-a4b2-764dbc2d2b17)
 
+## References
+
+- Storm Reference: [https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html)
+- Maxmind powerup: [https://synapse.docs.vertex.link/projects/maxmind/en/latest/](https://synapse.docs.vertex.link/projects/maxmind/en/latest/)
+- Alientvault OTX: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
 
 
