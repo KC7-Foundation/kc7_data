@@ -118,31 +118,29 @@ These additional forms may be helpful during your investigations
 
 **A Note on Forms, Properties, and Nodes:**
 
-It can be helpful to think of a Form as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have properties, which are specific fields that provide additional information. Properties found on the ps:contact form, for example, include :name, :email, :title, and :type, among others. 
+It can be helpful to think of a [Form](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form) as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have [properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property), which are specific fields that provide additional information. Properties found on the `ps:contact` form, for example, include `:name`, `:email`, `:title`, and `:type`, among others. 
 
-We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the ps:contact node for EnvolveLabs employee Cecil Bryant:
+We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the `ps:contact` node for EnvolveLabs employee Cecil Bryant:
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/93b611dc-73e7-4906-b848-d635d0083eb3)
+![cecil bryant employee](https://github.com/KC7-Foundation/kc7_data/assets/9474932/93b611dc-73e7-4906-b848-d635d0083eb3)
 
 The properties displayed are `:name`, `:title`, `:user`, `:email`, and `:type`, the last of which categorizes this entry as an employee. 
 
-You can review all currently available forms within Synapse in the Data Model Explorer, which is accessible through the Help Tool. Click on the question mark icon, shown below, in the left hand Tool Bar to access the Help Tool. 
+You can review all currently available Forms within Synapse in the **Data Model Explorer**. The **Data Model Explorer** is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the **Data Model Explorer** via the **Help Tool**, as shown below:
 
-![image4](https://github.com/KC7-Foundation/kc7_data/assets/9474932/32a1098c-63c4-447c-8dc5-89de3f5ab611)
-
-The Data Model Explorer, found in the first tab, serves as an index of all forms in Synapse and provides information such as what the form is used to capture, which properties are available, and how the form relates to others within Synapse’s Data Model. 
+![data_model_explorer](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1)
 
 
 ## STORM 101
 
-There are three basic operations we’ll use to query the company’s logs using Storm: Lift, Filter, and Pivot. We can build everything on top of these basics. 
+There are three basic operations we’ll use to query the company’s logs using Storm: **Lift, Filter, and Pivot**. We can build everything on top of these basics. 
 
 In some cases, we can use the Synapse UI to answer the question rather than running a Storm query. We’ll point out how to do that when possible.
 
 
 ### Lift
 
-Lift operations retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
+(Lift operations)[https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html] retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
 
 <u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
 
@@ -156,9 +154,9 @@ Note that we can use this query to lift only `ps:contact` nodes for EnvolveLabs 
 
 <u>**Lifts Example 2: Finding a limited number of nodes**</u>
 
-In Lifts - Example 1, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
+In <u>Lifts - Example 1</u>, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
 
-As with Example 1, let’s start by typing the Form name associated with domains:
+As with <u>Example 1</u>, let’s start by typing the Form name associated with domains:
 
 ```css
 inet:fqdn
@@ -170,7 +168,34 @@ This query brings back over 2,000 results. To see a more manageable set of the d
 inet:fqdn | limit 10
 ```
 
->Lift 10 employees. Enter “done” when you have finished. 
+>Question 2: Lift 10 employees. Copy and paste the query you used. 
+
+
+<blockquote>
+A note on Storm commands:
+
+There are several [Storm commands](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) that you may find useful when querying the data. These include:
+
+| Command | Description                                                         |
+|---------|---------------------------------------------------------------------|
+| count   | Iterate through query results, and print the resulting number of nodes to the Console Tool |
+| limit   | Limit the number of nodes generated by the query to a specific number of results |
+| min     | Lift the resulting node with the lowest value for the specified property |
+| max     | Lift the resulting node with the greatest value for the specified property |
+| uniq    | Remove duplicate nodes from the query results                       |
+
+When incorporating a Storm command into a query, we’ll need to use the pipe (“|”) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will  look like this:
+
+```css
+inet:email:message | max :date
+```
+
+ If we want to continue our query after the Storm command, we’ll need to use the pipe character once more between the Storm command and the rest of the query. As an example, if we take the query above to lift the most recently received email message, and pivot to any embedded URLs sent within the email, our query will look like this:
+
+```css
+inet:email:message | max :date | -> inet:email:message:link
+```
+</blockquote>
 
 <u>**Lifts Example 3: Standard and Extended Comparisons**</u>
 
