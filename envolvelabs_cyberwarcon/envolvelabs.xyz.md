@@ -62,30 +62,28 @@ A few things you’ll need to do first:
 	This will give you a pop-up window where you can name your “scratchspace”, then click **Fork** to create it. You’ll see the name of your scratchspace replace the _KC7-EnvolveLabs_ View in the Top Bar.
 
 
-7. Double check that the Query Bar, shown below, is set to Storm mode:
+7. Double check that the **Query Bar**, shown below, is set to Storm mode:
    
-	![active storm mode](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1d639bf0-d45c-4f8c-a06c-281456555457)
+	![active storm mode](https://github.com/KC7-Foundation/kc7_data/assets/9474932/9df6e908-2f5c-444c-afdf-7c2d6826d068)
 
 
-	We’ll be using this Query Bar to run our queries for today’s exercises. 
+	We’ll be using this **Query Bar** to run our queries for today’s exercises. 
 
 
-10. Use the Toolbar on the left of the UI to navigate to the Power-Ups Tool by clicking on the lightning bolt icon. Once in the Power-Ups Tool, use the search bar to search for the Synapse-Alienvault Power-Up in the “Available” tab. Click the “Add” button to install it on your Synapse Instance:
-
-	![powerup_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1bf09f51-035f-4f99-bbda-3f87d636fbbc)
-
-	Do the same for the Synapse-Maxmind Power-Up.
+8. Use the Tool Bar on the left of the UI, navigate to the **Power-Ups Tool** by clicking on the lightning bolt icon. Once in the **Power-Ups Tool**, use the search bar to search for the _Synapse-Alienvault_ Power-Up under the _Available_ tab. Click the **Add** button to install it on your Synapse Instance:
+	
+ 	![power-up_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/4121af76-4f42-4ae2-811a-76b427eefc23)
 
 
-11. Once you’ve installed the Power-Ups, use the Toolbar on the left of the UI to navigate to the Console Tool by clicking on the Console Tool icon, shown below: 
+9. Once you’ve installed the Power-Ups, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below: 
 
-12. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
+10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
 
 ```js
 alienvault.setup.apikey <apikey>
 ```
 
-12. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
+11. Once you’ve done that, use the magnifying glass icon at the top of the left hand toolbar to return to the Research Tool. 
 
 ## Section 1: The Walkthrough
 
