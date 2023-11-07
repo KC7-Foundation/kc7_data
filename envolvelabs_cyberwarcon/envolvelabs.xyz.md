@@ -121,23 +121,23 @@ These additional forms may be helpful during your investigations
 
 <br>
 
-<div class="warning" style='padding:0.1em; background-color:#E9D8FD; color:#69337A'>
 	
-**A Note on Forms, Properties, and Nodes:**
+<blockquote style="background-color: #FFFF99; padding: 10px;">
+  <strong>A Note on Forms, Properties, and Nodes:</strong>
 
-It can be helpful to think of a [Form](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form) as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have [properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property), which are specific fields that provide additional information. Properties found on the `ps:contact` form, for example, include `:name`, `:email`, `:title`, and `:type`, among others. 
+  It can be helpful to think of a <a href="https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form">Form</a> as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have <a href="https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property">properties</a>, which are specific fields that provide additional information. Properties found on the <code>ps:contact</code> form, for example, include <code>:name</code>, <code>:email</code>, <code>:title</code>, and <code>:type</code>, among others.
 
-We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the `ps:contact` node for EnvolveLabs employee Cecil Bryant:
+  We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the <code>ps:contact</code> node for EnvolveLabs employee Cecil Bryant:
 
-![cecil bryant employee](https://github.com/KC7-Foundation/kc7_data/assets/9474932/93b611dc-73e7-4906-b848-d635d0083eb3)
+  <img alt="cecil bryant employee" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/93b611dc-73e7-4906-b848-d635d0083eb3">
 
-The properties displayed are `:name`, `:title`, `:user`, `:email`, and `:type`, the last of which categorizes this entry as an employee. 
+  The properties displayed are <code>:name</code>, <code>:title</code>, <code>:user</code>, <code>:email</code>, and <code>:type</code>, the last of which categorizes this entry as an employee.
 
-You can review all currently available Forms within Synapse in the **Data Model Explorer**. The **Data Model Explorer** is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the **Data Model Explorer** via the **Help Tool**, as shown below:
+  You can review all currently available Forms within Synapse in the <strong>Data Model Explorer</strong>. The <strong>Data Model Explorer</strong> is an index of all Forms in Synapse and provides information such as, what the Form is used to capture, which properties are available, and how the Form relates to others within Synapse’s data model. You can access the <strong>Data Model Explorer</strong> via the <strong>Help Tool</strong>, as shown below:
 
-![data_model_explorer](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1)
+  <img alt="data_model_explorer" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1">
+</blockquote>
 
-</div>
 
 ## STORM 101
 
