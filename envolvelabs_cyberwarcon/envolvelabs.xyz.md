@@ -123,6 +123,7 @@ These additional forms may be helpful during your investigations
 
 	
 >**A Note on Forms, Properties, and Nodes:**
+>
 >It can be helpful to think of a [Form](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#form) as a template for capturing a certain kind of information in Synapse. For example, EnvolveLabs uses the ps:contact form to capture individual contact information about the company’s employees. Forms have [properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#property), which are specific fields that provide additional information. Properties found on the `ps:contact` form, for example, include `:name`, `:email`, `:title`, and `:type`, among others. 
 >We can use a form to capture information within Synapse - filling out the template as it were - at which point we refer to that information as a node. The image below shows the `ps:contact` node for EnvolveLabs employee Cecil Bryant:
 >
