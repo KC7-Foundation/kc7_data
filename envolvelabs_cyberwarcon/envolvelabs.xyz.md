@@ -402,11 +402,11 @@ For simplicity, we’ll nickname the first threat actor we are tracking “light
 
 ![tag_add1 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/e2efea45-4a75-452b-82dd-8d1f6b5f116d)
 
-Or, alternatively, from selecting the node and clicking the “Add Tags” button on the Details pane on the right hand side:
+Alternatively you can select the node and click the _Add Tags_ button on the **Details** pane on the right-hand side:
 
 ![tag_add2 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f840e27a-094c-456a-8a47-7fefa80cb9b6)
 
-Once you’ve applied the tag, you’ll see it appear in the Detail pane view for the tagged node. You can remove the tag by clicking on it in the Details pane and selecting “Remove full tag” from the menu:
+Once you’ve applied the tag, you’ll see it appear in the **Details** pane view for the tagged node. You can remove the tag by clicking on it in the **Details** pane and selecting _Remove full tag_:
 
 ![tag_remove (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/b8c65166-3ab7-45cb-a4b2-764dbc2d2b17)
 
