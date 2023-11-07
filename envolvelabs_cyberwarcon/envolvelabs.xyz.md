@@ -121,7 +121,7 @@ These additional forms may be helpful during your investigations
 
 <br>
 
-<div style="background-color: #FFFF00">
+<div class="warning" style='padding:0.1em; background-color:#E9D8FD; color:#69337A'>
 	
 **A Note on Forms, Properties, and Nodes:**
 
