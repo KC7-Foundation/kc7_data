@@ -76,9 +76,12 @@ A few things you’ll need to do first:
  	![power-up_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/4121af76-4f42-4ae2-811a-76b427eefc23)
 
 
-9. Once you’ve installed the Power-Ups, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below: 
+9. Once you’ve installed the Power-Ups, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below:
+    
+	<img width="238" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c46b2a2-6ffc-4266-97b1-9deeffcb9c7a">
 
-10. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
+
+11. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
 
 ```js
 alienvault.setup.apikey <apikey>
