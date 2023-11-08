@@ -237,7 +237,7 @@ There are several other comparison operators that we may find useful going forwa
 |----------|-------------------------------------------|
 | =        | Exact value                               |
 | ^=       | Prefix                                    |
-| ~=       | Regular expression                        |
+| ~=       | Regular expression (Regex)                |
 | @=       | Time or Interval                          |
 | >        | Value is greater than                     |
 | <        | Value is less than                        |
