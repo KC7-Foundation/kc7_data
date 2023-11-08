@@ -153,13 +153,13 @@ In some cases, we can use the Synapse UI to answer the question rather than runn
 
 <u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
 
-To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, we are capturing information about employees using the form `ps:contact`.
+To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, we are capturing information about employees using the form `ps:contact`. We would need to run a more specific query (such as `ps:contact:type=employee`) if this data set also included contact information for other individuals. 
 
 Let’s type that into the Query Bar and press Enter. We’ll find there are 1,513 results. Each result is a node that represents a unique employee at the company, with more detail about each employee - such as name, email address, and title - captured as a node property. 
 
 > Question 1: How many employees are in the company?
 
-Note that we can use this query to lift only `ps:contact` nodes for EnvolveLabs employees since those are currently the only `ps:contact` nodes in this data set. We would need to run a more specific query (such as `ps:contact:type=employee`)  if this data set also included contact information for other individuals. 
+
 
 <br>  
 
