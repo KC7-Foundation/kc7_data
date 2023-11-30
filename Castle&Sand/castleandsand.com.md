@@ -38,8 +38,6 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
 
-You can find all the links you need here: [http://scoreboard.kc7cyber.com/modules/SHARKZ](http://scoreboard.kc7cyber.com/modules/SHARKZ)
-
 ### Legend
 
 > 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
