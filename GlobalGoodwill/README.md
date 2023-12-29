@@ -11,10 +11,11 @@ Global Goodwill has a series of key partners who help us to extend our charitabl
 
 | Partner Name | Relationship |
 | ------------ | ----------- |
-| Sun & Sand Trading (sunandsandtrading.com) | Leading distributor of high-quality beach products and accessories. Collaborates closely with Global Goodwill to provide a diverse range of merchandise, ensuring inventory meets the demands and preferences of beachgoers. |
-| Beach Supply Co (beachsupplyco.com) | Specialized online retailer focused on providing beach essentials and supplies. Strategic partnership with Global Goodwill enhances online presence and expands customer base. Complements Global Goodwill's brick-and-mortar stores, creating a seamless omnichannel shopping experience. |
-| Surf Paradise (surfparadise.com) | Popular online platform dedicated to surfing and beach culture. Partnership with Global Goodwill leverages their extensive audience of surf enthusiasts and beach lovers, enhancing brand visibility and driving traffic to stores and online channels. Provides valuable industry insights and trends. |
-| Beach Lifestyle (beachlifestyle.com) | Lifestyle media and content platform focused on beach living, travel, and fashion. Partnership with Global Goodwill taps into an engaged community of beach enthusiasts, increasing brand exposure, and loyalty, and fostering a sense of community. Content and marketing expertise aligns with Global Goodwill's values. |
+| Charity Watch (charitywatch.org) | Esteemed nonprofit organization focused on evaluating and reporting on the efficiency and transparency of charities. Partnership enhances accountability and impact of philanthropic efforts. |
+| Global Impact (globalimpact.org) | Renowned for driving charitable initiatives worldwide. Collaborates to expand outreach and impact of humanitarian programs. |
+| World Vision (worldvision.org) | Leading global humanitarian agency. Joint efforts in global welfare projects to improve the lives of children and families. |
+| Mercy Ships (mercyships.org) | Provides free healthcare services through hospital ships. Collaborative work in medical aid and health education projects. |
+
 
 
 Global Goodwill has been focused on supporting civilians who have been displaced by recent global conflicts. However, this has made them a target for various cyber attackers so we need some extra help to keep the organization safe!
@@ -65,19 +66,19 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/08cfad5e-f136-4e72-a87b-514d6886b484)
 
-All of Global Goodwill's security logs are stored in a single database – the Global Goodwill database. 
+All of Global Goodwill's security logs are stored in a single database – the **GlobalGoodwill** database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the GlobalGoodwill database.
 	- Click on the **GlobalGoodwill** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the Global Goodwill database for all questions while you’re investigating activity at Global Goodwill! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **GlobalGoodwill** database for all questions while you’re investigating activity at Global Goodwill! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/648ed512-51a3-4c46-a298-1e1d14514b91)
 
-Currently, you’ll see there’s a message there welcoming you to Global Goodwill! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
+Currently, you’ll see there’s a message there welcoming you to Global Goodwill! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing `backspace` or `delete` on your keyboard.
 
 Okay, enough introductions… let’s get your hands on the data.
 
