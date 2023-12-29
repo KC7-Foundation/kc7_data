@@ -4,7 +4,7 @@
 
 ![243223309-cdd08773-1d97-4a99-a259-f9acefaea020](https://github.com/KC7-Foundation/kc7_data/assets/9474932/d5bbf3c1-bae6-407a-9ef6-4acf037b3940)
 
-Global Goodwill is a not-for-profit focused on poverty alleviaton, emergency aid and adovcacy work all over the world. Operating with a widespread reach, the organization is committed to creating positive change and uplifting regions facing socio-economic challenges. Global Goodwill's core values center around integrity, collaboration and empowerment - aiming to have a lasting impact on the lives of communities in need and allow them to achieve independence. 
+Global Goodwill is a not-for-profit focused on poverty alleviation, emergency aid and advocacy work all over the world. Operating with a widespread reach, the organization is committed to creating positive change and uplifting regions facing socio-economic challenges. Global Goodwill's core values center around integrity, collaboration, and empowerment - aiming to have a lasting impact on the lives of communities in need and allow them to achieve independence. 
 
 Global Goodwill has a series of key partners who help us to extend our charitable efforts across the world:
 
@@ -13,12 +13,12 @@ Global Goodwill has a series of key partners who help us to extend our charitabl
 | Sun & Sand Trading (sunandsandtrading.com) | Leading distributor of high-quality beach products and accessories. Collaborates closely with Global Goodwill to provide a diverse range of merchandise, ensuring inventory meets the demands and preferences of beachgoers. |
 | Beach Supply Co (beachsupplyco.com) | Specialized online retailer focused on providing beach essentials and supplies. Strategic partnership with Global Goodwill enhances online presence and expands customer base. Complements Global Goodwill's brick-and-mortar stores, creating a seamless omnichannel shopping experience. |
 | Surf Paradise (surfparadise.com) | Popular online platform dedicated to surfing and beach culture. Partnership with Global Goodwill leverages their extensive audience of surf enthusiasts and beach lovers, enhancing brand visibility and driving traffic to stores and online channels. Provides valuable industry insights and trends. |
-| Beach Lifestyle (beachlifestyle.com) | Lifestyle media and content platform focused on beach living, travel, and fashion. Partnership with Global Goodwill taps into engaged community of beach enthusiasts, increasing brand exposure, loyalty, and fostering a sense of community. Content and marketing expertise aligns with Global Goodwill's values. |
+| Beach Lifestyle (beachlifestyle.com) | Lifestyle media and content platform focused on beach living, travel, and fashion. Partnership with Global Goodwill taps into an engaged community of beach enthusiasts, increasing brand exposure, and loyalty, and fostering a sense of community. Content and marketing expertise aligns with Global Goodwill's values. |
 
 
 Global Goodwill has been focused on supporting civilians who have been displaced by recent global conflicts. However, this has made them a target for various cyber attackers so we need some extra help to keep the organization safe!
 
-To try and keep the charity safe, Global Goodwill collects log data about the activity performed on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
+To try and keep the charity safe, Global Goodwill collects log data about the activity performed on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
 You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
 
@@ -30,7 +30,7 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 -   Use multiple data sets to answer targeted questions 
 -   Investigate cyber activity in logs including: email, web traffic, and server logs 
 -   Use multiple techniques to track the activity of APTs (Advanced Persistent Threats) 
--   Use third party data sets to discover things about your attackers
+-   Use third-party data sets to discover things about your attackers
 -   Make recommendations on what actions a company can take to protect themselves
 
 
@@ -53,7 +53,7 @@ ADX is the primary tool used in the Global Goodwill SOC for data exploration and
 
 Let’s get you logged in and started with ADX:
 
-On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
+On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to log in with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
@@ -369,107 +369,6 @@ Work with your team to complete as many challenge questions from the remaining s
 
 As you answer the questions, we will take you on a journey exploring the data and discovering what actions the adversaries have taken. However, you should remember that this is only one of many paths you can take through the data.  As you go, don’t forget to pay attention to the details along the way. What patterns do the attackers exhibit that could help you track them better? Do they like to use certain words, themes? Or do they make mistakes? Keeping track of these patterns will help you build the full picture of what happened. 
 
-Use the provided [Actor Preview](https://docs.google.com/document/d/1rZR4eVG886oPziG-5nGeQ5kN_q5Bpq0m/edit?usp=sharing&ouid=105873493764084037775&rtpof=true&sd=true) document to keep track of what you know about the attacker. Building a good profile, timelining the attacker’s activity, and forming a list of indicators of compromise (IOCs) will help you keep track of the attacker. KC7 models some of the techniques used by these attackers from real world threat actors, so it may be a helpful resource for you in the future when you are investigating a real security incident. 
-
-Now, get out there and keep us safe! The whole company is counting on you. No pressure😊.
-
-## Nice to Know
-
-Here are some things that might be helpful to know as we explore the CastleSand Database:
-
-**Business hours**
-
-We operate our business from 9am to 5pm, 7 days a week. We should roughly expect to see all legitimate business activity within that timeframe (with some exceptions, of course). Let's be vigilant about any activity that occurs on the network while everyone sleeps ;)
-
-**Pay attention to the IT Workers**
-
-Our IT staff at Global Goodwill are granted elevated privileges on machines across the company in order to fulfill their duties. As a result, it can be concerning when their machines get compromised. We, at Global Goodwill, are a security-aware organization, so we do not grant local administrative privileges to users on their computers. However, each laptop and desktop at Global Goodwill is provisioned with a separate local administrative account - which looks something like "marketing_local_admin." These administrator accounts are provisioned with the same username and password per department. For example, all employees in the Marketing department have a local administrator account with the username "marketing_local_admin" and the same password.
-
-**Global Goodwill uses Active Directory**
-
-We utilize Active Directory, a directory service developed by Microsoft for Windows networks. It provides us with a centralized and standardized system for managing and organizing network resources, such as user accounts, computers, groups, and other network objects.
-
-Unfortunately, compromising the Active Directory Domain Controller would give an adversary credentials for all accounts on our network and enable them to cause severe harm.
-
-**Alerts and Alert Fatigue**
-
-In the CastleSand database, we have access to a **SecurityAlerts** table that shows suspicious security events that have occurred on the Global Goodwill network. This can be a great place to begin searching for malicious activity. However, we need to be aware that some of these alerts are false positives, which means they may indicate non-malicious activity. Let's be careful not to waste too much time chasing after these.
-
-
-## Mitre ATT&CK Techniques
-
-The MITRE ATT&CK(TM) framework is a knowledgebase of adversary techniques observed in real-world intrusions. The framework consists of tactics, techniques, and subtechniques. Each of these elements of the framework is assigned a number. You can access the MITRE ATT&CK framework [here](https://attack.mitre.org).
-
-The following Mitre ATT&CK techniques were used by the actors in the observed intrusions:
-
-**Reconnaissance**  
-
-- T1594 - Search Victim-Owned Websites - Adversaries may search websites owned by the victim for information that can be used during targeting. Victim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info (ex: Email Addresses). These sites may also have details highlighting business operations and relationships.
-
-**Resource Development**  
-
-- T1584 - Compromise Infrastructure - Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastructure solutions include physical or cloud servers, domains, and third-party web and DNS services. Instead of buying, leasing, or renting infrastructure an adversary may compromise infrastructure and use it during other phases of the adversary lifecycle.
-
-**Initial Access**  
-
-- T1189 - Drive-by Compromise - Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is typically targeted for exploitation, but adversaries may also use compromised websites for non-exploitation behavior such as acquiring Application Access Token.
-- T1566 - Phishing - Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.
-- T1195 - Supply Chain Compromise - Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
-
-**Execution** 
-
-- T1047 - Windows Management Instrumentation - Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
-- T1053 - Scheduled Task/Job - Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.
-
-**Persistence** 
-
-- T1574 - Hijack Execution Flow - Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs.
-- T1078 - Valid Accounts - Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
-
-**Privilege Escalation** 
-
-- T1078 - Valid Accounts - Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.
-- T1484 - Domain Policy Modification - Adversaries may modify the configuration settings of a domain to evade defenses and/or escalate privileges in domain environments.
-
-**Defense Evasion**  
-
-- T1070 - Indicator Removal - Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses.
-- T1574 - Hijack Execution Flow - Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs.
-- T1562 - Impair Defenses - Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms.
-
-**Credential Access**  
-
-- T1110 - Brute Force - Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained.
-- T1003 - OS Credential Dumping - Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password, from the operating system and software.
-
-**Discovery**  
-
-- T1087 - Account Discovery - Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses
-
-
-
-
-## Glossary
-
-**Watering hole:** A type of attack where a hacker compromises a website that is frequently visited by a specific group of users, such as employees of a certain organization, and then infects their devices with malware when they visit the site.
-
-**Phishing:** A type of attack where a hacker sends an email or other message that appears to be from a legitimate source, such as a bank or a colleague, and tries to trick the recipient into clicking on a malicious link, opening an attachment, or providing sensitive information.
-
-**Credential theft:** A type of attack where a hacker steals or obtains the username and password of a user or an administrator, and then uses them to access their accounts or systems.
-
-**Password spray:** A type of attack where a hacker tries to guess the passwords of multiple accounts by using common or weak passwords, such as “password” or “123456”, instead of targeting one account with many password attempts.
-
-**Reconnaissance:** The process of gathering information about a target system, network, organization, or user before launching an attack. This can include scanning for open ports, identifying vulnerabilities, mapping network topology, collecting email addresses, etc.
-
-**Supply chain compromise:** A type of attack where a hacker infiltrates the software development process or distribution channel of a trusted vendor or partner and inserts malicious code into their products or services. This way, the hacker can compromise the customers or users who install or use those products or services.
-
-**Malware:** A general term for any software that is designed to harm or disrupt a system, network, device, or data. Malware can include viruses, worms, trojans
-
-**Command and control:** A type of server or network that is used by hackers to communicate with and control their malware or botnets on compromised systems, networks, or devices. Command and control servers can send commands, receive data, update malware, or launch attacks.
-
-**Adversary in the middle:** A type of attack where a hacker intercepts and modifies the communication between two parties, such as a user and a website, without their knowledge. Adversary in the middle attacks can be used to steal or alter data, redirect traffic, inject malware, or impersonate either party.
-
-**Top level domain:** The highest level of domain names in the Internet’s domain name system. Top level domains are the last part of a domain name after the dot, such as .com, .org, .edu, etc. Top level domains can indicate the type or purpose of a website or its geographic location.
 
 ## Resources
 
