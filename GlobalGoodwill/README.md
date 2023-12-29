@@ -60,11 +60,11 @@ On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/33983641-1dab-4c4d-8dac-0b65532d3b4f)
+<img width="730" alt="cluster_added" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/87e878ee-8885-4d62-bd71-cb2c2501803e">
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/08cfad5e-f136-4e72-a87b-514d6886b484)
+<img width="494" alt="clusterdbtable" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/c6219417-f08b-452a-8ec0-7efc53d9dd56">
 
 All of Global Goodwill's security logs are stored in a single database – the **GlobalGoodwill** database. 
 
@@ -76,7 +76,7 @@ Note: It’s very important that you use the **GlobalGoodwill** database for all
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/648ed512-51a3-4c46-a298-1e1d14514b91)
+<img width="1218" alt="workspace" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/9371a4d9-7eaa-4faa-9799-10a3fae065c4">
 
 Currently, you’ll see there’s a message there welcoming you to Global Goodwill! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing `backspace` or `delete` on your keyboard.
 
