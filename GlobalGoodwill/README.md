@@ -2,7 +2,8 @@
 
 🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Global Goodwill and our employees from malicious cyber actors.
 
-![243223309-cdd08773-1d97-4a99-a259-f9acefaea020](https://github.com/KC7-Foundation/kc7_data/assets/9474932/d5bbf3c1-bae6-407a-9ef6-4acf037b3940)
+![GlobalGoodwillLogo](https://github.com/KC7-Foundation/kc7_data/assets/9474932/6e363ffa-43dc-41a7-8afe-1b40e9c91d78)
+
 
 Global Goodwill is a not-for-profit focused on poverty alleviation, emergency aid and advocacy work all over the world. Operating with a widespread reach, the organization is committed to creating positive change and uplifting regions facing socio-economic challenges. Global Goodwill's core values center around integrity, collaboration, and empowerment - aiming to have a lasting impact on the lives of communities in need and allow them to achieve independence. 
 
