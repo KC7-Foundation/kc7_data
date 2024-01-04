@@ -59,7 +59,7 @@ On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/33983641-1dab-4c4d-8dac-0b65532d3b4f)
+<img width="507" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/5226058/c36483ba-9521-4199-ac60-f02159019d65">
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
