@@ -58,7 +58,7 @@ Let’s get you logged in and started with ADX:
 On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to log in with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
 
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 <img width="730" alt="cluster_added" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/87e878ee-8885-4d62-bd71-cb2c2501803e">
 
