@@ -100,8 +100,8 @@ We currently have nine types of log data. As you’ll see in ADX, each log type 
 | ----------- | ----------- |
 | Employees | Contains information about the company’s employees| 
 | Email | Records emails sent and received by employees|
-| InboundNetworkEvents | Records inbound network events including browsing activity from the Internet to devices within the company network|
-| OutboundNetworkEvents | Records outbound network events including browsing activity from within the company network out to the Internet|
+| InboundBrowsing | Records inbound network events including browsing activity from the Internet to devices within the company network|
+| OutboundBrowsing | Records outbound network events including browsing activity from within the company network out to the Internet|
 | AuthenticationEvents | Records successful and failed logins to devices on the company network. This includes logins to the company’s mail server.|
 | FileCreationEvents | Records files stored on employee’s devices|
 | ProcessEvents | Records processes created on employee’s devices |
