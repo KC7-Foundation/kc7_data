@@ -47,7 +47,7 @@ On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/aaab3ee6-95c6-4806-99f2-a2e9e6ada2bf)
 
 
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/cc798f5c-a6b9-4928-af4c-25b13d02a83c)
 
