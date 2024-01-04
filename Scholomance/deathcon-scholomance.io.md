@@ -58,7 +58,7 @@ Let’s get you logged in and started with ADX:
 
 On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
