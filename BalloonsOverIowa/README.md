@@ -64,7 +64,7 @@ Let’s get you logged in and started with ADX:
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c572d21-109c-42c7-ab09-d9e352657ec4)
 
-Once you login to Azure Data Explorer, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login to Azure Data Explorer, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f64814b7-b702-49fa-8fa8-acb6af946daa)
 
