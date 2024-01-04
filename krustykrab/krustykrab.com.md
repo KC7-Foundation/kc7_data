@@ -66,7 +66,7 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 ![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
 
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 <img width="320" alt="image" src="https://user-images.githubusercontent.com/5226058/231639309-775a4eaa-2af9-4c6c-8eda-16951c555aa2.png">
 
