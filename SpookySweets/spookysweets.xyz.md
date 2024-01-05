@@ -64,7 +64,7 @@ Once you login, you should see a cluster called  _“kc7001.eastus”_   has alr
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
 
-<img width="660" alt="Screenshot 2023-10-28 at 11 39 06 AM" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/27cd7a48-1205-4d21-90d7-c054f2873388">
+![Untitled-8](https://github.com/KC7-Foundation/kc7_data/assets/31902160/fae8970c-27d9-4865-b6a3-fa97480a08e5)
 
 
 All of Spooky Sweets Candy Company’s security logs are stored in a single database – the Spooky Sweets Candy Company database. 
@@ -75,11 +75,11 @@ All of Spooky Sweets Candy Company’s security logs are stored in a single data
 
 Note: It’s very important that you use the Spooky Sweets Candy Company database for all questions while you’re investigating activity at Spooky Sweets Candy Company! If you choose the wrong database, you won’t be able to answer questions correctly. You can click the "favorite" button next to the query bar to highlight only the SpookySweets database.
 
-<img width="556" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/3d38b044-60fd-495e-851b-81f6e06100a7">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/b246c8d1-6041-47e1-824b-d39d290319a1)
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-<img width="565" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/ca8a5aef-6527-4589-b4ee-a8eae2aaf69d">
+![Untitled-9](https://github.com/KC7-Foundation/kc7_data/assets/31902160/384c3f1c-d6ed-4001-a187-6409e215a6c8)
 
 Currently, you’ll see there’s a message there welcoming you to Spooky Sweets Candy Company! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
