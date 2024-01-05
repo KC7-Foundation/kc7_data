@@ -63,7 +63,7 @@ Once you login, you should see a cluster called  _“kc7001.eastus”_   has alr
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/08cfad5e-f136-4e72-a87b-514d6886b484)
+![Untitled-3](https://github.com/KC7-Foundation/kc7_data/assets/31902160/1a623eaa-8228-4426-865f-e3e4262b1489)
 
 All of Castle&Sand’s security logs are stored in a single database – the CastleSand database. 
 
@@ -75,7 +75,8 @@ Note: It’s very important that you use the Castle&Sand database for all questi
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/648ed512-51a3-4c46-a298-1e1d14514b91)
+![Untitled-4](https://github.com/KC7-Foundation/kc7_data/assets/31902160/2233d447-08a4-47b6-8b9d-4d044ca3a53a)
+
 
 Currently, you’ll see there’s a message there welcoming you to Castle&Sand! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
@@ -292,7 +293,8 @@ Employees
 | where name has "James"
 ```
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/129029167/9565f7fc-9008-45fa-9439-9a35a910f5e1)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/07394f32-7c14-4502-b348-dd49243e2f68)
+
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
