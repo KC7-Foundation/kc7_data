@@ -69,11 +69,11 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![Screenshot 2024-01-05 102317](https://github.com/KC7-Foundation/kc7_data/assets/31902160/c1d21a38-bb87-421e-92c0-7f1123c4972d)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/6f5a2abd-5cd4-4e63-95ec-2ad2fae96229)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Untitled-3](https://github.com/KC7-Foundation/kc7_data/assets/31902160/70dd3166-8e46-4834-ba09-47ac1abb87b3)
+![Untitled-2](https://github.com/KC7-Foundation/kc7_data/assets/31902160/87ea9728-f8f7-4833-8e4d-c5c0194e309a)
 
 All of Dai Wok Foods’s security logs are stored in a single database – the Dai Wok Foods database. 
 
@@ -85,7 +85,7 @@ Note: It’s very important that you use the Dai Wok Foods database for all ques
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![Untitled-4](https://github.com/KC7-Foundation/kc7_data/assets/31902160/267f3985-3ac8-4739-a7b9-8e1790f10a2a)
+![Untitled-4](https://github.com/KC7-Foundation/kc7_data/assets/31902160/520d814f-896e-44df-9a8e-0c4bdfb8ad09)
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
