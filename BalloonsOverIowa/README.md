@@ -65,12 +65,11 @@ Let’s get you logged in and started with ADX:
 ![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c572d21-109c-42c7-ab09-d9e352657ec4)
 
 Once you login to Azure Data Explorer, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
-
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f64814b7-b702-49fa-8fa8-acb6af946daa)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/bd0f1472-a5de-44dd-8484-113ab2a0ef65)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/52092393-5c65-4fd1-8227-36309a269681)
+![Untitled-1](https://github.com/KC7-Foundation/kc7_data/assets/31902160/1834a792-8191-4f5a-8486-b1a4fd9e6fec)
 
 
 All of Balloons Over Iowa’s security logs are stored in a single database – the BalloonsOverIowa database. 
@@ -83,7 +82,7 @@ Note: It’s very important that you use the BalloonsOverIowa database for all q
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/91898d32-0831-4b34-92be-7bee25ed45d3)
+![Untitled-2](https://github.com/KC7-Foundation/kc7_data/assets/31902160/7ed6ae2c-2810-4735-829b-27f6ea4a5ea3)
 
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
@@ -301,7 +300,7 @@ Employees
 | where name has "James"
 ```
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/61265439-37c3-47f8-922c-a2782be1f9d9)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/6e74a7b2-365e-471f-b2a4-83f2bc978865)
 
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
