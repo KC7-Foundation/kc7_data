@@ -69,11 +69,11 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![image](https://user-images.githubusercontent.com/129029167/236728394-87b38cb0-96e2-4ab4-8108-00719146cbf6.png)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/45d032f1-c0d2-49ae-8b41-8f1e705ae92d)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/76f4c037-5b9c-49ed-ac86-320d4c179e2e)
+![Untitled-2](https://github.com/KC7-Foundation/kc7_data/assets/31902160/df59a31c-1581-441f-a1bc-728b73d11086)
 
 All of Dai Wok Foods’s security logs are stored in a single database – the Dai Wok Foods database. 
 
@@ -85,7 +85,8 @@ Note: It’s very important that you use the Dai Wok Foods database for all ques
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/121b9473-1814-4373-9057-5436c5e3ca1d)
+![Untitled-3](https://github.com/KC7-Foundation/kc7_data/assets/31902160/62c96bac-ebf0-4d7a-b6fd-e89f8256e10a)
+
 
 Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
@@ -302,7 +303,8 @@ Employees
 | where name has "James"
 ```
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/5226058/c8368d7a-2029-463a-a40e-8dadbb6fe67f)
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/7c86d5eb-5d10-46be-a4f5-e9f84860268a)
+
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
 
