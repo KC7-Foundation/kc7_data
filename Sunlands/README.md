@@ -49,13 +49,11 @@ On the left sidebar, you’ll see a button that says **Query Data (ADX)**. Click
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/cc798f5c-a6b9-4928-af4c-25b13d02a83c)
-
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/fa380f47-e573-452c-8647-b12b3f1a382f)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/c4114658-b8e3-4822-a0ea-951d577082d8)
-
+![Untitled-6](https://github.com/KC7-Foundation/kc7_data/assets/31902160/e213a8ed-9afb-4399-9c01-dea468b2b8a3)
 
 All of Sunlands Aeronautics and Space Administration (SASA)’s security logs are stored in a single database – the **Sunlands** database. 
 
@@ -67,7 +65,7 @@ Note: It’s very important that you use the **Sunlands** database for all quest
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/144710889/2c15aae9-2334-46a5-b3f1-fb47fbe6c47f)
+![Untitled-7](https://github.com/KC7-Foundation/kc7_data/assets/31902160/c0c3552b-8032-4682-876a-523d9f73ce0e)
 
 Currently, you’ll see there’s a message there welcoming you to Sunlands Aeronautics and Space Administration (SASA)! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
