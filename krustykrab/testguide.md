@@ -66,11 +66,12 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
 
-<img width="320" alt="image" src="https://user-images.githubusercontent.com/5226058/231639309-775a4eaa-2af9-4c6c-8eda-16951c555aa2.png">
+![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/e1c91646-9b18-43b4-af49-5cf2b93122ab)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-<img width="366" alt="image" src="https://user-images.githubusercontent.com/5226058/231639863-ace6a095-5dab-4304-a757-42fb0cee0f4a.png">
+![Untitled-5](https://github.com/KC7-Foundation/kc7_data/assets/31902160/2625543c-2bb3-4c3f-806e-3db8b6db47f5)
+
 
 All of Krusty Krab’s security logs are stored in a single database – the Krusty Krab database. 
 
@@ -83,7 +84,7 @@ Note: It’s very important that you use the Krusty Krab database for all questi
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-<img width="1313" alt="image" src="https://user-images.githubusercontent.com/5226058/231641358-3ab6ab68-8154-43f6-a4e0-d667fdf8ac83.png">
+![Untitled-6](https://github.com/KC7-Foundation/kc7_data/assets/31902160/7d5c0767-8aa0-4b04-957b-2f4ad3e037e4)
 
 Currently, you’ll see there’s a message there welcoming you to Krusty Krab! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
