@@ -69,8 +69,8 @@ Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has 
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Graphical user interface, application
-Description automatically generated](https://lh6.googleusercontent.com/KrJStzi_B5G_gWnd3h3nHzs-h_KSXG2JQaW67ihaTUAHN_4gFe-zlFyzLBtKSswEUlGgngNzoXZSj6G_Q9f1bwGKiaZADEyTB4-awd9XdRUGrOot7GZiH8pqNitQmpeJNXt9P2HV2AMV)
+![Valdy_2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b)
+
 
 All of Valdorian Times’s security logs are stored in a single database – the Valdorian Times database. 
 
@@ -82,7 +82,8 @@ Note: It’s very important that you use the Valdorian Times database for all qu
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![](https://lh3.googleusercontent.com/y6-5lCCuvV0uIDsvDn8cdKCmkUd2netEtaSgaWhvWXAfB5-XL8AEO5DYc3X2bC2DFSBVSzYGgGKkJz9TsE5bQYT43ZkqTsfhxLll1Co9__NSSxA7vqdFFxnfRErHqnWSF-pMGOaKDcTW)
+![Valdy_3](https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2)
+
 
 Currently, you’ll see there’s a message there welcoming you to Valdorian Times! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
