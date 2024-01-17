@@ -60,8 +60,6 @@ Let’s get you logged in and started with ADX:
 
 On the training module page, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-![]([https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV](https://kc7cyber.com/static/images/tutorial/tutorial4.png))
-
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 ![Valdy_1](https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20)
