@@ -11,11 +11,11 @@ Panic and disbelief spread like wildfire through the newsroom. Accusations and s
 
 You interviewed employees and management at the company and uncovered the following clues:
 
-A few weeks earlier, "Shadow Truth," a notorious hacktivist group, published a threatening video alleging they had evidence of Luffy Monk’s misdeeds.
-Within the Valdorian Times, there were rumors about an insider orchestrating the scandal. Employees have expressed concerns over low wages, and poor investments in infrastructure, especially by Valdorian’s website administrator who had to use antiquated and insecure publishing software.  
-Luffy’s primary competitor, Erik Stevens, was known to use underhanded tactics as part of his campaign. There was speculation abound that he might have orchestrated the scandal to sway the election, either through bribes or other means.
-Nene Leaks, the editor responsible for this story, who was also an outspoken critic of Rivera, was questioned ruthlessly by Valdorians about how this article could possibly have been published. Leaks had intended to publish for publishing a fair evaluation of all the candidates in the election 
-Ronnie McLovin, the new intern who worked under Leaks, was supposed to have emailed the final version of the article to the webmaster after finishing some formatting requests. Unfortunately, she fell asleep and forgot to email it out. 
+- A few weeks earlier, "Shadow Truth," a notorious hacktivist group, published a threatening video alleging they had evidence of Luffy Monk’s misdeeds.
+- Within the Valdorian Times, there were rumors about an insider orchestrating the scandal. Employees have expressed concerns over low wages, and poor investments in infrastructure, especially by Valdorian’s website administrator who had to use antiquated and insecure publishing software.  
+- Luffy’s primary competitor, Erik Stevens, was known to use underhanded tactics as part of his campaign. There was speculation abound that he might have orchestrated the scandal to sway the election, either through bribes or other means.
+- Nene Leaks, the editor responsible for this story, who was also an outspoken critic of Rivera, was questioned ruthlessly by Valdorians about how this article could possibly have been published. Leaks had intended to publish for publishing a fair evaluation of all the candidates in the election 
+- Ronnie McLovin, the new intern who worked under Leaks, was supposed to have emailed the final version of the article to the webmaster after finishing some formatting requests. Unfortunately, she fell asleep and forgot to email it out. 
 
 
 ** But first you will need some data...**
