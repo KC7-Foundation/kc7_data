@@ -4,13 +4,13 @@
 Valdoria, a city rich in untapped natural resources, was at a turning point during its election. Luffy Monk, a young candidate, became popular for wanting to develop the city responsibly. They were the main challenger to the current leader, Erik Stevens, whose platform aligned with powerful business interests. Garnering substantial grassroots support, Luffy’s campaign highlighted a critical choice for Valdoria: unrelenting economic growth or prioritizing environmental preservation.
 
 <div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/506e7432-02b4-4698-a231-c826ebf090a6" alt="valdoria-skyline" style="width:800px;height:auto;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/506e7432-02b4-4698-a231-c826ebf090a6" alt="valdoria-skyline" style="width:500px;height:auto;">
 </div>
 
 On the eve of the election, Nene Leaks, the esteemed editor of The Valdorian Times, awoke to a nightmare. The Valdorian Times, the beacon of truth for the city, published a scandalous article accusing Luffy of corruption and misconduct. The article, a vile concoction of lies, was not what she had approved. The article alleged that Luffy, hailed for his environmental activism and social reforms, was secretly involved in a land deal scandal, exploiting his position to benefit a shadowy network of real estate moguls. Furthermore, it accused Luffy of accepting substantial bribes to push environmentally damaging policies, a stark contradiction to his public persona.
 
 <div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/94aa4d78-cf93-4b5e-a077-ad72550c7225" alt="local_election" style="width:800px;height:auto;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/94aa4d78-cf93-4b5e-a077-ad72550c7225" alt="local_election" style="width:500px;height:auto;">
 </div>
 
 
