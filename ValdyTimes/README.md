@@ -51,13 +51,11 @@ ADX is the primary tool used in the Valdorian Times SOC for data exploration and
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Valdorian Times training module at [kc7cyber.com/Valdorian Times
+1. Go to the Valdorian Times training module
 
-](http://kc7cyber.com/Valdorian Times)
+On the training module page, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
-On the training module page, you’ll see a button that says **Get the Data**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
-
-![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
+![]([https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV](https://kc7cyber.com/static/images/tutorial/tutorial4.png))
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
@@ -136,7 +134,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 
 The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Valdorian Times” and the domain is “valdoriantimes.news”.
 
->2. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
+>2\. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
 Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
 
@@ -164,7 +162,7 @@ Employees
 | count
 ```
 
-> 3.  🤔 How many employees work at Valdorian Times?
+> 3\.  🤔 How many employees work at Valdorian Times?
 
 **Filtering Data With the _where_ Operator**
 
@@ -190,7 +188,7 @@ Employees
 | where role == "Editorial Director"
 ```
 
-> 4. 🤔 What is the Editorial Director's Name?
+> 4\. 🤔 What is the Editorial Director's Name?
 
 Here are some additional operators we like to use:
 
@@ -222,7 +220,7 @@ Email
 
 ```
 
-> 5. 🤔 How many emails did “Nene Leaks” receive?
+> 5\. 🤔 How many emails did “Nene Leaks” receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -243,7 +241,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-> 6.  🤔 How many distinct senders were seen in the email logs from “weprinturstuff.com?”
+> 6\.  🤔 How many distinct senders were seen in the email logs from “weprinturstuff.com?”
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -265,7 +263,7 @@ OutboundNetworkEvents
 | count
 ```
 
-> 7.  🤔 How many distinct websites did “Lois Lane” visit?
+> 7\.  🤔 How many distinct websites did “Lois Lane” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -289,7 +287,7 @@ PassiveDns
 | count
 ```
 
-> 8.  🤔 How many distinct domains in the PassiveDns records contain the word “hire?” 
+> 8\.  🤔 How many distinct domains in the PassiveDns records contain the word “hire?” 
 
 ```sql
 PassiveDns
@@ -297,7 +295,7 @@ PassiveDns
 | distinct ip
 ```
 
-> 9.  🤔 What IPs did the domain “hirejob.com” resolve to (enter any one of them)?
+> 9\.  🤔 What IPs did the domain “hirejob.com” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
@@ -378,7 +376,7 @@ OutboundNetworkEvents
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
-> 10.  🤔 How many websites did employees with the first name “Mary” visit?
+> 10\.  🤔 How many websites did employees with the first name “Mary” visit?
 
 Let's try that again using a different table.  
 
@@ -392,7 +390,7 @@ AuthenticationEvents
 | count
 ```
 
-> 11.  🤔 How many authentication attempts did we see in accounts of employees with the first name "Mary?"
+> 11\.  🤔 How many authentication attempts did we see in accounts of employees with the first name "Mary?"
 
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the **Employees table** – and used knowledge from there to find related data in another source – **OutboundNetworkEvents**.
 
