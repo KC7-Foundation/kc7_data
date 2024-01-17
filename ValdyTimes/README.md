@@ -4,18 +4,18 @@
 
 {{IMAGE_LOGO}}
 
-{{COMPANY_DESCRIPTION}}
+Founded in 1821, Valdorian Times is a venerable institution in the city of Valdoria, dedicated to journalistic excellence. Throughout its illustrious history, it has been a catalyst for impactful stories that shape public discourse. From its groundbreaking coverage of the EcoGate Revelations, exposing a covert environmental scandal threatening Valdoria's natural beauty, to its commitment to investigative journalism, Valdorian Times consistently exemplifies a dedication to truth, transparency, and social justice. As a progressive and independent voice, it remains at the forefront of delivering news that challenges the status quo and empowers readers to engage critically with the world around them.
 
 Valdorian Times has a series of key partners who contribute to the success of our business:
 
 | Partner Name | Relationship |
 | ----------- | ----------- |
-| weprinturstuff.com | {{PARTNER_DOMAIN_1_DESCRIPTION}}|
-| mediaethicsboard.org | {{PARTNER_DOMAIN_2_DESCRIPTION}}|
-| aightsoboom.net | {{PARTNER_DOMAIN_3_DESCRIPTION}}|
-| inksuppliers.com | {{PARTNER_DOMAIN_4_DESCRIPTION}}|
+| weprinturstuff.com | A premier customization company offering top-quality media printing, specializing in magazines and newspapers with tailored solutions.|
+| mediaethicsboard.org | A non-profit organization committed to promoting and upholding ethical standards in media through education and advocacy.|
+| aightsoboom.net | An innovative entertainment platform providing a diverse range of content, from music to digital art, with a focus on emerging artists and creators.|
+| inksuppliers.com | A leading supplier of high-quality ink products for various industries, ensuring reliable and vibrant printing solutions.|
 
-Valdorian Times has been laser-focused on broadening our customer base. Recently, though, we have been getting a lot of attention. All this extra attention has brought along some unwelcome visitors- cyber attackers! That’s why we’ve hired you! To help keep us safe!
+Valdorian Times has been steadfast in expanding its readership base. Recently, however, our coverage of this year's elections has drawn unexpected attention. With the surge in political visibility comes an influx of unwelcome visitors—cyber attackers! That's why we've brought you on board to help ensure our security and safeguard the integrity of our election-related news platform!
 
 Like all good companies, Valdorian Times collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
@@ -62,7 +62,7 @@ On the training module page, you’ll see a button that says **Get the Data**. C
 
 ![](https://lh5.googleusercontent.com/XVuNwIMKtT5WtYaxLkPRnuezZQfpWBDNa8naLYn31uFLDyd2A8NxrXYK86Vf9wEkdwuMM3Sp0PDdS9T3LXkeWJLYd2w_OVr39dB17_T-ItxDycIdURHQ74vMNQ-zMHVWJIsXeeuFjhoV)
 
-Once you login, you should see a cluster called  _“kc7cyber.eastus2”_   has already been added to your account.
+Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
 ![Valdy_1](https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20)
 
@@ -72,13 +72,13 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 ![Valdy_2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b)
 
 
-All of Valdorian Times’s security logs are stored in a single database – the Valdorian Times database. 
+All of Valdorian Times’s security logs are stored in a single database – the **ValdyTimes** database. 
 
   2. Select your database.  
-	- Expand the dropdown arrow next to the Valdorian Times database.
-	- Click on the **Valdorian Times** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
+	- Expand the dropdown arrow next to the **ValdyTimes** database.
+	- Click on the **ValdyTimes** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the Valdorian Times database for all questions while you’re investigating activity at Valdorian Times! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **ValdyTimes** database for all questions while you’re investigating activity at Valdorian Times! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
@@ -91,20 +91,20 @@ Okay, enough introductions… let’s get your hands on the data.
 
 #### First Look at the data... 
 
-The **Valdorian Times** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
+The **ValdyTimes** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
 
-We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Valdorian Times** database:
+We currently have nine types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **ValdyTimes** database:
 
 | **Table Name** | **Description** | 
 | ----------- | ----------- |
-| Employees | Contains information about the company’s employees| 
+| AuthenticationEvents | Records successful and failed logins to devices on the company network. This includes logins to the company’s mail server.|
 | Email | Records emails sent and received by employees|
+| Employees | Contains information about the company’s employees| 
+| FileCreationEvents | Records files stored on employee’s devices|
 | InboundNetworkEvents | Records inbound network events including browsing activity from the Internet to devices within the company network|
 | OutboundNetworkEvents | Records outbound network events including browsing activity from within the company network out to the Internet|
-| AuthenticationEvents | Records successful and failed logins to devices on the company network. This includes logins to the company’s mail server.|
-| FileCreationEvents | Records files stored on employee’s devices|
-| ProcessEvents | Records processes created on employee’s devices |
 | PassiveDns (External) | Records IP-domain resolutions |
+| ProcessEvents | Records processes created on employee’s devices |
 | SecurityAlerts | Records security alerts from an employee’s device or the company’s email security system |
 
 > 🎯**Key Point – Over the Horizon (OTH) data**: One of the tables listed above is not like the others – **PassiveDns**. Rather than being an internal security log, PassiveDns is a data source that we’ve purchased from a 3rd party vendor. Not all malicious cyber activity happens within our company network, so sometimes we depend on data from other sources to complete our investigations.
@@ -137,9 +137,9 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 > 🎯**Key Point – What to do when you don’t know what to do**: Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the **take** operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
 
 
-The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Valdorian Times” and the domain is “{{COMPANY_DOMAIN}}”.
+The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Valdorian Times” and the domain is “valdoriantimes.news”.
 
->1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
+>2. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
 Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
 
@@ -167,33 +167,33 @@ Employees
 | count
 ```
 
-2.  🤔How many employees are in the company?
+> 3.  🤔 How many employees work at Valdorian Times?
 
 **Filtering Data With the _where_ Operator**
 
 So far, we’ve run queries that look at the entire contents of the table. Often in cybersecurity analysis, we only want to look at data that meets a set of conditions or criteria. To accomplish this, we apply filters to specific columns.
   
-We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find all the employees with the name “{{COMPANY_USER_1_FNAME}}” by filtering on the name column in the Employees table.
+We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find the employees with the role of  “Director” by filtering on the role column in the Employees table.
 
 **where** statements are written using a particular structure. Use this helpful chart below to understand how to structure a **where** statement.
 
 | **where** | **field** | **operator** | **"value"** |
 | ----------- | ----------- | ----------- | ----------- |
-| where | name | has | "{{COMPANY_USER_1_FNAME}}" |
+| where | role | has | "Director" |
 
 ```sql
 Employees
-| where name has "{{COMPANY_USER_1_FNAME}}"
+| where role has "Director"
 ```
 
-The **has** operator is useful here because we’re looking for only a partial match. If we wanted to look for an employee with a specific first and last name (an exact match), we’d use the == operator:
+The **has** operator is useful here because we’re looking for only a partial match. If we wanted to look for an employee with a specific role (an exact match), we’d use the **==** operator:
 
 ```sql
 Employees
-| where name == "{{COMPANY_USER_1_NAME}}"
+| where role == "Editorial Director"
 ```
 
->3. 🤔Each employee at Valdorian Times is assigned an IP address. Which employee has the IP address: “192.168.2.191”?
+> 4. 🤔 What is the Editorial Director's Name?
 
 Here are some additional operators we like to use:
 
@@ -216,16 +216,16 @@ While performing their day-to-day tasks, Valdorian Times employees send and rece
 Email metadata includes information like: the time the email was sent, the sender, the recipient, the subject line, and any links the email may contain. Storing only email metadata, rather than entire contents, helps protect the privacy of our employees, while also ensuring that our security analysts can keep us safe. Sometimes even metadata can reveal sensitive information, so it’s important that you don’t talk about log data with other employees outside the SOC.
 
 
-We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails sent by “{{COMPANY_USER_1_NAME}}”:
+We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails received by “Nene Leaks”:
 
 ```sql
 
 Email
-| where sender == "{{COMPANY_USER_1_EMAIL}}"
+| where recipient == "nene_leaks@valdoriantimes.news"
 
 ```
 
-> 4. 🤔How many emails did {{COMPANY_USER_2_NAME}} receive?
+> 5. 🤔 How many emails did “Nene Leaks” receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -233,40 +233,42 @@ We can use the **distinct** operator to find unique values in a particular colum
 
 ```sql
 Email
-| where sender has "{{COMPANY_DOMAIN}}"
+| where sender has "weprinturstuff.com"
 | distinct sender
 | count
 ```
 
 This is our first time using a multi-line query with multiple operators, so let’s break it down:
 
-In line 2, we take the Email table and filter the data down to find only those rows with “{{COMPANY_DOMAIN}}” in the sender column.
+In line 2, we take the Email table and filter the data down to find only those rows with “weprinturstuff.com” in the sender column.
 
-In line 3, we add another pipe character ( | ) and use the distinct operator to find all the unique senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “{{COMPANY_DOMAIN}}” in the sender column.
+In line 3, we add another pipe character ( | ) and use the distinct operator to find all the distinct senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “weprinturstuff.com” in the sender column.
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-5.  🤔How many distinct senders were seen in the email logs from weprinturstuff.com?
+> 6.  🤔 How many distinct senders were seen in the email logs from “weprinturstuff.com?”
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
 When employees at Valdorian Times browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
 
-If we want to figure out what websites {{COMPANY_USER_3_NAME}} visited, we can find their IP address from the Employees table.
+If we want to figure out what websites Lois Lane visited, we can find their IP address from the **Employees** table.
 
 ```sql
 Employees
-| where name == "{{COMPANY_USER_3_NAME}}"
+| where name == "Lois Lane"
 ```
 
-The query above tells us their IP address is “{{COMPANY_USER_3_IP}}”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
+The query above tells us their IP address is “10.10.0.77”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
 
 ```sql
 OutboundNetworkEvents
-| where src_ip == "{{COMPANY_USER_3_IP}}"
+| where src_ip == "10.10.0.77"
+| distinct url
+| count
 ```
 
-> 6.  🤔How many unique websites did “{{COMPANY_USER_4_NAME}}” visit?
+> 7.  🤔 How many distinct websites did “Lois Lane” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -283,89 +285,119 @@ To eliminate the need to actively resolve (that is- directly browse to or intera
 
 These domain-to-IP relationships are stored in our **PassiveDns** table.
 
-> 7.  🤔 How many domains in the PassiveDns records contain the word “{{COMPANY_ACTOR_KEYWORD_1}}”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
-> 8. 🤔 What IPs did the domain “{{COMPANY_ACTOR_KEYWORD_1_DOMAIN}}” resolve to (enter any one of them)?
+```sql
+PassiveDns
+| where domain contains "hire"
+| distinct domain
+| count
+```
+
+> 8.  🤔 How many distinct domains in the PassiveDns records contain the word “hire?” 
+
+```sql
+PassiveDns
+| where domain == "hirejob.com"
+| distinct ip
+```
+
+> 9.  🤔 What IPs did the domain “hirejob.com” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
 Sometimes we need to use the output of one query as the input for a second query.  The first way we can do this is by manually typing the results into the next query.
 
-For example, what if we want to look at all the web browsing activity from employees named “James”?
+For example, what if we want to look at all the web browsing activity from employees named “Mary”?
 
 First, you would need to go into the **Employees** table and find the IP addresses used by these employees.
 
 
 ```sql
 Employees
-| where name has "James"
+| where name has "Mary"
 ```
 
-![](https://lh5.googleusercontent.com/Ul2NZuxCWG8Wg3zIGBjTSrUQHeNJ7b_cPKWSqvqGrkptYJ8F0Y4-qtoTcR8OtjJGzQaCqdyDe9_fJDSXOm58hWdgvNYqvteckmtEvq51WIjYrxXIIi-rdGUSIZ0eSYon7mOoL2jFrmu-)
+![Valdy_mary_ips](https://github.com/KC7-Foundation/kc7_data/assets/155035362/59942ea2-7ed7-441b-9662-9cae2e70bdbe)
 
-Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
+
+Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the **in** operator to choose all rows that have a value matching any value from a list of possible values. In other words, the **==** (comparison) operator looks for an exact match, while the **in** operator checks for any values from the list
 
 ```sql 
 OutboundNetworkEvents
-| where src-ip in ("192.168.1.132",
-	"192.168.3.128",
-	"192.168.1.70",
-	"192.168.1.92",
-	"192.168.0.147",
-	"192.168.1.50",
-	"192.168.0.163",
-	"192.168.2.200")
+| where src-ip in ("10.10.0.66",
+	"10.10.0.100",
+	"10.10.0.29",
+	"10.10.0.47",
+	"10.10.0.73")
 ```
 
-Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “James.”
+Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “Mary.”
 
 We can accomplish this in a more elegant way by using a [let statement,](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement) which allows us to assign a name to an expression or a function. We can use a let statement here to save and give a name to the results of the first query so that the values can be re-used later. That means we don’t have to manually type or copy and paste the results repeatedly.
 
 ```sql 
-let james_ips = 
+let mary_ips =
 Employees
-| where name has "James"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (james_ips)
+| where src_ip in (mary_ips)
+| count
 ```
 
-On the left of the let statement is the variable name (“james_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing.
+On the left of the let statement is the variable name (“mary_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing.
 
 ```sql  hl_lines="1"
-let james_ips = 
+let mary_ips =
 Employees
-| where name has "James"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (james_ips)
+| where src_ip in (mary_ips)
+| count
 ```
 On the right side of the let statement in the expression you are storing. In this case, we use the **distinct** operator to select values from only one column – so they are stored in an array – or list of values.
 
 ```sql  hl_lines="2 3 4"
-let james_ips = 
+let mary_ips =
 Employees
-| where name has "James"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (james_ips)
+| where src_ip in (mary_ips)
+| count
 ```
 
 The **let** statement is concluded by a semi-colon.
 
 ```sql  hl_lines="4"
-let james_ips = 
+let mary_ips =
 Employees
-| where name has "James"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (james_ips)
+| where src_ip in (mary_ips)
+| count
 ```
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
-> 9.  🤔 How many unique URLs were browsed by employees named “Karen”?
+> 10.  🤔 How many websites did employees with the first name “Mary” visit?
 
-> 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
+Let's try that again using a different table.  
+
+```sql  hl_lines="4"
+let mary_authentications =
+Employees
+| where name has "Mary"
+| distinct username;
+AuthenticationEvents
+| where username in (mary_authentications)
+| count
+```
+
+> 11.  🤔 How many authentication attempts did we see in accounts of employees with the first name "Mary?"
+
+> 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the **Employees table** – and used knowledge from there to find related data in another source – **OutboundNetworkEvents**.
 
 
 ## Section 2: Start Hunting! 
