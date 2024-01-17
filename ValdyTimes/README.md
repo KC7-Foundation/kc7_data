@@ -128,8 +128,10 @@ Employees
 
 This query has a few parts. Let’s take a moment to break each of them down:
 
-![Diagram
-Description automatically generated with low confidence](https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg)
+<div style="text-align:center;">
+    <img src="https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg" alt="Diagram" style="width:800px;height:auto;">
+</div>
+
 
 | **Query Component** | **Description** | 
 | ----------- | ----------- |
