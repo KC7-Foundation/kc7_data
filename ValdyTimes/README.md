@@ -62,12 +62,16 @@ On the training module page, you’ll see a button that says **Query Data (ADX)*
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![Valdy_1](https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20)
-
+<div style="text-align:center;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20" alt="Valdy_1" style="width:300px;height:auto;">
+</div>
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Valdy_2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b)
+<div style="text-align:center;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b" alt="Valdy_2" style="width:300px;height:auto;">
+</div>
+
 
 
 All of Valdorian Times’s security logs are stored in a single database – the **ValdyTimes** database. 
@@ -80,7 +84,9 @@ Note: It’s very important that you use the **ValdyTimes** database for all que
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![Valdy_3](https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2)
+<div style="text-align:center;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2" alt="Valdy_3" style="width:300px;height:auto;">
+</div>
 
 
 Currently, you’ll see there’s a message there welcoming you to Valdorian Times! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
