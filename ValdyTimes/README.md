@@ -85,7 +85,7 @@ Note: It’s very important that you use the **ValdyTimes** database for all que
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
 <div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2" alt="Valdy_3" style="width:600px;height:auto;">
+    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2" alt="Valdy_3" style="width:900px;height:auto;">
 </div>
 
 
