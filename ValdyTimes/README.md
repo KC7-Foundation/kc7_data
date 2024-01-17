@@ -19,7 +19,7 @@ On the eve of the election, Nene Leaks, the esteemed editor of The Valdorian Tim
 Panic and disbelief spread like wildfire through the newsroom. Accusations and suspicions turned towards Nene, questioning her role in this catastrophic lapse of ethics. After being hit with a defamation lawsuit by Luffy, The Valdorian times hired you as an incident responder to get to the bottom of what happened. 
 
 
-**But first you will need some data...**
+**But first you will need some data... **
 
 Like all good companies, Valdorian Times collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
