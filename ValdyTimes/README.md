@@ -136,7 +136,7 @@ The Employees table contains information about all the employees in our organiza
 
 >2\. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
-Make sure you record your answer to all the questions from KQL 101 in the scoreboard at kc7cyber.com/scoreboard
+Make sure you record your answer to all the questions from KQL 101 in the scoreboard
 
 You can easily write multiple queries in the same workspace tab. To do this, make sure to separate each query by an empty line. Notice below how we have separated the queries for the **Employees**, **Email**, and **OutboundNetworkEvents** tables by adding empty lines between them.
 
