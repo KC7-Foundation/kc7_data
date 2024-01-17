@@ -1,23 +1,26 @@
 # Welcome to Valdorian Times
 
-🥳 Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Valdorian Times and our employees from malicious cyber actors.
 
-{{IMAGE_LOGO}}
+Valdoria, a city rich in untapped natural resources, was at a turning point during its election. Luffy Monk, a young candidate, became popular for wanting to develop the city responsibly. They were the main challenger to the current leader, Erik Stevens, whose platform aligned with powerful business interests. Garnering substantial grassroots support, Luffy’s campaign highlighted a critical choice for Valdoria: unrelenting economic growth or prioritizing environmental preservation.
 
-Founded in 1821, Valdorian Times is a venerable institution in the city of Valdoria, dedicated to journalistic excellence. Throughout its illustrious history, it has been a catalyst for impactful stories that shape public discourse. From its groundbreaking coverage of the EcoGate Revelations, exposing a covert environmental scandal threatening Valdoria's natural beauty, to its commitment to investigative journalism, Valdorian Times consistently exemplifies a dedication to truth, transparency, and social justice. As a progressive and independent voice, it remains at the forefront of delivering news that challenges the status quo and empowers readers to engage critically with the world around them.
+{{ image of newsroom chaos here }} 
 
-Valdorian Times has a series of key partners who contribute to the success of our business:
+On the eve of the election, Nene Leaks, the esteemed editor of The Valdorian Times, awoke to a nightmare. The Valdorian Times, the beacon of truth for the city, published a scandalous article accusing Luffy of corruption and misconduct. The article, a vile concoction of lies, was not what she had approved. The article alleged that Luffy, hailed for his environmental activism and social reforms, was secretly involved in a land deal scandal, exploiting his position to benefit a shadowy network of real estate moguls. Furthermore, it accused Luffy of accepting substantial bribes to push environmentally damaging policies, a stark contradiction to his public persona.
 
-| Partner Name | Relationship |
-| ----------- | ----------- |
-| weprinturstuff.com | A premier customization company offering top-quality media printing, specializing in magazines and newspapers with tailored solutions.|
-| mediaethicsboard.org | A non-profit organization committed to promoting and upholding ethical standards in media through education and advocacy.|
-| aightsoboom.net | An innovative entertainment platform providing a diverse range of content, from music to digital art, with a focus on emerging artists and creators.|
-| inksuppliers.com | A leading supplier of high-quality ink products for various industries, ensuring reliable and vibrant printing solutions.|
+Panic and disbelief spread like wildfire through the newsroom. Accusations and suspicions turned towards Nene, questioning her role in this catastrophic lapse of ethics. After being hit with a defamation lawsuit by Luffy, The Valdorian times hired you as an incident responder to get to the bottom of what happened. 
 
-Valdorian Times has been steadfast in expanding its readership base. Recently, however, our coverage of this year's elections has drawn unexpected attention. With the surge in political visibility comes an influx of unwelcome visitors—cyber attackers! That's why we've brought you on board to help ensure our security and safeguard the integrity of our election-related news platform!
+You interviewed employees and management at the company and uncovered the following clues:
 
-Like all good companies, Valdorian Times collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
+A few weeks earlier, "Shadow Truth," a notorious hacktivist group, published a threatening video alleging they had evidence of Luffy Monk’s misdeeds.
+Within the Valdorian Times, there were rumors about an insider orchestrating the scandal. Employees have expressed concerns over low wages, and poor investments in infrastructure, especially by Valdorian’s website administrator who had to use antiquated and insecure publishing software.  
+Luffy’s primary competitor, Erik Stevens, was known to use underhanded tactics as part of his campaign. There was speculation abound that he might have orchestrated the scandal to sway the election, either through bribes or other means.
+Nene Leaks, the editor responsible for this story, who was also an outspoken critic of Rivera, was questioned ruthlessly by Valdorians about how this article could possibly have been published. Leaks had intended to publish for publishing a fair evaluation of all the candidates in the election 
+Ronnie McLovin, the new intern who worked under Leaks, was supposed to have emailed the final version of the article to the webmaster after finishing some formatting requests. Unfortunately, she fell asleep and forgot to email it out. 
+
+
+** But first you will need some data...**
+
+Like all good companies, Valdorian Times collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
 You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
 
@@ -35,8 +38,6 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 
 **The attackers have gotten a head start, so let's not waste any more time... let's get to work!**
 
-
-You can find all the links you need here: [kc7cyber.com/Valdorian Times](http://kc7cyber.com/Valdorian Times)
 
 ### Legend
 
