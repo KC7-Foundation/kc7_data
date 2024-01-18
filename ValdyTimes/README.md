@@ -1,4 +1,4 @@
-# Welcome to Valdorian Times
+# Welcome to Valdoria!
 
 
 Valdoria, a city rich in untapped natural resources, was at a turning point during its election. Luffy Monk, a young candidate, became popular for wanting to develop the city responsibly. They were the main challenger to the current leader, Erik Stevens, whose platform aligned with powerful business interests. Garnering substantial grassroots support, Luffy’s campaign highlighted a critical choice for Valdoria: unrelenting economic growth or prioritizing environmental preservation.
