@@ -306,7 +306,7 @@ PassiveDns
 | distinct ip
 ```
 
-> 9\.  🤔 What IPs did the domain “hirejob.com” resolve to (enter any one of them)?
+> 9\.  🤔 What IPs did the domain “jobhire.org” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
