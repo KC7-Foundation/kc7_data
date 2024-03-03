@@ -238,7 +238,7 @@ This is our first time using a multi-line query with multiple operators, so let�
 
 In line 2, we take the Email table and filter the data down to find only those rows with “eskom.co.za” in the sender column.
 
-In line 3, we add another pipe character ( | ) and use the distinct operator to find all the distinct senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “bitbingersbanking.net” in the sender column.
+In line 3, we add another pipe character ( | ) and use the distinct operator to find all the distinct senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “eskom.co.za” in the sender column.
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
