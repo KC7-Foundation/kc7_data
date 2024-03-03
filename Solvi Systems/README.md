@@ -1,9 +1,12 @@
 # Welcome to Solvi Systems
 
+![solvilogo2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/23c8e297-c03e-4272-868c-27c390992538)
 
-Encryptodera Financial Solutions, a standout in the financial technology sector, excels in providing secure and encrypted financial services, encompassing payment gateways, digital wallets, and blockchain solutions. Established in 2017, the company has achieved noteworthy success and expansion, positioning itself as a frontrunner in financial security and innovation. As Encryptodera Financial Solutions prepares for its public debut, a discreet strategy, driven by the CEO's desire for increased profits, is underway to optimize financial metrics, potentially involving workforce layoffs. This approach aims to present a streamlined and attractive profile to potential investors while maintaining the company's unwavering commitment to the safety and privacy of financial transactions.
+Solvi Systems is a software company that plays a pivotal role in shaping the future of the energy sector in South Africa. At the heart of Solvi Systems' operations is its Docks software, a critical component used by major power and utility companies.
 
-Within Encryptodera Financial Solutions, an air of tension lingers as rumors about potential layoffs circulate among employees. The once vibrant atmosphere is now tinged with uncertainty, prompting concerns about job security and the future. These whispers have cast a shadow over the collaborative spirit, creating an environment where employees navigate their daily tasks with a mix of dedication and unease.
+Solvi Systems' influence extends beyond national borders. The company plays a crucial role in regional stability, as South Africa exports power to neighboring states like Mozambique, Eswatini, Zimbabwe, and Namibia. This interconnectedness means that any vulnerability or disruption in South Africa's energy infrastructure, and by extension Solvi Systems' software, doesn't just affect one nation but echoes across the region.
+
+Given this key role, Solvi Systems is a prime target for cyber adversaries. You've been hired to identify any intrusions against this company.
 
 
 
@@ -13,7 +16,7 @@ Within Encryptodera Financial Solutions, an air of tension lingers as rumors abo
 
 **But first you will need some data**
 
-Like all good companies, Encryptodera Financial Solutions collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
+Like all good companies, Solvi Systems collects log data about the activity our employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analyzing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
 You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
 
@@ -44,50 +47,46 @@ You can find full documentation on ADX here: [https://docs.microsoft.com/en-us/a
 
 #### Getting Set Up in Azure Data Explorer (ADX)
 
-ADX is the primary tool used in the Encryptodera Financial Solutions SOC for data exploration and analysis. The great thing about ADX is that it is used by cyber analysts at many of the smallest and largest organizations in the world. 
+ADX is the primary tool used in the Solvi Systems SOC for data exploration and analysis. The great thing about ADX is that it is used by cyber analysts at many of the smallest and largest organizations in the world. 
 
 Let’s get you logged in and started with ADX:
 
-1. Go to the Encyrptodera training module
+1. Go to the Solvi Systems training module
 
 On the training module page, you’ll see a button that says **Query Data (ADX)**. Click this and it will redirect you to ADX! (Note: You’ll probably be asked to login with a Microsoft account. You can use an existing personal or organization-issued Microsoft account, or create a new one for free.)
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![encrypto_cluster](https://github.com/KC7-Foundation/kc7_data/assets/155035362/30660265-781c-4276-ab03-6ef8c55ca881)
+![solvi_cluster1](https://github.com/KC7-Foundation/kc7_data/assets/155035362/e6330c5c-a5e7-4d42-bc4e-b046606916c0)
 
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-
- ![encrypto_data](https://github.com/KC7-Foundation/kc7_data/assets/155035362/91233b48-4737-4008-9552-a09952fcf0ff)
-
+![solvi_cluster2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/683281e5-f052-4059-9282-c7ecf11c581d)
 
 
-
-All of Encryptodera Financial Solution’s security logs are stored in a single database – the **Encryptodera** database. 
+All of Solvi Systems’ security logs are stored in a single database – the **SolviSystems** database. 
 
   2. Select your database.  
-	- Expand the dropdown arrow next to the **Encryptodera** database.
-	- Click on the **Encryptodera** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
+	- Expand the dropdown arrow next to the **SolviSystems** database.
+	- Click on the **SolviSystems** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-Note: It’s very important that you use the **Encryptodera** database for all questions while you’re investigating activity at Encryptodera Financial Solutions! If you choose the wrong database, you won’t be able to answer questions correctly.
+Note: It’s very important that you use the **SolviSystems** database for all questions while you’re investigating activity at Solvi Systems! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![encrypto_workspace](https://github.com/KC7-Foundation/kc7_data/assets/155035362/7396a86e-21c9-4935-81ef-4195b82b3013)
+![solvi_querypane](https://github.com/KC7-Foundation/kc7_data/assets/155035362/c53d74d4-d751-44a5-811d-406cd774a24b)
 
 
-
-Currently, you’ll see there’s a message there welcoming you to Encryptodera Financial Solutions! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
+Currently, you’ll see there’s a message there welcoming you to Solvi Systems! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
 Okay, enough introductions… let’s get your hands on the data.
 
 #### First Look at the data... 
 
-The **Encryptodera** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
+The **SolviSystems** database contains nine tables. Tables contain many rows of similar data. For security logs, a single row typically represents a single thing done by an employee or a device on the network at a particular time.
 
-We currently have ten types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **Encryptodera** database:
+We currently have ten types of log data. As you’ll see in ADX, each log type corresponds to a table that exists in the **SolviSystems** database:
 
 | **Table Name** | **Description** | 
 | ----------- | ----------- |
@@ -134,7 +133,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 > 🎯**Key Point – What to do when you don’t know what to do**: Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the **take** operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
 
 
-The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Encryptodera Financial Solutions” and the domain is “encryptoderafinancial.com”.
+The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Solvi Systems” and the domain is “solvisystems.com”.
 
 >2\. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
@@ -164,32 +163,32 @@ Employees
 | count
 ```
 
-> 3\.  🤔 How many employees work at Encryptodera Financial?
+> 3\.  🤔 How many employees work at Solvi Systems?
 
 **Filtering Data With the _where_ Operator**
 
 So far, we’ve run queries that look at the entire contents of the table. Often in cybersecurity analysis, we only want to look at data that meets a set of conditions or criteria. To accomplish this, we apply filters to specific columns.
   
-We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find the employee with the IP address “10.10.0.216” by filtering on the ip_addr column in the Employees table.
+We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find the company's CTO by filtering on the role column in the Employees table.
 
 **where** statements are written using a particular structure. Use this helpful chart below to understand how to structure a **where** statement.
 
 | **where** | **field** | **operator** | **"value"** |
 | ----------- | ----------- | ----------- | ----------- |
-| where | ip_addr | == | "10.10.0.216" |
+| where | role | == | "CTO" |
 
 ```sql
 Employees
-| where ip_addr == "10.10.0.216"
+| where role == "CTO"
 ```
 
 The **==** operator is useful here because we're looking for an exact match. If we were seeking only a partial match, we'd use the **has** operator.
 ```sql
 Employees
-| where ip == "10.10.0.216"
+| where role == "CTO"
 ```
 
-> 4\. 🤔 Which employee does the IP address 10.10.0.216 belong to?
+> 4\. 🤔 What is the CTO's name?
 
 Here are some additional operators we like to use:
 
@@ -205,24 +204,24 @@ Here are some additional operators we like to use:
 | in | Equals to any of the elements | Yes | "abc" in ("123", "345", "abc") |
 
 
-While performing their day-to-day tasks, Encryptodera Financial Solutions employees send and receive emails. A record of each of these emails is stored in the **Email** table.
+While performing their day-to-day tasks, Solvi Systems employees send and receive emails. A record of each of these emails is stored in the **Email** table.
 
 > 🎯**Key Point – User Privacy and Metadata**: As you can imagine, some emails are highly sensitive. Instead of storing the entire contents of every email sent and received within the company in a database that can be easily accessed by security analysts, we only capture email metadata. 
 
 Email metadata includes information like: the time the email was sent, the sender, the recipient, the subject line, and any links the email may contain. Storing only email metadata, rather than entire contents, helps protect the privacy of our employees, while also ensuring that our security analysts can keep us safe. Sometimes even metadata can reveal sensitive information, so it’s important that you don’t talk about log data with other employees outside the SOC.
 
 
-We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails received by employee “Nakia Acosta”:
+We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails received by employee “Alexis Khoza”:
 
 ```sql
 
 Email
-| where recipient == "nakia_acosta@encryptoderafinancial.com"
+| where recipient == "alexis_khoza@solvisystems.com"
 
 ```
 
 
-> 5\. 🤔 How many emails did Nakia Acosta receive??
+> 5\. 🤔 How many emails did Alexis Khoza receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -230,42 +229,42 @@ We can use the **distinct** operator to find unique values in a particular colum
 
 ```sql
 Email
-| where sender has "bitbingersbanking.net"
+| where sender has "eskom.co.za"
 | distinct sender
 | count
 ```
 
 This is our first time using a multi-line query with multiple operators, so let’s break it down:
 
-In line 2, we take the Email table and filter the data down to find only those rows with “bitbingersbanking.net” in the sender column.
+In line 2, we take the Email table and filter the data down to find only those rows with “eskom.co.za” in the sender column.
 
 In line 3, we add another pipe character ( | ) and use the distinct operator to find all the distinct senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “bitbingersbanking.net” in the sender column.
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-> 6\.  🤔 How many distinct senders were seen in the email logs from bitbingersbanking.net?”
+> 6\.  🤔 How many distinct senders were seen in the email logs from eskom.co.za?”
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
-When employees at Valdorian Times browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
+When employees at Solvi Systems browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
 
-If we want to figure out what websites Timothy Geffre visited, we can find their IP address from the **Employees** table.
+If we want to figure out what websites Alexis Khoza visited, we can find their IP address from the **Employees** table.
 
 ```sql
 Employees
-| where name == "Timothy Geffre"
+| where name == "Alexis Khoza"
 ```
 
-The query above tells us their IP address is “10.10.1.73”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
+The query above tells us their IP address is “10.10.0.7”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
 
 ```sql
 OutboundNetworkEvents
-| where src_ip == "10.10.1.73"
+| where src_ip == "10.10.0.7"
 | distinct url
 | count
 ```
 
-> 7\.  🤔 How many distinct websites did “Timothy Geffre” visit?
+> 7\.  🤔 How many distinct websites did “Alexis Khoza” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -284,121 +283,127 @@ These domain-to-IP relationships are stored in our **PassiveDns** table.
 
 ```sql
 PassiveDns
-| where domain contains "money"
+| where domain contains "real"
 | distinct domain
 | count
 
 ```
 
-> 8\.  🤔 How many domains in the PassiveDns records contain the word “money”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 8\.  🤔 How many domains in the PassiveDns records contain the word “real”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
 
 ```sql
 PassiveDns
-| where domain == "moneyppl.com"
+| where domain == "bit.ly"
 ```
 
-> 9\.  🤔 What IP did the domain “moneyppl.com” resolve to?
+> 9\.  🤔 What IPs did the domain “bit.ly” resolve to (enter any one of them)?
 
 **🤯Let statements – making your life a bit easier:**
 
 Sometimes we need to use the output of one query as the input for a second query.  The first way we can do this is by manually typing the results into the next query.
 
-For example, what if we want to look at all the web browsing activity from employees named “Karen”?
+For example, what if we want to look at all the web browsing activity from employees named “Mary”?
 
 First, you would need to go into the **Employees** table and find the IP addresses used by these employees.
 
 
 ```sql
 Employees
-| where name has "Karen"
+| where name has "Mary"
 ```
-
-![encrypto_karens](https://github.com/KC7-Foundation/kc7_data/assets/155035362/883ce164-e8e9-443e-828c-e374f8e28a30)
+![Screenshot 2024-03-03 142413](https://github.com/KC7-Foundation/kc7_data/assets/155035362/44679250-c206-48d1-af75-ba0362d33f4e)
 
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the **in** operator to choose all rows that have a value matching any value from a list of possible values. In other words, the **==** (comparison) operator looks for an exact match, while the **in** operator checks for any values from the list
 
 ```sql 
 OutboundNetworkEvents
-| where src-ip in ("10.10.1.219",
-	"10.10.0.226",
-	"10.10.0.79")
+| where src-ip in ("10.10.0.80",
+	"10.10.1.79",
+	"10.10.0.177",
+	"10.10.0.184",
+	"10.10.0.10",
+	"10.10.1.224",
+	"10.10.1.104",
+	"10.10.1.118",
+	"10.10.0.196",
+	"10.10.1.29")
 	
 ```
 
-Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “Karen.”
+Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “Mary.”
 
 We can accomplish this in a more elegant way by using a [let statement,](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement) which allows us to assign a name to an expression or a function. We can use a let statement here to save and give a name to the results of the first query so that the values can be re-used later. That means we don’t have to manually type or copy and paste the results repeatedly.
 
 ```sql 
-let karen_ips =
+let mary_ips =
 Employees
-| where name has "Karen"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in karen_ips)
+| where src_ip in mary_ips)
 | count
 ```
 
-On the left of the let statement is the variable name (“karen_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing.
+On the left of the let statement is the variable name (“mary_ips” in this case). The variable name can be whatever we want, but it is helpful to make it something meaningful that can help us remember what values it is storing.
 
 ```sql  hl_lines="1"
-let karen_ips =
+let mary_ips =
 Employees
-| where name has "Karen"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (karen_ips)
+| where src_ip in (mary_ips)
 | count
 ```
 On the right side of the let statement in the expression you are storing. In this case, we use the **distinct** operator to select values from only one column – so they are stored in an array – or list of values.
 
 ```sql  hl_lines="2 3 4"
-let karen_ips =
+let mary_ips =
 Employees
-| where name has "Karen"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (karen_ips)
+| where src_ip in (mary_ips)
 | count
 ```
 
 The **let** statement is concluded by a semi-colon.
 
 ```sql  hl_lines="4"
-let karen_ips =
+let mary_ips =
 Employees
-| where name has "Karen"
+| where name has "Mary"
 | distinct ip_addr;
 OutboundNetworkEvents
-| where src_ip in (karen_ips)
+| where src_ip in (mary_ips)
 | count
 ```
 
 After we store the value of a query into a variable using the **let** statement, we can refer to it as many times as we like in the rest of the query. The stored query does not show any output. Remember, however, that your KQL query must have a tabular statement – which means that you must have another query following your **let** statement.
 
-> 10\.  🤔 How many websites did employees with the first name “Karen” visit?
+> 10\.  🤔 How many websites did employees with the first name "Mary" visit?
 
 Let's try that again using a different table.  
 
 ```sql  hl_lines="4"
-let karen_authentications =
+let mary_authentications =
 Employees
-| where name has "Karen"
+| where name has "Mary"
 | distinct username;
 AuthenticationEvents
-| where username in (karen_authentications)
+| where username in (mary_authentications)
 | count
 ```
 
-> 11\.  🤔 How many authentication attempts did we see in accounts of employees with the first name "Karen?"
+> 11\.  🤔 How many authentication attempts did we see in accounts of employees with the first name "Mary?"
 
 > 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the **Employees table** – and used knowledge from there to find related data in another source – **OutboundNetworkEvents**.
 
 
 ## Section 2: Start Hunting! 
 
-You’ve finished your training and you’re ready to get to work protecting Encryptodera Financial Solutions. 
+You’ve finished your training and you’re ready to get to work protecting Solvi Systems. 
 
 Work with your team to complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
 
