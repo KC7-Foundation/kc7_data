@@ -2,7 +2,6 @@
 
 ![AzureCrest](https://github.com/KC7-Foundation/kc7_data/assets/155035362/aaaca132-bc6b-4d7c-aecc-c2c946ffdc45)
 
-
 Azure Crest Hospital, serves as a regional medical center providing comprehensive healthcare services to a diverse patient population. With over 200 employees including medical staff, administrative personnel, and support staff, Azure Crest is a life-saving universe in the heart of the community.
 
 Azure Crest Hospital maintains electronic health records (EHRs) for all patients, containing sensitive medical information including diagnoses, treatment plans, medications, and personal identifiers. The hospital's IT infrastructure consists of interconnected systems including electronic medical record (EMR) systems, hospital information systems (HIS), medical devices, and networked equipment.
@@ -59,15 +58,13 @@ On the training module page, you’ll see a button that says **Query Data (ADX)*
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![solvi_cluster1](https://github.com/KC7-Foundation/kc7_data/assets/155035362/e6330c5c-a5e7-4d42-bc4e-b046606916c0)
-
+![AZ_clusterpic](https://github.com/KC7-Foundation/kc7_data/assets/155035362/fd2f7769-0dc6-403c-8098-98848695204b)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![solvi_cluster2](https://github.com/KC7-Foundation/kc7_data/assets/155035362/683281e5-f052-4059-9282-c7ecf11c581d)
+![AZ_databasepic](https://github.com/KC7-Foundation/kc7_data/assets/155035362/307de8a8-c647-4f59-ac95-0ef3311b3604)
 
-
-All of Solvi Systems’ security logs are stored in a single database – the **AzureCrest** database. 
+All of Azure Crest Hospital's security logs are stored in a single database – the **AzureCrest** database. 
 
   2. Select your database.  
 	- Expand the dropdown arrow next to the **AzureCrest** database.
@@ -77,8 +74,7 @@ Note: It’s very important that you use the **AzureCrest** database for all que
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![solvi_querypane](https://github.com/KC7-Foundation/kc7_data/assets/155035362/c53d74d4-d751-44a5-811d-406cd774a24b)
-
+![AZ_querypane](https://github.com/KC7-Foundation/kc7_data/assets/155035362/0ecc0452-bac9-4c42-ba41-1cfa6a5fcf7e)
 
 Currently, you’ll see there’s a message there welcoming you to Azure Crest! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
@@ -171,26 +167,26 @@ Employees
 
 So far, we’ve run queries that look at the entire contents of the table. Often in cybersecurity analysis, we only want to look at data that meets a set of conditions or criteria. To accomplish this, we apply filters to specific columns.
   
-We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find the company's CTO by filtering on the role column in the Employees table.
+We can use the **where** operator in KQL to apply filters to a particular field. For example, we can find the company's Chief Financial Officer by filtering on the role column in the Employees table.
 
 **where** statements are written using a particular structure. Use this helpful chart below to understand how to structure a **where** statement.
 
 | **where** | **field** | **operator** | **"value"** |
 | ----------- | ----------- | ----------- | ----------- |
-| where | role | == | "CTO" |
+| where | role | == | "Chief Financial Officer" |
 
 ```sql
 Employees
-| where role == "CTO"
+| where role == "Chief Financial Officer"
 ```
 
 The **==** operator is useful here because we're looking for an exact match. If we were seeking only a partial match, we'd use the **has** operator.
 ```sql
 Employees
-| where role == "CTO"
+| where role == "Chief Financial Officer"
 ```
 
-> 4\. 🤔 What is the CTO's name?
+> 4\. 🤔 What is the Chief Financial Officer's name?
 
 Here are some additional operators we like to use:
 
@@ -213,17 +209,17 @@ While performing their day-to-day tasks, Azure Crest Hospital employees send and
 Email metadata includes information like: the time the email was sent, the sender, the recipient, the subject line, and any links the email may contain. Storing only email metadata, rather than entire contents, helps protect the privacy of our employees, while also ensuring that our security analysts can keep us safe. Sometimes even metadata can reveal sensitive information, so it’s important that you don’t talk about log data with other employees outside the SOC.
 
 
-We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails received by employee “Alexis Khoza”:
+We can find information about the emails sent or received by a user by looking for their email address in the sender and recipient fields of the **Email** table. For example, we can use the following query to see all the emails received by employee “Penny Pincher”:
 
 ```sql
 
 Email
-| where recipient == "alexis_khoza@solvisystems.com"
+| where recipient == "penny_pincher@azurecresthospital.med"
 
 ```
 
 
-> 5\. 🤔 How many emails did Alexis Khoza receive?
+> 5\. 🤔 How many emails did Penny Pincher receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -231,42 +227,42 @@ We can use the **distinct** operator to find unique values in a particular colum
 
 ```sql
 Email
-| where sender has "eskom.co.za"
+| where sender has "pharmabest.net"
 | distinct sender
 | count
 ```
 
 This is our first time using a multi-line query with multiple operators, so let’s break it down:
 
-In line 2, we take the Email table and filter the data down to find only those rows with “eskom.co.za” in the sender column.
+In line 2, we take the Email table and filter the data down to find only those rows with “pharmabest.net” in the sender column.
 
 In line 3, we add another pipe character ( | ) and use the distinct operator to find all the distinct senders. Here, we aren’t finding the unique senders for all of the email senders, but only the unique senders that are left after we apply the filter looking for rows with “eskom.co.za” in the sender column.
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-> 6\.  🤔 How many distinct senders were seen in the email logs from eskom.co.za?”
+> 6\.  🤔 How many distinct senders were seen in the email logs from pharmabest.net?”
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
 When employees at Azure Crest Hospital browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
 
-If we want to figure out what websites Alexis Khoza visited, we can find their IP address from the **Employees** table.
+If we want to figure out what websites Penny Pincher visited, we can find their IP address from the **Employees** table.
 
 ```sql
 Employees
-| where name == "Alexis Khoza"
+| where name == "Penny Pincher"
 ```
 
-The query above tells us their IP address is “10.10.0.7”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
+The query above tells us their IP address is “10.10.0.1”. We can take their IP address and look in the **OutboundNetworkEvents** table to determine what websites they visited.
 
 ```sql
 OutboundNetworkEvents
-| where src_ip == "10.10.0.7"
+| where src_ip == "10.10.0.1"
 | distinct url
 | count
 ```
 
-> 7\.  🤔 How many distinct websites did “Alexis Khoza” visit?
+> 7\.  🤔 How many distinct websites did “Penny Pincher” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -285,13 +281,13 @@ These domain-to-IP relationships are stored in our **PassiveDns** table.
 
 ```sql
 PassiveDns
-| where domain contains "real"
+| where domain contains "health"
 | distinct domain
 | count
 
 ```
 
-> 8\.  🤔 How many domains in the PassiveDns records contain the word “real”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
+> 8\.  🤔 How many domains in the PassiveDns records contain the word “health”? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
 
 ```sql
 PassiveDns
@@ -313,23 +309,14 @@ First, you would need to go into the **Employees** table and find the IP address
 Employees
 | where name has "Mary"
 ```
-![Screenshot 2024-03-03 142413](https://github.com/KC7-Foundation/kc7_data/assets/155035362/44679250-c206-48d1-af75-ba0362d33f4e)
-
+![AZ_Mary](https://github.com/KC7-Foundation/kc7_data/assets/155035362/8a52a11b-0fcd-4ce3-bb15-350ba0121468)
 
 Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the **in** operator to choose all rows that have a value matching any value from a list of possible values. In other words, the **==** (comparison) operator looks for an exact match, while the **in** operator checks for any values from the list
 
 ```sql 
 OutboundNetworkEvents
-| where src-ip in ("10.10.0.80",
-	"10.10.1.79",
-	"10.10.0.177",
-	"10.10.0.184",
-	"10.10.0.10",
-	"10.10.1.224",
-	"10.10.1.104",
-	"10.10.1.118",
-	"10.10.0.196",
-	"10.10.1.29")
+| where src-ip in ("10.10.0.223",
+        "10.10.0.173")
 	
 ```
 
@@ -405,9 +392,9 @@ AuthenticationEvents
 
 ## Section 2: Start Hunting! 
 
-You’ve finished your training and you’re ready to get to work protecting Solvi Systems. 
+You’ve finished your training and you’re ready to get to work protecting Azure Crest Hospital. 
 
-Work with your team to complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
+Complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
 
 As you answer the questions, we will take you on a journey exploring the data and discovering what actions the adversaries have taken. However, you should remember that this is only one of many paths you can take through the data.  As you go, don’t forget to pay attention to the details along the way. What patterns do the attackers exhibit that could help you track them better? Do they like to use certain words, themes? Or do they make mistakes? Keeping track of these patterns will help you build the full picture of what happened. 
 
