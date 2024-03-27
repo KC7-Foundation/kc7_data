@@ -177,10 +177,13 @@ We can use the **where** operator in KQL to apply filters to a particular field.
 
 
 The **==** operator is useful here because we're looking for an exact match. If we were seeking only a partial match, we'd use the **has** operator.
+
+
 ```sql
 Employees
 | where role == "Chief Financial Officer"
 ```
+
 
 > 4\. 🤔 What is the Chief Financial Officer's name?
 
