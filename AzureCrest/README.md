@@ -13,22 +13,9 @@ Azure Crest Hospital has a series of key partners who contribute to the health o
 | MedEquipPros (medequippros.org) | A leading supplier of state-of-the-art medical equipment and technology solutions. MedEquipPros collaborates closely with health institutions like your hospital to ensure the provision of advanced diagnostic and treatment tools. Their partnership enhances patient care capabilities and supports the hospital's commitment to leveraging cutting-edge technology in healthcare delivery. |
 | Pharma Best (pharmabest.net) | A premier distributor and online retailer of pharmaceuticals, Pharma Best partners with hospitals to streamline the supply of essential medications. Their strategic alliance with your hospital ensures timely access to a broad spectrum of pharmaceuticals, enhancing patient treatment outcomes. PharmaBest.net's efficient distribution network supports the hospital's pharmacy services with a focus on safety, quality, and cost-effectiveness. |
 | Health Records Systems (healthrecordsystems.tech) | An innovator in digital health solutions, Health Record Systems specializes in the development and implementation of comprehensive electronic health record (EHR) systems. Their partnership with the hospital revolutionizes patient data management, improving the accuracy and accessibility of health records for medical professionals. This collaboration ensures a seamless, integrated approach to patient care and administrative efficiency. |
-| Emergency Care Partners (emergencycarepartners.com) | Dedicated to advancing emergency medical services, Emergency Care Partners works alongside hospitals to optimize emergency response strategies and patient care. This partnership enhances the hospital's emergency department capabilities, providing training, resources, and support to ensure rapid, effective treatment for critical care patients. Together, they are committed to saving lives and improving outcomes for those in urgent need.
-
-
-
-
-
-
- |
+| Emergency Care Partners (emergencycarepartners.com) | Dedicated to advancing emergency medical services, Emergency Care Partners works alongside hospitals to optimize emergency response strategies and patient care. This partnership enhances the hospital's emergency department capabilities, providing training, resources, and support to ensure rapid, effective treatment for critical care patients. Together, they are committed to saving lives and improving outcomes for those in urgent need.|
 
 Given its key role, Azure Crest Hospital is a prime target for cyber adversaries. You've been hired to identify any intrusions against this company.
-
-
-
-
-
-
 
 
 **But first you will need some data**
