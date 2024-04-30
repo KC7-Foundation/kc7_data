@@ -318,7 +318,7 @@ Let’s look again at Stephanie’s emails. But this time, we want to ignore any
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
 ```
 
-This leaves us 17 results.
+This leaves us 20 results.
 <br>
 
 >Question 5: How many emails did Yuko Sidney send that don’t mention the word “term”?
@@ -428,7 +428,7 @@ risk:alert:detected="2023/11/13 15:51:25" -(refs)>*
 
 >Question 11: What is the job role of the employee assigned to the host machine from the risk alert that was detected on 2023/10/27 15:26:47? 
 
-> Question 12: Who sent the email that mentions “german” that was detected in the alerts?
+>Question 12: Who sent the email that mentions “german” that was detected in the alerts?
 
 
 ## Section 2 Start Hunting!
