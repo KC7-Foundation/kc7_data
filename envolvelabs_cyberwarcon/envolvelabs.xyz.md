@@ -9,27 +9,15 @@ EnvolveLabs, situated in Ukraine's vibrant tech landscape, is a nexus of groundb
 
 However, in the wake of the Russian invasion, their cutting-edge research and strategic location have inadvertently made EnvolveLabs a prime target for cyber threats and espionage. Your mission, if you choose to accept it, is to investigate attacks against EvolveLabs so they can help keep the lights on for everyone in the country.
 
-EnvolveLabs has some key partners that contribute to the success of its research endeavors.
-
-| Partner Name | Relationship |
-|--------------|--------------|
-| We Sell Beakers (wesellbeakers.online) | We Sell Beakers is a crucial partner for EnvolveLabs, providing essential laboratory equipment and supplies to support their groundbreaking research. |
-| Ukrainian Pharma Supplies (pharmasupplies.shop) | Ukrainian Pharma Supplies plays a significant role in supporting EnvolveLabs' research activities, particularly in the context of healthcare and pharmaceutical-related projects. |
-| The Center For Compliance in Research Ethics (researchcompliance.biz) | The Center for Compliance in Research Ethics is a valued partner, providing guidance and expertise in ensuring that EnvolveLabs' research adheres to the highest ethical and compliance standards. |
-| Vaccine Distributors Inc (vaxdistro.site) | Vaccine Distributors Inc plays a crucial role in public health initiatives and is a key collaborator of EnvolveLabs. Protecting this partnership is vital for maintaining public health and safety. |
-
 ## Objectives
 
 🧠 **By the end of your first day on the job, you should be able to:**
 	
-- Pivot on data using Storm and Synapse, learning how to perform Lift, Filter and Pivot operations. 
+- Pivot on data using Storm and Synapse, learning how to perform Lift, Filter, and Pivot operations. 
 - Learn how to label nodes to form an analytical layer. 
-- Use multiple datasets to answer targeted questions.
 - Investigate cyber activity in logs including: email, web traffic, and server logs.
 - Use multiple techniques to track the activity of APTs (Advanced Persistent Threats).
 - Use third-party datasets to discover things about your attackers.
-- Make recommendations on what actions a company can take to protect themselves.
-
 
 
 🚀 The attackers have gotten a head start, so let's not waste any more time... **let's get to work!**
@@ -39,57 +27,56 @@ EnvolveLabs has some key partners that contribute to the success of its research
 
 A few things you’ll need to do first:
 
-1. Request a Synapse Enterprise demo instance at: [https://vertex.link/request-a-demo](https://vertex.link/request-a-demo).
+1. Request a Synapse Enterprise demo instance at: [https://vertex.link/request-a-demo](https://vertex.link/request-a-demo). You’ll then receive an email from `Optic <signup@vertex.link>` with a link to create a password and log in to your demo instance.
 
-2. Once you’ve requested a Synapse demo instance, you will receive an email from `Optic <signup@vertex.link>` with a link to your Synapse demo instance. Click the link to create a password and log into your Synapse instance.
+2. Once you’ve logged in, check the green **Top Bar** to verify that you are in the **Research Tool** (you should see  "Research" in the left hand corner). Next, use the **Workspace Selector** dropdown menu in the Top Bar to change from "default" to the *KC7 Workspace*. Once you’ve done that, use the **View Selector** to select the *KC7-EnvolveLabs View* from the dropdown menu. This is where the data for today’s exercise lives. The Top Bar of your UI should now look like this:
 
-3. Once you’ve logged in, you should be in the **Research Tool**, which you can verify by checking the green Top Bar, at the top of the UI. You should see  Research in the left hand corner. You can also navigate to the **Research Tool** by clicking on the magnifying glass icon at the top of the Tool Bar, on the left side of the page.
+	![top_bar](https://github.com/KC7-Foundation/kc7_data/assets/55701249/162a3dfb-c628-4ea0-8ce1-951458c9f5d0)
 
-   
- 	![Click on Research](https://github.com/KC7-Foundation/kc7_data/assets/9474932/3c2087c4-447f-4ba8-a0cf-9b4db0a33d14)
+3. Now, we’re going to create a scratchspace to work out of. To do this, click the **Fork** icon to the right of the **View Selector**: 
 
-4. Next, use the **Workspace Selector** dropdown menu in the Top Bar to change from “default” to the _KC7 Workspace_. This will be the first dropdown menu to the right of where it says Research.
- 
+	![fork](https://github.com/KC7-Foundation/kc7_data/assets/55701249/6b802086-5e60-4f48-99dd-a3f18892f065)
 
-5. After selecting the KC7 Workspace, move to the dropdown menu to the right of the **Workspace Selector**. This is called the **View Selector**. Next, select the _KC7-EnvolveLabs_ View. This is where the data for today’s exercise lives. The Top Bar of your UI should now look like this:
-   
-	![top bar of UI with KC0-Envolvelabs view](https://github.com/KC7-Foundation/kc7_data/assets/9474932/76302c4f-e526-4b46-ba40-62215f2d75f5)
+	This will open a pop-up window where you can name your "scratchspace" then click **Fork** to create it. You’ll see the name of your scratchspace replace the *KC7-EnvolveLabs* view in the Top Bar.
+
+4. After selecting the KC7 Workspace, move to the dropdown menu to the right of the **Workspace Selector**. This is called the **View Selector**. Next, select the _KC7-EnvolveLabs_ View. This is where the data for today’s exercise lives. The Top Bar of your UI should now look like this:
+
+   ![kc7](https://github.com/KC7-Foundation/kc7_data/assets/55701249/c01c6f3b-7f64-40de-bce1-d7a2fbb9dd6e)
 
 6. Next, we’re going to create a scratchspace to work out of. To do this, click the **Fork** icon to the right of the **View Selector**:
    
 	![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1ace5c60-a5ad-4df0-b6e1-dc673ae8a569)
 
-
 	This will give you a pop-up window where you can name your “scratchspace”, then click **Fork** to create it. You’ll see the name of your scratchspace replace the _KC7-EnvolveLabs_ View in the Top Bar.
-
 
 7. Double check that the **Query Bar**, shown below, is set to Storm mode:
    
-	![active storm mode](https://github.com/KC7-Foundation/kc7_data/assets/9474932/9df6e908-2f5c-444c-afdf-7c2d6826d068)
-
+	![storm_mode](https://github.com/KC7-Foundation/kc7_data/assets/55701249/00f34dcb-bf8d-4ac0-9502-c675bec9038a)
 
 	We’ll be using this **Query Bar** to run our queries for today’s exercises. 
 
-
-8. Use the Tool Bar on the left of the UI, navigate to the **Power-Ups Tool** by clicking on the lightning bolt icon. Once in the **Power-Ups Tool**, use the search bar to search for the _Synapse-Alienvault_ Power-Up under the _Available_ tab. Click the **Add** button to install it on your Synapse Instance:
+8. Use the Tool Bar on the left of the UI, navigate to the **Power-Ups Tool** by clicking on the lightning bolt icon, then search for the *Synapse-Alienvault* Power-Up under the *Available* tab and click the **Add** button to install it on your Synapse instance:
 	
  	![power-up_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/4121af76-4f42-4ae2-811a-76b427eefc23)
+<br>
 
-
-9. Once you’ve installed the Power-Ups, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below:
+9. Once you’ve installed the Power-Up, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below:
     
 	<img width="238" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c46b2a2-6ffc-4266-97b1-9deeffcb9c7a">
 
-
-11. Type the following command into the Query Bar and hit Enter to set your Alienvault API key:
+10. Type the following command into the **Query Bar** and hit Enter to set your Alienvault API key:
 
 ```js
 alienvault.setup.apikey <apikey>
 ```
 
-Once you’ve done that, use the magnifying glass icon at the top of the left-hand toolbar to return to the Research Tool. 
+Once you’ve done that, use the magnifying glass icon at the top of the left-hand toolbar to return to the **Research Tool**. 
+
+<br>
 
 ## Section 1: The Walkthrough
+
+<br>
 
 ### First Look at the Data…
 
@@ -98,29 +85,21 @@ EnvolveLabs maintains a log of various events taking place within the company. T
 | Form Used           | Description                                                                                          |
 |---------------------|------------------------------------------------------------------------------------------------------|
 | `ps:contact`        | Information about employees hired at the company and their corresponding assets                      |
-| `inet:email:message`| Emails sent and received by employees at the company                                                 |
-| `it:host`           | Information about hosts assigned to the company’s employees                                          |                                                                                     |
-| `inet:http:request` | Web browsing activity to and from the Internet, indicating websites visited by our employees and external users browsing our websites |
-| `it:logon`          | Successful and failed logins to devices on the company network, including logins to the company’s mail server |
-| `it:exec:file:add`  | Data about one of the employee-assigned host machines adding a file to a filesystem                  |
-| `it:exec:proc`      | Data regarding processes created on employee’s devices                                               |
-| `inet:dns:a`        | IP-domain resolutions provided by a third-party vendor                                               |
-| `risk:alert`        | Security alerts from employees’ devices and the company’s email security system                      |
-
-<br>
-
-These additional forms may be helpful during your investigations
-
-| Form                      | Description                                      |
-|---------------------------|--------------------------------------------------|
 | `inet:email`              | An email address                                 |
+| `inet:email:message`| Emails sent and received by employees at the company                                                 |
 | `inet:email:message:link` | A URL/link embedded in an email message          |
+| `it:host`           | Information about hosts assigned to the company’s employees                                          |                                                                                     |
 | `inet:fqdn`               | A fully qualified domain name                    |
 | `inet:ipv4`               | An IPv4 address                                  |
 | `inet:url`                | A URL                                            |
+| `inet:http:request` | Web browsing activity to and from the Internet, indicating websites visited by our employees and external users browsing our websites |
+| `inet:dns:a`        | IP-domain resolutions provided by a third-party vendor                                               |
+| `it:logon`          | Successful and failed logins to devices on the company network, including logins to the company’s mail server |
+| `it:exec:file:add`  | Data about one of the employee-assigned host machines adding a file to a filesystem                  |
+| `it:exec:proc`      | Data regarding processes created on employee’s devices                                               |
+| `risk:alert`        | Security alerts from employees’ devices and the company’s email security system                      |
 | `file:base`               | A filename                                       |
 | `ou:jobtitle`             | A job title                                      |
-
 
 <br>
 
@@ -138,103 +117,59 @@ These additional forms may be helpful during your investigations
 >
 >![data_model_explorer](https://github.com/KC7-Foundation/kc7_data/assets/9474932/a6456f9e-db81-45d6-846c-575de195d9a1)
 
+<br>
 
-
-## STORM 101
+## Storm Operations
 
 There are three basic operations we’ll use to query the company’s logs using Storm: **Lift, Filter, and Pivot**. We can build everything on top of these basics. 
 
 In some cases, we can use the Synapse UI to answer the question rather than running a Storm query. We’ll point out how to do that when possible.
 
-
+<br>
 
 ### Lift
 
-[Lift operations](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html) retrieve a set of nodes based on specified criteria. Let’s try a few lifts to get comfortable using Storm and working with the EnvolveLabs datasets.
+Every Storm query begins with a [Lift operation](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html) to retrieve a set of nodes based on specific criteria. Here are some examples:
 
+1. "Show me all the email addresses"
+```css
+inet:email
+```
 <br>
 
-<u>**Lifts - Example 1: Let’s find all the employees at EnvolveLabs**</u>
+2. "Show me the node representing the email address daniele_rael@envolvelabs[.]xyz"
 
-To look at all the employees in the EnvolveLabs data, we can use a lift operation. We need to start by typing the Form for the employee object. Here, we are capturing information about employees using the form `ps:contact`. We would need to run a more specific query (such as `ps:contact:type=employee`) if this data set also included contact information for other individuals. 
+```css
+inet:email=daniele_rael@envolvelabs.xyz
+```
+<br>
 
-Let’s type that into the Query Bar and press Enter. We’ll find there are 1,513 results. Each result is a node that represents a unique employee at the company, with more detail about each employee - such as name, email address, and title - captured as a node property. 
-
-> Question 1: How many employees are in the company?
-
-
-
+3. "Show me all email messages sent to the email address daniele_rael@envolvelabs[.]xyz"
+```css
+inet:email:message:to=daniele_rael@envolvelabs.xyz
+```
 <br>  
 
-<u>**Lifts Example 2: Finding a limited number of nodes**</u>
+<u>**Standard and Extended Comparisons**</u>
 
-In <u>Lifts - Example 1</u>, we found all the employees at EnvolveLabs by typing the name of the Form `ps:contact` that corresponds to the employee data model and lifting all `ps:contact` nodes. But, what if we wanted to look at an even larger set of nodes, for instance, all the domains seen in EnvolveLabs data?
+Lift operations can do more than just show us all the nodes in Synapse. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we want to find out more information about someone named Stephanie Clark.
 
-As with <u>Example 1</u>, let’s start by typing the Form name associated with domains:
-
-```css
-inet:fqdn
-```
-
-This query brings back over 2,000 results. To see a more manageable set of the data, we can pipe the output of the query to the limit command, which will only return the specified numbers of results. Let’s run this query to see only 10 domains:
+We’ll be looking at `ps:contact` nodes once again in this query, but this time, we’ll focus specifically on the node’s `:name` property. Using the = comparator, we can find the `ps:contact` node where the `:name` property value exactly matches the name "Stephanie Clark":
 
 ```css
-inet:fqdn | limit 10
+ps:contact:name="stephanie clark"
 ```
-
->Question 2: Lift 10 employees. Copy and paste the query you used. 
-
-<br> 
-
->**ℹ️ A Note on Storm Commands:**
->
->There are several [Storm commands](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) that you may find useful when querying the data. These include:
->
->| Command | Description                                                         |
->|---------|---------------------------------------------------------------------|
->| count   | Iterate through query results, and print the resulting number of nodes to the Console Tool |
->| limit   | Limit the number of nodes generated by the query to a specific number of results |
->| min     | Lift the resulting node with the lowest value for the specified property |
->| max     | Lift the resulting node with the greatest value for the specified property |
->| uniq    | Remove duplicate nodes from the query results                       |
->
->
->When incorporating a Storm command into a query, we’ll need to use the pipe (“|”) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will  look like this:
->
->```
->inet:email:message | max :date
->```
->
->If we want to continue our query after the Storm command, we’ll need to use the pipe character once more between the Storm command and the rest of the query. As an example, if we take the query above to lift the most recently received email message, and pivot to any embedded URLs sent within the email, our query will look like this:
->
->```
->inet:email:message | max :date | -> inet:email:message:link
->```
-
-
 <br>
- 
 
-
-<u>**Lifts Example 3: Standard and Extended Comparisons**</u>
-
-Lift can do more than just show us all nodes in the hypergraph. Often, we want to use a Storm query to find only specific nodes that meet a given set of criteria. Suppose we wanted to find more information about EnvolveLabs employee Stephanie Clark.
-
-We’ll be looking at `ps:contact` nodes for this query, but this time, we’ll focus specifically on the node’s `:name` property. Using the `=` comparator, we can find the exact node that belongs to Stephanie Clark:
+If, instead, we want to find all `ps:contact` nodes for people whose name starts with "Stephanie", we could use the prefix comparator (`^=`) to lift these nodes:
 
 ```css
-ps:contact:name="Stephanie Clark"
-```
-
-If, instead, we wanted to find all EnvolveLabs employees with the first name Stephanie, we could use the prefix comparator `^=` to match these nodes:
-
-```css
-ps:contact:name^=Stephanie
+ps:contact:name^=stephanie
 ```
 
 <br>
-
 There are several other comparison operators that we may find useful going forward. These include:
+<br>
 
 | Operator | Lift by                                   |
 |----------|-------------------------------------------|
@@ -247,27 +182,144 @@ There are several other comparison operators that we may find useful going forwa
 | >=       | Value greater than or equal to            |
 | <=       | Value less than or equal to               |
 
+
+<br>
+
 Here are some example Lift operations using [Standard Common Operators](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html#lifts-using-standard-comparison-operators): 
+
+<br>
 
 | Description                                                       | Command                                            |
 |-------------------------------------------------------------------|----------------------------------------------------|
 | Lift email messages sent from the email address, “`gregorysmith@aol.com`” | `inet:email:message:from=gregorysmith@aol.com`     |
 | Lift email messages whose subject starts with the word, “`Important`” | `inet:email:message:subject^=Important`            |
 | Lift alerts containing the process “`waitfor.exe`” in the description | `risk:alert:desc~=waitfor.exe`                     |
-| Lift HTTP requests that took place between January 1, 2023 (“`20230101`”) and January 31, 2023. | `inet:http:request:time@=(20230101,20230201)`      |
-|                                                                   | `inet:http:request:time@=(20230101, “+31 days”)`   |
+| Lift HTTP requests that took place between January 1, 2023 (“`20230101`”) and January 31, 2023. | `inet:http:request:time@=(20230101,20230201)`   `inet:http:request:time@=(20230101, “+31 days”)`   |
 | Lift email messages sent after November 8, 2023 (“`20231108`”)      | `inet:email:message:date>20231108`                |
 | Lift email messages sent before November 8, 2023 (“`20231108`”)     | `inet:email:message:date<20231109`                |
 | Lift process execution events that occurred on or after November 15, 2023 (“`20231115`”) | `it:exec:proc:time>=20231115`                    |
 | Lift process execution events that occurred on or before November 15, 2023 (“`20231115`”) | `it:exec:proc:time<=20231115`                    |
 
-
->Question: 3 What is the CEO’s name? (hint: lift by the title)
-
+<br> 
+ 
+### Pivot
 
 <br>
 
+A [Pivot operation](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#) is performed on the output of a previous Storm operation such as a Lift, and is used to navigate from one set of nodes to another based on a shared property value. 
+
+We mentioned earlier that Forms have properties which are specific fields that hold information about the node. Each Form has, at a minimum, a [primary property](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#primary-property), which is the name of the Form and unique value representing each individual node of that Form. A user must populate the primary property to create the node within Synapse. For some Forms, the primary property value may be a Globally Unique Identifier (GUID). For the `inet:email` node shown below, the primary property value for is "alexander_hall@envolvelabs[.]xyz":
+
+```css
+inet:email=alexander_hall@envolvelabs.xyz
+```
+<br>
+
+Many forms also have [secondary properties](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#secondary-property), which are optional fields capable of holding additional information, but which are not necessary for creating the node within Synapse. The `inet:email:message form`, for example, has multiple secondary properties, such as `:date`, `:body`, `:bytes`, `:to`, and `:from`, among others. We can pivot from the `inet:email=alexander_hall@envolvelabs.xyz` to all associated `inet:email:message` nodes that share the value "alexander_hall@envolvelabs[.]xyz". While "alexander_hall@envolvelabs[.]xyz" is the primary property value for the `inet:email` node, it may appear as one of several secondary property values (`:to`, `:from`, `:replyto`) for the associated `inet:email:message` nodes.
+<br>
+
+![image6](https://github.com/KC7-Foundation/kc7_data/assets/9474932/058bce1f-d96d-484a-b12c-e78bbc47fa43)
+
+<br>
+We can pivot among nodes using either the Synapse UI or the Storm query language. 
+
+<br>
+
+<u>**Pivoting through the UI**</u>
+<br>
+
+If we choose to pivot through the UI, we have the option of using the [Explore](https://synapse.docs.vertex.link/projects/optic/en/latest/user_interface/userguides/quick_tour.html#explore-button-breadcrumbs) button, which will allow us to pivot to all nodes connected to our original node (or nodes). In the example below, we’ve lifted `inet:email=alexander_hall@envolvelabs.xyz` and use the Explore button to view connected nodes, which include `inet:user`, `inet:fqdn`, `ps:contact`, and `inet:email:message` nodes:
+<br>
+
+![explore](https://github.com/KC7-Foundation/kc7_data/assets/55701249/b18ef463-b116-4fb2-8daa-26c4f8e0e90e)
+<br>
+
+Using the Explore button will also result in a ["breadcrumbs"](https://synapse.docs.vertex.link/projects/optic/en/latest/user_interface/userguides/quick_tour.html#explore-button-breadcrumbs) trail, shown at the top of the Results panel, which we can use to navigate back to our prior set of nodes if needed:
+<br>
+
+![breadcrumbs](https://github.com/KC7-Foundation/kc7_data/assets/55701249/a32b9b82-ec1c-45e6-871e-b20302cb0e06)
+<br>
+
+Since the Explore button will navigate out to all related nodes (as opposed only navigating from the `inet:email` node to related `inet:email:message` nodes, etc), using the Explore button can be a helpful way to easily view connected data and "see what’s out there" before attempting a more targeted pivot.
+
+The other way to pivot through the UI is by using the pivot option in the Context menu, which users can access through right-clicking on a selected node (or nodes) in the Results panel. Whereas the Explore button will navigate out to all connected nodes, the pivot option in the Context menu will provide several pivot options. In the example below, we use the pivot menu to pivot from the `inet:email` address to any related `inet:user` nodes:
+<br>
+
+![pivot_menu](https://github.com/KC7-Foundation/kc7_data/assets/55701249/4629cd57-d9e3-410c-beda-2545731bed78)
+
+<br>
+
+<u>**Pivoting through Storm**</u>
+<br>
+
+We have the ability to be more precise and specific when using the Storm query language for pivoting, as we can specify which shared property values we’d like to use. The majority of pivots will be pivoting out, and thus will involve the use of the [Pivot Out Operator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#pivot-out-operator) (`->`). Pivoting from `inet:email=alexander_hall@envolvelabs.xyz` to associated `inet:email:message` nodes using Storm would therefore look like:
+
+```css
+inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
+```
+<br>
+In this query, Synapse understands that we are using the shared property value "alexander_hall@envolvelabs[.]xyz" to navigate from the `inet:email` node to the related `inet:email:message` nodes that contain that email address as a `:to`, `:from`, or `:replyto` property value. However, in some instances, we’ll have to be more explicit in our navigation and identify for Synapse which property value we are using in our navigation. For example, in the following query, we have lifted a `ps:contact` node where the `:name` property is equal to "Mariya Bondarenko":
+
+```css
+ps:contact:name="Mariya Bondarenko"
+```
+From here, we’d like to pivot to the assigned host (captured as an `it:host`) associated with Mariya Bondarenko, which we can do as the `ps:contact` node’s primary property (a GUID) is the value of the `:operator` property for the `it:host` node:
+
+```css
+ps:contact:name="Mariya Bondarenko" -> it:host
+```
+However, now we want to navigate from the `it:host` node to the `inet:http:request` nodes capturing the HTTP requests from that host. To make that pivot, we’ll need to switch from using the `ps:contact` value to the IPv4 property value shared between the `it:host` and `inet:http:request` nodes. Since the IPv4 is a secondary property value for both nodes, we’ll need to specify that we are using the `:ipv4` property value from the `it:host` node to pivot to the `:client:ipv4` property on the `inet:http:request` nodes. Our query will look like this: 
+
+```css
+ps:contact:name="Mariya Bondarenko" -> it:host :ipv4 -> inet:http:request:client:ipv4
+```
+This type of query, in which we specifically identify the properties on which we are pivoting, is known as [explicit syntax](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#implicit-pivot-syntax) and is the most reliable way to pivot since we are clarifying for Synapse which properties we are using to navigate from one set of nodes to another. 
+
+<br>
+
+>**ℹ️ A Note on Storm Commands:**
+><br>
+><br>
+>In some instances, we’ll want to include a [Storm command](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) in our query to help us count the number of resulting nodes, remove duplicates, or lift a limited number of results, etc. Here are some Storm commands that may come in handy:
+><br>
+><br>
+>| Command | Description                                                         |
+>|---------|---------------------------------------------------------------------|
+>| count   | Iterate through query results, and print the resulting number of nodes to the Console Tool |
+>| limit   | Limit the number of nodes generated by the query to a specific number of results |
+>| min     | Lift the resulting node with the lowest value for the specified property |
+>| max     | Lift the resulting node with the greatest value for the specified property |
+>| uniq    | Remove duplicate nodes from the query results                       |
+><br>
+><br>
+>When incorporating a Storm command into a query, we’ll need to use the pipe (`|`) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will look like this:
+>
+>```
+>inet:email:message | max :date
+>```
+>
+>If we want to continue our query after the Storm command, we’ll need to use the pipe character once more between the Storm command and the rest of the query. As an example, if we take the query above to lift the most recently received email message, and pivot to any embedded URLs sent within the email, our query will look like this:
+>
+>```
+>inet:email:message | max :date | -> inet:email:message:link
+>```
+
+<br>
+
+<u>**Traverse**</u>
+<br>
+
+In the majority of cases, we’ll navigate among nodes by pivoting across shared property values. However, in a few specific instances, nodes are connected by [lightweight (light) edges](https://synapse.docs.vertex.link/en/latest/synapse/userguides/data_model.html#lightweight-light-edge) representing a specific, directional relationship between the nodes. Navigating among these relationships is known as traversing the light edge.
+
+For example, a blog modeled as a `media:news` node that references multiple indicators will have a "refs" lightweight edge pointing to the nodes representing those referenced indicators. In this dataset, lightweight edges appear between `risk:alert` nodes and nodes that the alerts reference. The query below shows a pivot from a `risk:alert` node to the `file:bytes` node that the alert references:
+
+```css
+risk:alert:detected="2023/11/13 15:51:25" -(refs)> file:bytes
+```
+<br>
+
 ### Filter
+<br>
 
 [Filter operations](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_filter.html#simple-filters) are performed on the output of a previous Storm operation, such as a lift or pivot. We use filter to downselect the set of nodes by either including or excluding nodes based on a set of criteria:
 
@@ -276,162 +328,60 @@ Here are some example Lift operations using [Standard Common Operators](https://
 
 <br>
 
-<u>**Filters Example 1: Inclusion Filtering**</u>
+<u>**Inclusion Filter**</u>
+<br>
 
-Suppose we wanted to look at all the emails sent by Stephanie Clark, but only those emails about economics.
-
-First, let’s find Stephanie’s email, which we can do using a simple lift:
-
-```css
-ps:contact:name="Stephanie Clark"
-```
-
-Right-click on Stephanie’s email address from the results table to copy it. Next, we need to identify the form which corresponds to email messages sent to/from the company.
+In the following Storm query, we’ve lifted all emails sent by the email address "stephanie_clark@envolvelabs[.]xyz":
 
 ```css
-inet:email:message
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" 
 ```
 
-Then, we can use a simple lift to find emails sent by Stephanie:
-
-```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz"
-```
-
-Now, we’ve found all the emails sent by Stephanie. But, remember, we need to find only those messages about economics. We can add a filter based on the subject line of the email messages to find such emails. In this case, we’ll use an inclusion filter with a [Regular Expression (regex) comparator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html#lift-by-regular-expression) to look for the term “economics” anywhere within the email’s Subject line:
+However, we are only interested in a subset of these results - namely those email messages where the subject line mentions the word "economics." We can alter our existing lift operation to add an inclusion filter that makes use of a [Regular Expression (regex) Comparator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_lift.html#lift-by-regular-expression) to look for messages that include the term "economics" anywhere within the subject line:
 
 ```css
 inet:email:message:from="stephanie_clark@envolvelabs.xyz" +:subject~="economics"
 ```
 
-This leaves us with only one result.
-
->Question 4: Who was the first person to send Delia Hill an email about “solidarity”? 
-
+This results in one `inet:email:message` node.
 <br>
 
-<u>**Filters Example 2: Exclusion Filtering**</u>
-
-Let’s look again at Stephanie’s emails. But this time, we want to ignore any email that might mention an opinion. For this, we’ll use an exclusion filter:
+<u>**Exclusion Filter**</u>
+<br>
+In contrast, we may want to remove a subset of nodes from our overall result set, which would require the use of an exclusion filter. For example, we may decide that we want to see all email messages from stephanie_clark@envolvelabs[.]xyz except for those that mention "economics" in the subject line:
 
 ```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="opinions"
+inet:email:message:from="stephanie_clark@envolvelabs.xyz" -:subject~="economics"
 ```
-
-This leaves us 20 results.
-<br>
-
->Question 5: How many emails did Yuko Sidney send that don’t mention the word “term”?
-
-<br>
-  
-### Pivot
-
-[Pivot](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#) and [Traverse](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#traverse-walk-light-edges) operations are performed on the output of a previous Storm operation such as a Lift or Filter. These operations are used to navigate from one set of nodes to another based on a specified relationship. 
-<br>
-
-Pivoting involves lifting adjacent nodes that share property values. However, traversing involves walking a named lightweight (light) edge (e.g., _refs_) to lift connected nodes.
-<br>
-
-We mentioned earlier that forms have properties, which are specific fields that hold information about the node modeled in Synapse. Each form has, at a minimum, a primary property, which is the name of the form and definition of the value for individual instances of that form, and which a user must populate in order to create the node within Synapse. For some forms, the primary property value may be a Globally Unique Identifier (GUID). For the `inet:email` node shown below, the primary property value for is "alexander_hall@envolvelabs.xyz":
-<br>
-
-```css
-inet:email=alexander_hall@envolvelabs.xyz
-```
-<br>
-
-Many forms also have secondary properties, which are optional fields capable of holding additional information, but which are not necessary for creating the node within Synapse. The `inet:email:message form`, for example, has multiple secondary properties, such as `:date`, `:body`, `:bytes`, `:to`, and `:from`, among others. We can pivot from the `inet:email=alexander_hall@envolvelabs.xyz` to all associated `inet:email:message` nodes that share the value "alexander_hall@envolvelabs.xyz". While "alexander_hall@envolvelabs.xyz" is the primary property value for the `inet:email` node, it may appear as one of several secondary property values (`:to`, `:from`, `:replyto`) for the associated `inet:email:message` nodes.
-
-![image6](https://github.com/KC7-Foundation/kc7_data/assets/9474932/058bce1f-d96d-484a-b12c-e78bbc47fa43)
+This leaves us with 20 results.
 
 <br>
 
-Pivoting from `inet:email=alexander_hall@envolvelabs.xyz` to associated `inet:email:message` nodes using Storm would look like the following (note the use of “->”, which is the [Pivot Out Operator](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_pivot.html#pivot-out-operator):
+### Applying Tags
 <br>
 
-```css
-inet:email=alexander_hall@envolvelabs.xyz -> inet:email:message
-```
+Finally, during your investigation, you may find it helpful to keep track your findings by applying a [tag](https://synapse.docs.vertex.link/en/latest/synapse/userguides/analytical_model.html#) or label to certain node(s). 
+
+Synapse gives you a structured way to record observations or assessments through the use of labels (tags) applied to data (nodes). Assessments represent conclusions based on the data available to you at the time. Tags are flexible and can be easily added, updated, or removed when assessments change, meaning that you can revise your analysis as needed when  new data becomes available.
+
+For simplicity, we’ll nickname the first threat actor we are tracking “lightning.” We’ll use the tag  `#cno.threat.lightning` to label all nodes that correspond to this threat actor. You can apply tags to a node by right-clicking on the node in the **Results** pane of the **Research Tool**, and then selecting _Add Tags_ from the context menu, as shown below:
+
+![tag_add1 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/e2efea45-4a75-452b-82dd-8d1f6b5f116d)
 <br>
 
-However, it is also possible to lift `inet:email=alexander_hall@envolvelabs.xyz` and pivot out to all associated `inet:email:message` nodes without using Storm at all. We can do this by switching the Query Bar from Storm to Lookup mode, querying alexander_hall@envolvelabs.xyz, and then using the Explore button to pivot to connected nodes, including `inet:email:message nodes`: 
+Alternatively you can select the node and click the _Add Tags_ button on the **Details** pane on the right-hand side:
 
-![explore_ui (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/c0775745-e5a0-41fc-98f6-c006ed09eb0d)
+![tag_add2 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f840e27a-094c-456a-8a47-7fefa80cb9b6)
 <br>
 
-While it’s possible to use the UI, or a combination of the Storm query language and the UI, to query the data in Synapse, doing so is generally less efficient than running a Storm query. However, when it comes to pivoting, using the **Explore** button to view adjacent nodes can be a way for analysts to get a sense of how nodes are connected within Synapse and what pivots they will need to make in their Storm query. 
+Once you’ve applied the tag, you’ll see it appear in the **Details** pane view for the tagged node. You can remove the tag by clicking on it in the **Details** pane and selecting _Remove full tag_:
 
+![tag_remove (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/b8c65166-3ab7-45cb-a4b2-764dbc2d2b17)
 <br>
-  
-<u>**Pivot Example**</u>
-
-Suppose you want to find all of the links sent in the emails sent by Stephanie Clark. We can accomplish this by pivoting. 
-
-First, lift the emails sent by Stephanie. Run the following Storm query to lift them by the `:from` property and value:
-
-```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz" 
-```
-<br>
-
-Then pivot from those messages to those that also include embedded links:
-
-```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link 
-```
-<br>
-
-Then, we pivot from the `inet:email:message:link` nodes representing those messages to the `inet:url` nodes representing just the URLs themselves.
-
-```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url
-```
-<br>
-
-Of course, there could have been multiple links that were sent by Stephanie. We can view the unique links by piping the existing query to the `uniq` command. 
-
-```css
-inet:email:message:from="stephanie_clark@envolvelabs.xyz" -> inet:email:message:link -> inet:url | uniq
-```
-<br>
-
->Question 6: How many emails did the CEO receive?
-
->Question 7: How many unique links were sent to the CEO via email?
-
->Question 8: How many unique websites did the CEO visit?
-
->Question 9: How many domains in the PassiveDNS records contain the word “cloudapps”?
-
->Question 10: What IPs did the domain security-cloudapps.envolvelabs.xyz resolve to?
-
-<br>
-
-<u>**Traverse Example**</u>
-
-In a few specific instances, nodes are connected by lightweight (light edges) representing a specific, directional relationship between the nodes. For example, a blog modeled as a media:news node that references multiple indicators will have a “refs” lightweight edge pointing to the nodes representing those referenced indicators. In this data set, lightweight edges appear between risk:alert nodes and nodes that the alerts reference. The query below shows a pivot from a risk:alert node to the file:bytes node that the alert references:
-
-```css
-risk:alert:detected="2023/11/13 15:51:25" -(refs)> file:bytes
-```
-<br>
-
-Note here that if you only relied on pivoting, you would have no way of getting to the file:bytes from risk alerts. Run the following queries and examine the difference.
-
-```
-risk:alert:detected="2023/11/13 15:51:25" ->*
-
-risk:alert:detected="2023/11/13 15:51:25" -(refs)>*
-```
-<br>
-
->Question 11: What is the job role of the employee assigned to the host machine from the risk alert that was detected on 2023/10/27 15:26:47? 
-
->Question 12: Who sent the email that mentions “german” that was detected in the alerts?
 
 
 ## Section 2 Start Hunting!
+<br>
 
 You’ve finished your training and you’re ready to get to work protecting EnvolveLabs.
 
@@ -445,28 +395,7 @@ Now, get out there and keep us safe! The whole company is counting on you. No pr
 
 ![cat typing gif](https://media.tenor.com/CrWHpzxIZYEAAAAC/cat-typing-gif.gif)
 
-## Section 3: Clustering!
 
-Now that we learned more about the Techniques, Tactics and the Procedures, used by the adversaries, we want to start documenting what we know so we can answer meaningful questions and build detections to block them. Instead of storing what we know about the adversaries as notes on a piece of paper, or just written words that someone else will need to re-interpret, we will label the relevant nodes using [tags](https://synapse.docs.vertex.link/en/latest/synapse/userguides/analytical_model.html#) to keep track of our findings. 
 
-Synapse gives you a structured way to record observations or assessments through the use of labels (tags) applied to data (nodes). Assessments represent conclusions based on the data available to you at the time. Tags are flexible and can be easily added, updated, or removed when assessments change, meaning that you can revise your analysis as needed when  new data becomes available.
-
-For simplicity, we’ll nickname the first threat actor we are tracking “lightning.” We’ll use the tag  `#cno.threat.lightning` to label all nodes that correspond to this threat actor. You can apply tags to a node by right-clicking on the node in the **Results** pane of the **Research Tool**, and then selecting _Add Tags_ from the context menu, as shown below:
-
-![tag_add1 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/e2efea45-4a75-452b-82dd-8d1f6b5f116d)
-
-Alternatively you can select the node and click the _Add Tags_ button on the **Details** pane on the right-hand side:
-
-![tag_add2 (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/f840e27a-094c-456a-8a47-7fefa80cb9b6)
-
-Once you’ve applied the tag, you’ll see it appear in the **Details** pane view for the tagged node. You can remove the tag by clicking on it in the **Details** pane and selecting _Remove full tag_:
-
-![tag_remove (1)](https://github.com/KC7-Foundation/kc7_data/assets/9474932/b8c65166-3ab7-45cb-a4b2-764dbc2d2b17)
-
-## References
-
-- Storm Reference: [https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_intro.html)
-- Maxmind Power-Up: [https://synapse.docs.vertex.link/projects/maxmind/en/latest/](https://synapse.docs.vertex.link/projects/maxmind/en/latest/)
-- AlienVault OTX Power-Up: [https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html](https://synapse.docs.vertex.link/projects/rapid-powerups/en/latest/storm-packages/synapse-alienvault/userguide.html)
 
 
