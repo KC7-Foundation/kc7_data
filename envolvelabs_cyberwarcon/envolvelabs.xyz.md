@@ -282,7 +282,7 @@ This type of query, in which we specifically identify the properties on which we
 ><br>
 >In some instances, we’ll want to include a [Storm command](https://synapse.docs.vertex.link/en/latest/synapse/userguides/storm_ref_cmd.html) in our query to help us count the number of resulting nodes, remove duplicates, or lift a limited number of results, etc. Here are some Storm commands that may come in handy:
 ><br>
-><br>
+>
 >| Command | Description                                                         |
 >|---------|---------------------------------------------------------------------|
 >| count   | Iterate through query results, and print the resulting number of nodes to the Console Tool |
@@ -290,7 +290,7 @@ This type of query, in which we specifically identify the properties on which we
 >| min     | Lift the resulting node with the lowest value for the specified property |
 >| max     | Lift the resulting node with the greatest value for the specified property |
 >| uniq    | Remove duplicate nodes from the query results                       |
-><br>
+>
 ><br>
 >When incorporating a Storm command into a query, we’ll need to use the pipe (`|`) character to pipe the inbound nodes to the command. A query to lift the most recently received email message modeled in our Synapse instance will look like this:
 >
