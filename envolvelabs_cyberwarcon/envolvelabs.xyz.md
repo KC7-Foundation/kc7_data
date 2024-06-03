@@ -29,48 +29,53 @@ A few things you’ll need to do first:
 
 1. Request a Synapse Enterprise demo instance at: [https://vertex.link/request-a-demo](https://vertex.link/request-a-demo). You’ll then receive an email from `Optic <signup@vertex.link>` with a link to create a password and log in to your demo instance.
 
-2. Once you’ve logged in, check the green **Top Bar** to verify that you are in the **Research Tool** (you should see  "Research" in the left hand corner). Next, use the **Workspace Selector** dropdown menu in the Top Bar to change from "default" to the *KC7 Workspace*. Once you’ve done that, use the **View Selector** to select the *KC7-EnvolveLabs View* from the dropdown menu. This is where the data for today’s exercise lives. The Top Bar of your UI should now look like this:
+2. Once you’ve logged in, check the green **Top Bar** to verify that you are in the **Research Tool** (you should see "Research" in the left hand corner).
 
-	![top_bar](https://github.com/KC7-Foundation/kc7_data/assets/55701249/162a3dfb-c628-4ea0-8ce1-951458c9f5d0)
+	![research](https://github.com/KC7-Foundation/kc7_data/assets/55701249/4032d0df-981c-4dcb-ad74-5372d14b716d)
 
-3. Now, we’re going to create a scratchspace to work out of. To do this, click the **Fork** icon to the right of the **View Selector**: 
+4. Next, use the **Workspace Selector** dropdown menu in the Top Bar to change from "default" to the *KC7 Workspace*.
+
+	![kc7_workspace](https://github.com/KC7-Foundation/kc7_data/assets/55701249/a568405b-61b6-4514-a8a1-962f2e8e9846)
+
+5. Use the **View Selector** to select the *KC7-EnvolveLabs View* from the dropdown menu. This is where the data for today’s exercise lives. 
+
+	![kc7_view](https://github.com/KC7-Foundation/kc7_data/assets/55701249/1410f844-5c85-4fbd-ba11-37591a5eda19)
+
+6. Now, create a scratchspace to work out of by clicking the **Fork** icon to the right of the **View Selector**: 
 
 	![fork](https://github.com/KC7-Foundation/kc7_data/assets/55701249/6b802086-5e60-4f48-99dd-a3f18892f065)
 
-	This will open a pop-up window where you can name your "scratchspace" then click **Fork** to create it. You’ll see the name of your scratchspace replace the *KC7-EnvolveLabs* view in the Top Bar.
+7. This will open a pop-up window where you can name your "scratchspace" then click **Fork** to create it.
 
-4. After selecting the KC7 Workspace, move to the dropdown menu to the right of the **Workspace Selector**. This is called the **View Selector**. Next, select the _KC7-EnvolveLabs_ View. This is where the data for today’s exercise lives. The Top Bar of your UI should now look like this:
+   	![fork_window](https://github.com/KC7-Foundation/kc7_data/assets/55701249/300cc51c-af25-41f6-b077-a6e36c00e82f)
 
-   ![kc7](https://github.com/KC7-Foundation/kc7_data/assets/55701249/c01c6f3b-7f64-40de-bce1-d7a2fbb9dd6e)
+   You’ll see the name of your scratchspace replace the *KC7-EnvolveLabs* view in the Top Bar:
 
-6. Next, we’re going to create a scratchspace to work out of. To do this, click the **Fork** icon to the right of the **View Selector**:
-   
-	![image](https://github.com/KC7-Foundation/kc7_data/assets/9474932/1ace5c60-a5ad-4df0-b6e1-dc673ae8a569)
+   ![top_bar](https://github.com/KC7-Foundation/kc7_data/assets/55701249/c6bc90e9-a47a-4d47-8a38-ba3ea4bd9dfe)
 
-	This will give you a pop-up window where you can name your “scratchspace”, then click **Fork** to create it. You’ll see the name of your scratchspace replace the _KC7-EnvolveLabs_ View in the Top Bar.
-
-7. Double check that the **Query Bar**, shown below, is set to Storm mode:
+8. Now that you've set the Workspace and view, double check that the **Query Bar**, shown below, is set to Storm mode:
    
 	![storm_mode](https://github.com/KC7-Foundation/kc7_data/assets/55701249/00f34dcb-bf8d-4ac0-9502-c675bec9038a)
 
-	We’ll be using this **Query Bar** to run our queries for today’s exercises. 
+	You’ll be using this **Query Bar** to run our queries for today’s exercises. 
 
-8. Use the Tool Bar on the left of the UI, navigate to the **Power-Ups Tool** by clicking on the lightning bolt icon, then search for the *Synapse-Alienvault* Power-Up under the *Available* tab and click the **Add** button to install it on your Synapse instance:
+9. Now you need to install a Power-Up. Use the Tool Bar on the left of the UI, navigate to the **Power-Ups Tool** by clicking on the lightning bolt icon, then search for the *Synapse-Alienvault* Power-Up under the *Available* tab and click the **Add** button to install it on your Synapse instance:
 	
  	![power-up_install](https://github.com/KC7-Foundation/kc7_data/assets/9474932/4121af76-4f42-4ae2-811a-76b427eefc23)
-<br>
 
-9. Once you’ve installed the Power-Up, use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below:
+10. Once you’ve installed the Power-Up, you'll need to set your AlienVault API key (you can sign up for a free key here: https://otx.alienvault.com/). Use the Tool Bar on the left to navigate to the **Console Tool** by clicking on the icon, shown below:
     
 	<img width="238" alt="image" src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/9c46b2a2-6ffc-4266-97b1-9deeffcb9c7a">
 
-10. Type the following command into the **Query Bar** and hit Enter to set your Alienvault API key:
+11. Type the following command into the **Query Bar** and hit Enter to set your Alienvault API key:
 
 ```js
 alienvault.setup.apikey <apikey>
 ```
 
-Once you’ve done that, use the magnifying glass icon at the top of the left-hand toolbar to return to the **Research Tool**. 
+10. Once you’ve done that, use the magnifying glass icon at the top of the left-hand toolbar to return to the **Research Tool**. 
+
+	![research_tool](https://github.com/KC7-Foundation/kc7_data/assets/55701249/17202138-a677-4061-94e4-e52d7e86f600)
 
 <br>
 
