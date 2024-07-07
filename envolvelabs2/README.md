@@ -60,7 +60,8 @@ Let’s get you logged in and started with ADX:
 1. Go to https://dataexplorer.azure.com/ and login with your @microsoft.com account credentials.
 2. Click the Query tab on the left side of the screen.
 
--Image placeholder-
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/920c976c-aeaf-443d-b42e-0cc245153fef)
+
 
 Data in ADX is organized in a hierarchical structure which consists of clusters, databases, and tables. All of Envolve Labs’s security logs are stored in a single cluster. Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
@@ -68,7 +69,7 @@ Data in ADX is organized in a hierarchical structure which consists of clusters,
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-![Untitled-2](https://github.com/KC7-Foundation/kc7_data/assets/31902160/87ea9728-f8f7-4833-8e4d-c5c0194e309a)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/d912c393-10d6-4db3-962d-519948535952)
 
 All of Envolve Labs' security logs are stored in a single database – the EvolveLabs database. 
 
@@ -76,13 +77,16 @@ All of Envolve Labs' security logs are stored in a single database – the Evolv
 	- Expand the dropdown arrow next to the EvolveLabs database.
 	- Click on the **EvolveLabs** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/22345902-885f-40f7-83ff-cb8800c9b3b5)
+
+
 Note: It’s very important that you use the EvolveLabs database for all questions while you’re investigating activity at EvolveLabs! If you choose the wrong database, you won’t be able to answer questions correctly.
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![Untitled-4](https://github.com/KC7-Foundation/kc7_data/assets/31902160/520d814f-896e-44df-9a8e-0c4bdfb8ad09)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/0f6c5be8-7d1a-4910-b07e-83c27118289f)
 
-Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
+Click the blue **Run** button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
 Okay, enough introductions… let’s get your hands on the data.
 
@@ -296,13 +300,13 @@ First, you would need to go into the **Employees** table and find the IP address
 Employees
 | where name has "Linda"
 ```
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/5a383622-844e-4ba3-88c4-27027cc7a8eb)
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/7c86d5eb-5d10-46be-a4f5-e9f84860268a)
 
+Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list.
 
-Then, you could manually copy and paste these IPs into a query against the **OutboundNetworkEvents** table. Note that we can use the in operator to choose all rows that have a value matching any value from a list of possible values. In other words, the == (comparison) operator looks for an exact match, while the in operator checks for any values from the list
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/bbcba4dd-490f-4460-a02f-59cccebec0bb)
 
-< Placeholder>
 
 Although this is a valid way to get the information you need, it may not be as elegant (or timely) if you had 100 or even 1000 employees named “James.”
 
