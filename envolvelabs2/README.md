@@ -26,7 +26,8 @@ Like all good companies, Envolve Labs collects log data about the activity its e
 ## Objectives
 
 🧠 **By the end of your first day on the job, you should be able to:**
-	
+
+```
     ✓ Use the Azure Data Explorer
     ✓ Use multiple data sets to answer targeted questions
     ✓ Find cyber activity in logs including: email, web traffic, and server logs
@@ -34,7 +35,7 @@ Like all good companies, Envolve Labs collects log data about the activity its e
     ✓ Use third party data sets to discover things about your attackers
     ✓ Build a threat intelligence report
     ✓ Make recommendations on what actions a company can take to protect themselves
-
+```
 
 🚀 The attackers have gotten a head start, so let’s not waste any more time… time to get to work!
 
