@@ -77,7 +77,7 @@ All of Envolve Labs' security logs are stored in a single database – the Evolv
 	- Expand the dropdown arrow next to the EvolveLabs database.
 	- Click on the **EvolveLabs** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
-![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/22345902-885f-40f7-83ff-cb8800c9b3b5)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/48b9258a-7476-45e5-8c56-66b615e38968)
 
 
 Note: It’s very important that you use the EvolveLabs database for all questions while you’re investigating activity at EvolveLabs! If you choose the wrong database, you won’t be able to answer questions correctly.
