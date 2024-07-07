@@ -2,8 +2,7 @@
 
 🥳 Welcome to Envolve Labs Corporation! Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Envolve Labs and its employees from malicious cyber actors.
 
-![2](![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/9885f1e0-01c4-4f4d-82e2-ef08ea0272b2)
-)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/9885f1e0-01c4-4f4d-82e2-ef08ea0272b2)
 
 
 Envolve Labs is a med-tech startup based in the United States that was founded in 2012. Our mission is to develop a new type of flexible vaccine technology that covers many different viral strains and offers long-lasting immunity (which means no more boosters!) Our initial research has proven this technology is highly effective – we’re planning to start production in Q1 2023.
