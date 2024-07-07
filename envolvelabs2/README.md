@@ -58,9 +58,9 @@ ADX is the primary tool used in the Envolve Labs SOC for data exploration and an
 
 Let’s get you logged in and started with ADX:
 1. Go to https://dataexplorer.azure.com/ and login with your @microsoft.com account credentials.
-2. Click the Query tab on the left side of the screen.
+2. Click the Query tab on the left side of the screen, or this may already be selected for you.
 
-![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/920c976c-aeaf-443d-b42e-0cc245153fef)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/57a418ea-d89d-43cf-8560-b2c61ad8efb9)
 
 
 Data in ADX is organized in a hierarchical structure which consists of clusters, databases, and tables. All of Envolve Labs’s security logs are stored in a single cluster. Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
@@ -84,7 +84,7 @@ Note: It’s very important that you use the EvolveLabs database for all questio
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/0f6c5be8-7d1a-4910-b07e-83c27118289f)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/15c43c98-0dac-40de-a282-5894afc1606b)
 
 Click the blue **Run** button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
 
