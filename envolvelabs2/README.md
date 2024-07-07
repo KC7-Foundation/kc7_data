@@ -65,7 +65,7 @@ Let’s get you logged in and started with ADX:
 
 Data in ADX is organized in a hierarchical structure which consists of clusters, databases, and tables. All of Envolve Labs’s security logs are stored in a single cluster. Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-![image](https://github.com/KC7-Foundation/kc7_data/assets/31902160/6f5a2abd-5cd4-4e63-95ec-2ad2fae96229)
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/01d730eb-bbcd-4b2f-bb43-3a704921f76e)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
