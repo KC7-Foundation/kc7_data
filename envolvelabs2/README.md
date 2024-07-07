@@ -39,9 +39,6 @@ Like all good companies, Envolve Labs collects log data about the activity its e
 
 🚀 The attackers have gotten a head start, so let’s not waste any more time… time to get to work!
 
-Some important links:
-• The scoreboard: https://kc7cyber.azurewebsites.net/
-• Azure Data Explorer: https://dataexplorer.azure.com
 
 ### Legend
 
