@@ -2,7 +2,8 @@
 
 🥳 Welcome to Envolve Labs Corporation! Today is your first day as a Junior Security Operations Center (SOC) Analyst with our company. Your primary job responsibility is to defend Envolve Labs and its employees from malicious cyber actors.
 
-![2](https://github.com/KC7-Foundation/kc7_data/assets/9474932/db6fffb7-6f81-4fc1-ada7-ab0af4700732)
+![2](![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/9885f1e0-01c4-4f4d-82e2-ef08ea0272b2)
+)
 
 
 Envolve Labs is a med-tech startup based in the United States that was founded in 2012. Our mission is to develop a new type of flexible vaccine technology that covers many different viral strains and offers long-lasting immunity (which means no more boosters!) Our initial research has proven this technology is highly effective – we’re planning to start production in Q1 2023.
@@ -20,7 +21,8 @@ Until now, we’ve been laser focused on medical research and meeting production
 
 Like all good companies, Envolve Labs collects log data about the activity its employees perform on the corporate network. These security audit logs are stored in Azure Data Explorer (ADX) - a data storage service in Azure (Microsoft’s cloud). You will use the Kusto Query Language (KQL) to parse through various types of security logs. By analysing these logs, you can help us determine whether we’re being targeted by malicious actors.
 
--Image placeholder-
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/61f2adcd-0cd4-4e6e-a007-7fcbcd9e1c72)
+
 
 ## Objectives
 
@@ -32,7 +34,7 @@ Like all good companies, Envolve Labs collects log data about the activity its e
     ✓ Use multiple techniques to track the activity of APTs (Advanced Persistent Threats)
     ✓ Use third party data sets to discover things about your attackers
     ✓ Build a threat intelligence report
-    ✓Make recommendations on what actions a company can take to protect themselves
+    ✓ Make recommendations on what actions a company can take to protect themselves
 
 
 🚀 The attackers have gotten a head start, so let’s not waste any more time… time to get to work!
@@ -43,13 +45,12 @@ Some important links:
 
 ### Legend
 
-> 🎯Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
+> 🎯 Key Point – Occasionally, you will see a dart emoji with a “key point.” These signal explanations of certain concepts that may enhance your understanding of key cybersecurity ideas that are demonstrated in the game. 
 
-> 🤔Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
+> 🤔 Question – “Thinking” emojis represent questions that will enable you to demonstrate mastery of the concepts at hand. You can earn points by entering your responses to questions from section 3 in the scoring portal available at kc7cyber.com/scoreboard.
 
 > 🤫 Hint – “Whisper” emojis represent in-game hints. These hints will guide you in the right direction in answering some of the questions.
 
--------
 ## Section 1: The Walkthrough 
 
 #### Getting Set Up in Azure Data Explorer (ADX)
@@ -163,7 +164,7 @@ Employees
 | count
 ```
 
-2.  🤔How many employees are in the company?
+2.  🤔 How many employees are in the company?
 
 **Filtering Data With the _where_ Operator**
 
@@ -189,7 +190,7 @@ Employees
 | where name == "Linda Holbert"
 ```
 
->3. 🤔Each employee at Envolve Labs is assigned an IP address. Which employee has the
+>3. 🤔 Each employee at Envolve Labs is assigned an IP address. Which employee has the
 IP address: “192.168.0.191”?
 
 Here are some additional operators we like to use:
@@ -222,7 +223,7 @@ Email
 
 ```
 
-> 4. 🤔How many emails did Stuart Carter receive?
+> 4. 🤔 How many emails did Stuart Carter receive?
 
 **Easy as 1, 2, 3… Compound Queries and the distinct Operator**
 
@@ -243,7 +244,7 @@ In line 3, we add another pipe character ( | ) and use the distinct operator to 
 
 Finally, in line 4, we add another pipe character ( | ) and then use the count operator to count the results of lines 1-3 of the query.
 
-5.  🤔How many distinct senders were seen in the email logs from siusamteas.com?
+5.  🤔 How many distinct senders were seen in the email logs from siusamteas.com?
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
@@ -263,7 +264,7 @@ OutboundNetworkEvents
 | where src_ip == "192.168.3.168"
 ```
 
-> 6.  🤔How many unique websites did “Keith Mitchell” visit?
+> 6. 🤔 How many unique websites did “Keith Mitchell” visit?
 
 
 **What’s in a Name? All about Passive DNS Data**
@@ -283,7 +284,7 @@ These domain-to-IP relationships are stored in our **PassiveDns** table.
 > 7.  🤔 How many domains in the PassiveDns records contain the word "vaccine"? (hint: use the contains operator instead of has. If you get stuck, do a take 10 on the table to see what fields are available.)
 > 8. 🤔 What IPs did the domain “biotechenvolv.science” resolve to?
 
-**🤯Let statements – making your life a bit easier:**
+**🤯 Let statements – making your life a bit easier:**
 
 Sometimes we need to use the output of one query as the input for a second query.  The first way we can do this is by manually typing the results into the next query.
 
@@ -353,20 +354,83 @@ After we store the value of a query into a variable using the **let** statement,
 
 > 9.  🤔 How many unique URLs were browsed by employees named “Karen”?
 
-> 🎯**Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
+> 🎯 **Key Point – Pivoting:** Part of being a great cyber analyst is learning how to use multiple data sources to tell a more complete story of what an attacker has done. We call this “pivoting.” We pivot by taking one known piece of data in one dataset and looking in a different dataset to learn something we didn’t already know. You practiced this here when we started in one dataset – the Employees table – and used knowledge from there to find related data in another source – OutboundNetworkEvents.
 
 
 ## Section 2: Start Hunting! 
 
-You’ve finished your training and you’re ready to get to work protecting Dai Wok Foods. 
+Now that you’ve completed your initial round of training, you are ready to work your first
+case in the SOC!
 
-Work with your team to complete as many challenge questions from the remaining sections in the scoreboard as possible! The goal is to score as many points as you can. There are a lot of questions (the attackers have been busy), so you probably won’t be able to answer them all. Just do as many as you can!
+A security researcher tweeted that the domain “immune.tech” was being used by hackers. Apparently the hackers are sending this domain inside credential phishing emails.
 
-As you answer the questions, we will take you on a journey exploring the data and discovering what actions the adversaries have taken. However, you should remember that this is only one of many paths you can take through the data.  As you go, don’t forget to pay attention to the details along the way. What patterns do the attackers exhibit that could help you track them better? Do they like to use certain words, themes? Or do they make mistakes? Keeping track of these patterns will help you build the full picture of what happened. 
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/d9449bb5-8219-4e26-9aba-38aea06617f9)
 
-Use the provided [Actor Preview](https://docs.google.com/document/d/1rZR4eVG886oPziG-5nGeQ5kN_q5Bpq0m/edit?usp=sharing&ouid=105873493764084037775&rtpof=true&sd=true) document to keep track of what you know about the attacker. Building a good profile, timelining the attacker’s activity, and forming a list of indicators of compromise (IOCs) will help you keep track of the attacker. KC7 models some of the techniques used by these attackers from real world threat actors, so it may be a helpful resource for you in the future when you are investigating a real security incident. 
+⚠️ NOTE! This domain and others encountered in this game are fictional and are not representative of actual malicious activity!
 
-Now, get out there and keep us safe! The whole company is counting on you. No pressure😊.
+According to OSINT research your colleagues conducted, this domain may be used as part of
+a phishing campaign with the following stages:
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/a63aec8b-5032-4557-9bc7-7e74696e19cf)
+
+> 🎯 Key Point – Open Source Intelligence (OSINT): Security researchers and analysts often
+use free, publicly available data, like Twitter! We call this public data OSINT, and it can be a
+great way to get investigative leads. Like all public data sources on the internet, you should
+follow up any OSINT tip with rigorous analysis, rather than blindly trusting the source.
+
+🤔 Answer the following questions related to this tip:
+1. Which users in our organization were sent emails containing the domain
+immune.tech?
+2. Did we block any of the emails containing that domain? Who actually received one
+of these emails? (hint: the “accepted” field in the Email table tells you whether or
+not the email was blocked. Blocked emails will show as false).
+3. What other domains shared the same IPs as immune.tech? Can you find the full list
+of domains associated with this actor based on PassiveDns data? (hint: you can use
+the in operator to check for multiple values in a field. E.g. where field in (“x”, “y”,
+“z”)
+4. What email addresses did the hackers use to send these domains?
+5. Did users click on any of the links in the phishing emails?
+6. Did any user have their credentials stolen? How do you know?
+   
+> 🤫 Hint: In order to have their credentials stolen, a user would need to browse to the credential harvesting site and enter their username and password. After this, the actor might try to login to the user’s account using the stolen credentials. You can find details about login activity in the AuthenticationEvents table.
+
+8. Did any user have contents exfiltrated (stolen) from their mailbox? How do you know? What risk is posed to the company by this content being stolen?
+
+## Section 3: Hackers sending malware docs
+After digging for a bit on the phishing activity, you come across another tweet from a threat
+intelligence vendor SolitaryStrike:
+![image](https://github.com/Squiblydoo/kc7_data/assets/77356206/21da1ad7-4399-4d9d-8f11-ba264b89bd9a)
+
+🤔 Use the tipper above to answer the following questions:
+You can optionally submit your answers to the scoreboard at
+https://kc7cyber.azurewebsites.net/ to get feedback and earn points.
+1. How many emails contained the domain `notice.io`? How many emails contained the domain `notice.io`?
+2. What email address sent the domain `notice.io`
+3. What was the subject line of the emails containing the domain `notice.io`?
+4. What is the name of the user who clicked on the `notice.io` link?
+5. At what timestamp did the user above download the file: "Critical_Security_Path.docx"?
+6. How many emails were sent to your organization on January 9th by users at wesellbeakers.com?
+7. What other domains are hosted on the same IPs as `notice.io`?
+8. What email address is seen sending emails containing one of the domains identified in question 7?
+9. How many users downloaded the files observed in the emails from question 8?
+10. One of the files observed in question 9 - IMPORTANT_INSTRUCTIONS.pptx - was seen in two separate emails. What are the subject lines of these emails?
+11. Which compromised pharmasupplies.org email address was used to send a link to scanverify.com?
+12. How many IPs has scanverify.com resolved to?
+13. Consider the email address you found in question 11. What other domain did this email address send?
+14. What is the name of the file hosted on scanverify.com?
+15. Which .pptx file was used to target Gerald Kempinski and Kenny Salcido?
+16. Which actor IP was used to search EnvolveLabs' website for the term "helpdesk ticket system"?
+17. How many total emails were sent to your organization by this actor?
+18. Which .dll file was dropped on a victim machine shortly after the user downloaded the malicious zip : EnvolveLabs_Research_Tool.7z
+
+> 🤫 Hint: Files that are created on employees’ devices are captured in the FileCreationEvents log. Try looking there to see which employees downloaded this file.
+
+19. Which six letter reconnaissance command was executed on the Machine of the user that loaded the implant above?
+
+> 🤫 Hint: Try narrowing down on one particular device that downloaded the EnvolveLabs_Research_Tool.7z file. Then, look in both the FileCreationEvents and ProcessEvents logs to find new files and processes created around the time when the file was downloaded.
+
+20. A malicious file 'infector.exe' is observed performing suspicious actions on multiple devices. What process_commandline associated with this file is being used for persistence on the devices?
+
+> 🤫 Hint: Actors establish persistence so they can come back later and conduct manual tasks (called hands-on-keyboard activity) within your company’s network. Try looking for systems creating connections to external domains and IPs, or unusual behaviors like creation of scheduled tasks.
 
 ## Glossary
 
