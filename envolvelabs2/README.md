@@ -73,7 +73,7 @@ Data in ADX is organized in a hierarchical structure which consists of **cluster
 All of Envolve Labs' security logs are stored in a single database – the EvolveLabs database. 
 
   2. Select your database.  
-	- Expand the dropdown arrow next to the Dai Wok Foods database.
+	- Expand the dropdown arrow next to the EvolveLabs database.
 	- Click on the **EvolveLabs** database. Once you’ve done this, you should see the database highlighted- this means you’ve selected the database and are ready to query the tables inside.
 
 Note: It’s very important that you use the EvolveLabs database for all questions while you’re investigating activity at EvolveLabs! If you choose the wrong database, you won’t be able to answer questions correctly.
@@ -133,7 +133,7 @@ The **take** operator is a powerful tool you can use to explore rows in a table,
 > 🎯**Key Point – What to do when you don’t know what to do**: Whenever you are faced with an unfamiliar database table, the first thing you should do is sample its rows using the **take** operator. That way, you know what fields are available for you to query and you can guess what type of information you might extract from the data source.
 
 
-The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “Dai Wok Foods” and the domain is “daiwokfoods.com”.
+The Employees table contains information about all the employees in our organization. In this case, we can see that the organization is named “EvolveLabs” and the domain is “evolvelabs.com”.
 
 >1. 🤔 Try it for yourself! Do a **take** 10 on all the other tables to see what kind of data they contain.
 
@@ -206,7 +206,7 @@ Here are some additional operators we like to use:
 | in | Equals to any of the elements | Yes | "abc" in ("123", "345", "abc") |
 
 
-While performing their day-to-day tasks, Dai Wok Foods employees send and receive emails. A record of each of these emails is stored in the **Email** table.
+While performing their day-to-day tasks, EvolveLabs employees send and receive emails. A record of each of these emails is stored in the **Email** table.
 
 > 🎯**Key Point – User Privacy and Metadata**: As you can imagine, some emails are highly sensitive. Instead of storing the entire contents of every email sent and received within the company in a database that can be easily accessed by security analysts, we only capture email metadata. 
 
@@ -247,7 +247,7 @@ Finally, in line 4, we add another pipe character ( | ) and then use the count o
 
 **Tracking Down a Click: OutboundNetworkEvents Data**
 
-When employees at Dai Wok Foods browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
+When employees at EvolveLabs browse to a website from within the corporate network, that browsing activity is logged. This is stored in the **OutboundNetworkEvents** table, which contains records of the websites browsed by each user in the company. Whenever someone visits a website, a record of it is stored in the table. However, the user’s name is not stored in the table, only their IP address is recorded. There is a 1:1 relationship between users and their assigned IP addresses, so we can reference the **Employees** table to figure out who browsed a particular website. When a user visits a site, sometimes data from a lot of other sources are loaded as well. For example, images, assets, and other content may be hosted on content delivery network (CDN), which is used to deliver and load content quickly on a website. Sometimes, advertisements will also load from a particular website as well.
 
 If we want to figure out what websites Annie Jackson visited, we can find their IP address from the Employees table.
 
