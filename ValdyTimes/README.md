@@ -3,17 +3,11 @@
 
 Valdoria, a city rich in untapped natural resources, was at a turning point during its election. Luffy Monk, a young candidate, became popular for wanting to develop the city responsibly. They were the main challenger to the current leader, Erik Stevens, whose platform aligned with powerful business interests. Garnering substantial grassroots support, Luffy’s campaign highlighted a critical choice for Valdoria: unrelenting economic growth or prioritizing environmental preservation.
 
-<div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/506e7432-02b4-4698-a231-c826ebf090a6" alt="valdoria-skyline" style="width:500px;height:auto;">
-</div>
-<br>
+![Valdoria skyline surrounded by mountains](https://github.com/KC7-Foundation/kc7_data/assets/9474932/506e7432-02b4-4698-a231-c826ebf090a6)
 
 On the eve of the election, Nene Leaks, the esteemed editor of The Valdorian Times, awoke to a nightmare. The Valdorian Times, the beacon of truth for the city, published a scandalous article accusing Luffy of corruption and misconduct. The article, a vile concoction of lies, was not what she had approved. The article alleged that Luffy, hailed for his environmental activism and social reforms, was secretly involved in a land deal scandal, exploiting his position to benefit a shadowy network of real estate moguls. Furthermore, it accused Luffy of accepting substantial bribes to push environmentally damaging policies, a stark contradiction to his public persona.
 
-<div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/9474932/94aa4d78-cf93-4b5e-a077-ad72550c7225" alt="local_election" style="width:500px;height:auto;">
-</div>
-<br>
+![Campaign volunteers working at laptops under Local Election signs](https://github.com/KC7-Foundation/kc7_data/assets/9474932/94aa4d78-cf93-4b5e-a077-ad72550c7225)
 
 
 Panic and disbelief spread like wildfire through the newsroom. Accusations and suspicions turned towards Nene, questioning her role in this catastrophic lapse of ethics. After being hit with a defamation lawsuit by Luffy, The Valdorian times hired you as an incident responder to get to the bottom of what happened. 
@@ -62,15 +56,11 @@ On the training module page, you’ll see a button that says **Query Data (ADX)*
 
 Once you login, you should see a cluster called  _“kc7001.eastus”_   has already been added to your account.
 
-<div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20" alt="Valdy_1" style="width:300px;height:auto;">
-</div>
+![Azure Data Explorer with the ValdyTimes database highlighted in the left pane](https://github.com/KC7-Foundation/kc7_data/assets/155035362/9ea96a3f-23b7-4b3a-ae5c-50928e5a6e20)
 
 Data in ADX is organized in a hierarchical structure which consists of **clusters**, **databases**, and **tables**.
 
-<div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b" alt="Valdy_2" style="width:300px;height:auto;">
-</div>
+![Azure Data Explorer pane labeling the cluster, the ValdyTimes database and the Employees table](https://github.com/KC7-Foundation/kc7_data/assets/155035362/8bd9052a-a706-4a53-8665-9ae442c4e44b)
 
 
 
@@ -84,9 +74,7 @@ Note: It’s very important that you use the **ValdyTimes** database for all que
 
 The big space to the right of your cluster list is the _query workspace_. That’s where you’ll actually write the queries used to interact with our log data.
 
-<div style="text-align:center;">
-    <img src="https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2" alt="Valdy_3" style="width:900px;height:auto;">
-</div>
+![Azure Data Explorer running take 10 queries on AuthenticationEvents, Email and Employees, with results below](https://github.com/KC7-Foundation/kc7_data/assets/155035362/b005e821-7ebb-4f40-b809-0c634fb466d2)
 
 
 Currently, you’ll see there’s a message there welcoming you to Valdorian Times! Click the blue Run button above the query workspace to run your first query! Once you’ve done that, you can erase the welcome message by highlighting it and pressing backspace or delete on your keyboard.
@@ -128,9 +116,7 @@ Employees
 
 This query has a few parts. Let’s take a moment to break each of them down:
 
-<div style="text-align:center;">
-    <img src="https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg" alt="Diagram" style="width:800px;height:auto;">
-</div>
+![KQL query Employees | take 10 with the table name, pipe character and take operator labeled](https://lh4.googleusercontent.com/y7YpmVbUlak4wMrI43nYzAqieamRnwiANLJzy8UsxHHaYJI5SlJVpTdz4EO47A-g0SVI77ehgZxHB13AZXLKKX02Yr40VZmFsb3blZgHCojeD-vS34SS24yWWqK6rnduGNdhmnXlCAQAMWETrm7_hg)
 
 
 | **Query Component** | **Description** | 
